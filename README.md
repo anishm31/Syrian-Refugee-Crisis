@@ -1,78 +1,70 @@
+# Getting Started with Create React App
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# Canvas / Ed Discussion group number: Group 18
-## Names of the team members:
+## Available Scripts
 
-* Shadow Sincross
-* Matthew Albert
-* Pranitha Kolli
-* Anish Madgula
-* Matthew Castilleja
+In the project directory, you can run:
 
-## Project Name: syrian_refugee_crisis
+### `npm start`
 
-## The proposed project:
-Our project serves to assist Syrian refugees with resources as well as educate the public on the Syrian refugee crisis. We will be providing charities and organizations across many countries which can assist Syrian refugees with housing, medical care, education, etc. 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## URLs of at least three data sources that you will programmatically scrape using a RESTful API 
-1. https://www.unhcr.org/refugee-statistics/download/
-1. https://en.wikipedia.org/wiki/Refugees_of_the_Syrian_civil_war#Financial_aid
-1. https://reliefweb.int/updates?view=headlines&search=syrian+refugee
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## Three Models:
-1. Relevant Charities/Organizations
-1. Countries 
-1. Relevant Events
+### `npm test`
 
-## An estimate of the number of instances of each model
-1. Relevant Charities/Organizations: *~40 instances
-1. Countries: *~100 instances
-1. Relevant Events: *~40 instances 
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Each model must have many attributes; Describe five of those attributes for each model that you can filter or sort:
-1. Charities/Organizations Attributes
-    * Year founded
-    * Organization abbreviation (if applicable)
-    * Parent Organization (if applicable)
-    * Country of origin
-    * Purpose
-    * Link to website
-    * Media about charity/organization (maybe an image and a video about the organization’s work)
-    * Statistics on aid given to help Syrian refugees
-1. Countries Attributes
-    * Map of country displaying location of country in relation to Syria
-    * Image of the country’s flag
-    * Number of asylum applications (where the country of origin of the applicant is the Syrian Arab Republic)
-    * Number of asylum decisions
-    * Includes statistics on:
-    * Year of asylum decisions
-    * Number classified as “Recognized”
-    * Number classified as “Complementary Protection”
-    * Number of applications rejected
-    * Number of applications closed for other reasons
-1. Event Attributes
-    * Name of event
-    * Date of event
-    * Location of event
-    * Map displaying location
-    * Description of event
-    * Affected people
+### `npm run build`
 
-### Instances of each model must connect to instances of at least two other models
-### Instances of each model must be rich with different media (e.g., feeds, images, maps, text, videos, etc.)
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Describe two types of media for instances of each model:
-1. Charities/Organizations
-    * Charity/Organization Logos 
-    * Pictures/Videos
-1. Country 
-    * Picture of Country/region 
-    * Graphs/ statistics 
-1. Events 
-    * Pictures
-    * Map/Location image
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## Describe three questions that your site will answer:
-* What events led to the Syrian refugee crisis?
-* Where are the Syrian refugees?
-* Through what charities can you help the refugees?
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
