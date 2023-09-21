@@ -22,12 +22,12 @@ Our project serves to assist Syrian refugees with resources as well as educate t
 ## Three Models:
 1. Relevant Charities/Organizations
 1. Countries 
-1. Relevant Events
+1. Relevant News/Events
 
 ## An estimate of the number of instances of each model
 1. Relevant Charities/Organizations: *~40 instances
 1. Countries: *~100 instances
-1. Relevant Events: *~40 instances 
+1. Relevant News/Events: *~40 instances 
 
 ## Each model must have many attributes; Describe five of those attributes for each model that you can filter or sort:
 1. Charities/Organizations Attributes
@@ -50,13 +50,14 @@ Our project serves to assist Syrian refugees with resources as well as educate t
     * Number classified as “Complementary Protection”
     * Number of applications rejected
     * Number of applications closed for other reasons
-1. Event Attributes
+1. News/Event Attributes
     * Name of event
     * Date of event
     * Location of event
     * Map displaying location
     * Description of event
     * Affected people
+    * Source
 
 ### Instances of each model must connect to instances of at least two other models
 ### Instances of each model must be rich with different media (e.g., feeds, images, maps, text, videos, etc.)
@@ -68,7 +69,7 @@ Our project serves to assist Syrian refugees with resources as well as educate t
 1. Country 
     * Picture of Country/region 
     * Graphs/ statistics 
-1. Events 
+1. News/Events 
     * Pictures
     * Map/Location image
 
