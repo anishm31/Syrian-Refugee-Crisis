@@ -1,0 +1,33 @@
+{
+  "page": 1,
+  "short-url": "s9x9RO",
+  "maxPages": 2,
+  "total": {
+    "dec_recognized": 3448,
+    "dec_other": 21,
+    "dec_rejected": 76,
+    "dec_closed": 3468,
+    "dec_total": 7013
+  },
+  "items": [
+    {
+      "year": 2022,
+      "coo_id": 185,
+      "coa_id": 76,
+      "coo_name": "Syrian Arab Rep.",
+      "coa_name": "Greece",
+      "coo": "SYR",
+      "coa": "GRE",
+      "coo_iso": "SYR",
+      "coa_iso": "GRC",
+      "procedure_type": "G",
+      "dec_level": "AR",
+      "dec_pc": "P",
+      "dec_recognized": 71,
+      "dec_other": 21,
+      "dec_rejected": 64,
+      "dec_closed": 385,
+      "dec_total": 541
+    }
+  ]
+}
