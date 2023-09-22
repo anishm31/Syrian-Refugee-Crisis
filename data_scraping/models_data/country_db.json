@@ -1,33 +1,41 @@
-{
-  "page": 1,
-  "short-url": "s9x9RO",
-  "maxPages": 2,
-  "total": {
-    "dec_recognized": 3448,
-    "dec_other": 21,
-    "dec_rejected": 76,
-    "dec_closed": 3468,
-    "dec_total": 7013
-  },
-  "items": [
-    {
-      "year": 2022,
-      "coo_id": 185,
-      "coa_id": 76,
-      "coo_name": "Syrian Arab Rep.",
-      "coa_name": "Greece",
-      "coo": "SYR",
-      "coa": "GRE",
-      "coo_iso": "SYR",
-      "coa_iso": "GRC",
-      "procedure_type": "G",
-      "dec_level": "AR",
-      "dec_pc": "P",
-      "dec_recognized": 71,
-      "dec_other": 21,
-      "dec_rejected": 64,
-      "dec_closed": 385,
-      "dec_total": 541
+[
+  {
+    "country": "Germany",
+    "country_iso3": "DEU",
+    "attributes": {
+      "num_refugees": 522575,
+      "num_asylum_decisions": 1691,
+      "year_of_decisions": 2022,
+      "num_recognized": 250,
+      "num_other": 641,
+      "num_apps_rejected": 5,
+      "num_closed": 795
     }
-  ]
-}
+  },
+  {
+    "country": "T\u00fcrkiye",
+    "country_iso3": "TUR",
+    "attributes": {
+      "num_refugees": 3535898,
+      "num_asylum_decisions": 56,
+      "year_of_decisions": 2018,
+      "num_recognized": "0",
+      "num_other": "0",
+      "num_apps_rejected": "0",
+      "num_closed": 56
+    }
+  },
+  {
+    "country": "Jordan",
+    "country_iso3": "JOR",
+    "attributes": {
+      "num_refugees": 660892,
+      "num_asylum_decisions": 7413,
+      "year_of_decisions": 2015,
+      "num_recognized": 7367,
+      "num_other": "0",
+      "num_apps_rejected": "0",
+      "num_closed": 46
+    }
+  }
+]
