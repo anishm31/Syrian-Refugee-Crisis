@@ -8,7 +8,7 @@ function MainNavbar() {
     return (
         <Navbar bg="dark" data-bs-theme="dark" expand="lg" className="bg-body-tertiary" >
           <Container>
-            <Navbar.Brand href="#home">Syrian Regufee Crisis</Navbar.Brand>
+            <Navbar.Brand href="#home">Syrian Refugee Crisis</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
