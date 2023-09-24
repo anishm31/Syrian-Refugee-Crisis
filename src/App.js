@@ -1,12 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
 import MainNavbar from './Components/MainNavbar.js';
+import ReactDOM from "react-dom/client";
+import About from './Components/About.js';
 
-function App() {
-  return (
-    <MainNavbar></MainNavbar>
-  );
+
+export default function App() {
+  return <h1>HOME</h1>;
 }
 
-export default App;
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+

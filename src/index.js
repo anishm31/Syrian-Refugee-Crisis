@@ -5,11 +5,23 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
+import MainNavbar from './Components/MainNavbar.js';
+import About from './Components/About.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+
+    <MainNavbar/>
+        <Routes> 
+            <Route exact path = "/" element ={<App />}/>
+            <Route  path = "/about" element ={<About />}/>
+        </Routes>
+
+  </Router>
+
   </React.StrictMode>
 );
 
