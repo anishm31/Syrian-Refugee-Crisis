@@ -1,0 +1,47 @@
+[
+  {
+    "country": "Germany",
+    "country_iso3": "DEU",
+    "id": "DEU",
+    "flag_url": "https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg",
+    "attributes": {
+      "num_refugees": 522575,
+      "num_asylum_decisions": 1691,
+      "year_of_decisions": 2022,
+      "num_recognized": 250,
+      "num_other": 641,
+      "num_apps_rejected": 5,
+      "num_closed": 795
+    }
+  },
+  {
+    "country": "Turkey",
+    "country_iso3": "TUR",
+    "id": "TUR",
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg",
+    "attributes": {
+      "num_refugees": 3535898,
+      "num_asylum_decisions": 56,
+      "year_of_decisions": 2018,
+      "num_recognized": "0",
+      "num_other": "0",
+      "num_apps_rejected": "0",
+      "num_closed": 56
+    }
+  },
+  {
+    "country": "Jordan",
+    "country_iso3": "JOR",
+    "id": "JOR",
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Flag_of_Jordan.svg",
+    "attributes": {
+      "num_refugees": 660892,
+      "num_asylum_decisions": 7413,
+      "year_of_decisions": 2015,
+      "num_recognized": 7367,
+      "num_other": "0",
+      "num_apps_rejected": "0",
+      "num_closed": 46
+    }
+  }
+]
