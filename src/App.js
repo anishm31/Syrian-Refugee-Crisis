@@ -7,12 +7,10 @@ import CountryModelPage from './Components/CountryModelPage';
 function App() {
   return (
     <div>
-      <MainNavbar />
       <CountryModelPage />
     </div>
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+export default App;
 
