@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 function InstanceGrid(props) {
-  const instanceList = require('./country_data.json');
+  const instanceList = props.instances;
   return (
     <Container fluid className="mt-5">
       <div className="title-holder mb-3">
