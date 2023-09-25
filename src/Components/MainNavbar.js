@@ -3,10 +3,8 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import {LinkContainer} from 'react-router-bootstrap'
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
-import ReactDOM from "react-dom/client";
-import About from './About.js';
+import {LinkContainer} from 'react-router-bootstrap';
+import { BrowserRouter as Router, Routes, Route, BrowserRouter, Link } from 'react-router-dom';
 
 
 
@@ -18,13 +16,23 @@ function MainNavbar() {
               <Navbar.Brand >Syrian Regufee Crisis</Navbar.Brand>
             </LinkContainer>
 
-            <LinkContainer to="/">
-              <Nav.Link>Home</Nav.Link>
-            </LinkContainer>
+            <Nav.Link>
+              <Link
+                style={{ color: "white", textDecoration: "inherit", marginRight: 10 }}
+                to="/"
+              >
+              Home
+              </Link>
+            </Nav.Link>
 
-            <LinkContainer to="/about">
-              <Nav.Link >About</Nav.Link>
-            </LinkContainer>
+            <Nav.Link>
+              <Link
+                style={{ color: "white", textDecoration: "inherit", marginRight: 3}}
+                to="/about"
+              >
+              About
+              </Link>
+            </Nav.Link>
             
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
