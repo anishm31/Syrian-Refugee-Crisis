@@ -24,6 +24,8 @@ for country in countries:
   instance_template = {
     "country" : "",
     "country_iso3" : country,
+    "id" : country,    # Unique identifier for instance that will be used by frontend
+    "flag_url" : "",
     "attributes" : {
       "num_refugees" : 0,
       "num_asylum_decisions" : 0,
@@ -55,6 +57,9 @@ for country in countries:
         # Store population dataset specific attribute
         instance_template["attributes"]["num_refugees"] = response_data["items"][item_index]["refugees"]
         instance_template["country"] = response_data["items"][item_index]["coa_name"]
+        # Handle special case for Turkey name (will be resolved in later phase)
+        if (instance_template["country_iso3"] == "TUR"):
+          instance_template["country"] = "Turkey"
       else:
         # Store asylum decisions dataset specific attributes
         instance_template["attributes"]["num_asylum_decisions"] = response_data["items"][item_index]["dec_total"]
@@ -69,6 +74,26 @@ for country in countries:
       print(f"Request URL: {response.url}")
       print(f"Request Failure Reason: {response.request.reason}")
       exit(1)
+  # Scrape for Wikipedia for flag image
+  wiki_params = {
+    "action": "query",
+    "format": "json",
+    "titles": f"Flag of {instance_template['country']}",
+    "prop": "pageimages",
+    "piprop": "original"
+  }
+  response = requests.get("https://en.wikipedia.org/w/api.php", params=wiki_params)
+  if response.status_code == 200:
+    # Extact URL from JSON response and store
+    response_data = response.json()['query']['pages']
+    flag_url = list(response_data.values())[0]['original']['source']
+    instance_template["flag_url"] = flag_url
+  else:
+    # Error, print status code
+    print(f"Request Error: {response.status_code}")
+    print(f"Request URL: {response.url}")
+    print(f"Request Failure Reason: {response.request.reason}")
+    exit(1)
   print(f'Successfully scraped data for {instance_template["country"]}')
   # Append instance to country data list
   country_data.append(instance_template)
