@@ -1,9 +1,16 @@
+import React from "react";
+import GenericModelPage from "./GenericModelPage";
+import CharityCard from "./CharityCard";
+import charityData from "../model_data/charity_db.json"
+
 function CharitiesModelPage() {
-    return (
-      <div>
-        <h2>Charities Model Page</h2>
-      </div>
-    );
-  }
-  
-  export default CharitiesModelPage;
+  return (
+    <GenericModelPage 
+      model="Charities"
+      modelCard={CharityCard}
+      instances={charityData}
+    />
+  );
+}
+
+export default CharitiesModelPage;
