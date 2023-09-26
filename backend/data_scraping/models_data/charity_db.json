@@ -1,0 +1,73 @@
+[
+  {
+    "name": "United Nations High Commissioner for Refugees",
+    "id": "Q132551",
+    "attributes": {
+      "description": "United Nations agency mandated to protect and support refugees",
+      "org_type": [
+        "organization established by the United Nations",
+        "intergovernmental organization",
+        "international organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/8/89/UN_refugee.jpg",
+      "org_img": "https://upload.wikimedia.org/wikipedia/commons/c/c2/UNHCR-geneveNov2013.jpg",
+      "established": "+1950-12-14T00:00:00Z",
+      "abbreviation": "UNHCR",
+      "parent_org": "United Nations",
+      "headquarters": "Geneva",
+      "awards_received": [
+        "Nobel Peace Prize",
+        "Nobel Peace Prize",
+        "Indira Gandhi Peace Prize",
+        "Balzan Prize"
+      ],
+      "website": "https://www.unhcr.org"
+    }
+  },
+  {
+    "name": "UNICEF",
+    "id": "Q740308",
+    "attributes": {
+      "description": "specialised agency of United Nations",
+      "org_type": [
+        "organization established by the United Nations"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Logo_of_UNICEF.svg",
+      "org_img": "",
+      "established": "+1946-12-11T00:00:00Z",
+      "abbreviation": "UNICEF",
+      "parent_org": "United Nations General Assembly",
+      "headquarters": "New York City",
+      "awards_received": [
+        "Nobel Peace Prize",
+        "Children of the Earth",
+        "Indira Gandhi Peace Prize",
+        "Princess of Asturias Award for Concord",
+        "Wateler Peace Prize",
+        "DZI Seal-of-Approval"
+      ],
+      "website": "https://www.unicef.org/"
+    }
+  },
+  {
+    "name": "World Food Programme",
+    "id": "Q204344",
+    "attributes": {
+      "description": "United Nations branch related to food-assistance",
+      "org_type": [
+        "intergovernmental organization",
+        "organization established by the United Nations"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/5/59/World_Food_Programme_Logo_Simple.svg",
+      "org_img": "https://upload.wikimedia.org/wikipedia/commons/5/5b/World_Food_Programme.jpg",
+      "established": "+1961-12-19T00:00:00Z",
+      "abbreviation": "",
+      "parent_org": "United Nations",
+      "headquarters": "Rome",
+      "awards_received": [
+        "Nobel Peace Prize"
+      ],
+      "website": "https://www.wfp.org/"
+    }
+  }
+]
