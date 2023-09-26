@@ -3,7 +3,7 @@ import GenericModelPage from "./GenericModelPage";
 import CharityCard from "./CharityCard";
 import charityData from "../model_data/charity_db.json"
 
-function CharitiesModelPage() {
+function CharityModelPage() {
   return (
     <GenericModelPage 
       model="Charities"
@@ -13,4 +13,4 @@ function CharitiesModelPage() {
   );
 }
 
-export default CharitiesModelPage;
+export default CharityModelPage;

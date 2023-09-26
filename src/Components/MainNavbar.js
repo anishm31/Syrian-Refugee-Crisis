@@ -13,7 +13,7 @@ function MainNavbar() {
         <Navbar bg="dark" data-bs-theme="dark" expand="lg" className="bg-body-tertiary" >
           <Container>
             <LinkContainer to="/">
-              <Navbar.Brand >Syrian Regufee Crisis</Navbar.Brand>
+              <Navbar.Brand >Syrian Refugee Crisis</Navbar.Brand>
             </LinkContainer>
 
             <Nav.Link>
