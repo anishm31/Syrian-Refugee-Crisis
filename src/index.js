@@ -10,7 +10,7 @@ import MainNavbar from './Components/MainNavbar.js';
 import About from './Components/About.js';
 import CountryModelPage from './Components/CountryModelPage';
 import CharitiesModelPage from './Components/CharitiesModelPage';
-import NewsEventsModelPage from './Components/NewsEventsModelPage';
+import NewsModelPage from './Components/NewsModelPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,7 +23,7 @@ root.render(
             <Route path = "/about" element ={<About />}/>
             <Route path = "/countries" element = {<CountryModelPage />}/>
             <Route path = "/charities" element = {<CharitiesModelPage />}/>
-            <Route path = "/news-and-events" element = {<NewsEventsModelPage />}/>
+            <Route path = "/news-and-events" element = {<NewsModelPage />}/>
         </Routes>
 
   </Router>
