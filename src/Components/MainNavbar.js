@@ -37,13 +37,35 @@ function MainNavbar() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto"> 
-
                 <NavDropdown title="Outreach" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Charities</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">
-                    Countries
+
+                  <NavDropdown.Item>
+                    <Link
+                      style={{ color: "white", textDecoration: "inherit"}}
+                      to="/charities"
+                    >
+                      Charities
+                    </Link>
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">News/Events</NavDropdown.Item>
+
+                  <NavDropdown.Item>
+                    <Link
+                      style={{ color: "white", textDecoration: "inherit"}}
+                      to="/countries"
+                    >
+                      Countries
+                    </Link>
+                  </NavDropdown.Item>
+
+                  <NavDropdown.Item>
+                    <Link
+                      style={{ color: "white", textDecoration: "inherit"}}
+                      to="/news-and-events"
+                    >
+                      News/Events
+                    </Link>
+                  </NavDropdown.Item>
+
                 </NavDropdown>
               
               </Nav>
