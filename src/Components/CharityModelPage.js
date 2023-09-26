@@ -5,7 +5,7 @@ import charityData from "../model_data/charity_db.json"
 
 function CharityModelPage() {
   return (
-    <GenericModelPage 
+    <GenericModelPage //test
       model="Charities"
       modelCard={CharityCard}
       instances={charityData}
