@@ -8,6 +8,9 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
 import MainNavbar from './Components/MainNavbar.js';
 import About from './Components/About.js';
+import CountryModelPage from './Components/CountryModelPage';
+import CharitiesModelPage from './Components/CharitiesModelPage';
+import NewsEventsModelPage from './Components/NewsEventsModelPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,7 +20,10 @@ root.render(
     <MainNavbar/>
         <Routes> 
             <Route exact path = "/" element ={<App />}/>
-            <Route  path = "/about" element ={<About />}/>
+            <Route path = "/about" element ={<About />}/>
+            <Route path = "/countries" element = {<CountryModelPage />}/>
+            <Route path = "/charities" element = {<CharitiesModelPage />}/>
+            <Route path = "/news-and-events" element = {<NewsEventsModelPage />}/>
         </Routes>
 
   </Router>
