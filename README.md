@@ -11,6 +11,9 @@
 
 ## Project Name: syrian_refugee_crisis
 
+## Website URL:
+https://www.syrianrefugeecrisis.me/
+
 ## The proposed project:
 Our project serves to assist Syrian refugees with resources as well as educate the public on the Syrian refugee crisis. We will be providing charities and organizations across many countries which can assist Syrian refugees with housing, medical care, education, etc. 
 
