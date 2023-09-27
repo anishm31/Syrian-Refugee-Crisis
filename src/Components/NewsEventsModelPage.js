@@ -1,9 +1,17 @@
+import React from "react";
+import GenericModelPage from "./GenericModelPage";
+import NewsCard from "./NewsCard.js";
+import newsData from "../model_data/news_db.json";
+
+
 function NewsEventsModelPage() {
-    return (
-      <div>
-        <h2>News/Events Model Page</h2>
-      </div>
-    );
-  }
-  
-  export default NewsEventsModelPage;
+  return (
+    <GenericModelPage
+      model="News"
+      modelCard={NewsCard}
+      instances={newsData}
+    />
+  );
+}
+
+export default NewsEventsModelPage;

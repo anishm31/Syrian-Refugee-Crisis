@@ -1,0 +1,122 @@
+[
+  {
+    "Title": "NGOs warn: Humanitarian Aid Shortage amid Harsh Temperatures and rising cases of COVID-19",
+    "Date": "2021-01-29T14:02:21+00:00",
+    "Source": "",
+    "Image": "https://upload.wikimedia.org/wikipedia/commons/3/36/Urban_flood_cropped.jpg",
+    "attributes": {
+      "DisasterType": [
+        "Flood",
+        "Severe Local Storm"
+      ],
+      "PrimaryCountry": "Syria",
+      "OtherSources": [
+        "Islamic Relief",
+        "NRC",
+        "CARE",
+        "Christian Aid",
+        "Mercy Corps",
+        "HI",
+        "Oxfam",
+        "IRC",
+        "Save the Children",
+        "World Vision",
+        "SDIO",
+        "SAMS",
+        "MedGlobal"
+      ],
+      "Themes": [
+        "Food and Nutrition",
+        "Health",
+        "Protection and Human Rights",
+        "Shelter and Non-Food Items"
+      ]
+    }
+  },
+  {
+    "Title": "Joint NGO Statement Syria Cross-Border",
+    "Date": "2022-06-29T18:54:46+00:00",
+    "Source": "",
+    "Image": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Lac_de_l%27Entonnoir_-_img_49473.jpg",
+    "attributes": {
+      "DisasterType": [
+        "Drought",
+        "Epidemic"
+      ],
+      "PrimaryCountry": "Syria",
+      "OtherSources": [
+        "CARE",
+        "Christian Aid",
+        "Concern",
+        "Global Communities",
+        "GOAL",
+        "HI",
+        "InterAction",
+        "IRC",
+        "Islamic Relief",
+        "MedGlobal",
+        "Mercy Corps",
+        "NRC",
+        "Oxfam",
+        "PIN",
+        "RI",
+        "Save the Children",
+        "Syria Relief",
+        "SAMS",
+        "World Vision"
+      ],
+      "Themes": [
+        "Food and Nutrition",
+        "Health",
+        "Shelter and Non-Food Items",
+        "Water Sanitation Hygiene"
+      ]
+    }
+  },
+  {
+    "Title": "Open Letter to the UN Security Council (June 22nd, 2023)",
+    "Date": "2023-06-22T19:36:57+00:00",
+    "Source": "",
+    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "attributes": {
+      "DisasterType": [
+        "Earthquake"
+      ],
+      "PrimaryCountry": "Syria",
+      "OtherSources": [
+        "Ataa Relief",
+        "CARE",
+        "DCA",
+        "Global Communities",
+        "Hand in Hand for Aid and Development",
+        "HI",
+        "HelpAge",
+        "IHSAN",
+        "IRC",
+        "Islamic Relief",
+        "Malteser",
+        "MedGlobal",
+        "Mercy Corps",
+        "M-USA",
+        "NRC",
+        "Oxfam",
+        "PIN",
+        "PAC",
+        "RI",
+        "Save the Children",
+        "SRD",
+        "SAMS",
+        "UOSSM",
+        "Violet Organization",
+        "WHH",
+        "World Vision"
+      ],
+      "Themes": [
+        "Food and Nutrition",
+        "Health",
+        "Protection and Human Rights",
+        "Shelter and Non-Food Items"
+      ]
+    }
+  }
+]
