@@ -21,7 +21,7 @@ root.render(
 
     <MainNavbar/>
     <Routes> 
-        <Route exact path = "/" element ={<App />}/>
+        <Route exact path="/" element={<HomePage />} />
         <Route path = "/about" element ={<About />}/>
         <Route path = "/countries" element = {<CountryModelPage />}/>
         <Route path = "/charities" element = {<CharityModelPage />}/>
