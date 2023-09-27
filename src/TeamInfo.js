@@ -27,7 +27,7 @@ const TeamInfo = [
   },
   {
     image: MatthewA,
-    name: "Matthew M Albert",
+    name: "Matthew Albert",
     user: "matthew.albert",
     user_id: "15659252",
     role: "Full Stack Developer",
