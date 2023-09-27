@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, ListGroup, Button } from "react-bootstrap";
-import { BrowserRouter as Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function CharityCard(props) {
   const date_est = new Date(props.instance.attributes.established);
