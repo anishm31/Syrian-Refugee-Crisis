@@ -28,6 +28,11 @@ function CountryInstancePage() {
                         <ListGroup.Item>Number Closed: {country.attributes.num_closed.toLocaleString()}</ListGroup.Item>
                         <ListGroup.Item>Other: {country.attributes.num_other.toLocaleString()}</ListGroup.Item>
                     </ListGroup>
+                    <Card.Img
+                        variant="bottom"
+                        src={country.map_url}
+                        style={{ objectFit : "cover", width: "50%", height: "50%", margin: "auto"}}
+                    />
                 </Card>
             </div>
         </Container>
