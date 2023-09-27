@@ -11,6 +11,7 @@ import About from './Components/About.js';
 import CountryModelPage from './Components/CountryModelPage';
 import CharityModelPage from './Components/CharityModelPage';
 import NewsEventsModelPage from './Components/NewsEventsModelPage';
+import CountryInstancePage from './Components/CountryInstancePage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,13 +19,14 @@ root.render(
     <Router>
 
     <MainNavbar/>
-        <Routes> 
-            <Route exact path = "/" element ={<App />}/>
-            <Route path = "/about" element ={<About />}/>
-            <Route path = "/countries" element = {<CountryModelPage />}/>
-            <Route path = "/charities" element = {<CharityModelPage />}/>
-            <Route path = "/news-and-events" element = {<NewsEventsModelPage />}/>
-        </Routes>
+    <Routes> 
+        <Route exact path = "/" element ={<App />}/>
+        <Route path = "/about" element ={<About />}/>
+        <Route path = "/countries" element = {<CountryModelPage />}/>
+        <Route path = "/countries/:id" element = {<CountryInstancePage />}/>
+        <Route path = "/charities" element = {<CharityModelPage />}/>
+        <Route path = "/news-and-events" element = {<NewsEventsModelPage />}/>
+    </Routes>
 
   </Router>
 

@@ -2,6 +2,8 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/esm/ListGroup";
 import Button from "react-bootstrap/Button";
+import { BrowserRouter as Router, Routes, Route, BrowserRouter, Link } from 'react-router-dom';
+
 
 function CountryCard(props) {
   return (
@@ -23,7 +25,13 @@ function CountryCard(props) {
         <ListGroup.Item>Number Rejected: {props.instance.attributes.num_apps_rejected.toLocaleString()}</ListGroup.Item>
       </ListGroup>
       <Card.Body>
-        <Button variant="outline-success">More Info</Button>{" "}
+        <Button variant="outline-success">
+          <Link 
+            style={{ color: "black", textDecoration: "inherit"}}
+            to={"/countries/" + props.instance.country}>
+          More Info
+          </Link>
+        </Button>
       </Card.Body>
     </Card>
   );
