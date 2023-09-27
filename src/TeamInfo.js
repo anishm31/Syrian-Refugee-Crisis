@@ -1,4 +1,3 @@
-// import Anish from "./images/anish.png";
 import Anish from "./images/anish.jpeg";
 import MatthewC from './images/matthew_c.jpg';
 import MatthewA from './images/matthew_a.jpeg';
