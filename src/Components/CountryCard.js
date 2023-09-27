@@ -1,7 +1,5 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
-import ListGroup from "react-bootstrap/esm/ListGroup";
-import Button from "react-bootstrap/Button";
+import { Card, ListGroup, Button } from "react-bootstrap";
 import { BrowserRouter as Router, Routes, Route, BrowserRouter, Link } from 'react-router-dom';
 
 

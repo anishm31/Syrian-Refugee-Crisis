@@ -1,7 +1,7 @@
 import React from "react";
 import GenericInstancePage from "./GenericInstancePage";
 import countryData from "../model_data/country_db.json";
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 function CountryInstancePage() {
     const params = useParams();
@@ -9,7 +9,8 @@ function CountryInstancePage() {
         <div>
             Country Instance Page for {params.id}
             <GenericInstancePage
-                instance="name"
+                model="Countries"
+                instance={params.id}
                 instances={countryData}/>
         </div>
         

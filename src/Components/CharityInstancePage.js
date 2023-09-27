@@ -1,7 +1,7 @@
 import React from "react";
 import GenericInstancePage from "./GenericInstancePage";
 import charityData from "../model_data/charity_db.json";
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 function CharityInstancePage() {
     const params = useParams();
@@ -9,7 +9,8 @@ function CharityInstancePage() {
         <div>
             Charity Instance Page for {params.id}
             <GenericInstancePage
-                instance="name"
+                model="Charities"
+                instance={params.id}
                 instances={charityData}/>
         </div>
         

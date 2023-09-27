@@ -4,7 +4,6 @@ import { TeamInfo } from "../TeamInfo.js"
 
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import TeamCard from "./TeamCard.js";
 
