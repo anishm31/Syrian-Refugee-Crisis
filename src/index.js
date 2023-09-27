@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
 import MainNavbar from './Components/MainNavbar.js';
+import HomePage from './Components/HomePage.js';
 import About from './Components/About.js';
 import CountryModelPage from './Components/CountryModelPage';
 import CharityModelPage from './Components/CharityModelPage';
@@ -19,7 +19,7 @@ root.render(
 
     <MainNavbar/>
         <Routes> 
-            <Route exact path = "/" element ={<App />}/>
+            <Route exact path = "/" element ={<HomePage />}/>
             <Route path = "/about" element ={<About />}/>
             <Route path = "/countries" element = {<CountryModelPage />}/>
             <Route path = "/charities" element = {<CharityModelPage />}/>
