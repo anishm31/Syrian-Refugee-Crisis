@@ -6,371 +6,38 @@
     "Image": "https://upload.wikimedia.org/wikipedia/commons/1/16/2014_West_Africa_Ebola_Epidemic_-_New_Cases_per_Week.svg",
     "attributes": {
       "DisasterType": [
-        {
-          "name": "Epidemic"
-        }
+        "Epidemic"
       ],
       "PrimaryCountry": "Syria",
       "OtherSources": [
-        {
-          "shortname": "Acci\u00f3n contra el Hambre"
-        },
-        {
-          "shortname": "Anera"
-        },
-        {
-          "shortname": "CARE"
-        },
-        {
-          "shortname": "Christian Aid"
-        },
-        {
-          "shortname": "DRC"
-        },
-        {
-          "shortname": "Global Communities"
-        },
-        {
-          "shortname": "HI"
-        },
-        {
-          "shortname": "InterAction"
-        },
-        {
-          "shortname": "IRC"
-        },
-        {
-          "shortname": "MedGlobal"
-        },
-        {
-          "shortname": "Mercy Corps"
-        },
-        {
-          "shortname": "M-USA"
-        },
-        {
-          "shortname": "NRC"
-        },
-        {
-          "shortname": "Oxfam"
-        },
-        {
-          "shortname": "RI"
-        },
-        {
-          "shortname": "Save the Children"
-        },
-        {
-          "shortname": "SI"
-        },
-        {
-          "shortname": "SAMS"
-        },
-        {
-          "shortname": "Un Ponte per"
-        },
-        {
-          "shortname": "UOSSM"
-        },
-        {
-          "shortname": "War Child"
-        },
-        {
-          "shortname": "World Vision"
-        }
+        "Acci\u00f3n contra el Hambre",
+        "Anera",
+        "CARE",
+        "Christian Aid",
+        "DRC",
+        "Global Communities",
+        "HI",
+        "InterAction",
+        "IRC",
+        "MedGlobal",
+        "Mercy Corps",
+        "M-USA",
+        "NRC",
+        "Oxfam",
+        "RI",
+        "Save the Children",
+        "SI",
+        "SAMS",
+        "Un Ponte per",
+        "UOSSM",
+        "War Child",
+        "World Vision"
       ],
       "Themes": [
-        {
-          "name": "Food and Nutrition"
-        },
-        {
-          "name": "Health"
-        },
-        {
-          "name": "Protection and Human Rights"
-        },
-        {
-          "name": "Recovery and Reconstruction"
-        }
-      ]
-    }
-  },
-  {
-    "Title": "Over 1 million people at risk of hunger in Syria if cross-border aid resolution not renewed, say aid groups",
-    "Date": "2021-06-10T03:12:42+00:00",
-    "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/1/16/2014_West_Africa_Ebola_Epidemic_-_New_Cases_per_Week.svg",
-    "attributes": {
-      "DisasterType": [
-        {
-          "name": "Epidemic"
-        }
-      ],
-      "PrimaryCountry": "Syria",
-      "OtherSources": [
-        {
-          "shortname": "Concern"
-        },
-        {
-          "shortname": "InterAction"
-        },
-        {
-          "shortname": "GOAL"
-        },
-        {
-          "shortname": "Medair"
-        },
-        {
-          "shortname": "ZOA"
-        },
-        {
-          "shortname": "Islamic Relief"
-        },
-        {
-          "shortname": "NRC"
-        },
-        {
-          "shortname": "CARE"
-        },
-        {
-          "shortname": "Mercy Corps"
-        },
-        {
-          "shortname": "HI"
-        },
-        {
-          "shortname": "PIN"
-        },
-        {
-          "shortname": "Oxfam"
-        },
-        {
-          "shortname": "LIFE"
-        },
-        {
-          "shortname": "IRC"
-        },
-        {
-          "shortname": "RI"
-        },
-        {
-          "shortname": "Un Ponte per"
-        },
-        {
-          "shortname": "Save the Children"
-        },
-        {
-          "shortname": "World Vision"
-        },
-        {
-          "shortname": "Tdh It"
-        },
-        {
-          "shortname": "Syria Relief"
-        },
-        {
-          "shortname": "SAMS"
-        },
-        {
-          "shortname": "UOSSM"
-        },
-        {
-          "shortname": "Orange"
-        },
-        {
-          "shortname": "MedGlobal"
-        }
-      ],
-      "Themes": [
-        {
-          "name": "Food and Nutrition"
-        },
-        {
-          "name": "Health"
-        },
-        {
-          "name": "Protection and Human Rights"
-        }
-      ]
-    }
-  },
-  {
-    "Title": "Open Letter to the UN Security Council (June 22nd, 2023)",
-    "Date": "2023-06-22T19:36:57+00:00",
-    "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
-    "attributes": {
-      "DisasterType": [
-        {
-          "name": "Earthquake"
-        }
-      ],
-      "PrimaryCountry": "Syria",
-      "OtherSources": [
-        {
-          "shortname": "Ataa Relief"
-        },
-        {
-          "shortname": "CARE"
-        },
-        {
-          "shortname": "DCA"
-        },
-        {
-          "shortname": "Global Communities"
-        },
-        {
-          "shortname": "Hand in Hand for Aid and Development"
-        },
-        {
-          "shortname": "HI"
-        },
-        {
-          "shortname": "HelpAge"
-        },
-        {
-          "shortname": "IHSAN"
-        },
-        {
-          "shortname": "IRC"
-        },
-        {
-          "shortname": "Islamic Relief"
-        },
-        {
-          "shortname": "Malteser"
-        },
-        {
-          "shortname": "MedGlobal"
-        },
-        {
-          "shortname": "Mercy Corps"
-        },
-        {
-          "shortname": "M-USA"
-        },
-        {
-          "shortname": "NRC"
-        },
-        {
-          "shortname": "Oxfam"
-        },
-        {
-          "shortname": "PIN"
-        },
-        {
-          "shortname": "PAC"
-        },
-        {
-          "shortname": "RI"
-        },
-        {
-          "shortname": "Save the Children"
-        },
-        {
-          "shortname": "SRD"
-        },
-        {
-          "shortname": "SAMS"
-        },
-        {
-          "shortname": "UOSSM"
-        },
-        {
-          "shortname": "Violet Organization"
-        },
-        {
-          "shortname": "WHH"
-        },
-        {
-          "shortname": "World Vision"
-        }
-      ],
-      "Themes": [
-        {
-          "name": "Food and Nutrition"
-        },
-        {
-          "name": "Health"
-        },
-        {
-          "name": "Protection and Human Rights"
-        },
-        {
-          "name": "Shelter and Non-Food Items"
-        }
-      ]
-    }
-  },
-  {
-    "Title": "NGOs warn: Reduced humanitarian access impedes response to rising cases of COVID-19 and the harsh effects of winter in Northern Syria amid shortages of humanitarian aid",
-    "Date": "2021-01-28T12:00:00+00:00",
-    "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/1/16/2014_West_Africa_Ebola_Epidemic_-_New_Cases_per_Week.svg",
-    "attributes": {
-      "DisasterType": [
-        {
-          "name": "Epidemic"
-        }
-      ],
-      "PrimaryCountry": "Syria",
-      "OtherSources": [
-        {
-          "shortname": "GOAL"
-        },
-        {
-          "shortname": "Islamic Relief"
-        },
-        {
-          "shortname": "NRC"
-        },
-        {
-          "shortname": "CARE"
-        },
-        {
-          "shortname": "Christian Aid"
-        },
-        {
-          "shortname": "Mercy Corps"
-        },
-        {
-          "shortname": "HI"
-        },
-        {
-          "shortname": "Oxfam"
-        },
-        {
-          "shortname": "LIFE"
-        },
-        {
-          "shortname": "M-USA"
-        },
-        {
-          "shortname": "IRC"
-        },
-        {
-          "shortname": "Save the Children"
-        },
-        {
-          "shortname": "World Vision"
-        },
-        {
-          "shortname": "Global Communities"
-        },
-        {
-          "shortname": "SAMS"
-        },
-        {
-          "shortname": "MedGlobal"
-        }
-      ],
-      "Themes": [
-        {
-          "name": "Health"
-        },
-        {
-          "name": "Protection and Human Rights"
-        }
+        "Food and Nutrition",
+        "Health",
+        "Protection and Human Rights",
+        "Recovery and Reconstruction"
       ]
     }
   },
@@ -381,68 +48,116 @@
     "Image": "https://upload.wikimedia.org/wikipedia/commons/3/36/Urban_flood_cropped.jpg",
     "attributes": {
       "DisasterType": [
-        {
-          "name": "Flood"
-        },
-        {
-          "name": "Severe Local Storm"
-        }
+        "Flood",
+        "Severe Local Storm"
       ],
       "PrimaryCountry": "Syria",
       "OtherSources": [
-        {
-          "shortname": "Islamic Relief"
-        },
-        {
-          "shortname": "NRC"
-        },
-        {
-          "shortname": "CARE"
-        },
-        {
-          "shortname": "Christian Aid"
-        },
-        {
-          "shortname": "Mercy Corps"
-        },
-        {
-          "shortname": "HI"
-        },
-        {
-          "shortname": "Oxfam"
-        },
-        {
-          "shortname": "IRC"
-        },
-        {
-          "shortname": "Save the Children"
-        },
-        {
-          "shortname": "World Vision"
-        },
-        {
-          "shortname": "SDIO"
-        },
-        {
-          "shortname": "SAMS"
-        },
-        {
-          "shortname": "MedGlobal"
-        }
+        "Islamic Relief",
+        "NRC",
+        "CARE",
+        "Christian Aid",
+        "Mercy Corps",
+        "HI",
+        "Oxfam",
+        "IRC",
+        "Save the Children",
+        "World Vision",
+        "SDIO",
+        "SAMS",
+        "MedGlobal"
       ],
       "Themes": [
-        {
-          "name": "Food and Nutrition"
-        },
-        {
-          "name": "Health"
-        },
-        {
-          "name": "Protection and Human Rights"
-        },
-        {
-          "name": "Shelter and Non-Food Items"
-        }
+        "Food and Nutrition",
+        "Health",
+        "Protection and Human Rights",
+        "Shelter and Non-Food Items"
+      ]
+    }
+  },
+  {
+    "Title": "Joint NGO Statement Syria Cross-Border",
+    "Date": "2022-06-29T18:54:46+00:00",
+    "Source": "",
+    "Image": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Lac_de_l%27Entonnoir_-_img_49473.jpg",
+    "attributes": {
+      "DisasterType": [
+        "Drought",
+        "Epidemic"
+      ],
+      "PrimaryCountry": "Syria",
+      "OtherSources": [
+        "CARE",
+        "Christian Aid",
+        "Concern",
+        "Global Communities",
+        "GOAL",
+        "HI",
+        "InterAction",
+        "IRC",
+        "Islamic Relief",
+        "MedGlobal",
+        "Mercy Corps",
+        "NRC",
+        "Oxfam",
+        "PIN",
+        "RI",
+        "Save the Children",
+        "Syria Relief",
+        "SAMS",
+        "World Vision"
+      ],
+      "Themes": [
+        "Food and Nutrition",
+        "Health",
+        "Shelter and Non-Food Items",
+        "Water Sanitation Hygiene"
+      ]
+    }
+  },
+  {
+    "Title": "Open Letter to the UN Security Council (June 22nd, 2023)",
+    "Date": "2023-06-22T19:36:57+00:00",
+    "Source": "",
+    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "attributes": {
+      "DisasterType": [
+        "Earthquake"
+      ],
+      "PrimaryCountry": "Syria",
+      "OtherSources": [
+        "Ataa Relief",
+        "CARE",
+        "DCA",
+        "Global Communities",
+        "Hand in Hand for Aid and Development",
+        "HI",
+        "HelpAge",
+        "IHSAN",
+        "IRC",
+        "Islamic Relief",
+        "Malteser",
+        "MedGlobal",
+        "Mercy Corps",
+        "M-USA",
+        "NRC",
+        "Oxfam",
+        "PIN",
+        "PAC",
+        "RI",
+        "Save the Children",
+        "SRD",
+        "SAMS",
+        "UOSSM",
+        "Violet Organization",
+        "WHH",
+        "World Vision"
+      ],
+      "Themes": [
+        "Food and Nutrition",
+        "Health",
+        "Protection and Human Rights",
+        "Shelter and Non-Food Items"
       ]
     }
   }

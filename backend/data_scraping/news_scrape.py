@@ -46,23 +46,38 @@ if response.status_code == 200:
         date = fields.get("date").get("created")
         primary_country = fields.get("primary_country").get("shortname")
         image = fields.get("headline")
-        disaster = fields.get("disaster_type")
-        sources = fields.get("source")
-        themes = fields.get("theme")
+        disaster_list = fields.get("disaster_type")
+        disaster = []
+      
+
+
+        sources_list = fields.get("source")
+        source = []
+        for i in sources_list:
+          source.append(i.get("shortname"))
+
+        theme_list = fields.get("theme")
+        theme = []
+        for i in theme_list:
+          theme.append(i.get("name"))
 
         instance_template["Title"]=title
         instance_template["Date"]=date
         instance_template["attributes"]["PrimaryCountry"]=primary_country
-        instance_template["attributes"]["DisasterType"]= disaster
+        instance_template["attributes"]["DisasterType"]=  disaster_list
         instance_template["Image"]= image
-        instance_template["attributes"]["OtherSources"]= sources
-        instance_template["attributes"]["Themes"]= themes
+        instance_template["attributes"]["OtherSources"]= source
+        instance_template["attributes"]["Themes"]= theme
 
         #news_data.append(instance_template)
         
         if instance_template["attributes"]["DisasterType"] is not None:
+          for i in disaster_list:
+            disaster.append(i.get("name"))
+          instance_template["attributes"]["DisasterType"]= disaster
+
           news_data.append(instance_template)
-          wiki_disaster =  disaster[0].get("name")
+          wiki_disaster =  disaster[0]
           # Scrape for Wikipedia for flag image
           wiki_params = {
             "action": "query",
