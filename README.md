@@ -4,7 +4,7 @@
 https://www.syrianrefugeecrisis.me/
 
 ## Names EIDs, and Gitlab IDs of the team members:
-* Shadow Sincross ()
+* Shadow Sincross (sas9375)
     * Gitlab ID: @shadowanneruby
 * Matthew Albert (mma3785)
     * Gitlab ID: @matthew.albert
@@ -12,7 +12,7 @@ https://www.syrianrefugeecrisis.me/
     * Gitlab ID: @pranikolli
 * Anish Madgula (am98375)
     * Gitlab ID: @animadgula
-* Matthew Castilleja ()
+* Matthew Castilleja (mc72635)
     * Gitlab ID: @mcastilleja
 
 ## Project Leader:
