@@ -1,6 +1,6 @@
 import React from "react";
 import GenericInstancePage from "./GenericInstancePage";
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 function NewsEventsInstancePage() {
     const params = useParams();
@@ -8,7 +8,7 @@ function NewsEventsInstancePage() {
         <div>
             NewsEvents Instance Page for {params.id}
             <GenericInstancePage
-                instance={params.id}/>
+                instance="name"/>
         </div>
         
     );

@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import {LinkContainer} from 'react-router-bootstrap';
-import { Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, BrowserRouter, Link } from 'react-router-dom';
 
 
 
