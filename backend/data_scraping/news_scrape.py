@@ -18,7 +18,7 @@ json_file_path = "./models_data/news_db.json"
 # Iterate through each endpoint to scrape necessary attributes
 #got rid of params
     # Make request to UNHCR API
-response = requests.get(f"https://api.reliefweb.int/v1/reports?appname=apidoc&query[value]=Syrian Refugee&query[fields][]=source&fields[include][]=source.shortname&fields[include][]=disaster_type.name&fields[include][]=primary_country.shortname&fields[include][]=date.created&fields[include][]=image&fields[include][]=headline.title")
+response = requests.get(f"https://api.reliefweb.int/v1/reports?appname=apidoc&query[value]=Syrian Refugee&query[fields][]=source&fields[include][]=source.shortname&fields[include][]=disaster_type.name&fields[include][]=primary_country.shortname&fields[include][]=date.created&fields[include][]=image&fields[include][]=headline.title&fields[include][]=theme.name")
 if response.status_code == 200:
       # Success, store data in json template
       response_data = response.json()
@@ -33,28 +33,56 @@ if response.status_code == 200:
         instance_template = {
         "Title" : "", "Date": "", "Source":"", "Image":"",
         "attributes" : {
-        "Disaster type" : "",
-        "Primary Country" : "",
-        "Other Sources": {},
-    }
+        "DisasterType" : [],
+        "PrimaryCountry" : "",
+        "OtherSources": {},
+        "Themes":[]
         }
+        }
+
         # Declare template for storing data in json format
         fields = report["fields"]
         title = fields.get("title")
         date = fields.get("date").get("created")
         primary_country = fields.get("primary_country").get("shortname")
         image = fields.get("headline")
+        disaster = fields.get("disaster_type")
+        sources = fields.get("source")
+        themes = fields.get("theme")
 
-        if image is not None:
-          image = fields.get("headline").get("image")
-          if image is not None:
-            image = fields.get("headline").get("image").get("url")
-  
         instance_template["Title"]=title
         instance_template["Date"]=date
-        instance_template["attributes"]["Primary Country"]=primary_country
-    
-        news_data.append(instance_template)
+        instance_template["attributes"]["PrimaryCountry"]=primary_country
+        instance_template["attributes"]["DisasterType"]= disaster
+        instance_template["Image"]= image
+        instance_template["attributes"]["OtherSources"]= sources
+        instance_template["attributes"]["Themes"]= themes
+
+        #news_data.append(instance_template)
+        
+        if instance_template["attributes"]["DisasterType"] is not None:
+          news_data.append(instance_template)
+          wiki_disaster =  disaster[0].get("name")
+          # Scrape for Wikipedia for flag image
+          wiki_params = {
+            "action": "query",
+            "format": "json",
+            "titles": f"{wiki_disaster}",
+            "prop": "pageimages",
+            "piprop": "original"
+          }
+          response = requests.get("https://en.wikipedia.org/w/api.php", params=wiki_params)
+          if response.status_code == 200:
+            # Extact URL from JSON response and store
+            response_data = response.json()['query']['pages']
+            flag_url = list(response_data.values())[0]['original']['source']
+            instance_template["Image"] = flag_url
+          else:
+            # Error, print status code
+            print(f"Request Error: {response.status_code}")
+            print(f"Request URL: {response.url}")
+            print(f"Request Failure Reason: {response.request.reason}")
+            exit(1)
 else:
       # Error, print status code
       print(f"Request Error: {response.status_code}")

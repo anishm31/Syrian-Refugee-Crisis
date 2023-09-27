@@ -6,6 +6,7 @@
 import requests
 import json
 
+
 # Set specific query fields for scrape
 
 syria_iso = "SYR"                              # ISO code for Syria (country of origin)
