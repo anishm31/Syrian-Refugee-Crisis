@@ -19,8 +19,9 @@ Our project serves to assist Syrian refugees with resources as well as educate t
 
 ## URLs of at least three data sources that you will programmatically scrape using a RESTful API 
 1. https://www.unhcr.org/refugee-statistics/download/
-1. https://en.wikipedia.org/wiki/Refugees_of_the_Syrian_civil_war#Financial_aid
+1. https://www.wikidata.org/wiki/Wikidata:REST_API
 1. https://reliefweb.int/updates?view=headlines&search=syrian+refugee
+1. https://en.wikipedia.org/wiki/Refugees_of_the_Syrian_civil_war#Financial_aid
 
 ## Three Models:
 1. Relevant Charities/Organizations
@@ -37,29 +38,28 @@ Our project serves to assist Syrian refugees with resources as well as educate t
     * Year founded
     * Organization abbreviation (if applicable)
     * Parent Organization (if applicable)
-    * Country of origin
+    * Location of headquarters
     * Purpose
     * Link to website
     * Media about charity/organization (maybe an image and a video about the organization’s work)
-    * Statistics on aid given to help Syrian refugees
 1. Countries Attributes
     * Map of country displaying location of country in relation to Syria
     * Image of the country’s flag
-    * Number of asylum applications (where the country of origin of the applicant is the Syrian Arab Republic)
     * Number of asylum decisions
     * Includes statistics on:
-    * Year of asylum decisions
-    * Number classified as “Recognized”
-    * Number classified as “Complementary Protection”
-    * Number of applications rejected
-    * Number of applications closed for other reasons
+        * Year of asylum decisions
+        * Number classified as “Recognized”
+        * Number classified as “Complementary Protection”
+        * Number of applications rejected
+        * Number of applications closed for other reasons
 1. News/Event Attributes
     * Name of event
     * Date of event
     * Location of event
+    * Disaster type
+    * Theme of event
     * Map displaying location
     * Description of event
-    * Affected people
     * Source
 
 ### Instances of each model must connect to instances of at least two other models
@@ -70,8 +70,8 @@ Our project serves to assist Syrian refugees with resources as well as educate t
     * Charity/Organization Logos 
     * Pictures/Videos
 1. Country 
-    * Picture of Country/region 
-    * Graphs/ statistics 
+    * Picture of Country's Flag
+    * Map of Country
 1. News/Events 
     * Pictures
     * Map/Location image
