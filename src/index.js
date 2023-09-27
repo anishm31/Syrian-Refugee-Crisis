@@ -12,6 +12,8 @@ import CountryModelPage from './Components/CountryModelPage';
 import CharityModelPage from './Components/CharityModelPage';
 import NewsEventsModelPage from './Components/NewsEventsModelPage';
 import CountryInstancePage from './Components/CountryInstancePage';
+import CharityInstancePage from './Components/CharityInstancePage';
+import NewsEventsInstancePage from './Components/NewsEventsInstancePage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,9 +25,11 @@ root.render(
         <Route exact path = "/" element ={<App />}/>
         <Route path = "/about" element ={<About />}/>
         <Route path = "/countries" element = {<CountryModelPage />}/>
-        <Route path = "/countries/:id" element = {<CountryInstancePage />}/>
         <Route path = "/charities" element = {<CharityModelPage />}/>
         <Route path = "/news-and-events" element = {<NewsEventsModelPage />}/>
+        <Route path = "/countries/:id" element = {<CountryInstancePage />}/>
+        <Route path = "/charities/:id" element = {<CharityInstancePage />}/>
+        <Route path = "/news-and-events/:id" element = {<NewsEventsInstancePage />}/>
     </Routes>
 
   </Router>

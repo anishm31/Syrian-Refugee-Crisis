@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, ListGroup, Button } from "react-bootstrap";
+import { BrowserRouter as Router, Routes, Route, BrowserRouter, Link } from 'react-router-dom';
 
 function CharityCard(props) {
   const date_est = new Date(props.instance.attributes.established);
@@ -23,7 +24,13 @@ function CharityCard(props) {
       <ListGroup.Item>Notable Award: {props.instance.attributes.awards_received[0]}</ListGroup.Item>
     </ListGroup>
     <Card.Body>
-      <Button variant="outline-success">More Info</Button>{" "}
+      <Button variant="outline-success">
+        <Link 
+          style={{ color: "black", textDecoration: "inherit"}}
+          to={"/charities/" + props.instance.name}>
+        More Info
+        </Link>
+      </Button>
     </Card.Body>
   </Card>
   );
