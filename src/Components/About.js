@@ -80,7 +80,12 @@ export default function About() {
         <p>
           Our project serves to assist Syrian refugees with resources as well as educate the public on the 
           Syrian refugee crisis. We will be providing charities and organizations across many countries which 
-          can assist Syrian refugees with housing, medical care, education, etc.
+          can assist Syrian refugees with housing, medical care, education, etc. This site can be used as a great 
+          resource to help increase Syrian refugee outreach across the globe.
+
+          To build this website so far, we have utilized JavaScript (React framework), CSS (Bootstrap), HTML, 
+          and AWS. We have also utilized public APIs from various sites, including UNHCR, Wikipedia, and Relief Web.
+          In the future, we will have a Python (Flask framework) backend with a MySQL database.
         </p>
       </Container>
 

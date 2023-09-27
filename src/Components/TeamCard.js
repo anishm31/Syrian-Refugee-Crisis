@@ -15,6 +15,9 @@ function TeamCard(props) {
         <h6>
           <Card.Text>{props.role}</Card.Text>
         </h6>
+        <h6>
+            <Card.Text>{props.bio}</Card.Text>
+        </h6>
       </Card.Body>
       <Card.Footer>
         <small className="text-muted">Commits: </small>
