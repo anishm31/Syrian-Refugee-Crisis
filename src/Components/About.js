@@ -83,9 +83,9 @@ export default function About() {
           can assist Syrian refugees with housing, medical care, education, etc.
         </p>
       </Container>
-      {/* Team Cards */}
+
       <Container className="container text-center mt-5 mb-4">
-        <h1>Team Members</h1>
+        <h1>Meet the Team</h1>
       </Container>
       <Container className="container text-start mt-5 mb-4">
         <Row className="row row-cols-md-5 g-4">
@@ -98,9 +98,9 @@ export default function About() {
           })}
         </Row>
       </Container>
-      {/* Repository Data */}
+
       <Container className="container text-center mt-5 mb-4">
-        <h2>Total GitLab Statistics</h2>
+        <h2>Team GitLab Statistics</h2>
       </Container>
       <Container className="container text-center mt-5 mb-4">
         <Card>

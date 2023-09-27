@@ -1,10 +1,9 @@
-// import Petar from "./images/petar.jpg";
-// import Tanya from "./images/tanya.png";
-// import Audrey from "./images/audrey.jpg";
-// import Noah from "./images/noah.jpg";
-// import Pawan from "./images/pawan.png";
-import Anish from "./images/anish.png";
-import { Placeholder } from "react-bootstrap";
+// import Anish from "./images/anish.png";
+import Anish from "./images/anish.jpeg";
+import MatthewC from './images/matthew_c.jpg';
+import MatthewA from './images/matthew_a.jpeg';
+import Pranitha from './images/pranitha.jpeg';
+import Shadow from './images/shadow.png';
 
 const TeamInfo = [
   {
@@ -12,43 +11,43 @@ const TeamInfo = [
     name: "Anish Madgula",
     user: "animadgula",
     user_id: "15725067",
-    role: "Developer",
+    role: "Full Stack Developer",
     commits: 0,
     issues: 0,
   },
   {
-    image: Placeholder,
-    name: "Anish Madgula",
-    user: "animadgula",
-    user_id: "15725067",
-    role: "Developer",
+    image: MatthewC,
+    name: "Matthew Castilleja",
+    user: "mcastilleja",
+    user_id: "15612468",
+    role: "Full Stack Developer",
     commits: 0,
     issues: 0,
   },
   {
-    image: Placeholder,
-    name: "Anish Madgula",
-    user: "animadgula",
-    user_id: "15725067",
-    role: "Developer",
+    image: MatthewA,
+    name: "Matthew Albert",
+    user: "matthew.albert",
+    user_id: "15659252",
+    role: "Full Stack Developer",
     commits: 0,
     issues: 0,
   },
   {
-    image: Placeholder,
-    name: "Anish Madgula",
-    user: "animadgula",
-    user_id: "15725067",
-    role: "Developer",
+    image: Pranitha,
+    name: "Pranitha Kolli",
+    user: "pranikolli",
+    user_id: "15587644",
+    role: "Full Stack Developer",
     commits: 0,
     issues: 0,
   },
   {
-    image: Placeholder,
-    name: "Anish Madgula",
-    user: "animadgula",
-    user_id: "15725067",
-    role: "Developer",
+    image: Shadow,
+    name: "Shadow Sincross",
+    user: "shadowanneruby",
+    user_id: "15677494",
+    role: "Full Stack Developer",
     commits: 0,
     issues: 0,
   },
