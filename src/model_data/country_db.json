@@ -4,6 +4,7 @@
     "country_iso3": "DEU",
     "id": "DEU",
     "flag_url": "https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg",
+    "map_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/EU-Germany.svg",
     "attributes": {
       "num_refugees": 522575,
       "num_asylum_decisions": 1691,
@@ -19,6 +20,7 @@
     "country_iso3": "TUR",
     "id": "TUR",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg",
+    "map_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Turkey_%28orthographic_projection%29.svg",
     "attributes": {
       "num_refugees": 3535898,
       "num_asylum_decisions": 56,
@@ -34,6 +36,7 @@
     "country_iso3": "JOR",
     "id": "JOR",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Flag_of_Jordan.svg",
+    "map_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/LocationJordan.svg",
     "attributes": {
       "num_refugees": 660892,
       "num_asylum_decisions": 7413,

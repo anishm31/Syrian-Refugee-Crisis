@@ -19,6 +19,75 @@ year_to = 2023                                 # Fetch results ending at this ye
 country_data = []
 json_file_path = "./models_data/country_db.json"
 
+
+# Returns page ID of the Wikidata page from a string name
+def get_page_id(name):
+  params = {
+    "action": "wbsearchentities",
+    "format": "json",
+    "search": name,
+    "language": "en",
+  }
+  ret = ""
+  try:
+    response = requests.get("https://www.wikidata.org/w/api.php", params=params)
+    ret = response.json()["search"][0]["id"]
+  except:
+    print("Request to WikiData failed")
+    ret = ""
+  return ret
+  
+# Return the json object of data relating to the Wikidata page
+def get_page_data(page_id):
+  params = {
+    "action": "wbgetentities",
+    "ids": f"{page_id}",
+    "format": "json",
+    "languages": "en",
+  }
+  try:
+    response = requests.get("https://www.wikidata.org/w/api.php", params=params)
+  except:
+    print("Request to WikiData failed")
+  return response.json()
+
+# Return the URL of an image from a file name
+def get_img_url(file_name):
+  params = {
+    "action": "query",
+    "titles": f"File:{file_name.replace(' ', '_')}",
+    "prop": "imageinfo",
+    "iiprop": "url",
+    "format": "json",
+  }
+  ret = ""
+  try:
+    # Search for image using Wikipedia image API
+    response = requests.get("https://en.wikipedia.org/w/api.php", params=params)
+    ret = response.json()["query"]["pages"]["-1"]["imageinfo"][0]["url"]
+  except:
+    print("Request to WikiData failed")
+    ret = ""
+  return ret
+  
+# Retrieves a map image of a specified country
+def get_map(country, instance_data):
+  # Get page ID of Wikidata page for country
+  page_id = get_page_id(country)
+  # Get page data from page ID
+  page_data = get_page_data(page_id)
+  try:
+    # Property of ID of country map
+    property = "P242"
+    # Get image file name from page data
+    file_name = page_data["entities"][page_id]["claims"][property][0]["mainsnak"]["datavalue"]["value"]
+    # Get image URL from file name
+    img_url = get_img_url(file_name)
+    # Store image URL in instance data
+    instance_data["map_url"] = img_url
+  except:
+    pass
+
 # Iterate through each country of asylum to scrape 3 instances
 for country in countries:
   # Declare template for storing data in json format
@@ -27,6 +96,7 @@ for country in countries:
     "country_iso3" : country,
     "id" : country,    # Unique identifier for instance that will be used by frontend
     "flag_url" : "",
+    "map_url" : "",
     "attributes" : {
       "num_refugees" : 0,
       "num_asylum_decisions" : 0,
@@ -96,6 +166,8 @@ for country in countries:
     print(f"Request Failure Reason: {response.request.reason}")
     exit(1)
   print(f'Successfully scraped data for {instance_template["country"]}')
+  # Retrieve map for country
+  get_map(instance_template["country"], instance_template)
   # Append instance to country data list
   country_data.append(instance_template)
   

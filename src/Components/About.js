@@ -6,6 +6,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import TeamCard from "./TeamCard.js";
+import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 
 export default function About() {
   const [totalCommits, setTotalCommits] = useState([]);
@@ -115,7 +117,14 @@ export default function About() {
           </Card.Body>
         </Card>
       </Container>
-
+      <Container className="container text-center mt-5 mb-4">
+        <Link to="https://documenter.getpostman.com/view/30070229/2s9YJZ3jRh">
+          <Button size="md"> 
+            API Documentation
+          </Button>
+        </Link>
+      </Container>
+      <br></br>
     </>
   );
 }
