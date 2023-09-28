@@ -18,7 +18,7 @@ json_file_path = "./models_data/news_db.json"
 # Iterate through each endpoint to scrape necessary attributes
 #got rid of params
     # Make request to UNHCR API
-response = requests.get(f"https://api.reliefweb.int/v1/reports?appname=apidoc&query[value]=Syrian Refugee&query[fields][]=source&fields[include][]=source.shortname&fields[include][]=disaster_type.name&fields[include][]=primary_country.shortname&fields[include][]=date.created&fields[include][]=image&fields[include][]=headline.title&fields[include][]=theme.name")
+response = requests.get(f"https://api.reliefweb.int/v1/reports?appname=apidoc&query[value]=Syrian Refugee&query[fields][]=source&fields[include][]=source.shortname&fields[include][]=disaster_type.name&fields[include][]=primary_country.shortname&fields[include][]=date.created&fields[include][]=image&fields[include][]=headline.title&fields[include][]=theme.name&fields[include][]=origin")
 if response.status_code == 200:
       # Success, store data in json template
       response_data = response.json()
@@ -36,7 +36,8 @@ if response.status_code == 200:
         "DisasterType" : [],
         "PrimaryCountry" : "",
         "OtherSources": {},
-        "Themes":[]
+        "Themes":[],
+        "OrgLink":"",
         }
         }
 
@@ -48,13 +49,14 @@ if response.status_code == 200:
         image = fields.get("headline")
         disaster_list = fields.get("disaster_type")
         disaster = []
+        link = fields.get("origin")
       
 
 
         sources_list = fields.get("source")
         source = []
         for i in sources_list:
-          source.append(i.get("shortname"))
+          source.append(i.get("shortname")+" ")
 
         theme_list = fields.get("theme")
         theme = []
@@ -68,6 +70,8 @@ if response.status_code == 200:
         instance_template["Image"]= image
         instance_template["attributes"]["OtherSources"]= source
         instance_template["attributes"]["Themes"]= theme
+        instance_template["attributes"]["OrgLink"]= link
+        
 
         #news_data.append(instance_template)
         
