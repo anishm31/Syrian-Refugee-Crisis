@@ -19,7 +19,7 @@ https://www.syrianrefugeecrisis.me/
 Matthew Albert
 
 ## Git SHA:
-8387f27cdc3b2f660e7d4d99995cb89b5c13e3d6
+2f07628b15abc62238089bddd41918f4c6dc6830
 
 ## Gitlab Pipeline:
 https://gitlab.com/mcastilleja/syrian_refugee_crisis/-/pipelines
