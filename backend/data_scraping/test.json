@@ -1,0 +1,428 @@
+[
+  {
+    "mainsnak": {
+      "snaktype": "value",
+      "property": "P41",
+      "hash": "7813b1839a28a1b7a1ed16acb66f1e19b1e79cbe",
+      "datavalue": { "value": "Flag of Germany.svg", "type": "string" },
+      "datatype": "commonsMedia"
+    },
+    "type": "statement",
+    "qualifiers": {
+      "P580": [
+        {
+          "snaktype": "value",
+          "property": "P580",
+          "hash": "2ed93c5224a3e784bd15d1eb7c47b4e8ad916a12",
+          "datavalue": {
+            "value": {
+              "time": "+1949-05-23T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            },
+            "type": "time"
+          },
+          "datatype": "time"
+        }
+      ]
+    },
+    "qualifiers-order": ["P580"],
+    "id": "q183$BB7D2224-39E9-429E-8CD5-42B634149648",
+    "rank": "preferred",
+    "references": [
+      {
+        "hash": "86592760dd7f42b914d140fb9cd7153d62bfa3a0",
+        "snaks": {
+          "P248": [
+            {
+              "snaktype": "value",
+              "property": "P248",
+              "hash": "5efd728bfb50cbe1a84eff2288034ec877f50418",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 56045,
+                  "id": "Q56045"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            }
+          ],
+          "P958": [
+            {
+              "snaktype": "value",
+              "property": "P958",
+              "hash": "9305ffbfe01d9a17dc21bde38b05a68382dc182b",
+              "datavalue": { "value": "Art. 22 (2)", "type": "string" },
+              "datatype": "string"
+            }
+          ],
+          "P1683": [
+            {
+              "snaktype": "value",
+              "property": "P1683",
+              "hash": "2574c657490196721b85a8517e07a701374bdce1",
+              "datavalue": {
+                "value": {
+                  "text": "Die Bundesflagge ist schwarz-rot-gold.",
+                  "language": "de"
+                },
+                "type": "monolingualtext"
+              },
+              "datatype": "monolingualtext"
+            }
+          ],
+          "P953": [
+            {
+              "snaktype": "value",
+              "property": "P953",
+              "hash": "04f23a3f6df5bc96d9d0620ada21e04929477871",
+              "datavalue": {
+                "value": "https://www.gesetze-im-internet.de/gg/art_22.html",
+                "type": "string"
+              },
+              "datatype": "url"
+            }
+          ]
+        },
+        "snaks-order": ["P248", "P958", "P1683", "P953"]
+      }
+    ]
+  },
+  {
+    "mainsnak": {
+      "snaktype": "value",
+      "property": "P41",
+      "hash": "2ad6cba93af9db96e62d1bdf5550646f9a01ed70",
+      "datavalue": {
+        "value": "Flag of Germany (1935–1945).svg",
+        "type": "string"
+      },
+      "datatype": "commonsMedia"
+    },
+    "type": "statement",
+    "qualifiers": {
+      "P580": [
+        {
+          "snaktype": "value",
+          "property": "P580",
+          "hash": "8b61c51659ba74847543dc26d951df4332918630",
+          "datavalue": {
+            "value": {
+              "time": "+1935-09-16T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            },
+            "type": "time"
+          },
+          "datatype": "time"
+        }
+      ],
+      "P582": [
+        {
+          "snaktype": "value",
+          "property": "P582",
+          "hash": "e97a0d9633f8f5b16c461743a9657548c79b8381",
+          "datavalue": {
+            "value": {
+              "time": "+1945-05-08T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            },
+            "type": "time"
+          },
+          "datatype": "time"
+        }
+      ]
+    },
+    "qualifiers-order": ["P580", "P582"],
+    "id": "Q183$8a905c84-48e6-56a3-07a0-91b8f84c309f",
+    "rank": "normal"
+  },
+  {
+    "mainsnak": {
+      "snaktype": "value",
+      "property": "P41",
+      "hash": "eedfbbcf14171e3b4d563f34b81bb2b1fa663687",
+      "datavalue": {
+        "value": "Flag of Germany (1867–1918).svg",
+        "type": "string"
+      },
+      "datatype": "commonsMedia"
+    },
+    "type": "statement",
+    "qualifiers": {
+      "P580": [
+        {
+          "snaktype": "value",
+          "property": "P580",
+          "hash": "0c4c62ad5d32faa967baa33fc5f526c57f9a7af7",
+          "datavalue": {
+            "value": {
+              "time": "+1933-03-13T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            },
+            "type": "time"
+          },
+          "datatype": "time"
+        }
+      ],
+      "P582": [
+        {
+          "snaktype": "value",
+          "property": "P582",
+          "hash": "6af87e7838df6efa536c06110cc9c36f948c7281",
+          "datavalue": {
+            "value": {
+              "time": "+1935-09-15T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            },
+            "type": "time"
+          },
+          "datatype": "time"
+        }
+      ]
+    },
+    "qualifiers-order": ["P580", "P582"],
+    "id": "Q183$7cfeae6f-4e10-4d82-c17b-58a17e69bd75",
+    "rank": "normal"
+  },
+  {
+    "mainsnak": {
+      "snaktype": "value",
+      "property": "P41",
+      "hash": "a76208e6393f22030637b99c0dce65f558d47b14",
+      "datavalue": {
+        "value": "Flag of Germany (3-2 aspect ratio).svg",
+        "type": "string"
+      },
+      "datatype": "commonsMedia"
+    },
+    "type": "statement",
+    "qualifiers": {
+      "P580": [
+        {
+          "snaktype": "value",
+          "property": "P580",
+          "hash": "ada7602ab94b8c2af0346ef29e198a3607cdcb65",
+          "datavalue": {
+            "value": {
+              "time": "+1919-04-11T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            },
+            "type": "time"
+          },
+          "datatype": "time"
+        }
+      ],
+      "P582": [
+        {
+          "snaktype": "value",
+          "property": "P582",
+          "hash": "8e69439e2d58ccb0a5913c72b26299463adc138a",
+          "datavalue": {
+            "value": {
+              "time": "+1933-03-12T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            },
+            "type": "time"
+          },
+          "datatype": "time"
+        }
+      ]
+    },
+    "qualifiers-order": ["P580", "P582"],
+    "id": "Q183$7cbb4038-46a5-dcbc-8cea-d680e9c4e5f4",
+    "rank": "normal"
+  },
+  {
+    "mainsnak": {
+      "snaktype": "value",
+      "property": "P41",
+      "hash": "eedfbbcf14171e3b4d563f34b81bb2b1fa663687",
+      "datavalue": {
+        "value": "Flag of Germany (1867–1918).svg",
+        "type": "string"
+      },
+      "datatype": "commonsMedia"
+    },
+    "type": "statement",
+    "qualifiers": {
+      "P580": [
+        {
+          "snaktype": "value",
+          "property": "P580",
+          "hash": "6a445c1c5932b2924b847b0e38ed245b5d03088d",
+          "datavalue": {
+            "value": {
+              "time": "+1867-07-01T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            },
+            "type": "time"
+          },
+          "datatype": "time"
+        }
+      ],
+      "P582": [
+        {
+          "snaktype": "value",
+          "property": "P582",
+          "hash": "93ac21226f54574fc2f9f074273226acf3b0705e",
+          "datavalue": {
+            "value": {
+              "time": "+1918-00-00T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 9,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            },
+            "type": "time"
+          },
+          "datatype": "time"
+        }
+      ]
+    },
+    "qualifiers-order": ["P580", "P582"],
+    "id": "Q183$be0682e0-4c12-c93f-f7e2-7151939e6517",
+    "rank": "normal"
+  },
+  {
+    "mainsnak": {
+      "snaktype": "novalue",
+      "property": "P41",
+      "hash": "eb542b98dd267bebc7161e7d1123d02b7ad7bfa8",
+      "datatype": "commonsMedia"
+    },
+    "type": "statement",
+    "qualifiers": {
+      "P580": [
+        {
+          "snaktype": "value",
+          "property": "P580",
+          "hash": "075140d0d53fba63fd2602a0bd83ffd2b0d00401",
+          "datavalue": {
+            "value": {
+              "time": "+1945-05-23T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            },
+            "type": "time"
+          },
+          "datatype": "time"
+        }
+      ],
+      "P582": [
+        {
+          "snaktype": "value",
+          "property": "P582",
+          "hash": "f12c4bd330e3d7844483eb77ad3977825524c505",
+          "datavalue": {
+            "value": {
+              "time": "+1949-05-23T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            },
+            "type": "time"
+          },
+          "datatype": "time"
+        }
+      ]
+    },
+    "qualifiers-order": ["P580", "P582"],
+    "id": "Q183$56212969-4095-ee83-6ece-1f3f632ea3d9",
+    "rank": "normal"
+  },
+  {
+    "mainsnak": {
+      "snaktype": "value",
+      "property": "P41",
+      "hash": "a76208e6393f22030637b99c0dce65f558d47b14",
+      "datavalue": {
+        "value": "Flag of Germany (3-2 aspect ratio).svg",
+        "type": "string"
+      },
+      "datatype": "commonsMedia"
+    },
+    "type": "statement",
+    "qualifiers": {
+      "P580": [
+        {
+          "snaktype": "value",
+          "property": "P580",
+          "hash": "d1d24f895bd900ae28177dcb6931ca5c80dd01cc",
+          "datavalue": {
+            "value": {
+              "time": "+1848-03-09T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            },
+            "type": "time"
+          },
+          "datatype": "time"
+        }
+      ],
+      "P582": [
+        {
+          "snaktype": "value",
+          "property": "P582",
+          "hash": "bc39abf9e607ca4a1cc1449488d260ae6b5ad50f",
+          "datavalue": {
+            "value": {
+              "time": "+1966-08-23T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            },
+            "type": "time"
+          },
+          "datatype": "time"
+        }
+      ]
+    },
+    "qualifiers-order": ["P580", "P582"],
+    "id": "Q183$48ed5225-470b-2d46-c61e-a65e85e76869",
+    "rank": "normal"
+  }
+]
