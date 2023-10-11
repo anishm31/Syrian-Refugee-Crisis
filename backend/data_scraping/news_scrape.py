@@ -5,6 +5,11 @@
 
 import requests
 import json
+import os
+from pprint import pprint
+#had to download pip install azure-cognitiveservices-search-imagesearch for this
+from azure.cognitiveservices.search.imagesearch import ImageSearchClient
+from msrest.authentication import CognitiveServicesCredentials
 
 # Set specific query fields for scrape
 
@@ -12,9 +17,9 @@ syria_iso = "SYR"                              # ISO code for Syria (country of 
 endpoints = ["reports"] # API endpoints to scrape
 
 
+#https://api.bing.microsoft.com/v7.0/images/search
 news_data = []
 json_file_path = "./models_data/news_db.json"
-
 # Iterate through each endpoint to scrape necessary attributes
 #got rid of params
     # Make request to UNHCR API
@@ -80,8 +85,10 @@ if response.status_code == 200:
             disaster.append(i.get("name"))
           instance_template["attributes"]["DisasterType"]= disaster
 
+          #only add news/events that have disaster filled out
           news_data.append(instance_template)
           wiki_disaster =  disaster[0]
+
           # Scrape for Wikipedia for flag image
           wiki_params = {
             "action": "query",
@@ -102,6 +109,38 @@ if response.status_code == 200:
             print(f"Request URL: {response.url}")
             print(f"Request Failure Reason: {response.request.reason}")
             exit(1)
+
+          blah = wiki_disaster
+          bing_params = {
+            "q" : blah,
+            "count":1,
+            "offset": 0 
+          }
+
+          bing_api_key = 'f9a65a3fc286459cbb519a7724274fa9'
+
+          headers = {
+            'Ocp-Apim-Subscription-Key': bing_api_key
+          }
+          #curl -H "Ocp-Apim-Subscription-Key: f9a65a3fc286459cbb519a7724274fa9>" https://api.bing.microsoft.com/v7.0/search?q=microsoft+devices
+          #response = requests.get( 'https://api.bing.microsoft.com/v7.0/images/search', headers=headers, params=bing_params)
+          #curl -H "Ocp-Apim-Subscription-Key: f9a65a3fc286459cbb519a7724274fa9" https://api.bing.microsoft.com/v7.0/search?q=microsoft+devices
+          subscriptionKey = "f9a65a3fc286459cbb519a7724274fa9"
+          customConfigId = "17af88cf-4940-47d0-bec4-1aaf3b509c61" 
+          searchTerm = "microsoft" 
+          url = 'https://api.bing.microsoft.com/v7.0/custom/images/search?' + 'q=' + searchTerm + '&' + 'customconfig=' + customConfigId
+          r = requests.get(url, headers={'Ocp-Apim-Subscription-Key': subscriptionKey})
+         #print(r.text)
+
+          # if image_results.value:
+          #   first_image_result = image_results.value[0]
+          #   instance_template["Image"]= first_image_result.thumbnail_url
+          # else:
+          #   print("No image results returned!")
+
+
+
+
 else:
       # Error, print status code
       print(f"Request Error: {response.status_code}")
