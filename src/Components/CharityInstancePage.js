@@ -93,7 +93,7 @@ function CharityInstancePage() {
                     </Col>
                     <Col>
                         <Card>
-                        <Card.Header as="h5">Associated Countries</Card.Header>
+                        <Card.Header as="h5">Associated News/Events</Card.Header>
                         <Card.Body>
                             <Container className="my-3">
                                 <Link
