@@ -22,7 +22,27 @@
         "Balzan Prize"
       ],
       "website": "https://www.unhcr.org"
-    }
+    },
+    "associatedCountries": [
+      {
+        "name": "Turkey",
+        "link": "/countries/Turkey"
+      },
+      {
+        "name": "Jordan",
+        "link": "/countries/Jordan"
+      }
+    ],
+    "associatedNewsEvents": [
+      {
+        "name": "Humanitarian Aid Shortage",
+        "link": "/news-and-events/NGOs%20warn:%20Humanitarian%20Aid%20Shortage%20amid%20Harsh%20Temperatures%20and%20rising%20cases%20of%20COVID-19"
+      },
+      {
+        "name": "Joint NGO Statement",
+        "link": "/news-and-events/Joint%20NGO%20Statement%20Syria%20Cross-Border"
+      }
+    ]
   },
   {
     "name": "UNICEF",
@@ -47,7 +67,27 @@
         "DZI Seal-of-Approval"
       ],
       "website": "https://www.unicef.org/"
-    }
+    },
+    "associatedCountries": [
+      {
+        "name": "Germany",
+        "link": "/countries/Germany"
+      },
+      {
+        "name": "Turkey",
+        "link": "/countries/Turkey"
+      }
+    ],
+    "associatedNewsEvents": [
+      {
+        "name": "Open Letter to UN Security Council",
+        "link": "/news-and-events/Open%20Letter%20to%20the%20UN%20Security%20Council%20(June%2022nd,%202023)"
+      },
+      {
+        "name": "Joint NGO Statement",
+        "link": "/news-and-events/Joint%20NGO%20Statement%20Syria%20Cross-Border"
+      }
+    ]
   },
   {
     "name": "World Food Programme",
@@ -68,6 +108,26 @@
         "Nobel Peace Prize"
       ],
       "website": "https://www.wfp.org/"
-    }
+    },
+    "associatedCountries": [
+      {
+        "name": "Jordan",
+        "link": "/countries/Jordan"
+      },
+      {
+        "name": "Germany",
+        "link": "/countries/Germany"
+      }
+    ],
+    "associatedNewsEvents": [
+      {
+        "name": "Joint NGO Statement",
+        "link": "/news-and-events/Joint%20NGO%20Statement%20Syria%20Cross-Border"
+      },
+      {
+        "name": "Humanitarian Aid Shortage",
+        "link": "/news-and-events/NGOs%20warn:%20Humanitarian%20Aid%20Shortage%20amid%20Harsh%20Temperatures%20and%20rising%20cases%20of%20COVID-19"
+      }
+    ]
   }
 ]

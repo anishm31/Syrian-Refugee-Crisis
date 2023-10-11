@@ -49,90 +49,34 @@ function CharityInstancePage() {
                 <Row>
                     <Col>
                         <Card>
-                        <Card.Header as="h5">Associated Countries</Card.Header>
-                        <Card.Body>
-                            <Container className="my-3">
-                                <Link
-                                    to={`/countries/Turkey`}
-                                >
-                                    <Button 
-                                        variant="primary"
-                                        className="btn w-100"
-                                    >
-                                    Turkey
+                            <Card.Header as="h5">Associated Countries</Card.Header>
+                            <Card.Body>
+                                {charity.associatedCountries && charity.associatedCountries.map((country, index) => (
+                                <Container key={index} className="my-3">
+                                    <Link to={country.link}>
+                                    <Button variant="primary" className="btn w-100">
+                                        {country.name}
                                     </Button>
-                                </Link>
-                            </Container>
-                            <Container className="my-3">
-                                <Link
-                                    to={`/countries/Turkey`}
-                                >
-                                    <Button 
-                                        variant="primary"
-                                        className="btn w-100"
-                                    >
-                                    Turkey
-                                    </Button>
-                                </Link>
-                            </Container>
-                            <Container className="my-3">
-                                <Link
-                                    to={`/countries/Turkey`}
-                                >
-                                    <Button 
-                                        variant="primary"
-                                        className="btn w-100"
-                                    >
-                                    Turkey
-                                    </Button>
-                                </Link>
-                            </Container>
-
-                        </Card.Body>
+                                    </Link>
+                                </Container>
+                                ))}
+                            </Card.Body>
                         </Card>
                     </Col>
                     <Col>
                         <Card>
-                        <Card.Header as="h5">Associated News/Events</Card.Header>
-                        <Card.Body>
-                            <Container className="my-3">
-                                <Link
-                                    to={`/countries/Turkey`}
-                                >
-                                    <Button 
-                                        variant="primary"
-                                        className="btn w-100"
-                                    >
-                                    Turkey
+                            <Card.Header as="h5">Associated News/Events</Card.Header>
+                            <Card.Body>
+                                {charity.associatedNewsEvents && charity.associatedNewsEvents.map((event, index) => (
+                                <Container key={index} className="my-3">
+                                    <Link to={event.link}>
+                                    <Button variant="primary" className="btn w-100">
+                                        {event.name}
                                     </Button>
-                                </Link>
-                            </Container>
-                            <Container className="my-3">
-                                <Link
-                                    to={`/countries/Turkey`}
-                                >
-                                    <Button 
-                                        variant="primary"
-                                        className="btn w-100"
-                                    >
-                                    Turkey
-                                    </Button>
-                                </Link>
-                            </Container>
-                            <Container className="my-3">
-                                <Link
-                                    to={`/countries/Turkey`}
-                                >
-                                    <Button 
-                                        variant="primary"
-                                        className="btn w-100"
-                                    >
-                                    Turkey
-                                    </Button>
-                                </Link>
-                            </Container>
-
-                        </Card.Body>
+                                    </Link>
+                                </Container>
+                                ))}
+                            </Card.Body>
                         </Card>
                     </Col>
                 </Row>

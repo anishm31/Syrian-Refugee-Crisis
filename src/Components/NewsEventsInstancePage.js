@@ -40,7 +40,7 @@ function NewsEventsInstancePage() {
                 <Row>
                     <Col>
                         <Card>
-                        <Card.Header as="h5">Associated Countries</Card.Header>
+                        <Card.Header as="h5">Associated Charities</Card.Header>
                         <Card.Body>
                             <Container className="my-3">
                                 <Link
@@ -84,7 +84,7 @@ function NewsEventsInstancePage() {
                     </Col>
                     <Col>
                         <Card>
-                        <Card.Header as="h5">Associated News/Events</Card.Header>
+                        <Card.Header as="h5">Associated Countries</Card.Header>
                         <Card.Body>
                             <Container className="my-3">
                                 <Link
