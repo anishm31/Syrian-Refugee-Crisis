@@ -34,7 +34,27 @@
         "Shelter and Non-Food Items"
       ],
       "OrgLink": "https://www.care.org/news-and-stories/press-releases/ngos-warn-reduced-humanitarian-access-impedes-response-to-rising-cases-of-covid-19/"
-    }
+    },
+    "associatedCharities": [
+      {
+        "name": "United Nations High Commissioner for Refugees",
+        "link": "/charities/United%20Nations%20High%20Commissioner%20for%20Refugees"
+      },
+      {
+        "name": "World Food Programme",
+        "link": "/charities/World%20Food%20Programme"
+      }
+    ],
+    "associatedCountries": [
+      {
+        "name": "Germany",
+        "link": "/countries/Germany"
+      },
+      {
+        "name": "Turkey",
+        "link": "/countries/Turkey"
+      } 
+    ]
   },
   {
     "Title": "Joint NGO Statement Syria Cross-Border",
@@ -76,7 +96,31 @@
         "Water Sanitation Hygiene"
       ],
       "OrgLink": "https://www.savethechildren.net/news/joint-ngo-statement-syria-cross-border#"
-    }
+    },
+    "associatedCharities": [
+      {
+        "name": "United Nations High Commissioner for Refugees",
+        "link": "/charities/United%20Nations%20High%20Commissioner%20for%20Refugees"
+      },
+      {
+        "name": "UNICEF",
+        "link": "/charities/United%20Nations%20High%20Commissioner%20for%20Refugees"
+      },
+      {
+        "name": "World Food Programme",
+        "link": "/charities/World%20Food%20Programme"
+      }
+    ],
+    "associatedCountries": [
+      {
+        "name": "Germany",
+        "link": "/countries/Germany"
+      },
+      {
+        "name": "Jordan",
+        "link": "/countries/Jordan"
+      } 
+    ]
   },
   {
     "Title": "Open Letter to the UN Security Council (June 22nd, 2023)",
@@ -124,6 +168,18 @@
         "Shelter and Non-Food Items"
       ],
       "OrgLink": null
-    }
+    },
+    "associatedCharities": [
+      {
+        "name": "UNICEF",
+        "link": "/charities/United%20Nations%20High%20Commissioner%20for%20Refugees"
+      }
+    ],
+    "associatedCountries": [
+      {
+        "name": "Germany",
+        "link": "/countries/Germany"
+      }
+    ]
   }
 ]
