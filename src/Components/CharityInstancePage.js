@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function CharityInstancePage() {
     const params = useParams();
     const charity = charityData.find(instance => instance.name === params.id)
-    const date_est = new Date(charity.attributes.established);
+    const date_est = new Date(charity.attributes.established);  
     return (
         <div>
             <Container className='mt-5' style={{width: "85%", textAlign: "center"}}>
