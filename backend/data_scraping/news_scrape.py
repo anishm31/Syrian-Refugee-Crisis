@@ -6,10 +6,16 @@
 import requests
 import json
 import os
+import time
 from pprint import pprint
+import matplotlib
+matplotlib.use('Agg')
 #had to download pip install azure-cognitiveservices-search-imagesearch for this
 from azure.cognitiveservices.search.imagesearch import ImageSearchClient
 from msrest.authentication import CognitiveServicesCredentials
+import matplotlib.pyplot as plt
+from PIL import Image
+from io import BytesIO
 
 # Set specific query fields for scrape
 
@@ -17,13 +23,12 @@ syria_iso = "SYR"                              # ISO code for Syria (country of 
 endpoints = ["reports"] # API endpoints to scrape
 
 
-#https://api.bing.microsoft.com/v7.0/images/search
 news_data = []
 json_file_path = "./models_data/news_db.json"
 # Iterate through each endpoint to scrape necessary attributes
 #got rid of params
     # Make request to UNHCR API
-response = requests.get(f"https://api.reliefweb.int/v1/reports?appname=apidoc&query[value]=Syrian Refugee&query[fields][]=source&fields[include][]=source.shortname&fields[include][]=disaster_type.name&fields[include][]=primary_country.shortname&fields[include][]=date.created&fields[include][]=image&fields[include][]=headline.title&fields[include][]=theme.name&fields[include][]=origin")
+response = requests.get(f"https://api.reliefweb.int/v1/reports?appname=apidoc&query[value]=earthquake&query[fields][]=source&fields[include][]=source.shortname&fields[include][]=disaster_type.name&fields[include][]=primary_country.shortname&fields[include][]=date.created&fields[include][]=image&fields[include][]=headline.title&fields[include][]=theme.name&fields[include][]=url&limit=75")
 if response.status_code == 200:
       # Success, store data in json template
       response_data = response.json()
@@ -54,7 +59,7 @@ if response.status_code == 200:
         image = fields.get("headline")
         disaster_list = fields.get("disaster_type")
         disaster = []
-        link = fields.get("origin")
+        link = fields.get("url")
       
 
 
@@ -65,8 +70,12 @@ if response.status_code == 200:
 
         theme_list = fields.get("theme")
         theme = []
-        for i in theme_list:
-          theme.append(i.get("name"))
+        if theme_list is not None:
+          for i in theme_list:
+            theme.append(i.get("name"))
+          
+          
+
 
         instance_template["Title"]=title
         instance_template["Date"]=date
@@ -74,13 +83,13 @@ if response.status_code == 200:
         instance_template["attributes"]["DisasterType"]=  disaster_list
         instance_template["Image"]= image
         instance_template["attributes"]["OtherSources"]= source
-        instance_template["attributes"]["Themes"]= theme
         instance_template["attributes"]["OrgLink"]= link
+        instance_template["attributes"]["Themes"]= theme
         
 
         #news_data.append(instance_template)
         
-        if instance_template["attributes"]["DisasterType"] is not None:
+        if instance_template["attributes"]["DisasterType"] is not None and instance_template["attributes"]["OrgLink"] is not None: 
           for i in disaster_list:
             disaster.append(i.get("name"))
           instance_template["attributes"]["DisasterType"]= disaster
@@ -117,26 +126,85 @@ if response.status_code == 200:
             "offset": 0 
           }
 
-          bing_api_key = 'f9a65a3fc286459cbb519a7724274fa9'
+          # bing_api_key = 'f9a65a3fc286459cbb519a7724274fa9'
 
-          headers = {
-            'Ocp-Apim-Subscription-Key': bing_api_key
-          }
-          #curl -H "Ocp-Apim-Subscription-Key: f9a65a3fc286459cbb519a7724274fa9>" https://api.bing.microsoft.com/v7.0/search?q=microsoft+devices
-          #response = requests.get( 'https://api.bing.microsoft.com/v7.0/images/search', headers=headers, params=bing_params)
-          #curl -H "Ocp-Apim-Subscription-Key: f9a65a3fc286459cbb519a7724274fa9" https://api.bing.microsoft.com/v7.0/search?q=microsoft+devices
-          subscriptionKey = "f9a65a3fc286459cbb519a7724274fa9"
-          customConfigId = "17af88cf-4940-47d0-bec4-1aaf3b509c61" 
-          searchTerm = "microsoft" 
-          url = 'https://api.bing.microsoft.com/v7.0/custom/images/search?' + 'q=' + searchTerm + '&' + 'customconfig=' + customConfigId
-          r = requests.get(url, headers={'Ocp-Apim-Subscription-Key': subscriptionKey})
-         #print(r.text)
+          # headers = {
+          #   'Ocp-Apim-Subscription-Key': bing_api_key
+          # }
+          
+          # subscriptionKey = "f9a65a3fc286459cbb519a7724274fa9"
+          # customConfigId = "17af88cf-4940-47d0-bec4-1aaf3b509c61" 
+          # searchTerm = "dogs" 
+          # #cannot get this to work  
+          # url = 'https://api.bing.microsoft.com/v7.0//custom/images/search?' + 'q=' + searchTerm + '&' + 'customconfig=' + customConfigId
+          # time.sleep(1)
+          # r = requests.get(url, headers={'Ocp-Apim-Subscription-Key': subscriptionKey})
+          # ret = r.json()
+          #pprint(json.loads(r.text))
+          # with open(json_file_path, "w") as json_file:
+          #   json.dump(ret, json_file, indent=2)
 
-          # if image_results.value:
-          #   first_image_result = image_results.value[0]
-          #   instance_template["Image"]= first_image_result.thumbnail_url
+          # if 'Images' in ret and len(ret['Images']) > 0:
+          #   instance_template["Image"]= ret['value'][0]['Images']
+          #   #instance_template["Image"]= ret.thumbnail_url
           # else:
           #   print("No image results returned!")
+
+
+          # Unable to init server: Could not connect: Connection refused
+          # Unable to init server: Could not connect: Connection refused
+
+          # (news_scrape.py:996012): Gdk-CRITICAL **: 10:06:34.070: gdk_cursor_new_for_display: assertion 'GDK_IS_DISPLAY (display)' failed
+          # raceback (most recent call last):
+          # File "news_scrape.py", line 158, in <module>
+          # response.raise_for_status()
+          # File "/usr/lib/python3/dist-packages/requests/models.py", line 940, in raise_for_status
+          # raise HTTPError(http_error_msg, response=self)
+          # requests.exceptions.HTTPError: 401 Client Error: Access Denied for url: https://api.bing.microsoft.com/v7.0/images/search?q=puppie
+
+          # subscription_key = "94458eda300a418880dd421286e63c2e"
+          # search_url = "https://api.bing.microsoft.com/v7.0/images/search"
+          # search_term = "puppies"
+          # headers = {"Ocp-Apim-Subscription-Key" : subscription_key}
+          # params  = {"q": search_term, "license":"public"}
+          # time.sleep(1)
+          # response = requests.get(search_url, headers=headers, params=params)
+          # response.raise_for_status()
+          # search_results = response.json()
+          #thumbnail_urls = [img["thumbnailUrl"] for img in search_results["value"][:16]]
+
+#           subscriptionKey = '94458eda300a418880dd421286e63c2e'
+#           endpoint = 'https://api.bing.microsoft.com'
+
+#           searchTerm = "microsoft"
+#             # </importsAndVars>
+#           # <url>
+# # Add you r Bing Custom Search endpoint to your environment variables.
+#           url = endpoint + "/v7.0/images/search?q=" + searchTerm 
+#           r = requests.get(url, headers={'Ocp-Apim-Subscription-Key': subscriptionKey})
+#           pprint(json.loads(r.text))
+          
+          api_key = 'AIzaSyDsWGnneLR5-fm9z3S5Tp-lMYqoDV1YpRk'
+          search_engine_id = 'e1c5bf1893dd2489d'
+
+# Set the search query
+          query = instance_template["attributes"]["OrgLink"]
+
+# Make the API request
+          url = f'https://www.googleapis.com/customsearch/v1?key={api_key}&cx={search_engine_id}&q={query}&searchType=image'
+          response = requests.get(url)
+
+          if response.status_code == 200:
+    # Parse the JSON response
+            data = response.json()
+    
+    # Extract and print image URLs
+          if 'items' in data:
+            for item in data['items']:
+                print(item['link'])
+          else:
+            print(f"Request failed with status code {response.status_code}")
+
 
 
 
