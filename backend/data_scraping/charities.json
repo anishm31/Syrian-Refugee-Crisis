@@ -188,5 +188,9 @@
   {
     "name": "World Health Organization",
     "relief": ["Health"]
+  },
+  {
+    "name": "Amnesty International",
+    "relief": ["Other"]
   }
 ]
