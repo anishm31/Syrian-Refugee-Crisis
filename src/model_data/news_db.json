@@ -3,7 +3,9 @@
     "Title": "EERI Earthquake Reconnaissance Team Report: M7.8 Gorkha, Nepal Earthquake on April 25, 2015 and its Aftershocks",
     "Date": "2016-05-19T04:00:54+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse1.mm.bing.net/th?id=OIP.DxT98Af9UqXqYe-YX_m4cwHaE8&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -15,14 +17,19 @@
       "Themes": [
         "Recovery and Reconstruction"
       ],
-      "OrgLink": "https://reliefweb.int/node/1531726"
+      "OrgLink": "https://reliefweb.int/node/1531726",
+      "Video": [
+        "https://www.bing.com/videos/search?q=EERI%20Earthquake%20Reconnaissance%20Team%20Report:%20M7.8%20Gorkha,%20Nepal%20Earthquake%20on%20April%2025,%202015%20and%20its%20Aftershocks&view=detail&mid=515BAFFE8BADF619E256515BAFFE8BADF619E256"
+      ]
     }
   },
   {
     "Title": "EERI Reconnaissance Team Begins Work in Nepal",
     "Date": "2015-06-10T17:21:21+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse1.mm.bing.net/th?id=OIP.wzrpLo8wcB3rSaVWBWbjvgAAAA&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -34,72 +41,19 @@
       "Themes": [
         "Recovery and Reconstruction"
       ],
-      "OrgLink": "https://reliefweb.int/node/1031806"
-    }
-  },
-  {
-    "Title": "M8.2 Iquique, Chile Earthquake and Tsunami: Preliminary Reconnaissance Observations",
-    "Date": "2014-04-16T20:03:40+00:00",
-    "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
-    "attributes": {
-      "DisasterType": [
-        "Earthquake",
-        "Tsunami"
-      ],
-      "PrimaryCountry": "Chile",
-      "OtherSources": [
-        "EERI "
-      ],
-      "Themes": [],
-      "OrgLink": "https://reliefweb.int/node/653431"
-    }
-  },
-  {
-    "Title": "Bridge Performance in the Mw 9.0 Tohoku, Japan, Earthquake of March 11, 2011",
-    "Date": "2011-11-02T15:48:12+00:00",
-    "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
-    "attributes": {
-      "DisasterType": [
-        "Earthquake",
-        "Tsunami"
-      ],
-      "PrimaryCountry": "Japan",
-      "OtherSources": [
-        "EERI "
-      ],
-      "Themes": [
-        "Recovery and Reconstruction"
-      ],
-      "OrgLink": "https://reliefweb.int/node/456969"
-    }
-  },
-  {
-    "Title": "The Tohoku, Japan, Tsunami of March 11, 2011: Effects on Structures",
-    "Date": "2011-09-30T15:38:10+00:00",
-    "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
-    "attributes": {
-      "DisasterType": [
-        "Earthquake",
-        "Tsunami"
-      ],
-      "PrimaryCountry": "Japan",
-      "OtherSources": [
-        "EERI "
-      ],
-      "Themes": [
-        "Recovery and Reconstruction"
-      ],
-      "OrgLink": "https://reliefweb.int/node/450031"
+      "OrgLink": "https://reliefweb.int/node/1031806",
+      "Video": [
+        "https://www.bing.com/videos/search?q=EERI%20Reconnaissance%20Team%20Begins%20Work%20in%20Nepal&view=detail&mid=778AB7F2B957F385E8AD778AB7F2B957F385E8AD"
+      ]
     }
   },
   {
     "Title": "Observations on Ongoing Efforts to Address the Haitian Housing Crisis",
     "Date": "2010-02-13T05:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse3.mm.bing.net/th?id=OIP.TI-VNTuIELYtGa4j4wWWRgAAAA&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -111,14 +65,19 @@
       "Themes": [
         "Recovery and Reconstruction"
       ],
-      "OrgLink": "https://reliefweb.int/node/345610"
+      "OrgLink": "https://reliefweb.int/node/345610",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Observations%20on%20Ongoing%20Efforts%20to%20Address%20the%20Haitian%20Housing%20Crisis&view=detail&mid=E52C5C4047624B12E461E52C5C4047624B12E461"
+      ]
     }
   },
   {
     "Title": "World Bank / GFDRR / ImageCat / RIT Remote Sensing & Damage Assessment Mission, Haiti, January 2010",
     "Date": "2010-02-11T05:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse3.mm.bing.net/th?id=OIP.kn0hL19g3zczG-ICdDW7IwHaEL&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -132,14 +91,19 @@
       "Themes": [
         "Coordination"
       ],
-      "OrgLink": "https://reliefweb.int/node/344840"
+      "OrgLink": "https://reliefweb.int/node/344840",
+      "Video": [
+        "https://www.bing.com/videos/search?q=World%20Bank%20/%20GFDRR%20/%20ImageCat%20/%20RIT%20Remote%20Sensing%20&%20Damage%20Assessment%20Mission,%20Haiti,%20January%202010&view=detail&mid=6C8CEB45A573C6072F3F6C8CEB45A573C6072F3F"
+      ]
     }
   },
   {
     "Title": "The Kashmir earthquake of October 8, 2005: Impacts in Pakistan",
     "Date": "2006-02-28T05:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse4.mm.bing.net/th?id=OIP.uMZQsWgF4w7ZeVxSw0saygHaIh&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -149,14 +113,19 @@
         "EERI "
       ],
       "Themes": [],
-      "OrgLink": "https://reliefweb.int/node/206500"
+      "OrgLink": "https://reliefweb.int/node/206500",
+      "Video": [
+        "https://www.bing.com/videos/search?q=The%20Kashmir%20earthquake%20of%20October%208,%202005:%20Impacts%20in%20Pakistan&view=detail&mid=6880C5A777E5AEEDF28C6880C5A777E5AEEDF28C"
+      ]
     }
   },
   {
     "Title": "EERI sends engineering team to Iran",
     "Date": "2004-01-06T05:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse4.mm.bing.net/th?id=OIP.0JmD5ENOcyFwlUGy8IMLhgAAAA&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -166,14 +135,92 @@
         "EERI "
       ],
       "Themes": [],
-      "OrgLink": "https://reliefweb.int/node/140504"
+      "OrgLink": "https://reliefweb.int/node/140504",
+      "Video": [
+        "https://www.bing.com/videos/search?q=EERI%20sends%20engineering%20team%20to%20Iran&view=detail&mid=778AB7F2B957F385E8AD778AB7F2B957F385E8AD"
+      ]
+    }
+  },
+  {
+    "Title": "Bridge Performance in the Mw 9.0 Tohoku, Japan, Earthquake of March 11, 2011",
+    "Date": "2011-11-02T15:48:12+00:00",
+    "Source": "",
+    "Image": [
+      "https://tse2.mm.bing.net/th?id=OIP.0qGeOGCZo_LRz34Az-bTigHaE8&pid=Api"
+    ],
+    "attributes": {
+      "DisasterType": [
+        "Earthquake",
+        "Tsunami"
+      ],
+      "PrimaryCountry": "Japan",
+      "OtherSources": [
+        "EERI "
+      ],
+      "Themes": [
+        "Recovery and Reconstruction"
+      ],
+      "OrgLink": "https://reliefweb.int/node/456969",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Bridge%20Performance%20in%20the%20Mw%209.0%20Tohoku,%20Japan,%20Earthquake%20of%20March%2011,%202011&view=detail&mid=4774DC7E93AAA31120864774DC7E93AAA3112086"
+      ]
+    }
+  },
+  {
+    "Title": "The Tohoku, Japan, Tsunami of March 11, 2011: Effects on Structures",
+    "Date": "2011-09-30T15:38:10+00:00",
+    "Source": "",
+    "Image": [
+      "https://tse2.mm.bing.net/th?id=OIP.kv3p7OgdInSJyMJN6P7PAQHaFj&pid=Api"
+    ],
+    "attributes": {
+      "DisasterType": [
+        "Earthquake",
+        "Tsunami"
+      ],
+      "PrimaryCountry": "Japan",
+      "OtherSources": [
+        "EERI "
+      ],
+      "Themes": [
+        "Recovery and Reconstruction"
+      ],
+      "OrgLink": "https://reliefweb.int/node/450031",
+      "Video": [
+        "https://www.bing.com/videos/search?q=The%20Tohoku,%20Japan,%20Tsunami%20of%20March%2011,%202011:%20Effects%20on%20Structures&view=detail&mid=BF8DD8AC77027D4E8264BF8DD8AC77027D4E8264"
+      ]
+    }
+  },
+  {
+    "Title": "M8.2 Iquique, Chile Earthquake and Tsunami: Preliminary Reconnaissance Observations",
+    "Date": "2014-04-16T20:03:40+00:00",
+    "Source": "",
+    "Image": [
+      "https://tse2.mm.bing.net/th?id=OIP.5Qsk5870Te9hKs7oQ3fN9gHaEK&pid=Api"
+    ],
+    "attributes": {
+      "DisasterType": [
+        "Earthquake",
+        "Tsunami"
+      ],
+      "PrimaryCountry": "Chile",
+      "OtherSources": [
+        "EERI "
+      ],
+      "Themes": [],
+      "OrgLink": "https://reliefweb.int/node/653431",
+      "Video": [
+        "https://www.bing.com/videos/search?q=M8.2%20Iquique,%20Chile%20Earthquake%20and%20Tsunami:%20Preliminary%20Reconnaissance%20Observations&view=detail&mid=44363C6421BD36BD7B0044363C6421BD36BD7B00"
+      ]
     }
   },
   {
     "Title": "Emergent Issues and Vulnerability Factors in Temporary and Intermediate Shelters Following the 2015 Nepal Earthquake",
     "Date": "2015-08-30T03:54:57+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse1.explicit.bing.net/th?id=OIP.oHqUWStAQIi1qWVrrdGPrwHaEL&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -188,14 +235,19 @@
         "Shelter and Non-Food Items",
         "Camp Coordination and Camp Management"
       ],
-      "OrgLink": "https://reliefweb.int/node/1149241"
+      "OrgLink": "https://reliefweb.int/node/1149241",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Emergent%20Issues%20and%20Vulnerability%20Factors%20in%20Temporary%20and%20Intermediate%20Shelters%20Following%20the%202015%20Nepal%20Earthquake&view=detail&mid=CA144939F43A0AA9788ACA144939F43A0AA9788A"
+      ]
     }
   },
   {
     "Title": "Iran: Earthquake Report for November 27, 2005: West of Qeshm (Persian Gulf)",
     "Date": "2005-11-27T05:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse4.mm.bing.net/th?id=OIP.EPvraVjvCZN1hGr0_nSunwAAAA&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -205,14 +257,19 @@
         "IIEES "
       ],
       "Themes": [],
-      "OrgLink": "https://reliefweb.int/node/414909"
+      "OrgLink": "https://reliefweb.int/node/414909",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Iran:%20Earthquake%20Report%20for%20November%2027,%202005:%20West%20of%20Qeshm%20(Persian%20Gulf)&view=detail&mid=9DDE4E9B26632A6838879DDE4E9B26632A683887"
+      ]
     }
   },
   {
     "Title": "IIEES: Bam (SE Iran) earthquake 26 Dec 2003, Mw6.5 - A preliminary reconnaissance report",
     "Date": "2003-12-29T05:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse4.mm.bing.net/th?id=OIP.g03udVa0K3oNZT_z9z6zQwHaE8&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -222,14 +279,19 @@
         "IIEES "
       ],
       "Themes": [],
-      "OrgLink": "https://reliefweb.int/node/140336"
+      "OrgLink": "https://reliefweb.int/node/140336",
+      "Video": [
+        "https://www.bing.com/videos/search?q=IIEES:%20Bam%20(SE%20Iran)%20earthquake%2026%20Dec%202003,%20Mw6.5%20-%20A%20preliminary%20reconnaissance%20report&view=detail&mid=3635C29B744E0EA7DA6A3635C29B744E0EA7DA6A"
+      ]
     }
   },
   {
     "Title": "Iran: Seismicity of the Bam Area (2003)",
     "Date": "2003-12-29T05:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse3.mm.bing.net/th?id=OIP.LK6g7ZqFPQfbWsmVGxcJkwHaE6&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -239,14 +301,19 @@
         "IIEES "
       ],
       "Themes": [],
-      "OrgLink": "https://reliefweb.int/node/1177"
+      "OrgLink": "https://reliefweb.int/node/1177",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Iran:%20Seismicity%20of%20the%20Bam%20Area%20(2003)&view=detail&mid=0835A44332FD614897300835A44332FD61489730"
+      ]
     }
   },
   {
     "Title": "EERI Preliminary Report from the field: Earthquake in Gujarat, India",
     "Date": "2001-02-10T05:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse2.mm.bing.net/th?id=OIP.jLhyGllqv8GDji_pv2MLWgHaEb&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -256,14 +323,19 @@
         "EERI "
       ],
       "Themes": [],
-      "OrgLink": "https://reliefweb.int/node/76409"
+      "OrgLink": "https://reliefweb.int/node/76409",
+      "Video": [
+        "https://www.bing.com/videos/search?q=EERI%20Preliminary%20Report%20from%20the%20field:%20Earthquake%20in%20Gujarat,%20India&view=detail&mid=EB49CE85BFB65922461AEB49CE85BFB65922461A"
+      ]
     }
   },
   {
     "Title": "Earthquake Risk Reduction: Addressing the Unmet Challenges",
     "Date": "2008-01-01T05:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse4.mm.bing.net/th?id=OIP.D4fWwl30PUtnBOMWQoRpOQHaE6&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -276,14 +348,19 @@
         "Coordination",
         "Disaster Management"
       ],
-      "OrgLink": "https://reliefweb.int/node/24705"
+      "OrgLink": "https://reliefweb.int/node/24705",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Earthquake%20Risk%20Reduction:%20Addressing%20the%20Unmet%20Challenges&view=detail&mid=4312BB92946FB04B55464312BB92946FB04B5546"
+      ]
     }
   },
   {
     "Title": "The March 11, 2011, Great East Japan (Tohoku) Earthquake and Tsunami: Societal Dimensions",
     "Date": "2011-08-20T02:25:51+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse1.mm.bing.net/th?id=OIP.8wjuzgGB8Nt1wD64dtwJlAAAAA&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake",
@@ -299,14 +376,19 @@
         "Recovery and Reconstruction",
         "Shelter and Non-Food Items"
       ],
-      "OrgLink": "https://reliefweb.int/node/442064"
+      "OrgLink": "https://reliefweb.int/node/442064",
+      "Video": [
+        "https://www.bing.com/videos/search?q=The%20March%2011,%202011,%20Great%20East%20Japan%20(Tohoku)%20Earthquake%20and%20Tsunami:%20Societal%20Dimensions&view=detail&mid=BF8DD8AC77027D4E8264BF8DD8AC77027D4E8264"
+      ]
     }
   },
   {
     "Title": "Pakistan: Reconnaissance report from Pakistani colleagues",
     "Date": "2005-11-07T05:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse4.mm.bing.net/th?id=OIP.YRP5b4EWfQJLDmclDhZe-wHaDt&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -316,14 +398,19 @@
         "EERI "
       ],
       "Themes": [],
-      "OrgLink": "https://reliefweb.int/node/414908"
+      "OrgLink": "https://reliefweb.int/node/414908",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Pakistan:%20Reconnaissance%20report%20from%20Pakistani%20colleagues&view=detail&mid=DFA194B30A2ED677E6CEDFA194B30A2ED677E6CE"
+      ]
     }
   },
   {
     "Title": "Pakistan: A summary report on Muzaffarabad earthquake",
     "Date": "2005-11-07T05:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse3.mm.bing.net/th?id=OIP.ls9BBNjs4VHwsQlp4FNNDgHaFb&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -337,14 +424,19 @@
         "Recovery and Reconstruction",
         "Shelter and Non-Food Items"
       ],
-      "OrgLink": "https://reliefweb.int/node/414607"
+      "OrgLink": "https://reliefweb.int/node/414607",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Pakistan:%20A%20summary%20report%20on%20Muzaffarabad%20earthquake&view=detail&mid=A89C03E3920E3DC41325A89C03E3920E3DC41325"
+      ]
     }
   },
   {
     "Title": "EERI preliminary report from Pakistan",
     "Date": "2005-11-01T05:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse1.mm.bing.net/th?id=OIP.zB5iRE7tFctSxVldw45H7gAAAA&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -354,14 +446,19 @@
         "EERI "
       ],
       "Themes": [],
-      "OrgLink": "https://reliefweb.int/node/414565"
+      "OrgLink": "https://reliefweb.int/node/414565",
+      "Video": [
+        "https://www.bing.com/videos/search?q=EERI%20preliminary%20report%20from%20Pakistan&view=detail&mid=6829746BF879F6B5F2356829746BF879F6B5F235"
+      ]
     }
   },
   {
     "Title": "The great Sumatra earthquake and Indian ocean tsunami",
     "Date": "2005-07-29T04:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse4.mm.bing.net/th?id=OIP.zPnQPQaHLqVGHsZH8fQqswHaFj&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake",
@@ -372,14 +469,19 @@
         "EERI "
       ],
       "Themes": [],
-      "OrgLink": "https://reliefweb.int/node/413675"
+      "OrgLink": "https://reliefweb.int/node/413675",
+      "Video": [
+        "https://www.bing.com/videos/search?q=The%20great%20Sumatra%20earthquake%20and%20Indian%20ocean%20tsunami&view=detail&mid=0DD7DCDF9017943744BF0DD7DCDF9017943744BF"
+      ]
     }
   },
   {
     "Title": "EERIs Learning from Earthquakes Program to Send Team to New Zealand: Scientists and Engineers to Bring Back Lessons",
     "Date": "2011-03-10T05:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse2.mm.bing.net/th?id=OIP.RsGm-Ft8DK4vjIEe1Nn1EAHaFj&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -389,14 +491,19 @@
         "EERI "
       ],
       "Themes": [],
-      "OrgLink": "https://reliefweb.int/node/391613"
+      "OrgLink": "https://reliefweb.int/node/391613",
+      "Video": [
+        "https://www.bing.com/videos/search?q=EERIs%20Learning%20from%20Earthquakes%20Program%20to%20Send%20Team%20to%20New%20Zealand:%20Scientists%20and%20Engineers%20to%20Bring%20Back%20Lessons&view=detail&mid=37AC91875456D0A7207F37AC91875456D0A7207F"
+      ]
     }
   },
   {
     "Title": "South Asia Earthquake and Tsunami: EERI sends reconnaissance teams to capture critical perishable data",
     "Date": "2005-01-06T05:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse3.mm.bing.net/th?id=OIP.TgXRc3OR6QZ8nGcbrKa3fgHaHx&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake",
@@ -407,14 +514,19 @@
         "EERI "
       ],
       "Themes": [],
-      "OrgLink": "https://reliefweb.int/node/166547"
+      "OrgLink": "https://reliefweb.int/node/166547",
+      "Video": [
+        "https://www.bing.com/videos/search?q=South%20Asia%20Earthquake%20and%20Tsunami:%20EERI%20sends%20reconnaissance%20teams%20to%20capture%20critical%20perishable%20data&view=detail&mid=DC4EB9D52601C1554073DC4EB9D52601C1554073"
+      ]
     }
   },
   {
     "Title": "The Mw 7.0 Haiti Earthquake of January 12, 2010: USGS/EERI Advance Reconnaissance Team - Team Report V 1.0",
     "Date": "2010-02-18T05:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse4.mm.bing.net/th?id=OIP.75O520rzKKNhai1TfsQb_QHaE8&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -427,14 +539,19 @@
       "Themes": [
         "Recovery and Reconstruction"
       ],
-      "OrgLink": "https://reliefweb.int/node/345927"
+      "OrgLink": "https://reliefweb.int/node/345927",
+      "Video": [
+        "https://www.bing.com/videos/search?q=The%20Mw%207.0%20Haiti%20Earthquake%20of%20January%2012,%202010:%20USGS/EERI%20Advance%20Reconnaissance%20Team%20-%20Team%20Report%20V%201.0&view=detail&mid=B6D40A4C504F9612ADE5B6D40A4C504F9612ADE5"
+      ]
     }
   },
   {
     "Title": "EERI Response to M7.8 Earthquake in Ecuador on April 16, 2016",
     "Date": "2016-04-19T10:33:50+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse2.mm.bing.net/th?id=OIP.RsGm-Ft8DK4vjIEe1Nn1EAHaFj&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -444,14 +561,19 @@
         "EERI "
       ],
       "Themes": [],
-      "OrgLink": "https://reliefweb.int/node/1487631"
+      "OrgLink": "https://reliefweb.int/node/1487631",
+      "Video": [
+        "https://www.bing.com/videos/search?q=EERI%20Response%20to%20M7.8%20Earthquake%20in%20Ecuador%20on%20April%2016,%202016&view=detail&mid=0AE6F2387EA9A748B02E0AE6F2387EA9A748B02E"
+      ]
     }
   },
   {
     "Title": "Learning from Earthquakes Program: 2015 in Review",
     "Date": "2016-02-07T05:24:36+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse4.mm.bing.net/th?id=OIP.g03udVa0K3oNZT_z9z6zQwHaE8&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake",
@@ -464,14 +586,19 @@
       "Themes": [
         "Disaster Management"
       ],
-      "OrgLink": "https://reliefweb.int/node/1382176"
+      "OrgLink": "https://reliefweb.int/node/1382176",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Learning%20from%20Earthquakes%20Program:%202015%20in%20Review&view=detail&mid=933A241025F2DE493283933A241025F2DE493283"
+      ]
     }
   },
   {
     "Title": "The November 7, 2012 M7.4 Guatemala earthquake and its implications for disaster reduction and mitigation",
     "Date": "2013-08-01T11:13:15+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse2.mm.bing.net/th?id=OIP.sGiXzEA3YFqaQmlnnumLFgHaEs&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -483,14 +610,41 @@
       "Themes": [
         "Disaster Management"
       ],
-      "OrgLink": "https://reliefweb.int/node/592989"
+      "OrgLink": "https://reliefweb.int/node/592989",
+      "Video": [
+        "https://www.bing.com/videos/search?q=The%20November%207,%202012%20M7.4%20Guatemala%20earthquake%20and%20its%20implications%20for%20disaster%20reduction%20and%20mitigation&view=detail&mid=7275C60B487A85BD78F47275C60B487A85BD78F4"
+      ]
+    }
+  },
+  {
+    "Title": "South Asia earthquake: EERI sends team to Pakistan to bring back lessons",
+    "Date": "2005-11-03T05:00:00+00:00",
+    "Source": "",
+    "Image": [
+      "https://tse3.mm.bing.net/th?id=OIP.zjAQo57vuOEK52jh3-VEdgAAAA&pid=Api"
+    ],
+    "attributes": {
+      "DisasterType": [
+        "Earthquake"
+      ],
+      "PrimaryCountry": "Pakistan",
+      "OtherSources": [
+        "EERI "
+      ],
+      "Themes": [],
+      "OrgLink": "https://reliefweb.int/node/191053",
+      "Video": [
+        "https://www.bing.com/videos/search?q=South%20Asia%20earthquake:%20EERI%20sends%20team%20to%20Pakistan%20to%20bring%20back%20lessons&view=detail&mid=117922B6FF473A24749B117922B6FF473A24749B"
+      ]
     }
   },
   {
     "Title": "Taiwan Earthquake Reconnaissance Briefing Webinar Now Available",
     "Date": "2016-05-03T15:37:51+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse4.mm.bing.net/th?id=OIP.cERhNLjkcjbbuLydUSOZ1wAAAA&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -500,14 +654,19 @@
         "EERI "
       ],
       "Themes": [],
-      "OrgLink": "https://reliefweb.int/node/1510336"
+      "OrgLink": "https://reliefweb.int/node/1510336",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Taiwan%20Earthquake%20Reconnaissance%20Briefing%20Webinar%20Now%20Available&view=detail&mid=20E28291F9CE6B45BAAB20E28291F9CE6B45BAAB"
+      ]
     }
   },
   {
     "Title": "EERI Response to M7.0 Earthquake in Kumamoto, Japan on April 15, 2016",
     "Date": "2016-04-17T09:39:59+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse2.mm.bing.net/th?id=OIP.s7X2FYr7Ej0J-6BZVgJF0QHaFj&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -517,14 +676,19 @@
         "EERI "
       ],
       "Themes": [],
-      "OrgLink": "https://reliefweb.int/node/1484541"
+      "OrgLink": "https://reliefweb.int/node/1484541",
+      "Video": [
+        "https://www.bing.com/videos/search?q=EERI%20Response%20to%20M7.0%20Earthquake%20in%20Kumamoto,%20Japan%20on%20April%2015,%202016&view=detail&mid=C5D294171CB3ABA22A30C5D294171CB3ABA22A30"
+      ]
     }
   },
   {
     "Title": "Taiwan Earthquake Virtual Clearinghouse Launched",
     "Date": "2016-02-12T07:28:36+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse4.mm.bing.net/th?id=OIP.MKxX918gO7RdnE0OHxYHlAAAAA&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -534,14 +698,19 @@
         "EERI "
       ],
       "Themes": [],
-      "OrgLink": "https://reliefweb.int/node/1390946"
+      "OrgLink": "https://reliefweb.int/node/1390946",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Taiwan%20Earthquake%20Virtual%20Clearinghouse%20Launched&view=detail&mid=4FF5D7EBD8D5B1F3FA4B4FF5D7EBD8D5B1F3FA4B"
+      ]
     }
   },
   {
     "Title": "EERI Reconnaissance Team Wraps Up Mission in Nepal",
     "Date": "2015-06-14T06:29:36+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse4.mm.bing.net/th?id=OIP.5g-oUYnISwHV_SckOdSuDQHaE8&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -551,14 +720,19 @@
         "EERI "
       ],
       "Themes": [],
-      "OrgLink": "https://reliefweb.int/node/1036066"
+      "OrgLink": "https://reliefweb.int/node/1036066",
+      "Video": [
+        "https://www.bing.com/videos/search?q=EERI%20Reconnaissance%20Team%20Wraps%20Up%20Mission%20in%20Nepal&view=detail&mid=778AB7F2B957F385E8AD778AB7F2B957F385E8AD"
+      ]
     }
   },
   {
     "Title": "A Reconnaissance Report on two Iran, Makran Earthquakes",
     "Date": "2013-08-15T10:39:57+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse4.mm.bing.net/th?id=OIP.g03udVa0K3oNZT_z9z6zQwHaE8&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -571,31 +745,19 @@
         "Disaster Management",
         "Shelter and Non-Food Items"
       ],
-      "OrgLink": "https://reliefweb.int/node/595843"
-    }
-  },
-  {
-    "Title": "South Asia earthquake: EERI sends team to Pakistan to bring back lessons",
-    "Date": "2005-11-03T05:00:00+00:00",
-    "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
-    "attributes": {
-      "DisasterType": [
-        "Earthquake"
-      ],
-      "PrimaryCountry": "Pakistan",
-      "OtherSources": [
-        "EERI "
-      ],
-      "Themes": [],
-      "OrgLink": "https://reliefweb.int/node/191053"
+      "OrgLink": "https://reliefweb.int/node/595843",
+      "Video": [
+        "https://www.bing.com/videos/search?q=A%20Reconnaissance%20Report%20on%20two%20Iran,%20Makran%20Earthquakes&view=detail&mid=F973CEB160C904CB5168F973CEB160C904CB5168"
+      ]
     }
   },
   {
     "Title": "EERI field investigation teams to Samoa and Indonesia",
     "Date": "2009-10-05T04:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/2/2d/2004-tsunami.jpg",
+    "Image": [
+      "https://tse1.mm.bing.net/th?id=OIP.VUMaLBIro_8d7DHY5gX0wwHaEl&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Tsunami",
@@ -606,14 +768,19 @@
         "EERI "
       ],
       "Themes": [],
-      "OrgLink": "https://reliefweb.int/node/327616"
+      "OrgLink": "https://reliefweb.int/node/327616",
+      "Video": [
+        "https://www.bing.com/videos/search?q=EERI%20field%20investigation%20teams%20to%20Samoa%20and%20Indonesia&view=detail&mid=778AB7F2B957F385E8AD778AB7F2B957F385E8AD"
+      ]
     }
   },
   {
     "Title": "Pakistan: BHU funded by Saudi Relief Org. opens for quake-hit people of Muzaffarabad",
     "Date": "2009-02-11T05:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse2.mm.bing.net/th?id=OIP.nH0epCyX8C3A-VRjdS6V3AHaD4&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -629,14 +796,19 @@
         "Shelter and Non-Food Items",
         "Contributions"
       ],
-      "OrgLink": "https://reliefweb.int/node/299595"
+      "OrgLink": "https://reliefweb.int/node/299595",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Pakistan:%20BHU%20funded%20by%20Saudi%20Relief%20Org.%20opens%20for%20quake-hit%20people%20of%20Muzaffarabad&view=detail&mid=046FCBA699DE885555AE046FCBA699DE885555AE"
+      ]
     }
   },
   {
     "Title": "Pakistan: SPAPEV distributes \"Ramazan Package\" among quake-affectees of AJK, NWFP",
     "Date": "2008-09-23T04:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse3.mm.bing.net/th?id=OIP.RWfsXYyFy9KEb_dzSIsg0wHaE8&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -649,14 +821,19 @@
         "Food and Nutrition",
         "Recovery and Reconstruction"
       ],
-      "OrgLink": "https://reliefweb.int/node/281711"
+      "OrgLink": "https://reliefweb.int/node/281711",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Pakistan:%20SPAPEV%20distributes%20%22Ramazan%20Package%22%20among%20quake-affectees%20of%20AJK,%20NWFP&view=detail&mid=9F9E9DE23AD9C4C83C3E9F9E9DE23AD9C4C83C3E"
+      ]
     }
   },
   {
     "Title": "Pakistan: SPAPEV distributes food packets among quake affected families",
     "Date": "2006-07-08T04:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse1.mm.bing.net/th?id=OIP.SchSub2UEzMLtJUbCJgMvAHaE8&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -666,14 +843,19 @@
         "Spapev "
       ],
       "Themes": [],
-      "OrgLink": "https://reliefweb.int/node/260000"
+      "OrgLink": "https://reliefweb.int/node/260000",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Pakistan:%20SPAPEV%20distributes%20food%20packets%20among%20quake%20affected%20families&view=detail&mid=70BE48A32A52CFE9FC4570BE48A32A52CFE9FC45"
+      ]
     }
   },
   {
     "Title": "Pakistan: Saudi delegation meets ERRA Deputy Chairman",
     "Date": "2006-03-13T05:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse4.mm.bing.net/th?id=OIP.T3jXIhR7s6BqexHa7PWdUQHaE8&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -683,14 +865,19 @@
         "Spapev "
       ],
       "Themes": [],
-      "OrgLink": "https://reliefweb.int/node/259981"
+      "OrgLink": "https://reliefweb.int/node/259981",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Pakistan:%20Saudi%20delegation%20meets%20ERRA%20Deputy%20Chairman&view=detail&mid=6EFDD02704C1D6D5DB6A6EFDD02704C1D6D5DB6A"
+      ]
     }
   },
   {
     "Title": "Pakistan: SPAPEV distributes food items among 150 quake affected families",
     "Date": "2006-05-03T04:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse3.mm.bing.net/th?id=OIP.pUyfehkh-SD9I3H3zlovfgHaE8&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -700,14 +887,19 @@
         "Spapev "
       ],
       "Themes": [],
-      "OrgLink": "https://reliefweb.int/node/259967"
+      "OrgLink": "https://reliefweb.int/node/259967",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Pakistan:%20SPAPEV%20distributes%20food%20items%20among%20150%20quake%20affected%20families&view=detail&mid=C7D4E9D6D2E41EB8E919C7D4E9D6D2E41EB8E919"
+      ]
     }
   },
   {
     "Title": "Pakistan: 50,000 blankets, quilts being distributed among Oct. 8 affectees",
     "Date": "2007-01-23T05:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse3.mm.bing.net/th?id=OIP.egevLt3Ib8Yjy3oAOixIzQHaE0&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -717,14 +909,19 @@
         "Spapev "
       ],
       "Themes": [],
-      "OrgLink": "https://reliefweb.int/node/259962"
+      "OrgLink": "https://reliefweb.int/node/259962",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Pakistan:%2050,000%20blankets,%20quilts%20being%20distributed%20among%20Oct.%208%20affectees&view=detail&mid=36F7F54C88114CAEFF7236F7F54C88114CAEFF72"
+      ]
     }
   },
   {
     "Title": "Pakistan: SPAPEV provides winterized tents to CDA Muzzaffarabad for distribution among quake-affectees",
     "Date": "2008-11-20T05:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse3.mm.bing.net/th?id=OIP.nNKQSdSECMKOEV0icPrijAAAAA&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -738,14 +935,17 @@
         "Shelter and Non-Food Items",
         "Contributions"
       ],
-      "OrgLink": "https://reliefweb.int/node/287932"
+      "OrgLink": "https://reliefweb.int/node/287932",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Pakistan:%20SPAPEV%20provides%20winterized%20tents%20to%20CDA%20Muzzaffarabad%20for%20distribution%20among%20quake-affectees&view=detail&mid=02D043C4573AFD3EF94602D043C4573AFD3EF946"
+      ]
     }
   },
   {
     "Title": "Pakistan: SPAPEV announces 20 trucks of relief goods to quake-hit areas of Balochistan.",
     "Date": "2008-10-30T04:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -758,14 +958,19 @@
         "Coordination",
         "Contributions"
       ],
-      "OrgLink": "https://reliefweb.int/node/285335"
+      "OrgLink": "https://reliefweb.int/node/285335",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Pakistan:%20SPAPEV%20announces%2020%20trucks%20of%20relief%20goods%20to%20quake-hit%20areas%20of%20Balochistan.&view=detail&mid=47635495146453E7071047635495146453E70710"
+      ]
     }
   },
   {
     "Title": "Pakistan: Saudi Arabia to provide 4000 pre-fabricated houses, contract signed",
     "Date": "2006-10-12T04:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse3.mm.bing.net/th?id=OIP.hfd9TJgztm2wYlTx2qxuRAHaFa&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -775,14 +980,19 @@
         "Spapev "
       ],
       "Themes": [],
-      "OrgLink": "https://reliefweb.int/node/259946"
+      "OrgLink": "https://reliefweb.int/node/259946",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Pakistan:%20Saudi%20Arabia%20to%20provide%204000%20pre-fabricated%20houses,%20contract%20signed&view=detail&mid=CADFAF916A87EF290DBDCADFAF916A87EF290DBD"
+      ]
     }
   },
   {
     "Title": "Deputy Chairman ERRA visits Saudi Relief Organization, appreciates reconstruction work",
     "Date": "2009-12-23T05:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse4.mm.bing.net/th?id=OIP.3Uj3d9gF-IyKCP3gAcMn3AHaE8&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -794,14 +1004,19 @@
       "Themes": [
         "Recovery and Reconstruction"
       ],
-      "OrgLink": "https://reliefweb.int/node/338666"
+      "OrgLink": "https://reliefweb.int/node/338666",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Deputy%20Chairman%20ERRA%20visits%20Saudi%20Relief%20Organization,%20appreciates%20reconstruction%20work&view=detail&mid=3199ECA9470AE1E17D133199ECA9470AE1E17D13"
+      ]
     }
   },
   {
     "Title": "Pakistan: King Abdullah sends special dates for quake-affectees",
     "Date": "2009-09-03T04:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse4.mm.bing.net/th?id=OIP.53pb1bg5ETmnIMYXWqZSrgHaE7&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -816,14 +1031,19 @@
         "Shelter and Non-Food Items",
         "Contributions"
       ],
-      "OrgLink": "https://reliefweb.int/node/322834"
+      "OrgLink": "https://reliefweb.int/node/322834",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Pakistan:%20King%20Abdullah%20sends%20special%20dates%20for%20quake-affectees&view=detail&mid=603249C518681C86362A603249C518681C86362A"
+      ]
     }
   },
   {
     "Title": "Pakistan: King Abdullah sends over 1,500 cartons of special dates for quake affectees",
     "Date": "2009-03-31T04:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse3.mm.bing.net/th?id=OIP.LK6g7ZqFPQfbWsmVGxcJkwHaE6&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -837,14 +1057,19 @@
         "Recovery and Reconstruction",
         "Contributions"
       ],
-      "OrgLink": "https://reliefweb.int/node/302933"
+      "OrgLink": "https://reliefweb.int/node/302933",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Pakistan:%20King%20Abdullah%20sends%20over%201,500%20cartons%20of%20special%20dates%20for%20quake%20affectees&view=detail&mid=42B15522F3ED42CAF9BE42B15522F3ED42CAF9BE"
+      ]
     }
   },
   {
     "Title": "Pakistan: SPAPEV completes 4000 pre-fabricated houses at Balakot; more projects to be started in quake-hit areas",
     "Date": "2008-07-07T04:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse3.mm.bing.net/th?id=OIP.hfd9TJgztm2wYlTx2qxuRAHaFa&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -856,14 +1081,19 @@
       "Themes": [
         "Recovery and Reconstruction"
       ],
-      "OrgLink": "https://reliefweb.int/node/272693"
+      "OrgLink": "https://reliefweb.int/node/272693",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Pakistan:%20SPAPEV%20completes%204000%20pre-fabricated%20houses%20at%20Balakot;%20more%20projects%20to%20be%20started%20in%20quake-hit%20areas&view=detail&mid=B939815AFD01CE413D78B939815AFD01CE413D78"
+      ]
     }
   },
   {
     "Title": "Pakistan: SPAPEV completing 4000 houses in Balakot, signs contract of 1000 houses for Bagh quake affectees",
     "Date": "2008-05-15T04:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse4.mm.bing.net/th?id=OIP.lon17HU8sWbumSj6bv3X4AHaE8&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -875,14 +1105,19 @@
       "Themes": [
         "Shelter and Non-Food Items"
       ],
-      "OrgLink": "https://reliefweb.int/node/266067"
+      "OrgLink": "https://reliefweb.int/node/266067",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Pakistan:%20SPAPEV%20completing%204000%20houses%20in%20Balakot,%20signs%20contract%20of%201000%20houses%20for%20Bagh%20quake%20affectees&view=detail&mid=4C3D0B35904339FB9C914C3D0B35904339FB9C91"
+      ]
     }
   },
   {
     "Title": "Pakistan: WFP delegation meets SPAPEV Deputy Regional Director, thanks for assistance",
     "Date": "2007-12-10T05:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse3.mm.bing.net/th?id=OIP.QIiuPKD3x3-Xl7jivSL7WgHaE8&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -897,14 +1132,19 @@
         "Shelter and Non-Food Items",
         "Contributions"
       ],
-      "OrgLink": "https://reliefweb.int/node/259989"
+      "OrgLink": "https://reliefweb.int/node/259989",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Pakistan:%20WFP%20delegation%20meets%20SPAPEV%20Deputy%20Regional%20Director,%20thanks%20for%20assistance&view=detail&mid=63F06D3498D4B38C285B63F06D3498D4B38C285B"
+      ]
     }
   },
   {
     "Title": "Pakistan: SPAPEV handed over another consignment of relief goods to PRCS",
     "Date": "2006-04-03T04:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse2.mm.bing.net/th?id=OIP.S-ZMlBpb45GZNOk5tSOIgQHaE8&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -914,14 +1154,19 @@
         "Spapev "
       ],
       "Themes": [],
-      "OrgLink": "https://reliefweb.int/node/259976"
+      "OrgLink": "https://reliefweb.int/node/259976",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Pakistan:%20SPAPEV%20handed%20over%20another%20consignment%20of%20relief%20goods%20to%20PRCS&view=detail&mid=28CCC5F48D4CF6F9C9CB28CCC5F48D4CF6F9C9CB"
+      ]
     }
   },
   {
     "Title": "Pakistan: SPAPEV hands over keys of pre-fabricated houses to Balakot earthquake victims",
     "Date": "2007-11-22T05:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse1.mm.bing.net/th?id=OIP.x8UzZZnEAiC5E2OhPr5tfQHaE8&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -931,14 +1176,19 @@
         "Spapev "
       ],
       "Themes": [],
-      "OrgLink": "https://reliefweb.int/node/259964"
+      "OrgLink": "https://reliefweb.int/node/259964",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Pakistan:%20SPAPEV%20hands%20over%20keys%20of%20pre-fabricated%20houses%20to%20Balakot%20earthquake%20victims&view=detail&mid=A9CABC4277AF7656F3B5A9CABC4277AF7656F3B5"
+      ]
     }
   },
   {
     "Title": "Pakistan: Saudi Org built 1800 pre-fabricated houses at Balakot; work on remaining 2200 underway",
     "Date": "2007-08-26T04:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse3.mm.bing.net/th?id=OIP.hfd9TJgztm2wYlTx2qxuRAHaFa&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
@@ -948,7 +1198,10 @@
         "Spapev "
       ],
       "Themes": [],
-      "OrgLink": "https://reliefweb.int/node/259935"
+      "OrgLink": "https://reliefweb.int/node/259935",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Pakistan:%20Saudi%20Org%20built%201800%20pre-fabricated%20houses%20at%20Balakot;%20work%20on%20remaining%202200%20underway&view=detail&mid=9CC2290B156F8FDCBBE09CC2290B156F8FDCBBE0"
+      ]
     }
   }
 ]

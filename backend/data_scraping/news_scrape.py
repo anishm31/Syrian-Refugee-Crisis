@@ -48,6 +48,7 @@ if response.status_code == 200:
         "OtherSources": {},
         "Themes":[],
         "OrgLink":"",
+        "Video":"",
         }
         }
 
@@ -61,8 +62,6 @@ if response.status_code == 200:
         disaster = []
         link = fields.get("url")
       
-
-
         sources_list = fields.get("source")
         source = []
         for i in sources_list:
@@ -88,126 +87,50 @@ if response.status_code == 200:
         
 
         #news_data.append(instance_template)
-        
-        if instance_template["attributes"]["DisasterType"] is not None and instance_template["attributes"]["OrgLink"] is not None: 
+      #   api_key = 'AIzaSyDsWGnneLR5-fm9z3S5Tp-lMYqoDV1YpRk'
+      #   search_engine_id = 'e1c5bf1893dd2489d'
+
+      #     # Set the search query
+      #   query = instance_template["attributes"]["OrgLink"]
+
+      #     # Make the API request
+      #   time.sleep(1);
+      #   url = f'https://www.googleapis.com/customsearch/v1?key={api_key}&cx={search_engine_id}&q={query}&searchType=image'
+      #   response = requests.get(url)
+
+      #   if response.status_code == 200:
+      #  # Parse the JSON response
+      #     data = response.json()
+
+      #trying again the bing api lol
+
+        subscription_key = "6593dbe5ca00458b890062640971c88c"
+        search_url = "https://api.bing.microsoft.com/v7.0/images/search"
+        search_term = instance_template["Title"]
+        headers = {"Ocp-Apim-Subscription-Key" : subscription_key}
+        params = {"q": search_term, "license":"public", "count":"1", "offset":"0"}
+        time.sleep(1)
+        response = requests.get(search_url, headers=headers, params=params)
+        response.raise_for_status()
+        search_results = response.json()
+        instance_template["Image"] = [img["thumbnailUrl"] for img in search_results["value"][:16]]
+
+        #getting bing video 
+        search_url = "https://api.bing.microsoft.com/v7.0/videos/search"
+        params = {"q": search_term, "license":"public", "count":"1", "offset":"0", "embedded":"player", "pricing":"free"}
+        response = requests.get(search_url, headers=headers, params=params)
+        response.raise_for_status()
+        search_results = response.json()
+        instance_template["attributes"]["Video"] = [Videos["webSearchUrl"] for Videos in search_results["value"][:16]]
+
+
+        if instance_template["attributes"]["DisasterType"] is not None and instance_template["Image"] is not None : 
           for i in disaster_list:
             disaster.append(i.get("name"))
           instance_template["attributes"]["DisasterType"]= disaster
 
-          #only add news/events that have disaster filled out
+          #only add news/events that have disaster and an image
           news_data.append(instance_template)
-          wiki_disaster =  disaster[0]
-
-          # Scrape for Wikipedia for flag image
-          wiki_params = {
-            "action": "query",
-            "format": "json",
-            "titles": f"{wiki_disaster}",
-            "prop": "pageimages",
-            "piprop": "original"
-          }
-          response = requests.get("https://en.wikipedia.org/w/api.php", params=wiki_params)
-          if response.status_code == 200:
-            # Extact URL from JSON response and store
-            response_data = response.json()['query']['pages']
-            flag_url = list(response_data.values())[0]['original']['source']
-            instance_template["Image"] = flag_url
-          else:
-            # Error, print status code
-            print(f"Request Error: {response.status_code}")
-            print(f"Request URL: {response.url}")
-            print(f"Request Failure Reason: {response.request.reason}")
-            exit(1)
-
-          blah = wiki_disaster
-          bing_params = {
-            "q" : blah,
-            "count":1,
-            "offset": 0 
-          }
-
-          # bing_api_key = 'f9a65a3fc286459cbb519a7724274fa9'
-
-          # headers = {
-          #   'Ocp-Apim-Subscription-Key': bing_api_key
-          # }
-          
-          # subscriptionKey = "f9a65a3fc286459cbb519a7724274fa9"
-          # customConfigId = "17af88cf-4940-47d0-bec4-1aaf3b509c61" 
-          # searchTerm = "dogs" 
-          # #cannot get this to work  
-          # url = 'https://api.bing.microsoft.com/v7.0//custom/images/search?' + 'q=' + searchTerm + '&' + 'customconfig=' + customConfigId
-          # time.sleep(1)
-          # r = requests.get(url, headers={'Ocp-Apim-Subscription-Key': subscriptionKey})
-          # ret = r.json()
-          #pprint(json.loads(r.text))
-          # with open(json_file_path, "w") as json_file:
-          #   json.dump(ret, json_file, indent=2)
-
-          # if 'Images' in ret and len(ret['Images']) > 0:
-          #   instance_template["Image"]= ret['value'][0]['Images']
-          #   #instance_template["Image"]= ret.thumbnail_url
-          # else:
-          #   print("No image results returned!")
-
-
-          # Unable to init server: Could not connect: Connection refused
-          # Unable to init server: Could not connect: Connection refused
-
-          # (news_scrape.py:996012): Gdk-CRITICAL **: 10:06:34.070: gdk_cursor_new_for_display: assertion 'GDK_IS_DISPLAY (display)' failed
-          # raceback (most recent call last):
-          # File "news_scrape.py", line 158, in <module>
-          # response.raise_for_status()
-          # File "/usr/lib/python3/dist-packages/requests/models.py", line 940, in raise_for_status
-          # raise HTTPError(http_error_msg, response=self)
-          # requests.exceptions.HTTPError: 401 Client Error: Access Denied for url: https://api.bing.microsoft.com/v7.0/images/search?q=puppie
-
-          # subscription_key = "94458eda300a418880dd421286e63c2e"
-          # search_url = "https://api.bing.microsoft.com/v7.0/images/search"
-          # search_term = "puppies"
-          # headers = {"Ocp-Apim-Subscription-Key" : subscription_key}
-          # params  = {"q": search_term, "license":"public"}
-          # time.sleep(1)
-          # response = requests.get(search_url, headers=headers, params=params)
-          # response.raise_for_status()
-          # search_results = response.json()
-          #thumbnail_urls = [img["thumbnailUrl"] for img in search_results["value"][:16]]
-
-#           subscriptionKey = '94458eda300a418880dd421286e63c2e'
-#           endpoint = 'https://api.bing.microsoft.com'
-
-#           searchTerm = "microsoft"
-#             # </importsAndVars>
-#           # <url>
-# # Add you r Bing Custom Search endpoint to your environment variables.
-#           url = endpoint + "/v7.0/images/search?q=" + searchTerm 
-#           r = requests.get(url, headers={'Ocp-Apim-Subscription-Key': subscriptionKey})
-#           pprint(json.loads(r.text))
-          
-          api_key = 'AIzaSyDsWGnneLR5-fm9z3S5Tp-lMYqoDV1YpRk'
-          search_engine_id = 'e1c5bf1893dd2489d'
-
-# Set the search query
-          query = instance_template["attributes"]["OrgLink"]
-
-# Make the API request
-          url = f'https://www.googleapis.com/customsearch/v1?key={api_key}&cx={search_engine_id}&q={query}&searchType=image'
-          response = requests.get(url)
-
-          if response.status_code == 200:
-    # Parse the JSON response
-            data = response.json()
-    
-    # Extract and print image URLs
-          if 'items' in data:
-            for item in data['items']:
-                print(item['link'])
-          else:
-            print(f"Request failed with status code {response.status_code}")
-
-
-
-
 
 else:
       # Error, print status code

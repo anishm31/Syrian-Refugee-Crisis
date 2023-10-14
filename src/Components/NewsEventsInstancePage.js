@@ -26,7 +26,7 @@ style={{ objectFit : "cover", width: "50%", height: "50%", margin: "auto"}}
 <ListGroup.Item>Disaster Type: {event.attributes.DisasterType.toLocaleString()}</ListGroup.Item>
 <ListGroup.Item>Source: {event.attributes.OtherSources}</ListGroup.Item>
 <ListGroup.Item>Theme: {event.attributes.Themes.toLocaleString()}</ListGroup.Item>
-<iframe src={event.attributes.OrgLink.toLocaleString()} width="800" height="600" frameborder="0"></iframe>
+<iframe src={event.attributes.Video.toLocaleString()} width="800" height="600" frameborder="0"></iframe>
 </ListGroup>
 <Card.Img
                     variant="bottom"
