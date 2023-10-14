@@ -1,266 +1,48 @@
-Scraping data for Afghanistan...1/230
-Scraping data for Albania...2/230
-Scraping data for Algeria...3/230
-Scraping data for Andorra...4/230
-Scraping data for Angola...5/230
-Scraping data for Anguilla...6/230
-Scraping data for Antigua and Barbuda...7/230
-Scraping data for Argentina...8/230
-Scraping data for Armenia...9/230
-Scraping data for Aruba...10/230
-Scraping data for Australia...11/230
-Scraping data for Austria...12/230
-Scraping data for Azerbaijan...13/230
-Scraping data for Bahamas...14/230
-Scraping data for Bahrain...15/230
-Scraping data for Bangladesh...16/230
-Scraping data for Barbados...17/230
-Scraping data for Belarus...18/230
-Scraping data for Belgium...19/230
-Scraping data for Belize...20/230
-Scraping data for Benin...21/230
-Failed to retrieve capital city data for Benin
-Scraping data for Bermuda...22/230
-Scraping data for Bhutan...23/230
-Scraping data for Bolivia (Plurinational State of)...24/230
-Scraping data for Bonaire, Saint Eustatius and Saba...25/230
-Scraping data for Bosnia and Herzegovina...26/230
-Scraping data for Botswana...27/230
-Scraping data for Bouvet Island...28/230
-Scraping data for Brazil...29/230
-Scraping data for British Virgin Islands...30/230
-Scraping data for Brunei Darussalam...31/230
-Scraping data for Bulgaria...32/230
-Scraping data for Burkina Faso...33/230
-Scraping data for Burundi...34/230
-Scraping data for Cabo Verde...35/230
-Scraping data for Cambodia...36/230
-Scraping data for Cameroon...37/230
-Scraping data for Canada...38/230
-Scraping data for Cayman Islands...39/230
-Scraping data for Central African Rep....40/230
-Request for page ID failed
-Failed to retrieve capital city data for Central African Rep.
-Failed to retrieve flag image url for Central African Rep.
-Scraping data for Chad...41/230
-Scraping data for Chile...42/230
-Scraping data for China...43/230
-Scraping data for China, Hong Kong SAR...44/230
-Scraping data for China, Macao SAR...45/230
-Request for page ID failed
-Failed to retrieve capital city data for China, Macao SAR
-Failed to retrieve flag image url for China, Macao SAR
-Scraping data for Colombia...46/230
-Scraping data for Comoros...47/230
-Scraping data for Congo...48/230
-Scraping data for Cook Islands...49/230
-Scraping data for Costa Rica...50/230
-Scraping data for Cote d'Ivoire...51/230
-Scraping data for Croatia...52/230
-Scraping data for Cuba...53/230
-Scraping data for Curacao ...54/230
-Scraping data for Cyprus...55/230
-Scraping data for Czechia...56/230
-Scraping data for Dem. People's Rep. of Korea...57/230
-Scraping data for Dem. Rep. of the Congo...58/230
-Request for page ID failed
-Failed to retrieve capital city data for Dem. Rep. of the Congo
-Failed to retrieve flag image url for Dem. Rep. of the Congo
-Scraping data for Denmark...59/230
-Scraping data for Djibouti...60/230
-Scraping data for Dominica...61/230
-Scraping data for Dominican Rep....62/230
-Request for page ID failed
-Failed to retrieve capital city data for Dominican Rep.
-Failed to retrieve flag image url for Dominican Rep.
-Scraping data for Ecuador...63/230
-Scraping data for Egypt...64/230
-Failed to retrieve capital city data for Egypt
-Scraping data for El Salvador...65/230
-Scraping data for Equatorial Guinea...66/230
-Scraping data for Eritrea...67/230
-Scraping data for Estonia...68/230
-Scraping data for Eswatini...69/230
-Scraping data for Ethiopia...70/230
-Scraping data for Faeroe Islands...71/230
-Scraping data for Fiji...72/230
-Scraping data for Finland...73/230
-Scraping data for France...74/230
-Scraping data for French Guiana...75/230
-Scraping data for French Polynesia...76/230
-Scraping data for Gabon...77/230
-Scraping data for Gambia...78/230
-Scraping data for Georgia...79/230
-Scraping data for Germany...80/230
-Scraping data for Ghana...81/230
-Scraping data for Gibraltar...82/230
-Scraping data for Greece...83/230
-Scraping data for Greenland...84/230
-Scraping data for Grenada...85/230
-Scraping data for Guadeloupe...86/230
-Scraping data for Guam...87/230
-Scraping data for Guatemala...88/230
-Scraping data for Guinea...89/230
-Scraping data for Guinea-Bissau...90/230
-Scraping data for Guyana...91/230
-Scraping data for Haiti...92/230
-Scraping data for Holy See...93/230
-Scraping data for Honduras...94/230
-Scraping data for Hungary...95/230
-Scraping data for Iceland...96/230
-Scraping data for India...97/230
-Scraping data for Indonesia...98/230
-Scraping data for Iran (Islamic Rep. of)...99/230
-Scraping data for Iraq...100/230
-Scraping data for Ireland...101/230
-Scraping data for Israel...102/230
-Scraping data for Italy...103/230
-Scraping data for Jamaica...104/230
-Scraping data for Japan...105/230
-Scraping data for Jordan...106/230
-Map Info Scraping Error: Country = Jordan, Error Code = 200
-API Reponse: {'results': [], 'status': 'ZERO_RESULTS'}
-Scraping data for Kazakhstan...107/230
-Scraping data for Kenya...108/230
-Scraping data for Kiribati...109/230
-Scraping data for Kuwait...110/230
-Scraping data for Kyrgyzstan...111/230
-Scraping data for Lao People's Dem. Rep....112/230
-Scraping data for Latvia...113/230
-Scraping data for Lebanon...114/230
-Scraping data for Lesotho...115/230
-Scraping data for Liberia...116/230
-Scraping data for Libya...117/230
-Scraping data for Liechtenstein...118/230
-Scraping data for Lithuania...119/230
-Failed to retrieve capital city data for Lithuania
-Scraping data for Luxembourg...120/230
-Scraping data for Madagascar...121/230
-Scraping data for Malawi...122/230
-Scraping data for Malaysia...123/230
-Scraping data for Maldives...124/230
-Scraping data for Mali...125/230
-Scraping data for Malta...126/230
-Scraping data for Marshall Islands...127/230
-Scraping data for Martinique...128/230
-Scraping data for Mauritania...129/230
-Scraping data for Mauritius...130/230
-Scraping data for Mexico...131/230
-Scraping data for Micronesia (Federated States of)...132/230
-Scraping data for Monaco...133/230
-Scraping data for Mongolia...134/230
-Scraping data for Montenegro...135/230
-Scraping data for Montserrat...136/230
-Scraping data for Morocco...137/230
-Scraping data for Mozambique...138/230
-Scraping data for Myanmar...139/230
-Scraping data for Namibia...140/230
-Scraping data for Nauru...141/230
-Scraping data for Nepal...142/230
-Scraping data for Netherlands (Kingdom of the)...143/230
-Request for page ID failed
-Failed to retrieve capital city data for Netherlands (Kingdom of the)
-Failed to retrieve flag image url for Netherlands (Kingdom of the)
-Scraping data for New Caledonia...144/230
-Scraping data for New Zealand...145/230
-Scraping data for Nicaragua...146/230
-Scraping data for Niger...147/230
-Scraping data for Nigeria...148/230
-Scraping data for Niue...149/230
-Scraping data for North Macedonia...150/230
-Scraping data for Northern Mariana Islands...151/230
-Scraping data for Norway...152/230
-Scraping data for Oman...153/230
-Scraping data for Pakistan...154/230
-Scraping data for Palau...155/230
-Scraping data for Panama...156/230
-Scraping data for Papua New Guinea...157/230
-Scraping data for Paraguay...158/230
-Scraping data for Peru...159/230
-Scraping data for Philippines...160/230
-Scraping data for Poland...161/230
-Scraping data for Portugal...162/230
-Scraping data for Puerto Rico...163/230
-Scraping data for Qatar...164/230
-Scraping data for Rep. of Korea...165/230
-Request for page ID failed
-Failed to retrieve capital city data for Rep. of Korea
-Failed to retrieve flag image url for Rep. of Korea
-Scraping data for Rep. of Moldova...166/230
-Request for page ID failed
-Failed to retrieve capital city data for Rep. of Moldova
-Failed to retrieve flag image url for Rep. of Moldova
-Scraping data for Reunion...167/230
-Scraping data for Romania...168/230
-Scraping data for Russian Federation...169/230
-Scraping data for Rwanda...170/230
-Scraping data for Saint Kitts and Nevis...171/230
-Scraping data for Saint Lucia...172/230
-Scraping data for Saint Vincent and the Grenadines...173/230
-Scraping data for Saint-Martin (French part)...174/230
-Scraping data for Saint-Pierre-et-Miquelon...175/230
-Scraping data for Samoa...176/230
-Scraping data for San Marino...177/230
-Scraping data for Sao Tome and Principe...178/230
-Scraping data for Saudi Arabia...179/230
-Scraping data for Senegal...180/230
-Scraping data for Serbia and Kosovo: S/RES/1244 (1999)...181/230
-Request for page ID failed
-Failed to retrieve capital city data for Serbia and Kosovo: S/RES/1244 (1999)
-Failed to retrieve flag image url for Serbia and Kosovo: S/RES/1244 (1999)
-Scraping data for Seychelles...182/230
-Scraping data for Sierra Leone...183/230
-Scraping data for Singapore...184/230
-Scraping data for Sint Maarten (Dutch part)...185/230
-Scraping data for Slovakia...186/230
-Scraping data for Slovenia...187/230
-Scraping data for Solomon Islands...188/230
-Scraping data for Somalia...189/230
-Scraping data for South Africa...190/230
-Scraping data for South Georgia and the South Sandwich Islands...191/230
-Scraping data for South Sudan...192/230
-Scraping data for Spain...193/230
-Scraping data for Sri Lanka...194/230
-Scraping data for State of Palestine...195/230
-Scraping data for Stateless...196/230
-Scraping data for Sudan...197/230
-Scraping data for Suriname...198/230
-Scraping data for Svalbard and Jan Mayen...199/230
-Scraping data for Sweden...200/230
-Scraping data for Switzerland...201/230
-Failed to retrieve capital city data for Switzerland
-Scraping data for Syrian Arab Rep....202/230
-Scraping data for Tajikistan...203/230
-Scraping data for Thailand...204/230
-Scraping data for Tibetan...205/230
-Scraping data for Timor-Leste...206/230
-Scraping data for Togo...207/230
-Scraping data for Tonga...208/230
-Scraping data for Trinidad and Tobago...209/230
-Scraping data for Tunisia...210/230
-Scraping data for Türkiye...211/230
-Scraping data for Turkmenistan...212/230
-Scraping data for Turks and Caicos Islands...213/230
-Scraping data for Tuvalu...214/230
-Scraping data for Uganda...215/230
-Scraping data for Ukraine...216/230
-Scraping data for United Arab Emirates...217/230
-Scraping data for United Kingdom of Great Britain and Northern Ireland...218/230
-Scraping data for United Rep. of Tanzania...219/230
-Request for page ID failed
-Failed to retrieve capital city data for United Rep. of Tanzania
-Failed to retrieve flag image url for United Rep. of Tanzania
-Scraping data for United States of America...220/230
-Scraping data for Unknown ...221/230
-Scraping data for Uruguay...222/230
-Scraping data for Uzbekistan...223/230
-Scraping data for Vanuatu...224/230
-Scraping data for Venezuela (Bolivarian Republic of)...225/230
-Request for page ID failed
-Failed to retrieve capital city data for Venezuela (Bolivarian Republic of)
-Failed to retrieve flag image url for Venezuela (Bolivarian Republic of)
-Scraping data for Viet Nam...226/230
-Scraping data for Western Sahara...227/230
-Scraping data for Yemen...228/230
-Scraping data for Zambia...229/230
-Scraping data for Zimbabwe...230/230
+Scraping data for Agency for Technical Cooperation and Development...1/47
+Scraping data for CARE International...2/47
+Scraping data for Danish Refugee Council...3/47
+Scraping data for International Catholic Migration Commission...4/47
+Scraping data for International Organization for Migration...5/47
+Scraping data for International Orthodox Christian Charities...6/47
+Scraping data for Islamic Relief...7/47
+Scraping data for Première Urgence Internationale...8/47
+Scraping data for United Nations Development Programme...9/47
+Scraping data for United Nations High Commissioner for Refugees...10/47
+Scraping data for United Nations Children's Fund...11/47
+Scraping data for United Nations Population Fund...12/47
+Scraping data for World Food Programme...13/47
+Scraping data for Caritas Internationalis...14/47
+Scraping data for Catholic Relief Services...15/47
+Scraping data for International Federation of Red Cross and Red Crescent Societies...16/47
+Scraping data for International Rescue Committee...17/47
+Scraping data for Medair...18/47
+Scraping data for Mercy Corps...19/47
+Scraping data for Terre Des Hommes...20/47
+Request for page title failed
+Scraping data for Action contre la faim...21/47
+Scraping data for British Council...22/47
+Scraping data for Concern Worldwide...23/47
+Scraping data for Finn Church Aid...24/47
+Scraping data for Human Appeal...25/47
+Scraping data for Lutheran World Federation...26/47
+Scraping data for Norwegian Refugee Council...27/47
+Scraping data for Relief International...28/47
+Scraping data for Save the Children...29/47
+Scraping data for UNESCO...30/47
+Scraping data for World Vision...31/47
+Scraping data for Adventist Development and Relief Agency...32/47
+Scraping data for Peace Winds Japan...33/47
+Scraping data for ActionAid...34/47
+Scraping data for Deutsche Welthungerhilfe...35/47
+Scraping data for Food and Agriculture Organization...36/47
+Scraping data for International Labour Organization...37/47
+Scraping data for Plan International...38/47
+Scraping data for UN Women...39/47
+Scraping data for United Nations Industrial Development Organization...40/47
+Scraping data for Center for Victims of Torture...41/47
+Scraping data for Jesuit Refugee Service...42/47
+Scraping data for Medecins Du Monde...43/47
+Scraping data for International Medical Corps...44/47
+Scraping data for Qatar Red Crescent...45/47
+Scraping data for World Health Organization...46/47
+Scraping data for Amnesty International...47/47

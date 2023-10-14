@@ -5,6 +5,7 @@
   },
   {
     "name": "CARE International",
+    "query_by_id": "1457",
     "relief": ["Basic Needs", "Cash Assistance", "Emergency Shelter and NFI", "Food Security", "Health", "Protection"]
   },
   {
@@ -55,7 +56,7 @@
   },
   {
     "name": "Caritas Internationalis",
-    "alternate_query": "Caritas",
+    "query_by_id": "1517",
     "relief": ["Cash Assistance", "Education", "Food Security", "Health", ""]
   },
   {
@@ -80,6 +81,7 @@
   },
   {
     "name": "Terre Des Hommes",
+    "query_by_id": "1508",
     "relief": ["Cash Assistance", "Education", "Health", "Protection"]
   },
   {
@@ -116,6 +118,7 @@
   },
   {
     "name": "Save the Children",
+    "query_by_id": "2865",
     "relief": ["Education", "Food Security", "Health", "Protection"]
   },
   {
@@ -125,6 +128,7 @@
   },
   {
     "name": "World Vision",
+    "query_by_id": "2926",
     "relief": ["Education", "Food Security", "Water Sanitation Hygiene"]
   },
   {
@@ -137,6 +141,7 @@
   },
   {
     "name": "ActionAid",
+    "query_by_id": "460",
     "relief": ["Food Security"]
   },
   {
@@ -150,10 +155,12 @@
   },
   {
     "name": "International Labour Organization",
+    "query_by_id": "1099",
     "relief": ["Food Security"]
   },
   {
     "name": "Plan International",
+    "query_by_id": "2866",
     "relief": ["Food Security"]
   },
   {
@@ -171,6 +178,7 @@
   },
   {
     "name": "Jesuit Refugee Service",
+    "query_by_id": "1046",
     "relief": ["Health"]
   },
   {

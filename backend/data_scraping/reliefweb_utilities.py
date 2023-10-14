@@ -14,15 +14,16 @@ def get_relevant_countries(charity, charity_id):
     "fields[include][]" : "country",
     "limit" : 200
   }
+  # Define template to store relevant countries
+  relevant_countries = {
+    "primary_countries" : set(),
+    "secondary_countries" : set()
+  }
   # Make request to retrieve documents/reports pertaining to the query
   response = requests.get(URL, params=params)
   # Verify status of response
   if response.status_code == 200 and response.json()["count"] > 0:
     # Parse relevant countries from response of documents/reports and store
-    relevant_countries = {
-      "primary_countries" : set(),
-      "secondary_countries" : set()
-    }
     for report in response.json()["data"]:
       # Add all countries to list (if present)
       if report["fields"].get("country") is not None:
@@ -37,10 +38,14 @@ def get_relevant_countries(charity, charity_id):
               relevant_countries["secondary_countries"].add(country_iso3.upper())
     # Remove duplicates sets
     relevant_countries["secondary_countries"] = relevant_countries["secondary_countries"].difference(relevant_countries["primary_countries"])
-    # Convert fields of relevant_countries to lists and return
-    relevant_countries["primary_countries"] = list(relevant_countries["primary_countries"])
-    relevant_countries["secondary_countries"] = list(relevant_countries["secondary_countries"])
-    return relevant_countries
+  elif response.json()["count"] == 0:
+    # Default to Syria being the relevant country if no documents/reports are found
+    relevant_countries["primary_countries"].add("SYR")
   else:
     print(f"Request for relevant countries for {charity} failed: {response.status_code}")
     return []
+  
+  # Convert fields of relevant_countries to lists and return
+  relevant_countries["primary_countries"] = list(relevant_countries["primary_countries"])
+  relevant_countries["secondary_countries"] = list(relevant_countries["secondary_countries"])
+  return relevant_countries
