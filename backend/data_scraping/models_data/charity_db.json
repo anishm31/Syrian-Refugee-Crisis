@@ -304,7 +304,7 @@
       "org_type": [
         "Non-governmental Organization"
       ],
-      "logo_img": "",
+      "logo_img": "https://upload.wikimedia.org/wikipedia/en/thumb/3/3c/ICMC_colour_logo_with_tagline_2015.jpg/220px-ICMC_colour_logo_with_tagline_2015.jpg",
       "org_img": "",
       "established": "1951-00-00T00:00:00Z",
       "short_name": "ICMC",
@@ -467,7 +467,7 @@
       "org_type": [
         "Non-governmental Organization"
       ],
-      "logo_img": "",
+      "logo_img": "https://iocc.org/wp-content/uploads/2019/06/iocc-logo-1.png",
       "org_img": "",
       "established": "1992-01-01T00:00:00Z",
       "short_name": "IOCC",
@@ -583,9 +583,9 @@
       "org_type": [
         "Non-governmental Organization"
       ],
-      "logo_img": "",
+      "logo_img": "https://healthcluster.who.int/images/librariesprovider16/health-cluster/partners/pui-logo.tmb-1920v.png?sfvrsn=cc87d56a_1",
       "org_img": "",
-      "established": "",
+      "established": "2011-00-00T00:00:00Z",
       "short_name": "Premi\u00e8re Urgence Internationale",
       "long_name": "Premi\u00e8re Urgence Internationale",
       "parent_org": "",
@@ -1751,7 +1751,7 @@
       "org_type": [
         "Non-governmental Organization"
       ],
-      "logo_img": "",
+      "logo_img": "https://upload.wikimedia.org/wikipedia/en/3/32/Concern_worldwide_logo.gif",
       "org_img": "",
       "established": "1968-01-01T00:00:00Z",
       "short_name": "Concern",
@@ -1851,7 +1851,7 @@
       "org_type": [
         "Non-governmental Organization"
       ],
-      "logo_img": "",
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Human_appeal_logo18.png",
       "org_img": "",
       "established": "1991-00-00T00:00:00Z",
       "short_name": "HA",
@@ -1885,7 +1885,7 @@
       "org_type": [
         "Non-governmental Organization"
       ],
-      "logo_img": "",
+      "logo_img": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8d/The_Lutheran_World_Federation_%28logo%29.svg/1024px-The_Lutheran_World_Federation_%28logo%29.svg.png",
       "org_img": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Logo-LWB.svg",
       "established": "1947-00-00T00:00:00Z",
       "short_name": "Lutheran World Federation",
@@ -2488,7 +2488,7 @@
       "org_type": [
         "Non-governmental Organization"
       ],
-      "logo_img": "",
+      "logo_img": "https://give2asia.org/wp-content/uploads/2019/08/PWJ-Logo.jpg",
       "org_img": "",
       "established": "1996-02-00T00:00:00Z",
       "short_name": "PWJ",
@@ -3110,7 +3110,7 @@
       "org_type": [
         "Non-governmental Organization"
       ],
-      "logo_img": "",
+      "logo_img": "https://upload.wikimedia.org/wikipedia/fr/4/40/Medecins_du_monde.svg",
       "org_img": "",
       "established": "1980-00-00T00:00:00Z",
       "short_name": "MDM",
