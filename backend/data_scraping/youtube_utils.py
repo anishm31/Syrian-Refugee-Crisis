@@ -2,8 +2,11 @@ import requests
 import json
 import time
 from bs4 import BeautifulSoup
+import os
+from dotenv import load_dotenv
+load_dotenv(dotenv_path="../../secrets.env")
 
-# Function to retrieve the channel IDs for each charity/organization
+# Function to retrieve/populate the channel IDs for each charity/organization
 def scrape_youtube_channel_ids(charity_db_path):
   with open(charity_db_path, "r") as f:
     charity_db = json.load(f)
@@ -47,4 +50,48 @@ def scrape_youtube_channel_ids(charity_db_path):
     json.dump(charity_db, f, indent=2)
     
 
-scrape_youtube_channel_ids("models_data/charity_db.json")
+# Function to retrieve/populate the relevant videos (Video IDs) for each charity/organization
+def retrieve_videos(charity_db_path):
+  # Define necessary variables for API request
+  YOUTUBE_URL = "https://youtube.googleapis.com/youtube/v3/search"
+  KEY = os.environ["GOOGLE_API"]
+  # Load charity instances into list
+  with open(charity_db_path, "r") as f:
+    charity_db = json.load(f)
+  # Iterate through each charity/organization
+  count = 0
+  charity_num = 0
+  for charity in charity_db:
+    # Define API query parameters
+    params = {
+      "part": "id",
+      "channelId": charity["attributes"]["youtube_info"]["channel_id"],
+      "order": "relevance",
+      "q": "syrian refugees",
+      "type": "video",
+      "videoEmbeddable": "true",
+      "maxResults": 5,
+      "key": KEY
+    }
+    # Make request to API
+    response = requests.get(YOUTUBE_URL, params=params)
+    # Verify that the response is valid
+    if response.status_code == 200 and len(response.json()["items"]) > 0:
+      # Extract video IDs from response and store in charity instance
+      video_ids = []
+      for video in response.json()["items"]:
+        video_ids.append(video["id"]["videoId"])
+      charity["attributes"]["youtube_info"]["relevant_videos"] = video_ids
+      count += 1
+    else:
+      print(f"Failed to retrieve relevant videos for {charity['name']}")
+    charity_num += 1
+    # Print Status
+    print(f"Retrieved relevant videos for {charity['name']}...{charity_num}/{len(charity_db)}")
+    time.sleep(1)
+  print(f"Retrieved relevant videos for {count}/{len(charity_db)} charities/organizations")
+  # Write updated charity info to json file
+  with open(charity_db_path, "w") as f:
+    json.dump(charity_db, f, indent=2)
+    
+retrieve_videos("models_data/charity_db.json")
