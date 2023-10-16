@@ -1,0 +1,204 @@
+[
+  {
+    "name": "Agency for Technical Cooperation and Development",
+    "relief": ["Basic Needs", "Education", "Food Security", "Other", "Protection", "Water Sanitation Hygiene"]
+  },
+  {
+    "name": "CARE International",
+    "query_by_id": "1457",
+    "relief": ["Basic Needs", "Cash Assistance", "Emergency Shelter and NFI", "Food Security", "Health", "Protection"]
+  },
+  {
+    "name": "Danish Refugee Council",
+    "relief": ["Basic Needs", "Cash Assistance", "Emergency Shelter and NFI", "Food Security", "Protection"]
+  },
+  {
+    "name": "International Catholic Migration Commission",
+    "relief": ["Basic Needs", "Education", "Emergency Shelter and NFI", "Food Security", "Protection", "Water Sanitation Hygiene"]
+  },
+  {
+    "name": "International Organization for Migration",
+    "relief": ["Basic Needs", "Education", "Food Security", "Health", "Protection", ""]
+  },
+  {
+    "name": "International Orthodox Christian Charities",
+    "relief": ["Basic Needs", "Cash Assistance", "Emergency Shelter and NFI", "Food Security", "Health", "Protection"]
+  },
+  {
+    "name": "Islamic Relief",
+    "relief": ["Basic Needs", "Emergency Shelter and NFI", "Food Security", "Health"]
+  },
+  {
+    "name": "Première Urgence Internationale",
+    "relief": ["Basic Needs", "Cash Assistance", "Education", "Emergency Shelter and NFI", "Health", "Water Sanitation Hygiene"]
+  },
+  {
+    "name": "United Nations Development Programme",
+    "alternate_query": "UN Development Programme",
+    "relief": ["Basic Needs", "Food Security", "Protection"]
+  },
+  {
+    "name": "United Nations High Commissioner for Refugees",
+    "relief": ["Basic Needs", "Camp Coordination and Management", "Cash Assistance", "Education", "Emergency Shelter and NFI", "Food Security", "Health", "Other", "Protection", "Water Sanitation Hygiene"]
+  },
+  {
+    "name": "United Nations Children's Fund",
+    "alternate_query": "UN Children's Fund",
+    "relief": ["Basic Needs", "Camp Coordination and Management", "Education", "Health", "Protection", "Water Sanitation Hygiene"]
+  },
+  {
+    "name": "United Nations Population Fund",
+    "relief": ["Basic Needs", "Camp Coordination and Management", "Health", "Protection"]
+  },
+  {
+    "name": "World Food Programme",
+    "relief": ["Basic Needs", "Food Security"]
+  },
+  {
+    "name": "Caritas Internationalis",
+    "query_by_id": "1517",
+    "relief": ["Cash Assistance", "Education", "Food Security", "Health", ""]
+  },
+  {
+    "name": "Catholic Relief Services",
+    "relief": ["Cash Assistance", "Education", "Food Security"]
+  },
+  {
+    "name": "International Federation of Red Cross and Red Crescent Societies",
+    "relief": ["Cash Assistance", ""]
+  },
+  {
+    "name": "International Rescue Committee",
+    "relief": ["Cash Assistance", "Education", "Health", "Protection"]
+  },
+  {
+    "name": "Medair",
+    "relief": ["Cash Assistance", "Emergency Shelter and NFI", "Health"]
+  },
+  {
+    "name": "Mercy Corps",
+    "relief": ["Cash Assistance", "Education", "Emergency Shelter and NFI", "Protection", "Water Sanitation Hygiene"]
+  },
+  {
+    "name": "Terre Des Hommes",
+    "query_by_id": "1508",
+    "relief": ["Cash Assistance", "Education", "Health", "Protection"]
+  },
+  {
+    "name": "Action contre la faim",
+    "relief": ["Education", "Water Sanitation Hygiene"]
+  },
+  {
+    "name": "British Council",
+    "relief": ["Education"]
+  },
+  {
+    "name": "Concern Worldwide",
+    "relief": ["Education", "Protection"]
+  },
+  {
+    "name": "Finn Church Aid",
+    "relief": ["Education", "Protection"]
+  },
+  {
+    "name": "Human Appeal",
+    "relief": ["Education"]
+  },
+  {
+    "name": "Lutheran World Federation",
+    "relief": ["Education", "Emergency Shelter and NFI", "Food Security", "Protection"]
+  },
+  {
+    "name": "Norwegian Refugee Council",
+    "relief": ["Education", "Emergency Shelter and NFI", "Food Security", "Protection"]
+  },
+  {
+    "name": "Relief International",
+    "relief": ["Education", "Food Security", "Water Sanitation Hygiene"]
+  },
+  {
+    "name": "Save the Children",
+    "query_by_id": "2865",
+    "relief": ["Education", "Food Security", "Health", "Protection"]
+  },
+  {
+    "name": "UNESCO",
+    "alternate_query": "UN Educational, Scientific and Cultural Organization",
+    "relief": ["Education"]
+  },
+  {
+    "name": "World Vision",
+    "query_by_id": "2926",
+    "relief": ["Education", "Food Security", "Water Sanitation Hygiene"]
+  },
+  {
+    "name": "Adventist Development and Relief Agency",
+    "relief": ["Emergency Shelter and NFI"]
+  },
+  {
+    "name": "Peace Winds Japan",
+    "relief": ["Emergency Shelter and NFI", "Food Security", "Health", "Water Sanitation Hygiene"]
+  },
+  {
+    "name": "ActionAid",
+    "query_by_id": "460",
+    "relief": ["Food Security"]
+  },
+  {
+    "name": "Deutsche Welthungerhilfe",
+    "alternate_query": "Welthungerhilfe",
+    "relief": ["Food Security"]
+  },
+  {
+    "name": "Food and Agriculture Organization",
+    "relief": ["Food Security", "Water Sanitation Hygiene"]
+  },
+  {
+    "name": "International Labour Organization",
+    "query_by_id": "1099",
+    "relief": ["Food Security"]
+  },
+  {
+    "name": "Plan International",
+    "query_by_id": "2866",
+    "relief": ["Food Security"]
+  },
+  {
+    "name": "UN Women",
+    "relief": ["Food Security", "Protection"]
+  },
+  {
+    "name": "United Nations Industrial Development Organization",
+    "alternate_query": "UNIDO",
+    "relief": ["Food Security"]
+  },
+  {
+    "name": "Center for Victims of Torture",
+    "relief": ["Health"]
+  },
+  {
+    "name": "Jesuit Refugee Service",
+    "query_by_id": "1046",
+    "relief": ["Health"]
+  },
+  {
+    "name": "Medecins Du Monde",
+    "relief": ["Health"]
+  },
+  {
+    "name": "International Medical Corps",
+    "relief": ["Health", "Protection"]
+  },
+  {
+    "name": "Qatar Red Crescent",
+    "relief": ["Health"]
+  },
+  {
+    "name": "World Health Organization",
+    "relief": ["Health"]
+  },
+  {
+    "name": "Amnesty International",
+    "relief": ["Other"]
+  }
+]

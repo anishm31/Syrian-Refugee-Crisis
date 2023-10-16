@@ -1,93 +1,1084 @@
 [
   {
+    "name": "Agency for Technical Cooperation and Development",
+    "id": "Q2826580",
+    "attributes": {
+      "description": "We go the last mile: ACTED\u2019s mission is to save lives and support people in meeting their needs in hard to reach areas. ACTED develops and implements programs that target the most vulnerable amongst populations that have suffered from conflict, natural disaster, or socio-economic hardship. ACTED\u2019s approach looks beyond the immediate emergency towards opportunities for longer term livelihoods reconstruction and sustainable development.\n\n**Our mandate**\n\nIndependent, private and non-profit, ACTED respects a strict political and religious impartiality, and operates following principles of non-discrimination, transparency, according to its core values: responsibility, impact, enterprising-spirit and inspiration.\n\nACTED is committed to immediate humanitarian relief to support those in urgent need and protect people\u2019s dignity, while co-creating longer term opportunities for sustainable growth and fulfilling people\u2019s potential.\n\nACTED endeavors to respond to humanitarian crises and build resilience; promote inclusive and sustainable growth; co-construct effective governance and support the building of civil society worldwide by investing in people and their potential.",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://reliefweb.int/sites/default/files/images/sources/a6/81/a68112a9-8260-3135-8ff3-d067d8310e4f.jpg",
+      "org_img": "",
+      "established": "1993-00-00T00:00:00Z",
+      "short_name": "ACTED",
+      "long_name": "Agency for Technical Cooperation and Development",
+      "parent_org": "",
+      "headquarters": "Paris",
+      "hq_country": "France",
+      "awards_received": [],
+      "website": "https://www.acted.org/en",
+      "relief_web_id": "823",
+      "relief_web_url": "https://reliefweb.int/organization/acted",
+      "relief_provided": [
+        "Basic Needs",
+        "Education",
+        "Food Security",
+        "Other",
+        "Protection",
+        "Water Sanitation Hygiene"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "AFG",
+          "THA",
+          "PAK",
+          "SOM",
+          "SDN",
+          "IRQ",
+          "NER",
+          "BGD",
+          "TCD",
+          "SSD",
+          "COG",
+          "LBY",
+          "MLI",
+          "JOR",
+          "UKR",
+          "SYR",
+          "UGA",
+          "KEN",
+          "TUR",
+          "CAF",
+          "LBN",
+          "NPL",
+          "COD"
+        ],
+        "secondary_countries": [
+          "BEN",
+          "PSE",
+          "MMR",
+          "MDA",
+          "IRN",
+          "NGA",
+          "TZA",
+          "CMR",
+          "RWA",
+          "ETH",
+          "BDI",
+          "ROU",
+          "ERI",
+          "EGY",
+          "DJI",
+          "BTN"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCWocpjd-nzUUgbd19tFyUmQ",
+        "channel_url": "https://www.youtube.com/user/NGOACTED",
+        "relevant_videos": [
+          "v3xfkKL44Ks",
+          "gsaN88Hj7CQ",
+          "dE8aum5RlIc",
+          "7TPIv7wWyTg",
+          "kSo054WcKEQ"
+        ]
+      }
+    }
+  },
+  {
+    "name": "CARE International",
+    "id": "Q699385",
+    "attributes": {
+      "description": "CARE International is a 75-year-old global confederation working to fight poverty and social injustice in the world, with a specific focus on the empowerment of women and girls. We work side-by-side with communities to understand the root causes of poverty and find innovative, locally-led solutions. CARE seeks to demonstrate the results and methodologies used in our projects to ensure transparency and accountability and advance the quality of our work.",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/4/49/CARE_Logo_Orange.png",
+      "org_img": "",
+      "established": "1945-00-00T00:00:00Z",
+      "short_name": "CARE",
+      "long_name": "CARE International",
+      "parent_org": "",
+      "headquarters": "Geneva",
+      "hq_country": "Switzerland",
+      "awards_received": [
+        {
+          "award_name": "Silver Anvil Awards",
+          "award_date": "1994-00-00T00:00:00Z"
+        }
+      ],
+      "website": "https://www.care-international.org/",
+      "relief_web_id": "1457",
+      "relief_web_url": "https://reliefweb.int/organization/care",
+      "relief_provided": [
+        "Basic Needs",
+        "Cash Assistance",
+        "Emergency Shelter and NFI",
+        "Food Security",
+        "Health",
+        "Protection"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "AFG",
+          "SOM",
+          "SDN",
+          "IRQ",
+          "NER",
+          "BDI",
+          "GIN",
+          "BGD",
+          "SRB",
+          "VEN",
+          "COL",
+          "GRC",
+          "SLE",
+          "TCD",
+          "TZA",
+          "POL",
+          "ETH",
+          "ALB",
+          "ERI",
+          "HUN",
+          "BIH",
+          "EGY",
+          "SSD",
+          "MMR",
+          "JOR",
+          "CIV",
+          "SYR",
+          "UGA",
+          "NGA",
+          "KEN",
+          "LBR",
+          "TUR",
+          "RWA",
+          "LBN",
+          "ECU",
+          "ARM",
+          "COD"
+        ],
+        "secondary_countries": [
+          "ITA",
+          "PSE",
+          "BEL",
+          "THA",
+          "FRA",
+          "PAK",
+          "CHL",
+          "CUW",
+          "URY",
+          "YEM",
+          "ABW",
+          "DEU",
+          "GBR",
+          "DJI",
+          "PRY",
+          "MKD",
+          "PER",
+          "MDA",
+          "ARG",
+          "BRA",
+          "MNE",
+          "PAN",
+          "LBY",
+          "MYS",
+          "MLI",
+          "AZE",
+          "UKR",
+          "BOL",
+          "CMR",
+          "MLT",
+          "GUY",
+          "TTO",
+          "IDN",
+          "CAF",
+          "CRI",
+          "ROU",
+          "DOM",
+          "SVK"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCOK3VDTcbFGPM2X3aTOmZpQ",
+        "channel_url": "https://www.youtube.com/user/CAREinternational",
+        "relevant_videos": [
+          "Xf5q4MdVU9M",
+          "brvbg4jJPWE",
+          "jUYV2kUTm7s",
+          "0Os7CtYot70",
+          "gdmKYIDYdZ8"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Danish Refugee Council",
+    "id": "Q3272284",
+    "attributes": {
+      "description": "Founded in 1956, DRC Danish Refugee Council is Denmark\u2019s largest, and a leading international NGO - one of the few with a specific expertise in forced displacement. In 40 countries, our 7,500 employees protect, advocate and build sustainable futures for refugees and other displacement-affected people and communities.\n\n- DRC works during displacement at all stages: In the acute crisis, in exile, when settling and integrating in a new place, or upon return.\n\n- DRC provides protection and life-saving humanitarian assistance.\n\n- DRC supports displaced persons in becoming self-reliant and included in hosting societies.\n\n- DRC works with civil society and responsible authorities to promote the protection of rights and peaceful coexistence.\n\n- Our 6,000 volunteers in Denmark make an invaluable difference in integration activities throughout the country.",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Dansk_Flygtningehj%C3%A6lp_-_logo_%282016%29.png",
+      "org_img": "",
+      "established": "1976-09-01T00:00:00Z",
+      "short_name": "DRC",
+      "long_name": "Danish Refugee Council",
+      "parent_org": "",
+      "headquarters": "Copenhagen",
+      "hq_country": "Denmark",
+      "awards_received": [],
+      "website": "https://drc.ngo/",
+      "relief_web_id": "522",
+      "relief_web_url": "https://reliefweb.int/organization/drc",
+      "relief_provided": [
+        "Basic Needs",
+        "Cash Assistance",
+        "Emergency Shelter and NFI",
+        "Food Security",
+        "Protection"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "ITA",
+          "AFG",
+          "PAK",
+          "SOM",
+          "IRQ",
+          "BGD",
+          "VEN",
+          "COL",
+          "GRC",
+          "MDA",
+          "DZA",
+          "IRN",
+          "POL",
+          "ETH",
+          "BIH",
+          "HUN",
+          "SSD",
+          "LBY",
+          "MYS",
+          "JOR",
+          "TJK",
+          "MMR",
+          "CIV",
+          "SYR",
+          "UGA",
+          "KEN",
+          "TUR",
+          "IDN",
+          "LBN",
+          "PAN",
+          "COD"
+        ],
+        "secondary_countries": [
+          "IND",
+          "PSE",
+          "ESH",
+          "BEL",
+          "THA",
+          "FRA",
+          "CHL",
+          "CUW",
+          "URY",
+          "SDN",
+          "YEM",
+          "ABW",
+          "BDI",
+          "DEU",
+          "GBR",
+          "DJI",
+          "PRY",
+          "DNK",
+          "PER",
+          "TZA",
+          "CHE",
+          "UZB",
+          "BRA",
+          "ARG",
+          "EGY",
+          "UKR",
+          "CZE",
+          "BOL",
+          "NLD",
+          "MLT",
+          "TUN",
+          "LBR",
+          "AUS",
+          "GUY",
+          "GHA",
+          "TTO",
+          "RWA",
+          "ECU",
+          "CRI",
+          "ROU",
+          "DOM",
+          "SVK"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCOSVI6yw6mY_xLjAIO4TQGA",
+        "channel_url": "https://www.youtube.com/channel/UCOSVI6yw6mY_xLjAIO4TQGA",
+        "relevant_videos": [
+          "7fJYgIVg8H0",
+          "3sECL_lpjaI",
+          "0mXl4h3CX-E",
+          "cRe8XmQ0EVo",
+          "aUi3M4rDP50"
+        ]
+      }
+    }
+  },
+  {
+    "name": "International Catholic Migration Commission",
+    "id": "Q6049012",
+    "attributes": {
+      "description": "The International Catholic Migration Commission (ICMC) is an international non-governmental organization working in the areas of migration and refugee assistance and advocacy. ICMC was founded in 1951, in the wake of the massive human displacement caused by the Second World War. It has consultative status with the United Nations Economic and Social Council (ECOSOC).",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/en/thumb/3/3c/ICMC_colour_logo_with_tagline_2015.jpg/220px-ICMC_colour_logo_with_tagline_2015.jpg",
+      "org_img": "",
+      "established": "1951-00-00T00:00:00Z",
+      "short_name": "ICMC",
+      "long_name": "International Catholic Migration Commission",
+      "parent_org": "",
+      "headquarters": "Geneva",
+      "hq_country": "Switzerland",
+      "awards_received": [],
+      "website": "http://www.icmc.net",
+      "relief_web_id": "1985",
+      "relief_web_url": "https://reliefweb.int/organization/icmc",
+      "relief_provided": [
+        "Basic Needs",
+        "Education",
+        "Emergency Shelter and NFI",
+        "Food Security",
+        "Protection",
+        "Water Sanitation Hygiene"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "MYS",
+          "JOR",
+          "AFG",
+          "MDA",
+          "SYR",
+          "IRQ"
+        ],
+        "secondary_countries": [
+          "TUR",
+          "MMR",
+          "IRN",
+          "UKR",
+          "POL",
+          "LBN",
+          "HUN",
+          "EGY",
+          "ROU",
+          "SVK"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCpGzHyxhMmoiGTFZQlhJIMQ",
+        "channel_url": "https://www.youtube.com/internationalcatholicmigrationcommission",
+        "relevant_videos": [
+          "9QIQZE2gixk",
+          "kQXOxd_VR2I",
+          "rIIirIF9UQA",
+          "QYqNSm2z9Bo",
+          "kKMwaIy0954"
+        ]
+      }
+    }
+  },
+  {
+    "name": "International Organization for Migration",
+    "id": "Q472311",
+    "attributes": {
+      "description": "Established in 1951, the International Organization for Migration (IOM) is the leading intergovernmental organization in the field of migration and is committed to the principle that humane and orderly migration benefits migrants and society. IOM is part of the United Nations system, as a related organization.",
+      "org_type": [
+        "International Organization"
+      ],
+      "logo_img": "https://reliefweb.int/sites/default/files/images/sources/1e/a0/1ea00cc0-b2c5-31f4-a857-dbf267456a71.png",
+      "org_img": "",
+      "established": "1951-00-00T00:00:00Z",
+      "short_name": "IOM",
+      "long_name": "International Organization for Migration",
+      "parent_org": "",
+      "headquarters": "Geneva",
+      "hq_country": "Switzerland",
+      "awards_received": [],
+      "website": "http://www.iom.int/",
+      "relief_web_id": "1255",
+      "relief_web_url": "https://reliefweb.int/organization/iom",
+      "relief_provided": [
+        "Basic Needs",
+        "Education",
+        "Food Security",
+        "Health",
+        "Protection",
+        ""
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "PSE",
+          "BEL",
+          "CHL",
+          "SOM",
+          "URY",
+          "SDN",
+          "IRQ",
+          "YEM",
+          "CAN",
+          "DEU",
+          "ZMB",
+          "GBR",
+          "BGD",
+          "FIN",
+          "NIC",
+          "USA",
+          "MDA",
+          "COL",
+          "TZA",
+          "LVA",
+          "ARG",
+          "ETH",
+          "BRA",
+          "MEX",
+          "ERI",
+          "CYP",
+          "HUN",
+          "EGY",
+          "MLI",
+          "JOR",
+          "MMR",
+          "SVK",
+          "CIV",
+          "SYR",
+          "HRV",
+          "ESP",
+          "KEN",
+          "SVN",
+          "TUR",
+          "LBN",
+          "ECU",
+          "NPL",
+          "COD"
+        ],
+        "secondary_countries": [
+          "ITA",
+          "DOM",
+          "FRA",
+          "THA",
+          "CUW",
+          "GTM",
+          "ABW",
+          "BDI",
+          "CHN",
+          "PRY",
+          "PER",
+          "VEN",
+          "SLV",
+          "HND",
+          "AUT",
+          "BLZ",
+          "SSD",
+          "LBY",
+          "QAT",
+          "UKR",
+          "BOL",
+          "JPN",
+          "LBR",
+          "AUS",
+          "GUY",
+          "TTO",
+          "SWE",
+          "PRT",
+          "CRI",
+          "ROU",
+          "PAN",
+          "MRT"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCTPDxhZ5d8nZgZFLTITA5LA",
+        "channel_url": "https://www.youtube.com/user/IOMMigration",
+        "relevant_videos": [
+          "FdB-Wz6WFnE",
+          "_MPkXdV3mlQ",
+          "cqbZSsq-g2M",
+          "16T99rC2kjQ",
+          "dYX2q9Dtm0I"
+        ]
+      }
+    }
+  },
+  {
+    "name": "International Orthodox Christian Charities",
+    "id": "Q6052281",
+    "attributes": {
+      "description": "As the humanitarian relief and development agency of the Assembly of Canonical Orthodox Bishops of the United States of America, IOCC works in cooperation with the Orthodox Church and other partners to serve people in need.\n\nIn the spirit of Christ\u2019s love, IOCC offers emergency relief and development programs to those in need worldwide, without discrimination, and strengthens the capacity of the Orthodox Church to so respond. We envision that, by God\u2019s grace, IOCC will equip those suffering and in need to continue to improve their own lives and communities and to have means to live with dignity, respect, and hope.\n\nSince its inception in 1992, IOCC has provided more than $800 million in humanitarian relief and sustainable development programs to people facing hardship. All assistance is provided solely on the basis of need. Current programs focus on emergency preparedness and response; sustainable livelihoods; water, sanitation, and hygiene; health; and food security and agriculture in places including Ethiopia, Greece, Lebanon, Syria, Uganda, and the United States.",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://iocc.org/wp-content/uploads/2019/06/iocc-logo-1.png",
+      "org_img": "",
+      "established": "1992-01-01T00:00:00Z",
+      "short_name": "IOCC",
+      "long_name": "International Orthodox Christian Charities",
+      "parent_org": "",
+      "headquarters": "Baltimore",
+      "hq_country": "United States of America",
+      "awards_received": [],
+      "website": "http://www.iocc.org",
+      "relief_web_id": "1997",
+      "relief_web_url": "https://reliefweb.int/organization/iocc",
+      "relief_provided": [
+        "Basic Needs",
+        "Cash Assistance",
+        "Emergency Shelter and NFI",
+        "Food Security",
+        "Health",
+        "Protection"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "JOR",
+          "GRC",
+          "SYR",
+          "IRQ",
+          "LBN",
+          "ETH",
+          "KGZ",
+          "BIH",
+          "SRB"
+        ],
+        "secondary_countries": [
+          "MNE",
+          "SSD",
+          "SOM",
+          "AFG"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UChevcXuzBOFhIAfzJpfQf5w",
+        "channel_url": "https://www.youtube.com/channel/UChevcXuzBOFhIAfzJpfQf5w",
+        "relevant_videos": [
+          "lVfPKwscXIQ",
+          "cI7e0Tdm_eU",
+          "oKfY5QrD7iw",
+          "Cg3jsre5I4w",
+          "6ctMea1OF6E"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Islamic Relief",
+    "id": "Q239714",
+    "attributes": {
+      "description": "Islamic Relief is a faith-inspired humanitarian and development agency working to save and transform the lives of some of the world\u2019s most vulnerable people. Established in 1984, we now work in over 45 countries assisting individuals, families and communities through emergency response and development projects that typically help over 10 million people each year.",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/3/3f/IRW-LOGO_BOXED_small.jpg",
+      "org_img": "",
+      "established": "1984-00-00T00:00:00Z",
+      "short_name": "Islamic Relief",
+      "long_name": "Islamic Relief Worldwide",
+      "parent_org": "",
+      "headquarters": "Birmingham",
+      "hq_country": "United Kingdom of Great Britain and Northern Ireland",
+      "awards_received": [],
+      "website": "https://islamic-relief.org/",
+      "relief_web_id": "1142",
+      "relief_web_url": "https://reliefweb.int/organization/islamic-relief",
+      "relief_provided": [
+        "Basic Needs",
+        "Emergency Shelter and NFI",
+        "Food Security",
+        "Health"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "BGD",
+          "JOR",
+          "GRC",
+          "TCD",
+          "CIV",
+          "SYR",
+          "RUS",
+          "IRQ",
+          "LBN",
+          "YEM",
+          "SDN",
+          "DEU",
+          "TUN",
+          "KEN",
+          "GBR",
+          "EGY",
+          "MKD",
+          "SRB"
+        ],
+        "secondary_countries": [
+          "ITA",
+          "LBY",
+          "ZAF",
+          "TUR",
+          "PSE",
+          "MMR",
+          "USA",
+          "MLI",
+          "SWE",
+          "SOM",
+          "ETH",
+          "CAN",
+          "ERI",
+          "MNE",
+          "SSD"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCZTzye9GGrnfsL-BZd_JBDg",
+        "channel_url": "https://www.youtube.com/user/IRWorldwide",
+        "relevant_videos": [
+          "DNsb7RThQg4",
+          "bxjaUNJmHpE",
+          "fjkIdK2q1r0",
+          "z0DGL_U8Oxk",
+          "IvyaWztftKc"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Premi\u00e8re Urgence Internationale",
+    "id": "Q3401883",
+    "attributes": {
+      "description": "Premi\u00e8re Urgence Internationale is a non-profit, non-political, non-religious international NGO.\n\nPremi\u00e8re Urgence Internationale helps civilians who are marginalised or excluded as a result of natural disasters, war and economic collapse.\n\nOur mission is to defend basic human rights, such as those set out in the Universal Declaration of Human Rights in 1948.",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://healthcluster.who.int/images/librariesprovider16/health-cluster/partners/pui-logo.tmb-1920v.png?sfvrsn=cc87d56a_1",
+      "org_img": "",
+      "established": "2011-00-00T00:00:00Z",
+      "short_name": "Premi\u00e8re Urgence Internationale",
+      "long_name": "Premi\u00e8re Urgence Internationale",
+      "parent_org": "",
+      "headquarters": "Asni\u00e8res-sur-Seine",
+      "hq_country": "France",
+      "awards_received": [],
+      "website": "https://www.premiere-urgence.org",
+      "relief_web_id": "8593",
+      "relief_web_url": "https://reliefweb.int/organization/premiere-urgence-internationale",
+      "relief_provided": [
+        "Basic Needs",
+        "Cash Assistance",
+        "Education",
+        "Emergency Shelter and NFI",
+        "Health",
+        "Water Sanitation Hygiene"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "PSE",
+          "VEN",
+          "TCD",
+          "SYR",
+          "LBN",
+          "GEO"
+        ],
+        "secondary_countries": [
+          "DOM",
+          "CHL",
+          "CUW",
+          "URY",
+          "IRQ",
+          "ABW",
+          "PRY",
+          "PER",
+          "COL",
+          "ARG",
+          "BRA",
+          "EGY",
+          "JOR",
+          "BOL",
+          "TUR",
+          "GUY",
+          "TTO",
+          "ECU",
+          "CRI",
+          "PAN"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UC7QZ2GaRS9bZNMSgnwxZVHg",
+        "channel_url": "https://www.youtube.com/user/premiereurgence",
+        "relevant_videos": [
+          "eqxK8SOac6g",
+          "G34VBloHDk8",
+          "WDBYZJQMwdA",
+          "KdHmHplmXxM",
+          "Yd0KtGj6w5U"
+        ]
+      }
+    }
+  },
+  {
+    "name": "United Nations Development Programme",
+    "id": "Q161718",
+    "attributes": {
+      "description": "As the United Nations lead agency on international development, UNDP works in 170 countries and territories to eradicate poverty and reduce inequality. We help countries to develop policies, leadership skills, partnering abilities, institutional capabilities, and to build resilience to achieve the Sustainable Development Goals. Our work is concentrated in three focus areas; sustainable development, democratic governance and peace building, and climate and disaster resilience.",
+      "org_type": [
+        "International Organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/9/9f/UNDP_logo.svg",
+      "org_img": "",
+      "established": "1965-00-00T00:00:00Z",
+      "short_name": "UNDP",
+      "long_name": "United Nations Development Programme",
+      "parent_org": "United Nations General Assembly",
+      "headquarters": "New York City",
+      "hq_country": "United States of America",
+      "awards_received": [],
+      "website": "https://www.undp.org/",
+      "relief_web_id": "1293",
+      "relief_web_url": "https://reliefweb.int/organization/undp",
+      "relief_provided": [
+        "Basic Needs",
+        "Food Security",
+        "Protection"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "PSE",
+          "AFG",
+          "PAK",
+          "SDN",
+          "IRQ",
+          "BDI",
+          "ZMB",
+          "SRB",
+          "BGD",
+          "MDA",
+          "ALB",
+          "BIH",
+          "MMR",
+          "JOR",
+          "SYR",
+          "UGA",
+          "CMR",
+          "KGZ",
+          "TUR",
+          "RWA",
+          "LBN"
+        ],
+        "secondary_countries": [
+          "NGA",
+          "USA",
+          "SWE",
+          "UKR",
+          "UZB",
+          "ETH",
+          "SSD",
+          "KOR",
+          "DEU",
+          "JPN",
+          "TUN",
+          "MNE",
+          "GBR",
+          "EGY",
+          "MKD",
+          "COD"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCagCOAfZBpsTOlAJq_vcWbw",
+        "channel_url": "https://www.youtube.com/UNDP/",
+        "relevant_videos": [
+          "hLPf9Zetlzo",
+          "NhnOFLU5Z8M",
+          "8CD3HMS2bp4",
+          "xUPcxYknpzM",
+          "mexOBZFxJk4"
+        ]
+      }
+    }
+  },
+  {
     "name": "United Nations High Commissioner for Refugees",
     "id": "Q132551",
     "attributes": {
-      "description": "United Nations agency mandated to protect and support refugees",
+      "description": "UNHCR, the UN Refugee Agency, is a global organization dedicated to saving lives, protecting rights and building a better future for refugees, forcibly displaced communities and stateless people.",
       "org_type": [
-        "organization established by the United Nations",
-        "intergovernmental organization",
-        "international organization"
+        "International Organization"
       ],
       "logo_img": "https://upload.wikimedia.org/wikipedia/commons/8/89/UN_refugee.jpg",
       "org_img": "https://upload.wikimedia.org/wikipedia/commons/c/c2/UNHCR-geneveNov2013.jpg",
       "established": "1950-12-14T00:00:00Z",
-      "abbreviation": "UNHCR",
+      "short_name": "UNHCR",
+      "long_name": "United Nations High Commissioner for Refugees",
       "parent_org": "United Nations",
       "headquarters": "Geneva",
+      "hq_country": "Switzerland",
       "awards_received": [
-        "Nobel Peace Prize",
-        "Nobel Peace Prize",
-        "Indira Gandhi Peace Prize",
-        "Balzan Prize"
+        {
+          "award_name": "Nobel Peace Prize",
+          "award_date": "1954-00-00T00:00:00Z"
+        },
+        {
+          "award_name": "Nobel Peace Prize",
+          "award_date": "1981-00-00T00:00:00Z"
+        },
+        {
+          "award_name": "Indira Gandhi Peace Prize",
+          "award_date": "2015-00-00T00:00:00Z"
+        },
+        {
+          "award_name": "Balzan Prize",
+          "award_date": "1986-01-01T00:00:00Z"
+        }
       ],
-      "website": "https://www.unhcr.org"
-    },
-    "associatedCountries": [
-      {
-        "name": "Turkey",
-        "link": "/countries/Turkey"
+      "website": "http://www.unhcr.org/",
+      "relief_web_id": "2868",
+      "relief_web_url": "https://reliefweb.int/organization/unhcr",
+      "relief_provided": [
+        "Basic Needs",
+        "Camp Coordination and Management",
+        "Cash Assistance",
+        "Education",
+        "Emergency Shelter and NFI",
+        "Food Security",
+        "Health",
+        "Other",
+        "Protection",
+        "Water Sanitation Hygiene"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "TUR",
+          "AUS",
+          "JOR",
+          "SYR",
+          "IRQ",
+          "LBN",
+          "BGR",
+          "EGY"
+        ],
+        "secondary_countries": [
+          "PSE",
+          "FRA",
+          "LUX",
+          "SOM",
+          "SDN",
+          "YEM",
+          "NZL",
+          "CAN",
+          "DEU",
+          "FIN",
+          "USA",
+          "MDA",
+          "DZA",
+          "CHE",
+          "AUT",
+          "HUN",
+          "LBY",
+          "MAR",
+          "NLD",
+          "IRL",
+          "NOR",
+          "ESP",
+          "SWE"
+        ]
       },
-      {
-        "name": "Jordan",
-        "link": "/countries/Jordan"
+      "youtube_info": {
+        "channel_id": "UC2ZDAoIMGP3m9tAgnniNEYw",
+        "channel_url": "http://www.youtube.com/user/unhcr",
+        "relevant_videos": [
+          "RZxmhapoQzQ",
+          "ItNWqzBTC0w",
+          "Z0SgBM2yMtY",
+          "pDhEJz3_PtM",
+          "CWxbhYkRrkc"
+        ]
       }
-    ],
-    "associatedNewsEvents": [
-      {
-        "name": "Humanitarian Aid Shortage",
-        "link": "/news-and-events/NGOs%20warn:%20Humanitarian%20Aid%20Shortage%20amid%20Harsh%20Temperatures%20and%20rising%20cases%20of%20COVID-19"
-      },
-      {
-        "name": "Joint NGO Statement",
-        "link": "/news-and-events/Joint%20NGO%20Statement%20Syria%20Cross-Border"
-      }
-    ]
+    }
   },
   {
-    "name": "UNICEF",
+    "name": "United Nations Children's Fund",
     "id": "Q740308",
     "attributes": {
-      "description": "Specialised agency of United Nations",
+      "description": "**About UNICEF**\n\nUNICEF promotes the rights and wellbeing of every child, in everything we do. Together with our partners, we work in 190 countries and territories to translate that commitment into practical action, focusing special effort on reaching the most vulnerable and excluded children, to the benefit of all children, everywhere. For more information about UNICEF and its work for children visit www.unicef.org.",
       "org_type": [
-        "organization established by the United Nations"
+        "International Organization"
       ],
       "logo_img": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Logo_of_UNICEF.svg",
       "org_img": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Sudan_Envoy_-_UNICEF_Tent.jpg",
       "established": "1946-12-11T00:00:00Z",
-      "abbreviation": "UNICEF",
+      "short_name": "UNICEF",
+      "long_name": "United Nations Children's Fund",
       "parent_org": "United Nations General Assembly",
       "headquarters": "New York City",
+      "hq_country": "United States of America",
       "awards_received": [
-        "Nobel Peace Prize",
-        "Children of the Earth",
-        "Indira Gandhi Peace Prize",
-        "Princess of Asturias Award for Concord",
-        "Wateler Peace Prize",
-        "DZI Seal-of-Approval"
+        {
+          "award_name": "Nobel Peace Prize",
+          "award_date": "1965-00-00T00:00:00Z"
+        },
+        {
+          "award_name": "Children of the Earth",
+          "award_date": "1993-00-00T00:00:00Z"
+        },
+        {
+          "award_name": "Indira Gandhi Peace Prize",
+          "award_date": "1989-00-00T00:00:00Z"
+        },
+        {
+          "award_name": "Princess of Asturias Award for Concord",
+          "award_date": "2006-00-00T00:00:00Z"
+        },
+        {
+          "award_name": "Wateler Peace Prize",
+          "award_date": "1957-00-00T00:00:00Z"
+        }
       ],
-      "website": "https://www.unicef.org/"
-    },
-    "associatedCountries": [
-      {
-        "name": "Germany",
-        "link": "/countries/Germany"
+      "website": "http://www.unicef.org",
+      "relief_web_id": "1979",
+      "relief_web_url": "https://reliefweb.int/organization/unicef",
+      "relief_provided": [
+        "Basic Needs",
+        "Camp Coordination and Management",
+        "Education",
+        "Health",
+        "Protection",
+        "Water Sanitation Hygiene"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "LBY",
+          "TUR",
+          "JOR",
+          "SYR",
+          "IRQ",
+          "LBN",
+          "EGY"
+        ],
+        "secondary_countries": [
+          "CAN",
+          "PSE",
+          "JPN",
+          "AFG"
+        ]
       },
-      {
-        "name": "Turkey",
-        "link": "/countries/Turkey"
+      "youtube_info": {
+        "channel_id": "UCZceliiH71OLw4t4HcvKKjw",
+        "channel_url": "http://www.youtube.com/user/unicef",
+        "relevant_videos": [
+          "xpG3jLGGkvc",
+          "qe0ab0n13Rk",
+          "gu8OfkAeDr4",
+          "jyscRA5CY68",
+          "bcrvKtmQTZs"
+        ]
       }
-    ],
-    "associatedNewsEvents": [
-      {
-        "name": "Open Letter to UN Security Council",
-        "link": "/news-and-events/Open%20Letter%20to%20the%20UN%20Security%20Council%20(June%2022nd,%202023)"
+    }
+  },
+  {
+    "name": "United Nations Population Fund",
+    "id": "Q623036",
+    "attributes": {
+      "description": "UNFPA is the United Nations sexual and reproductive health agency. Our mission is to deliver a world where every pregnancy is wanted, every childbirth is safe and every young person's potential is fulfilled.\n \nWe promote gender equality and empower women, girls and young people to take control of their bodies and their futures. We work with partners in more than 150 countries to provide access to a wide range of sexual and reproductive health services. Our goal is ending unmet need for family planning, preventable maternal death, and gender-based violence and harmful practices including child marriage and female genital mutilation by 2030.",
+      "org_type": [
+        "International Organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/1/14/UNFPA_logo.svg",
+      "org_img": "",
+      "established": "1969-00-00T00:00:00Z",
+      "short_name": "UNFPA",
+      "long_name": "United Nations Population Fund",
+      "parent_org": "",
+      "headquarters": "New York City",
+      "hq_country": "United States of America",
+      "awards_received": [],
+      "website": "https://www.unfpa.org/",
+      "relief_web_id": "1070",
+      "relief_web_url": "https://reliefweb.int/organization/unfpa",
+      "relief_provided": [
+        "Basic Needs",
+        "Camp Coordination and Management",
+        "Health",
+        "Protection"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "AFG",
+          "SDN",
+          "IRQ",
+          "GIN",
+          "DJI",
+          "BGD",
+          "SRB",
+          "BEN",
+          "COL",
+          "MDA",
+          "AGO",
+          "TZA",
+          "POL",
+          "ETH",
+          "BRA",
+          "ALB",
+          "ERI",
+          "BIH",
+          "SSD",
+          "EGY",
+          "COG",
+          "LBY",
+          "JOR",
+          "TJK",
+          "UKR",
+          "CIV",
+          "SYR",
+          "UGA",
+          "KEN",
+          "TUR",
+          "RWA",
+          "LBN"
+        ],
+        "secondary_countries": [
+          "LBR",
+          "PSE",
+          "VEN",
+          "MMR",
+          "SLE",
+          "IRN",
+          "TCD",
+          "CAF",
+          "PAK",
+          "NER",
+          "YEM",
+          "BDI",
+          "TUN",
+          "MNE",
+          "TGO",
+          "KWT",
+          "COD"
+        ]
       },
-      {
-        "name": "Joint NGO Statement",
-        "link": "/news-and-events/Joint%20NGO%20Statement%20Syria%20Cross-Border"
+      "youtube_info": {
+        "channel_id": "UC1MOaUuMyeBPHiIWr16tAgw",
+        "channel_url": "https://www.youtube.com/user/unfpa",
+        "relevant_videos": [
+          "n4uECYDmf-c",
+          "xSedlcwqn40",
+          "nOCiaKNJtBo",
+          "B4OAfkoKH80",
+          "skRM_MSt8DY"
+        ]
       }
-    ]
+    }
   },
   {
     "name": "World Food Programme",
@@ -95,39 +1086,2916 @@
     "attributes": {
       "description": "United Nations branch related to food-assistance",
       "org_type": [
-        "intergovernmental organization",
-        "organization established by the United Nations"
+        "International Organization"
       ],
       "logo_img": "https://upload.wikimedia.org/wikipedia/commons/5/59/World_Food_Programme_Logo_Simple.svg",
       "org_img": "https://upload.wikimedia.org/wikipedia/commons/5/5b/World_Food_Programme.jpg",
       "established": "1961-12-19T00:00:00Z",
-      "abbreviation": "",
+      "short_name": "WFP",
+      "long_name": "United Nations World Food Programme",
       "parent_org": "United Nations",
       "headquarters": "Rome",
+      "hq_country": "Italy",
       "awards_received": [
-        "Nobel Peace Prize"
+        {
+          "award_name": "Nobel Peace Prize",
+          "award_date": "2020-00-00T00:00:00Z"
+        }
       ],
-      "website": "https://www.wfp.org/"
-    },
-    "associatedCountries": [
-      {
-        "name": "Jordan",
-        "link": "/countries/Jordan"
+      "website": "http://www.wfp.org",
+      "relief_web_id": "1741",
+      "relief_web_url": "https://reliefweb.int/organization/wfp",
+      "relief_provided": [
+        "Basic Needs",
+        "Food Security"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "TUR",
+          "JOR",
+          "SYR",
+          "IRQ",
+          "LBN",
+          "ARM",
+          "EGY"
+        ],
+        "secondary_countries": [
+          "SAU",
+          "PSE",
+          "NOR",
+          "USA",
+          "QAT",
+          "FRA",
+          "CHE",
+          "NLD",
+          "CAN",
+          "KOR",
+          "DEU",
+          "MEX",
+          "IRL",
+          "JPN",
+          "CHN",
+          "RUS"
+        ]
       },
-      {
-        "name": "Germany",
-        "link": "/countries/Germany"
+      "youtube_info": {
+        "channel_id": "UCT-FJ4sgZ-0OCTmyf1tmKwQ",
+        "channel_url": "https://www.youtube.com/user/WORLDFOODPROGRAM",
+        "relevant_videos": [
+          "bdbWI46RMoY",
+          "M6kET3sXcOw",
+          "GNZWlvIDJS4",
+          "j9IsJsZ8uOo",
+          "HLYCul0qaQw"
+        ]
       }
-    ],
-    "associatedNewsEvents": [
-      {
-        "name": "Joint NGO Statement",
-        "link": "/news-and-events/Joint%20NGO%20Statement%20Syria%20Cross-Border"
+    }
+  },
+  {
+    "name": "Caritas Internationalis",
+    "id": "Q533143",
+    "attributes": {
+      "description": "Caritas shares the mission of the Catholic Church to serve the poor and to promote charity and justice throughout the world.\n \n**Faith in action**\n\nWe are inspired by the Gospels, by the teachings of the Catholic Church and by the hopes of people living in poverty. We encourage everyone to respond to humanitarian disasters, to promote integral human development and to advocate on the causes of poverty and violence. We animate Catholic communities and all people of good will in solidarity with the suffering of their brothers and sisters around the world.\n\n**Emergency response**\n\nCaritas responds practically to humanitarian crises such as natural disasters, conflict and the effects of climate change. We save lives, relieve suffering and help rebuild livelihoods and communities in the longer-term. This allows women and men in the poorest and most vulnerable communities to survive and recover from crises and to live in a safe and secure environment.\n\n**Transforming lives**\n\nCaritas promotes integral human development so that people in the worst off and most disadvantaged communities are free to flourish and live in peace and dignity. We work to ensure that our natural environment is managed responsibly and sustainably in the interests of the entire human family.\n\n**Calling for a better world**\n\nCaritas seeks a world where the voices of the poor are heard and acted upon. This is a world where women and men in the poorest and most disadvantaged communities are able to influence the systems, decisions and resources that affect them. They can then live under governments, institutions and global structures that are just and accountable.",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/8/83/Caritas_pl.jpg",
+      "org_img": "",
+      "established": "1897-00-00T00:00:00Z",
+      "short_name": "Caritas",
+      "long_name": "Caritas",
+      "parent_org": "",
+      "headquarters": "Vatican City",
+      "hq_country": "Holy See",
+      "awards_received": [
+        {
+          "award_name": "Saint George's Cross",
+          "award_date": "1990-00-00T00:00:00Z"
+        }
+      ],
+      "website": "https://www.caritas.org/",
+      "relief_web_id": "1517",
+      "relief_web_url": "https://reliefweb.int/organization/caritas",
+      "relief_provided": [
+        "Cash Assistance",
+        "Education",
+        "Food Security",
+        "Health",
+        ""
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "ITA",
+          "AFG",
+          "THA",
+          "PAK",
+          "SDN",
+          "IRQ",
+          "NER",
+          "NZL",
+          "MKD",
+          "SRB",
+          "BGD",
+          "COL",
+          "GRC",
+          "MDA",
+          "TCD",
+          "PNG",
+          "EGY",
+          "JOR",
+          "SYR",
+          "UGA",
+          "HRV",
+          "NGA",
+          "KEN",
+          "BFA",
+          "SVN",
+          "TUR",
+          "LBR",
+          "CAF",
+          "RWA",
+          "LBN",
+          "COD"
+        ],
+        "secondary_countries": [
+          "PSE",
+          "BEL",
+          "FRA",
+          "SOM",
+          "BDI",
+          "DEU",
+          "PER",
+          "VEN",
+          "IRN",
+          "TZA",
+          "POL",
+          "ETH",
+          "ERI",
+          "HUN",
+          "AUT",
+          "SSD",
+          "MMR",
+          "MLI",
+          "UKR",
+          "CMR",
+          "MLT",
+          "ECU",
+          "ROU",
+          "CZE",
+          "SVK"
+        ]
       },
-      {
-        "name": "Humanitarian Aid Shortage",
-        "link": "/news-and-events/NGOs%20warn:%20Humanitarian%20Aid%20Shortage%20amid%20Harsh%20Temperatures%20and%20rising%20cases%20of%20COVID-19"
+      "youtube_info": {
+        "channel_id": "UCN7MvrHoSqI5RjV-urE1usw",
+        "channel_url": "http://www.youtube.com/user/IAmCaritas",
+        "relevant_videos": [
+          "lSNMRqCXAbs",
+          "hJkDmqpcw9E",
+          "sVlfK4bzeXo",
+          "QoUveU1tCxU",
+          "menGqrnbc2s"
+        ]
       }
-    ]
+    }
+  },
+  {
+    "name": "Catholic Relief Services",
+    "id": "Q2942152",
+    "attributes": {
+      "description": "Catholic Relief Services was founded in 1943 by the Catholic Bishops of the United States to serve World War II survivors in Europe. Since then, we have expanded in size to reach more than 130 million people in more than 100 countries on five continents.\n\nFor over 75 years, our mission has been to assist impoverished and disadvantaged people overseas, working in the spirit of Catholic social teaching to promote the sacredness of human life and the dignity of the human person. Although our mission is rooted in the Catholic faith, our operations serve people based solely on need, regardless of their race, religion or ethnicity. Within the United States, CRS engages Catholics to live their faith in solidarity with the poor and suffering people of the world.\n\nCRS is motivated by the example of Jesus Christ to ease suffering, provide development assistance, and foster charity and justice. We are committed to a set of Guiding Principles and hold ourselves accountable to each other for them.\n\nWatch what happens when little miracles touch the lives of the most vulnerable people around the world. Witness the lifesaving help and hope provided by Catholic Relief Services. Take a look at just how far your heart can reach.\n\nAs the official international humanitarian agency of the Catholic community in the United States, CRS is governed by a board of directors comprising clergy, most of them bishops elected by the United States Conference of Catholic Bishops, as well as religious and Catholic lay men and women.",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://reliefweb.int/sites/default/files/images/sources/07/1e/071e02ce-973e-362b-b726-4062a4dd0639.jpg",
+      "org_img": "",
+      "established": "1943-01-01T00:00:00Z",
+      "short_name": "CRS",
+      "long_name": "Catholic Relief Services",
+      "parent_org": "",
+      "headquarters": "Baltimore",
+      "hq_country": "United States of America",
+      "awards_received": [
+        {
+          "award_name": "Silver Anvil Awards",
+          "award_date": "2016-01-01T00:00:00Z"
+        }
+      ],
+      "website": "https://www.crs.org/",
+      "relief_web_id": "436",
+      "relief_web_url": "https://reliefweb.int/organization/crs",
+      "relief_provided": [
+        "Cash Assistance",
+        "Education",
+        "Food Security"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "AFG",
+          "PAK",
+          "SOM",
+          "SDN",
+          "IRQ",
+          "NER",
+          "BDI",
+          "GIN",
+          "SRB",
+          "COL",
+          "TCD",
+          "ALB",
+          "EGY",
+          "JOR",
+          "CIV",
+          "SYR",
+          "UGA",
+          "KEN",
+          "RWA",
+          "LBN"
+        ],
+        "secondary_countries": [
+          "LBR",
+          "TUR",
+          "MLI",
+          "SLE",
+          "TZA",
+          "CMR",
+          "ETH",
+          "ECU",
+          "BGR",
+          "ARM",
+          "MNE",
+          "SSD",
+          "MKD",
+          "COD"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UClfHNvzS7UxS3me3ZV3TCrQ",
+        "channel_url": "https://www.youtube.com/user/CatholicRelief",
+        "relevant_videos": [
+          "mxzGTQuqAWI",
+          "Sjs5LpPnDBA",
+          "cxLpurqAU2w",
+          "2aop_Jitzsw",
+          "BhjW_FM99Hc"
+        ]
+      }
+    }
+  },
+  {
+    "name": "International Federation of Red Cross and Red Crescent Societies",
+    "id": "Q1069175",
+    "attributes": {
+      "description": "The IFRC was founded in 1919 in Paris in the aftermath of World War I. Originally called the League of Red Cross Societies, we were the brainchild of Henry Davison, the president of the American Red Cross War Committee.\n\nDavison convened the League\u2019s founding members\u2014the Red Cross Societies of France, Great Britain, Italy, Japan and the United States\u2014at an international medical conference. Together, they believed the compassion and expertise shown by Red Cross volunteers during wartime could be shown in peacetime too.\n\nThe League\u2019s first objective was simple: improve the health of people in countries that had suffered greatly during the war. It also sought to improve existing Red Cross Societies and promote the creation of new ones around the world.\n\nWithin months of its creation, the League had launched a campaign to counter a massive typhus epidemic in Eastern Europe. Shortly after, it launched appeals in the wake of the Russian famine of 1921 and the Great Kanto earthquake in Japan in 1923.\n\nIn 1983, it became the League of Red Cross and Red Crescent Societies, and finally\u2014in 1991\u2014the IFRC as we are today.",
+      "org_type": [
+        "Red Cross/Red Crescent Movement"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/3/38/IFRC_logo_2020.svg",
+      "org_img": "",
+      "established": "1919-00-00T00:00:00Z",
+      "short_name": "IFRC",
+      "long_name": "International Federation of Red Cross And Red Crescent Societies",
+      "parent_org": "",
+      "headquarters": "Geneva",
+      "hq_country": "Switzerland",
+      "awards_received": [
+        {
+          "award_name": "Nobel Peace Prize",
+          "award_date": "1963-00-00T00:00:00Z"
+        },
+        {
+          "award_name": "Nansen Refugee Award",
+          "award_date": "1957-00-00T00:00:00Z"
+        }
+      ],
+      "website": "http://www.ifrc.org/",
+      "relief_web_id": "1242",
+      "relief_web_url": "https://reliefweb.int/organization/ifrc",
+      "relief_provided": [
+        "Cash Assistance",
+        ""
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "ITA",
+          "AFG",
+          "FRA",
+          "SDN",
+          "IRQ",
+          "BDI",
+          "GIN",
+          "GEO",
+          "ZMB",
+          "RUS",
+          "DJI",
+          "SRB",
+          "BEN",
+          "COL",
+          "GRC",
+          "IRN",
+          "TCD",
+          "AGO",
+          "GNB",
+          "TZA",
+          "NAM",
+          "SLE",
+          "ETH",
+          "ALB",
+          "ERI",
+          "COG",
+          "JOR",
+          "MAR",
+          "CIV",
+          "SYR",
+          "UGA",
+          "CMR",
+          "HRV",
+          "KEN",
+          "TUR",
+          "SWE",
+          "CAF",
+          "RWA",
+          "LBN",
+          "ECU",
+          "ARM",
+          "COD"
+        ],
+        "secondary_countries": [
+          "PSE",
+          "DOM",
+          "CHL",
+          "SOM",
+          "CUW",
+          "URY",
+          "NER",
+          "PAK",
+          "YEM",
+          "GTM",
+          "DEU",
+          "BGR",
+          "GBR",
+          "PRY",
+          "MKD",
+          "BGD",
+          "NIC",
+          "PER",
+          "VEN",
+          "ARG",
+          "BRA",
+          "MEX",
+          "BIH",
+          "MNE",
+          "EGY",
+          "TGO",
+          "PAN",
+          "SSD",
+          "LBY",
+          "SEN",
+          "MMR",
+          "MLI",
+          "AZE",
+          "UKR",
+          "BOL",
+          "JAM",
+          "TUN",
+          "NGA",
+          "BFA",
+          "LBR",
+          "GUY",
+          "GHA",
+          "TTO",
+          "CRI",
+          "ABW"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCZ8xf9ZrTOv7SeYK7U5eKVg",
+        "channel_url": "https://www.youtube.com/user/ifrc",
+        "relevant_videos": [
+          "OENTor011hI",
+          "B-hYa2i6Qkw",
+          "tWMz3ln1qGY",
+          "YQp801J8CDE",
+          "dpImstAOvuQ"
+        ]
+      }
+    }
+  },
+  {
+    "name": "International Rescue Committee",
+    "id": "Q1666849",
+    "attributes": {
+      "description": "The International Rescue Committee (IRC) helps people affected by humanitarian crises\u2014including the climate crisis\u2014to survive, recover and rebuild their lives.\n\nFounded at the call of Albert Einstein in 1933, the IRC is now at work in over 40 crisis-affected countries as well as communities throughout Europe and the Americas. We deliver lasting impact by providing health care, helping children learn, and empowering individuals and communities to become self-reliant, always seeking to address the inequalities facing women and girls.",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/7/71/International_Rescue_Committee_Logo.svg",
+      "org_img": "",
+      "established": "1933-00-00T00:00:00Z",
+      "short_name": "IRC",
+      "long_name": "International Rescue Committee",
+      "parent_org": "",
+      "headquarters": "Chanin Building",
+      "hq_country": "United States of America",
+      "awards_received": [],
+      "website": "https://www.rescue.org/",
+      "relief_web_id": "2012",
+      "relief_web_url": "https://reliefweb.int/organization/irc",
+      "relief_provided": [
+        "Cash Assistance",
+        "Education",
+        "Health",
+        "Protection"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "ITA",
+          "AFG",
+          "THA",
+          "PAK",
+          "SOM",
+          "SDN",
+          "IRQ",
+          "BDI",
+          "GIN",
+          "DEU",
+          "RUS",
+          "SRB",
+          "BGD",
+          "VEN",
+          "COL",
+          "GRC",
+          "USA",
+          "TCD",
+          "MDA",
+          "TZA",
+          "POL",
+          "PRK",
+          "ETH",
+          "ALB",
+          "SSD",
+          "EGY",
+          "LBY",
+          "MMR",
+          "JOR",
+          "UKR",
+          "CIV",
+          "SYR",
+          "UGA",
+          "TUN",
+          "KEN",
+          "LBR",
+          "RWA",
+          "LBN",
+          "HTI",
+          "COD"
+        ],
+        "secondary_countries": [
+          "PSE",
+          "DOM",
+          "BEL",
+          "FRA",
+          "CHL",
+          "CUW",
+          "GTM",
+          "URY",
+          "YEM",
+          "NER",
+          "ABW",
+          "BGR",
+          "CHN",
+          "GBR",
+          "PRY",
+          "NIC",
+          "PER",
+          "BEN",
+          "IRN",
+          "SLE",
+          "SLV",
+          "ARG",
+          "BRA",
+          "ERI",
+          "BIH",
+          "MNE",
+          "PAN",
+          "HUN",
+          "HND",
+          "COG",
+          "MYS",
+          "BOL",
+          "CMR",
+          "MLT",
+          "TUR",
+          "GUY",
+          "TTO",
+          "CAF",
+          "ECU",
+          "CRI",
+          "ZWE",
+          "ROU",
+          "CZE",
+          "SVK"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCFWA1y24EABrEB6u_dAfqIQ",
+        "channel_url": "https://www.youtube.com/RESCUEorg",
+        "relevant_videos": [
+          "Mg3wX1mFln0",
+          "E-b6b5Q8yIc",
+          "gQEYGlT9srg",
+          "PuOgi8p4VYg",
+          "XdOcnnvA6xw"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Medair",
+    "id": "Q6805007",
+    "attributes": {
+      "description": "Medair is an impartial, independent, and neutral humanitarian organisation inspired by Christian faith to save lives and relieve human suffering in the world\u2019s most difficult-to-reach and devastated places. Since 1989, we\u2019ve been helping people in crisis \u2013 regardless of race, creed or nationality \u2013 That the world\u2019s most vulnerable and difficult-to-reach people living in dignity, free from human suffering, and with hope for a better future.",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Medair.svg",
+      "org_img": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Medair_Ecublens.jpg",
+      "established": "1989-00-00T00:00:00Z",
+      "short_name": "Medair",
+      "long_name": "Medair",
+      "parent_org": "",
+      "headquarters": "Ecublens",
+      "hq_country": "Switzerland",
+      "awards_received": [],
+      "website": "https://www.medair.org/",
+      "relief_web_id": "1107",
+      "relief_web_url": "https://reliefweb.int/organization/medair",
+      "relief_provided": [
+        "Cash Assistance",
+        "Emergency Shelter and NFI",
+        "Health"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "MMR",
+          "JOR",
+          "AFG",
+          "AGO",
+          "SYR",
+          "SDN",
+          "IRQ",
+          "LBN",
+          "BGD"
+        ],
+        "secondary_countries": [
+          "TUR",
+          "PSE",
+          "TCD",
+          "ZMB",
+          "EGY"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UC81vUUMrn0jrm_Wvvd-0OdQ",
+        "channel_url": "https://www.youtube.com/channel/UC81vUUMrn0jrm_Wvvd-0OdQ",
+        "relevant_videos": [
+          "ktNwYbLgbR4",
+          "av8PXL9Vd3k",
+          "PpZwQ2PNCNs",
+          "8I7JCNU4ELU",
+          "Xn4iyZmYxFA"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Mercy Corps",
+    "id": "Q3874786",
+    "attributes": {
+      "description": "Mercy Corps is a global team of humanitarians working together on the front lines of today\u2019s biggest crises to create a future of possibility, where everyone can prosper.\n\nIn more than 40+ countries around the world, over 5,400+ team members work side by side with people living through poverty, disaster, violent conflict, and the acute impacts of climate change. We\u2019re committed to creating global change through local impact \u2014 84% of our team members are from the countries where they work.\n\nWe bring a comprehensive approach to every challenge, addressing problems from multiple angles. And we go beyond emergency aid, partnering with local governments, forward-thinking corporations, social entrepreneurs, and people living in fragile communities to develop bold solutions that make lasting change possible.",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/9/96/MC_New_Logo_Horizontal_PMS_186_PC_10-15.jpg",
+      "org_img": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Mercy_Corps_headquarters_-_Portland%2C_Oregon.JPG",
+      "established": "1979-00-00T00:00:00Z",
+      "short_name": "Mercy Corps",
+      "long_name": "Mercy Corps",
+      "parent_org": "",
+      "headquarters": "Portland",
+      "hq_country": "United States of America",
+      "awards_received": [],
+      "website": "https://www.mercycorps.org/",
+      "relief_web_id": "1929",
+      "relief_web_url": "https://reliefweb.int/organization/mercy-corps",
+      "relief_provided": [
+        "Cash Assistance",
+        "Education",
+        "Emergency Shelter and NFI",
+        "Protection",
+        "Water Sanitation Hygiene"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "ITA",
+          "LBY",
+          "TUR",
+          "VEN",
+          "JOR",
+          "COL",
+          "GRC",
+          "AFG",
+          "SYR",
+          "UGA",
+          "IRQ",
+          "LBN",
+          "SDN",
+          "ALB",
+          "NGA",
+          "MKD",
+          "SRB"
+        ],
+        "secondary_countries": [
+          "DOM",
+          "CHL",
+          "PAK",
+          "URY",
+          "CUW",
+          "NER",
+          "PRY",
+          "PER",
+          "BEN",
+          "MDA",
+          "IRN",
+          "POL",
+          "SLV",
+          "ETH",
+          "ARG",
+          "BRA",
+          "HUN",
+          "MNE",
+          "SSD",
+          "EGY",
+          "PAN",
+          "COD",
+          "UKR",
+          "CZE",
+          "BOL",
+          "GUY",
+          "TTO",
+          "CAF",
+          "ECU",
+          "CRI",
+          "ROU",
+          "ABW",
+          "SVK"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCEwPS6OeB9NjoQlkg1eOcgw",
+        "channel_url": "https://www.youtube.com/user/mercycorps",
+        "relevant_videos": [
+          "3dga3tFEYEQ",
+          "3xBT7tQTMMc",
+          "_2MxxKN9syw",
+          "37I5WqWt128",
+          "TCPkfkR6vxo"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Terre Des Hommes",
+    "id": "Q264955",
+    "attributes": {
+      "description": "Terre des Hommes International Federation is a network of nine organisations with headquarters across Europe, in Denmark, France, Germany, Italy, Luxembourg, the Netherlands, Spain and Switzerland.\n\nWe work in 67 countries and with 1023 partners.\n\nThe Terre des Hommes International Federation is supported by an International Secretariat, with offices in Geneva and Brussels.",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Terre_des_hommes_Logo.jpg?20180709133500",
+      "org_img": "",
+      "established": "1960-00-00T00:00:00Z",
+      "short_name": "Tdh",
+      "long_name": "Terre des Homme International Federation",
+      "parent_org": "",
+      "headquarters": "Geneva",
+      "hq_country": "Switzerland",
+      "awards_received": [
+        {
+          "award_name": "Balzan Prize",
+          "award_date": "2018-01-01T00:00:00Z"
+        }
+      ],
+      "website": "http://www.terredeshommes.org/",
+      "relief_web_id": "1508",
+      "relief_web_url": "https://reliefweb.int/organization/tdh",
+      "relief_provided": [
+        "Cash Assistance",
+        "Education",
+        "Health",
+        "Protection"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "MMR",
+          "COL",
+          "GRC",
+          "THA",
+          "SYR",
+          "LBN",
+          "LKA",
+          "HUN",
+          "EGY",
+          "KEN"
+        ],
+        "secondary_countries": [
+          "ITA",
+          "BEL",
+          "FRA",
+          "SOM",
+          "SDN",
+          "IRQ",
+          "YEM",
+          "BDI",
+          "DEU",
+          "MOZ",
+          "ZMB",
+          "MKD",
+          "SRB",
+          "BGD",
+          "PER",
+          "VEN",
+          "USA",
+          "MDA",
+          "TZA",
+          "POL",
+          "ETH",
+          "MEX",
+          "ERI",
+          "BIH",
+          "SSD",
+          "JOR",
+          "MLI",
+          "MYS",
+          "UKR",
+          "CIV",
+          "UGA",
+          "MLT",
+          "HRV",
+          "NOR",
+          "ESP",
+          "BFA",
+          "ZAF",
+          "TUR",
+          "SWE",
+          "IDN",
+          "BWA",
+          "SWZ",
+          "ECU",
+          "ZWE",
+          "ROU",
+          "CZE",
+          "SVK"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCIGOWeWz4v76qfWg9ic1wAQ",
+        "channel_url": "https://www.youtube.com/@FondationTerredeshommes",
+        "relevant_videos": [
+          "xCyUXZuM9f4",
+          "kAwwOHNK9Us",
+          "srlFP5I6FlM",
+          "ujfnkCBf33Y",
+          "p6hr3k-DySY"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Action contre la faim",
+    "id": "Q343624",
+    "attributes": {
+      "description": "Founded in 1979, our association is a non-governmental organisation focused on international solidarity. In other words, Action contre la Faim fights hunger all over the world. Conflict, climate imbalance, poverty and unequal access to water and care are just some of the causes of malnutrition. Our mission is to save lives by eliminating hunger through the prevention, detection and treatment of malnutrition, especially during and after emergency situations linked to conflicts and natural disasters.",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/1/19/Eng_Col_RGB_-_Copy.png",
+      "org_img": "",
+      "established": "1979-00-00T00:00:00Z",
+      "short_name": "ACF",
+      "long_name": "Action contre la Faim",
+      "parent_org": "",
+      "headquarters": "Paris",
+      "hq_country": "France",
+      "awards_received": [],
+      "website": "https://www.actioncontrelafaim.org",
+      "relief_web_id": "1955",
+      "relief_web_url": "https://reliefweb.int/organization/acf",
+      "relief_provided": [
+        "Education",
+        "Water Sanitation Hygiene"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "COD",
+          "JOR",
+          "USA",
+          "TCD",
+          "SOM",
+          "SYR",
+          "LBN",
+          "GIN",
+          "ALB",
+          "KEN",
+          "RUS",
+          "BGD"
+        ],
+        "secondary_countries": [
+          "TUR",
+          "PSE",
+          "MYS",
+          "MMR",
+          "SLE",
+          "IDN",
+          "THA",
+          "UGA",
+          "IRQ",
+          "ETH",
+          "MNE",
+          "EGY",
+          "DJI",
+          "MKD",
+          "SRB"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCBl23tS-qaCVw-eveIGnUlg",
+        "channel_url": "https://www.youtube.com/user/actioncontrelafaim",
+        "relevant_videos": [
+          "UVigavl8MM0",
+          "VlZGOCk9LLw"
+        ]
+      }
+    }
+  },
+  {
+    "name": "British Council",
+    "id": "Q45433",
+    "attributes": {
+      "description": "We support peace and prosperity by building connections, understanding and trust between people in the UK and countries worldwide.",
+      "org_type": [
+        "Government"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/c/c4/British_Council_logo_2020.svg",
+      "org_img": "https://upload.wikimedia.org/wikipedia/commons/b/b6/British_Council_-_London_1.jpg",
+      "established": "1934-00-00T00:00:00Z",
+      "short_name": "British Council",
+      "long_name": "British Council",
+      "parent_org": "",
+      "headquarters": "London",
+      "hq_country": "United Kingdom of Great Britain and Northern Ireland",
+      "awards_received": [
+        {
+          "award_name": "Princess of Asturias Award for Communications and Humanities",
+          "award_date": "2005-00-00T00:00:00Z"
+        }
+      ],
+      "website": "https://www.britishcouncil.org/",
+      "relief_web_id": "449",
+      "relief_web_url": "https://reliefweb.int/organization/british-council",
+      "relief_provided": [
+        "Education"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "SYR"
+        ],
+        "secondary_countries": []
+      },
+      "youtube_info": {
+        "channel_id": "UCpPo_0b7_nvXYBy6EbbMC5A",
+        "channel_url": "https://www.youtube.com/user/britishcouncil",
+        "relevant_videos": [
+          "8l66cuM6D0Y",
+          "PTT9kfPUmmg",
+          "uf2H01kvrT4"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Concern Worldwide",
+    "id": "Q5158451",
+    "attributes": {
+      "description": "Our vision, our mission and our work are all defined by one goal \u2013 ending extreme poverty, whatever it takes. We believe that no-one should have to live in fear that they won't have a home to sleep in or enough food to feed their children.\n\nFor over 50 years we have been working with the world's poorest people to transform their lives.\nToday we are a team of over 3,500 highly skilled and dedicated professionals from 50 countries who share an exceptional depth and diversity of experience.\n\nEach year our specialist teams work with 25 million people living on less than $2 a day, from war zones in Syria and Somalia to devastating floods in Bangladesh.",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/en/3/32/Concern_worldwide_logo.gif",
+      "org_img": "",
+      "established": "1968-01-01T00:00:00Z",
+      "short_name": "Concern",
+      "long_name": "Concern",
+      "parent_org": "",
+      "headquarters": "Dublin",
+      "hq_country": "Ireland",
+      "awards_received": [],
+      "website": "https://www.concern.net/",
+      "relief_web_id": "359",
+      "relief_web_url": "https://reliefweb.int/organization/concern",
+      "relief_provided": [
+        "Education",
+        "Protection"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "TUR",
+          "MMR",
+          "IDN",
+          "UKR",
+          "TCD",
+          "CIV",
+          "SYR",
+          "LBN",
+          "ALB",
+          "BGD"
+        ],
+        "secondary_countries": [
+          "LBR",
+          "TLS",
+          "COD",
+          "MDA",
+          "POL",
+          "SDN",
+          "IRL",
+          "MNE",
+          "ROU",
+          "MKD",
+          "SRB"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCBt4eRgZAcwfbeT5AiElVWA",
+        "channel_url": "https://www.youtube.com/user/concernworldwide",
+        "relevant_videos": [
+          "exvyR6-JYQI",
+          "ZNZ1VjhuWCw",
+          "ngz8nLk_Q4s",
+          "er1EFmy0LFI",
+          "UkibZIH5Z5Y"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Finn Church Aid",
+    "id": "Q5491872",
+    "attributes": {
+      "description": "Finn Church Aid (FCA) is Finland\u2019s largest international aid organisation with more than 70 years of experience. We specialise in the world\u2019s most fragile contexts and work with the most vulnerable people, regardless of their religious beliefs, ethnic background or political convictions.  \n\nFCA was founded in 1947 to coordinate international aid to Finland from the United States and Sweden after World War II. Finland turned into a provider of assistance in the 1960s, and FCA has grown ever since. FCA was a part of the The Evangelical Lutheran Church of Finland\u2019s (ELCF) international department until 1995 when FCA became an independent foundation.",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Kirkon_Ulkomaanapu_logo.png",
+      "org_img": "",
+      "established": "1947-09-25T00:00:00Z",
+      "short_name": "FCA",
+      "long_name": "",
+      "parent_org": "",
+      "headquarters": "Kaartinkaupunki",
+      "hq_country": "Finland",
+      "awards_received": [],
+      "website": "https://www.kirkonulkomaanapu.fi/en/",
+      "relief_web_id": "4370",
+      "relief_web_url": "https://reliefweb.int/organization/fca",
+      "relief_provided": [
+        "Education",
+        "Protection"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "JOR",
+          "GRC",
+          "UKR",
+          "AGO",
+          "UGA",
+          "SYR",
+          "KEN",
+          "SSD",
+          "COD"
+        ],
+        "secondary_countries": [
+          "SDN",
+          "ETH",
+          "BDI",
+          "HUN",
+          "ZMB",
+          "SRB"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCUkfk2JDuxiAJLMgULWMewQ",
+        "channel_url": "https://www.youtube.com/user/kirkonulkomaanapu",
+        "relevant_videos": [
+          "kNVul_rFoXs",
+          "5e-ul8_wvXE",
+          "UPV8oKu3LIc",
+          "uwCYc6vXbnE",
+          "Rg-wJytg4R0"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Human Appeal",
+    "id": "Q25383518",
+    "attributes": {
+      "description": "British international development and relief charity based in Manchester",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Human_appeal_logo18.png",
+      "org_img": "",
+      "established": "1991-00-00T00:00:00Z",
+      "short_name": "HA",
+      "long_name": "Human Appeal",
+      "parent_org": "",
+      "headquarters": "Manchester",
+      "hq_country": "United Kingdom of Great Britain and Northern Ireland",
+      "awards_received": [],
+      "website": "http://humanappeal.org.uk",
+      "relief_web_id": "505",
+      "relief_web_url": "https://reliefweb.int/organization/ha-0",
+      "relief_provided": [
+        "Education"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "JOR",
+          "SYR"
+        ],
+        "secondary_countries": [
+          "PSE"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCfXeCq5wRsRs4a9WzwJzQJg",
+        "channel_url": "https://www.youtube.com/user/humanappealint",
+        "relevant_videos": [
+          "0pMNYJDHzts",
+          "a-rISMJCc2M",
+          "Gzb4PyFXXFM",
+          "W_eAfpcdtno",
+          "4aZG52ncthM"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Lutheran World Federation",
+    "id": "Q942284",
+    "attributes": {
+      "description": "The Lutheran World Federation works in 25 countries, carrying out emergency response and long-term development that assists 2.7 million people. Current emergency operations include the South Sudan and DRC refugee crises, Central African Republic, Nigeria, and Myanmar. Long term projects run in Jerusalem, Nepal, Haiti and Colombia. \n\nThe LWF stands alongside local and international partners, helping communities achieve their full potential and advocating for their universal rights. People in need are assisted irrespective of their ethnicity, gender, religion, race, or political conviction. \n\nPartners include Lutheran churches, the European Commission (ECHO), the US Government (BPRM) and UNHCR, with whom we are a key implementing partner. LWF has been a UNHCR partner since its inception and remains its largest faith-based partner. \n\nThe Lutheran World Federation is a global communion of 148 churches in the Lutheran tradition, representing over 75.5 million Christians in 99 countries.",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8d/The_Lutheran_World_Federation_%28logo%29.svg/1024px-The_Lutheran_World_Federation_%28logo%29.svg.png",
+      "org_img": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Logo-LWB.svg",
+      "established": "1947-00-00T00:00:00Z",
+      "short_name": "Lutheran World Federation",
+      "long_name": "The Lutheran World Federation",
+      "parent_org": "",
+      "headquarters": "Geneva",
+      "hq_country": "Switzerland",
+      "awards_received": [],
+      "website": "http://www.lutheranworld.org",
+      "relief_web_id": "1335",
+      "relief_web_url": "https://reliefweb.int/organization/lutheran-world-federation",
+      "relief_provided": [
+        "Education",
+        "Emergency Shelter and NFI",
+        "Food Security",
+        "Protection"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "LBR",
+          "JOR",
+          "TCD",
+          "AGO",
+          "UGA",
+          "SYR",
+          "ETH",
+          "NPL",
+          "SSD",
+          "KEN"
+        ],
+        "secondary_countries": [
+          "TUR",
+          "SLE",
+          "SOM",
+          "CMR",
+          "IRQ",
+          "LBN",
+          "BDI",
+          "EGY",
+          "COD"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCGffmt_EoT0-cwq_7R1DiDQ",
+        "channel_url": "http://www.youtube.com/c/TheLutheranWorldFederation",
+        "relevant_videos": [
+          "g4g4qiHYHLA",
+          "J4vfVy9MuN8",
+          "wLDA9RWXZqw",
+          "IsDY-TKq3HI",
+          "QV-kZHAhI9Y"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Norwegian Refugee Council",
+    "id": "Q3307397",
+    "attributes": {
+      "description": "The Norwegian Refugee Council (NRC) is an independent humanitarian organisation helping people forced to flee.\nWe protect displaced people and support them as they build a new future. We started our relief efforts after World War Two. Today, we work in both new and protracted crises across 40 countries. We specialise in six areas: food security, education, shelter, legal assistance, protection from violence, and water, sanitation and hygiene.\n\nWe stand up for people forced to flee. NRC is a determined advocate for displaced people. We promote and defend displaced people's rights and dignity in local communities, with national governments and in the international arena. NRC\u2019s Internal Displacement Monitoring Centre in Geneva is a global leader in monitoring, reporting on and advocating for people displaced within their own country.\n\nWe work with partners across the world through NORCAP, our global provider of humanitarian, development and peacebuilding expertise. NORCAP collaborates with local, national and international partners on finding sustainable solutions to meet the needs of people at risk.\n\nAround 15,000 humanitarians work with the Norwegian Refugee Council. Most of us are hired locally to work in the field, and a small number are based at our head office in Oslo. Many of our colleagues were once themselves forced to flee their homes.\n\nToday, a record 100 million people are fleeing war and persecution. Not since World War Two have more people needed our help. The Norwegian Refugee Council assisted almost 10 million people worldwide in 2022, and with your support, we can help even more.",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/6/6b/NRC_flyktningehjelpen_logo.svg",
+      "org_img": "",
+      "established": "1946-01-01T00:00:00Z",
+      "short_name": "NRC",
+      "long_name": "Norwegian Refugee Council",
+      "parent_org": "",
+      "headquarters": "Oslo",
+      "hq_country": "Norway",
+      "awards_received": [
+        {
+          "award_name": "Children of the Earth",
+          "award_date": "1992-00-00T00:00:00Z"
+        }
+      ],
+      "website": "https://www.nrc.no/",
+      "relief_web_id": "1331",
+      "relief_web_url": "https://reliefweb.int/organization/nrc",
+      "relief_provided": [
+        "Education",
+        "Emergency Shelter and NFI",
+        "Food Security",
+        "Protection"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "PSE",
+          "AFG",
+          "PAK",
+          "SOM",
+          "SDN",
+          "IRQ",
+          "GEO",
+          "RUS",
+          "BGD",
+          "VEN",
+          "COL",
+          "GRC",
+          "IRN",
+          "USA",
+          "AGO",
+          "TZA",
+          "MDA",
+          "POL",
+          "ETH",
+          "LBY",
+          "MMR",
+          "JOR",
+          "CIV",
+          "SYR",
+          "UGA",
+          "CMR",
+          "KEN",
+          "LBN",
+          "ECU",
+          "ROU",
+          "PAN",
+          "COD"
+        ],
+        "secondary_countries": [
+          "THA",
+          "FRA",
+          "CHL",
+          "CUW",
+          "URY",
+          "YEM",
+          "ABW",
+          "BDI",
+          "BGR",
+          "GBR",
+          "PRY",
+          "MKD",
+          "SRB",
+          "FIN",
+          "PER",
+          "ARG",
+          "BRA",
+          "MEX",
+          "ERI",
+          "CYP",
+          "EGY",
+          "SSD",
+          "MLI",
+          "MYS",
+          "UKR",
+          "BOL",
+          "MLT",
+          "NGA",
+          "BFA",
+          "LBR",
+          "TUR",
+          "GUY",
+          "TTO",
+          "IDN",
+          "PRT",
+          "RWA",
+          "CRI",
+          "NPL",
+          "DOM"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCU9W9KBKmF4FcO_HWYNFVKg",
+        "channel_url": "https://www.youtube.com/@NorwRefugeeCouncil",
+        "relevant_videos": [
+          "ZuleaDFzVow",
+          "3xSwYTKsZ10",
+          "1RPGdwcwzrE",
+          "7BVkD3sYnbI",
+          "-T0OIUMo-5M"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Relief International",
+    "id": "Q7311083",
+    "attributes": {
+      "description": "Relief International is a 60-year-old development and humanitarian nonprofit alliance that is the product of mergers and alliances between four organizations.\n\nToday, our team totals more than 5,100 staff and local volunteers working in 16 countries across Asia, Africa, and the Middle East.",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://reliefweb.int/sites/default/files/images/sources/80/b6/80b6189e-6d66-3587-90c9-8e3bfcc4cbc3.jpg",
+      "org_img": "",
+      "established": "2005-00-00T00:00:00Z",
+      "short_name": "RI",
+      "long_name": "Relief International",
+      "parent_org": "",
+      "headquarters": "London",
+      "hq_country": "United States of America",
+      "awards_received": [],
+      "website": "http://www.ri.org/",
+      "relief_web_id": "2024",
+      "relief_web_url": "https://reliefweb.int/organization/ri",
+      "relief_provided": [
+        "Education",
+        "Food Security",
+        "Water Sanitation Hygiene"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "TUR",
+          "JOR",
+          "AFG",
+          "SYR",
+          "IRQ",
+          "LBN",
+          "NER",
+          "BGD"
+        ],
+        "secondary_countries": [
+          "MMR",
+          "MLI",
+          "TJK",
+          "IRN",
+          "PAK",
+          "EGY"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCgSmQCoD_V56kipVpuUOzeQ",
+        "channel_url": "https://www.youtube.com/@reliefinternational3343",
+        "relevant_videos": [
+          "f5BFlhqBNf0",
+          "O0myK92XKHo",
+          "mxFgCR20Xxs",
+          "NSbN1TMNYEY",
+          "u5hsEQu8ypA"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Save the Children",
+    "id": "Q215934",
+    "attributes": {
+      "description": "We champion the rights and interests of children worldwide, putting the most vulnerable children first.\n\nWith 25,000 dedicated staff across 116 countries, we respond to major emergencies, deliver innovative development programmes, and ensure children's voices are heard through our campaigning to build a better future for and with children.",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/1/15/Logo_SavetheChildren.png",
+      "org_img": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Save_the_Children%2C_Westport%2C_CT%2C_USA_2012.jpg",
+      "established": "1919-00-00T00:00:00Z",
+      "short_name": "Save the Children",
+      "long_name": "Save the Children Alliance",
+      "parent_org": "",
+      "headquarters": "London",
+      "hq_country": "United States of America",
+      "awards_received": [
+        {
+          "award_name": "Annette Thommessens minnepris",
+          "award_date": "2004-00-00T00:00:00Z"
+        },
+        {
+          "award_name": "Princess of Asturias Award for Concord",
+          "award_date": "1994-00-00T00:00:00Z"
+        }
+      ],
+      "website": "https://www.savethechildren.net/",
+      "relief_web_id": "2865",
+      "relief_web_url": "https://reliefweb.int/organization/save-children",
+      "relief_provided": [
+        "Education",
+        "Food Security",
+        "Health",
+        "Protection"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "ITA",
+          "AFG",
+          "THA",
+          "PAK",
+          "SOM",
+          "SDN",
+          "IRQ",
+          "NER",
+          "CAN",
+          "GBR",
+          "BGD",
+          "SRB",
+          "DNK",
+          "VEN",
+          "COL",
+          "GRC",
+          "TZA",
+          "ETH",
+          "ALB",
+          "BIH",
+          "EGY",
+          "MYS",
+          "JOR",
+          "MMR",
+          "UKR",
+          "SYR",
+          "UGA",
+          "LBR",
+          "RWA",
+          "LBN",
+          "COD"
+        ],
+        "secondary_countries": [
+          "PSE",
+          "DOM",
+          "BEL",
+          "FRA",
+          "CHL",
+          "CUW",
+          "URY",
+          "YEM",
+          "NZL",
+          "BDI",
+          "ABW",
+          "DEU",
+          "BGR",
+          "MOZ",
+          "ZMB",
+          "RUS",
+          "PRY",
+          "MKD",
+          "FIN",
+          "PER",
+          "USA",
+          "MDA",
+          "SLE",
+          "TCD",
+          "AGO",
+          "POL",
+          "UZB",
+          "ARG",
+          "BRA",
+          "MEX",
+          "ERI",
+          "HUN",
+          "PAN",
+          "MNE",
+          "SSD",
+          "KAZ",
+          "MLI",
+          "TJK",
+          "BOL",
+          "CIV",
+          "CMR",
+          "MLT",
+          "HRV",
+          "NOR",
+          "NRU",
+          "NGA",
+          "ESP",
+          "BFA",
+          "KEN",
+          "ZAF",
+          "TUR",
+          "AUS",
+          "GUY",
+          "TTO",
+          "SWE",
+          "IDN",
+          "BWA",
+          "SWZ",
+          "ECU",
+          "CRI",
+          "ZWE",
+          "ROU",
+          "CZE",
+          "SVK"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCNVTVX1noOYr60nfHBaUV9w",
+        "channel_url": "https://www.youtube.com/user/everyonestc",
+        "relevant_videos": [
+          "UC-l1y7RnAw",
+          "qlbpb86HBd0",
+          "8GQ-728EDLk",
+          "kMGFBs_GeME",
+          "tFkxojcdbMs"
+        ]
+      }
+    }
+  },
+  {
+    "name": "UNESCO",
+    "id": "Q7809",
+    "attributes": {
+      "description": "Our mission since 1945 is to build peace through international cooperation as it is the only way to build bridges between nations. Therefore, as a laboratory of ideas, UNESCO seeks to offer a broad range of expertise in the fields of Education, the Sciences and Culture.",
+      "org_type": [
+        "International Organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/b/bc/UNESCO_logo.svg",
+      "org_img": "",
+      "established": "1945-11-16T00:00:00Z",
+      "short_name": "UNESCO",
+      "long_name": "United Nations Educational, Scientific and Cultural Organization",
+      "parent_org": "United Nations",
+      "headquarters": "Paris",
+      "hq_country": "France",
+      "awards_received": [
+        {
+          "award_name": "Peabody Awards",
+          "award_date": "1958-00-00T00:00:00Z"
+        }
+      ],
+      "website": "https://www.unesco.org/en",
+      "relief_web_id": "1820",
+      "relief_web_url": "https://reliefweb.int/organization/unesco",
+      "relief_provided": [
+        "Education"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "JOR",
+          "AFG",
+          "PAK",
+          "SYR",
+          "IRQ",
+          "LBN",
+          "ETH",
+          "GBR",
+          "BGD"
+        ],
+        "secondary_countries": [
+          "IND",
+          "PSE",
+          "THA",
+          "FRA",
+          "SOM",
+          "SDN",
+          "NZL",
+          "YEM",
+          "CAN",
+          "DEU",
+          "USA",
+          "IRN",
+          "BRA",
+          "MWI",
+          "ERI",
+          "SSD",
+          "MYS",
+          "MMR",
+          "JPN",
+          "NOR",
+          "KEN",
+          "AUS",
+          "TUR",
+          "SWE",
+          "RWA",
+          "ZWE",
+          "KWT"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCkD7gm3Am3M3k156lk46t3A",
+        "channel_url": "https://www.youtube.com/user/unesco",
+        "relevant_videos": [
+          "fc-An_1Qerc",
+          "JUgMjmWA1Bk",
+          "_JNQMMDUQ8g",
+          "-7UgDEt9zX8",
+          "N0Z7zhpiZzg"
+        ]
+      }
+    }
+  },
+  {
+    "name": "World Vision",
+    "id": "Q2594001",
+    "attributes": {
+      "description": "World Vision is an international partnership of Christians whose mission is to follow our Lord and Saviour Jesus Christ in working with the poor and oppressed to promote human transformation, seek justice and bear witness to the good news of the Kingdom of God.",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/a/af/World_Vision_new_logo.png",
+      "org_img": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Wvi_relief.jpg",
+      "established": "1950-00-00T00:00:00Z",
+      "short_name": "World Vision",
+      "long_name": "World Vision",
+      "parent_org": "",
+      "headquarters": "Recife",
+      "hq_country": "United States of America",
+      "awards_received": [],
+      "website": "http://www.wvi.org",
+      "relief_web_id": "2926",
+      "relief_web_url": "https://reliefweb.int/organization/world-vision",
+      "relief_provided": [
+        "Education",
+        "Food Security",
+        "Water Sanitation Hygiene"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "TLS",
+          "AFG",
+          "SDN",
+          "IRQ",
+          "NER",
+          "GEO",
+          "RUS",
+          "BGD",
+          "SRB",
+          "VEN",
+          "COL",
+          "SLE",
+          "TCD",
+          "AGO",
+          "BRA",
+          "ALB",
+          "BIH",
+          "MMR",
+          "JOR",
+          "SYR",
+          "UGA",
+          "KEN",
+          "TUR",
+          "PHL",
+          "IDN",
+          "RWA",
+          "LBN",
+          "COD"
+        ],
+        "secondary_countries": [
+          "ITA",
+          "IND",
+          "PSE",
+          "DOM",
+          "BEL",
+          "FRA",
+          "PAK",
+          "CHL",
+          "SOM",
+          "CUW",
+          "URY",
+          "ABW",
+          "BDI",
+          "DEU",
+          "ZMB",
+          "GBR",
+          "PRY",
+          "MKD",
+          "PER",
+          "IRN",
+          "TZA",
+          "UZB",
+          "ARG",
+          "MWI",
+          "HND",
+          "HUN",
+          "EGY",
+          "SSD",
+          "MNE",
+          "PAN",
+          "MLI",
+          "TJK",
+          "UKR",
+          "BOL",
+          "CMR",
+          "MLT",
+          "TKM",
+          "HRV",
+          "GUY",
+          "GHA",
+          "TTO",
+          "CAF",
+          "ECU",
+          "CRI",
+          "ZWE",
+          "GTM"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UC-mPNVrE9uHcFj02XOjGi2g",
+        "channel_url": "https://www.youtube.com/user/WorldVisionStory",
+        "relevant_videos": [
+          "uzmLEsQZUuA",
+          "8HtsVIHtB0c",
+          "06EjrEawF_4",
+          "Dcm1SSm_f0Q",
+          "J1t_YrVRUpw"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Adventist Development and Relief Agency",
+    "id": "Q290625",
+    "attributes": {
+      "description": "We are the global humanitarian arm of the Seventh-day Adventist Church\u2014part of the 20-million strong Adventist community, with hundreds of thousands of churches globally and the world\u2019s largest integrated healthcare and education network.\n\nWe deliver relief and development assistance to individuals in more than 120 countries\u2014regardless of their ethnicity, political affiliation, gender, or religious association.\n\nBy partnering with local communities, organizations, and governments, we are able to deliver culturally relevant programs and build local capability for sustainable change.",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://reliefweb.int/sites/default/files/images/sources/a5/5b/a55b0b91-a825-3647-a396-1e9cc788a750.png",
+      "org_img": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Crian%C3%A7as_na_escola_ADRA_em_Itanha%C3%A9m.jpg",
+      "established": "1986-00-00T00:00:00Z",
+      "short_name": "ADRA",
+      "long_name": "Adventist Development and Relief Agency International",
+      "parent_org": "",
+      "headquarters": "Silver Spring",
+      "hq_country": "United States of America",
+      "awards_received": [],
+      "website": "https://adra.org/",
+      "relief_web_id": "592",
+      "relief_web_url": "https://reliefweb.int/organization/adra",
+      "relief_provided": [
+        "Emergency Shelter and NFI"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "IND",
+          "AFG",
+          "THA",
+          "SDN",
+          "YEM",
+          "GIN",
+          "BDI",
+          "RUS",
+          "SRB",
+          "MDA",
+          "TCD",
+          "ALB",
+          "ERI",
+          "LBY",
+          "MMR",
+          "JOR",
+          "UGA",
+          "SYR",
+          "KGZ",
+          "HRV",
+          "LBR",
+          "IDN",
+          "COD"
+        ],
+        "secondary_countries": [
+          "TLS",
+          "PAK",
+          "SOM",
+          "ZMB",
+          "MKD",
+          "VEN",
+          "COL",
+          "SLE",
+          "IRN",
+          "TZA",
+          "UZB",
+          "BRA",
+          "MNE",
+          "SSD",
+          "TJK",
+          "CIV",
+          "CMR",
+          "LKA",
+          "TUN",
+          "NOR",
+          "LBN",
+          "ECU"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCNk0pLPnx9dGTG75U5CTISg",
+        "channel_url": "https://www.youtube.com/user/ADRAInternational/",
+        "relevant_videos": [
+          "-jc6g6H85-I",
+          "NU0xPdDGtaQ",
+          "NzAw3SLXDqU",
+          "6h9_hmy3V8o",
+          "u5KmTFublGo"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Peace Winds Japan",
+    "id": "Q11331731",
+    "attributes": {
+      "description": "Peace Winds Japan (PWJ) is a non-governmental organization (NGO) dedicated to the support of people in distress, and threatened by conflict, poverty, or other turmoil. With its headquarters in Japan, PWJ is operational in many parts of the world.",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://give2asia.org/wp-content/uploads/2019/08/PWJ-Logo.jpg",
+      "org_img": "",
+      "established": "1996-02-00T00:00:00Z",
+      "short_name": "PWJ",
+      "long_name": "Peace Winds Japan",
+      "parent_org": "",
+      "headquarters": "Jinsekik\u014dgen",
+      "hq_country": "Japan",
+      "awards_received": [],
+      "website": "https://peace-winds.org/en/",
+      "relief_web_id": "1330",
+      "relief_web_url": "https://reliefweb.int/organization/pwj",
+      "relief_provided": [
+        "Emergency Shelter and NFI",
+        "Food Security",
+        "Health",
+        "Water Sanitation Hygiene"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "MMR",
+          "MDA",
+          "POL",
+          "UGA",
+          "SYR",
+          "IRQ",
+          "KEN"
+        ],
+        "secondary_countries": [
+          "UKR",
+          "SSD",
+          "USA",
+          "BGD"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCbZPpaSmV5g1fkzNp-qUDHA",
+        "channel_url": "https://www.youtube.com/channel/UCbZPpaSmV5g1fkzNp-qUDHA",
+        "relevant_videos": [
+          "ufU25UvhZFk",
+          "h5d0oQv1cAc",
+          "BS1xpr_Enfc",
+          "cNJ6oAPQHY4",
+          "GclgwTGgTAU"
+        ]
+      }
+    }
+  },
+  {
+    "name": "ActionAid",
+    "id": "Q2608548",
+    "attributes": {
+      "description": "ActionAid is a global federation working for a world free from poverty and injustice. \n\nOur [strategy](https://actionaid.org/node/700585) is to build international momentum for social, economic and environmental justice, driven by people living in poverty and exclusion.\n\nIn practice, this means working closely with people living in poverty and exclusion, civil society organisations, social movements and supporters. Together, we deliver grassroots programmes, provide emergency relief and campaign for things such as women\u2019s economic rights, tax justice and climate justice.\n\nOur work falls into four broad areas: [women](https://actionaid.org/taxonomy/term/71), [politics and economics](https://actionaid.org/taxonomy/term/3), [land and climate](https://actionaid.org/taxonomy/term/2), and [emergencies](https://actionaid.org/taxonomy/term/70). We have a particular focus on women\u2019s rights; it\u2019s a thread that runs through all our work.\n\nActionAid was founded as a charity in 1972. In the 1990s, we adopted a human rights-based approach to development. In 2003, we established the ActionAid International federation. Our head office is in Johannesburg, South Africa. We also have hubs in Asia, the Americas and Europe.",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Actionaid_logo.svg",
+      "org_img": "",
+      "established": "1972-00-00T00:00:00Z",
+      "short_name": "ActionAid",
+      "long_name": "ActionAid",
+      "parent_org": "",
+      "headquarters": "Johannesburg",
+      "hq_country": "South Africa",
+      "awards_received": [],
+      "website": "https://actionaid.org/",
+      "relief_web_id": "460",
+      "relief_web_url": "https://reliefweb.int/organization/actionaid",
+      "relief_provided": [
+        "Food Security"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "MMR",
+          "JOR",
+          "GRC",
+          "TCD",
+          "CIV",
+          "SYR",
+          "LBN",
+          "HUN",
+          "BGD"
+        ],
+        "secondary_countries": [
+          "LBR",
+          "TUR",
+          "PSE",
+          "AFG",
+          "CMR",
+          "IRQ",
+          "GBR",
+          "EGY"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCzsElxx1mkkoSA01jEV7JdA",
+        "channel_url": "https://www.youtube.com/actionaid",
+        "relevant_videos": [
+          "WDQ5_0YT79E",
+          "8_4OLwOkl7U",
+          "lE4WhcOAgec",
+          "722TUpX-CmQ"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Deutsche Welthungerhilfe",
+    "id": "Q896030",
+    "attributes": {
+      "description": "Welthungerhilfe (WHH) is one of the largest private aid organizations in Germany, without political or religious affiliation. Since WHH was founded in 1962 each sitting German President has been its patron. The Chair of the Board of WHH and the Board of Directors represent the organization externally and advise its Executive Management. The full-time Executive Management manages the activities of WHH.",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/f/f8/%EC%84%B8%EA%B3%84%EA%B8%B0%EC%95%84%EC%9B%90%EC%A1%B0%28Welthungerhilfe%29_logo.png",
+      "org_img": "",
+      "established": "1962-12-14T00:00:00Z",
+      "short_name": "WHH",
+      "long_name": "Welthungerhilfe",
+      "parent_org": "",
+      "headquarters": "Bonn",
+      "hq_country": "Germany",
+      "awards_received": [],
+      "website": "https://www.welthungerhilfe.org/",
+      "relief_web_id": "648",
+      "relief_web_url": "https://reliefweb.int/organization/whh",
+      "relief_provided": [
+        "Food Security"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "TUR",
+          "COD",
+          "MMR",
+          "CIV",
+          "UGA",
+          "SYR",
+          "SDN",
+          "LKA",
+          "KEN",
+          "BGD"
+        ],
+        "secondary_countries": [
+          "LBR",
+          "MLI",
+          "GRC",
+          "CAF",
+          "IRQ",
+          "ETH",
+          "DEU",
+          "SSD"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCFQRnMCZ_HMwi6ZxdjH9new",
+        "channel_url": "https://www.youtube.com/welthungerhilfe",
+        "relevant_videos": [
+          "qwdMUL870i0",
+          "LPFInROO19w",
+          "nLb_FUBsfoU",
+          "cfUUhsJDA6E",
+          "OIjR3PJs-l4"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Food and Agriculture Organization",
+    "id": "Q82151",
+    "attributes": {
+      "description": "The Food and Agriculture Organization (FAO) is a specialized agency of the United Nations that leads international efforts to defeat hunger.\n\nOur goal is to achieve food security for all and make sure that people have regular access to enough high-quality food to lead active, healthy lives. With 195 members - 194 countries and the European Union, FAO works in over 130 countries worldwide.",
+      "org_type": [
+        "International Organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/d/db/FAO_logo.svg",
+      "org_img": "https://upload.wikimedia.org/wikipedia/commons/7/76/FAO_sede.jpg",
+      "established": "1945-10-16T00:00:00Z",
+      "short_name": "FAO",
+      "long_name": "Food and Agriculture Organization of the United Nations",
+      "parent_org": "United Nations",
+      "headquarters": "Rome",
+      "hq_country": "Italy",
+      "awards_received": [],
+      "website": "https://www.fao.org/home/en/",
+      "relief_web_id": "2836",
+      "relief_web_url": "https://reliefweb.int/organization/fao",
+      "relief_provided": [
+        "Food Security",
+        "Water Sanitation Hygiene"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "TUR",
+          "JOR",
+          "AFG",
+          "SYR",
+          "IRQ",
+          "LBN",
+          "LKA",
+          "HUN",
+          "SSD",
+          "DJI"
+        ],
+        "secondary_countries": [
+          "ITA",
+          "PSE",
+          "BEL",
+          "SDN",
+          "BDI",
+          "DEU",
+          "GBR",
+          "BGD",
+          "USA",
+          "MDA",
+          "POL",
+          "EGY",
+          "COD",
+          "MMR",
+          "UKR",
+          "UGA",
+          "JPN",
+          "NOR",
+          "SWE",
+          "ROU",
+          "KWT",
+          "SVK"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCtu8MkufmVgxS8_Ocl7mMig",
+        "channel_url": "http://www.youtube.com/user/FAOoftheUN",
+        "relevant_videos": [
+          "OuFcZKAUb3E",
+          "6hLmBe3PDFA",
+          "zSDNzv39_Js",
+          "JxZGrZxntrU",
+          "X3KJRCyYFAI"
+        ]
+      }
+    }
+  },
+  {
+    "name": "International Labour Organization",
+    "id": "Q54129",
+    "attributes": {
+      "description": "United Nations agency dealing with labour issues",
+      "org_type": [
+        "International Organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/9/92/Logo_ilo.png",
+      "org_img": "https://upload.wikimedia.org/wikipedia/commons/b/b7/ILO_Geneva.JPG",
+      "established": "1919-00-00T00:00:00Z",
+      "short_name": "ILO",
+      "long_name": "International Labour Organization",
+      "parent_org": "",
+      "headquarters": "Geneva",
+      "hq_country": "Switzerland",
+      "awards_received": [
+        {
+          "award_name": "Nobel Peace Prize",
+          "award_date": "1969-00-00T00:00:00Z"
+        }
+      ],
+      "website": "http://www.ilo.org",
+      "relief_web_id": "1099",
+      "relief_web_url": "https://reliefweb.int/organization/ilo",
+      "relief_provided": [
+        "Food Security"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "TUR",
+          "JOR",
+          "DZA",
+          "SYR",
+          "UGA",
+          "RWA",
+          "LBN",
+          "HUN",
+          "EGY"
+        ],
+        "secondary_countries": [
+          "PSE",
+          "AFG",
+          "SOM",
+          "SDN",
+          "IRQ",
+          "YEM",
+          "BDI",
+          "ZMB",
+          "DJI",
+          "FIN",
+          "VEN",
+          "MDA",
+          "BHR",
+          "POL",
+          "ETH",
+          "ERI",
+          "SSD",
+          "LBY",
+          "SEN",
+          "SAU",
+          "MLI",
+          "QAT",
+          "SVK",
+          "OMN",
+          "MAR",
+          "ARE",
+          "UKR",
+          "NLD",
+          "MRT",
+          "CMR",
+          "TUN",
+          "KEN",
+          "BFA",
+          "ZAF",
+          "IDN",
+          "ROU",
+          "KWT",
+          "COD"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCrlcu5KChYyHwXlIeD7oLUg",
+        "channel_url": "http://www.youtube.com/ilotv",
+        "relevant_videos": [
+          "ikeaaovZWPo",
+          "LIrhRNz4hyo",
+          "5ykBdxIf_ZI",
+          "-GZQiPfm6tk",
+          "dr1xENQyXfs"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Plan International",
+    "id": "Q1350284",
+    "attributes": {
+      "description": "Plan International is an independent development and humanitarian organisation that advances children\u2019s rights and equality for girls. We strive for a just world, working together with children, young people, our supporters and partners.",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://reliefweb.int/sites/default/files/images/sources/dc/d5/dcd5db6c-602e-3485-a9aa-cf653932e9b0.jpg",
+      "org_img": "",
+      "established": "1937-00-00T00:00:00Z",
+      "short_name": "Plan International",
+      "long_name": "Plan International",
+      "parent_org": "",
+      "headquarters": "Woking",
+      "hq_country": "United Kingdom of Great Britain and Northern Ireland",
+      "awards_received": [],
+      "website": "http://www.plan-international.org",
+      "relief_web_id": "2866",
+      "relief_web_url": "https://reliefweb.int/organization/plan-international",
+      "relief_provided": [
+        "Food Security"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "VEN",
+          "MLI",
+          "COL",
+          "MMR",
+          "TZA",
+          "THA",
+          "SYR",
+          "UGA",
+          "RWA",
+          "LBN",
+          "SDN",
+          "BFA",
+          "NER",
+          "LKA",
+          "TGO",
+          "EGY",
+          "BGD"
+        ],
+        "secondary_countries": [
+          "DOM",
+          "CHL",
+          "CUW",
+          "URY",
+          "ABW",
+          "BDI",
+          "PRY",
+          "PER",
+          "BEN",
+          "MDA",
+          "POL",
+          "ETH",
+          "ARG",
+          "BRA",
+          "HUN",
+          "SSD",
+          "COD",
+          "MYS",
+          "UKR",
+          "CZE",
+          "BOL",
+          "TUR",
+          "GUY",
+          "TTO",
+          "IDN",
+          "ECU",
+          "CRI",
+          "ROU",
+          "PAN",
+          "SVK"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCVLkqTvsRpm46RDmM4SYf6Q",
+        "channel_url": "https://www.youtube.com/channel/UCVLkqTvsRpm46RDmM4SYf6Q",
+        "relevant_videos": [
+          "jFTkeVUrBO8",
+          "XZ6NDLRDk6E",
+          "XBgCrrnksqg",
+          "afetgAMkej8",
+          "jgHULy0QlZc"
+        ]
+      }
+    }
+  },
+  {
+    "name": "UN Women",
+    "id": "Q641576",
+    "attributes": {
+      "description": "UN Women is the United Nations entity dedicated to gender equality and the empowerment of women. A global champion for women and girls, UN Women was established to accelerate progress on meeting their needs worldwide.\n\nUN Women supports UN Member States as they set global standards for achieving gender equality, and works with governments and civil society to design laws, policies, programmes and services needed to ensure that the standards are effectively implemented and truly benefit women and girls worldwide. It works globally to make the vision of the Sustainable Development Goals a reality for women and girls and stands behind women\u2019s equal participation in all aspects of life, focusing on four strategic priorities:\n\n- Women lead, participate in and benefit equally from governance systems\n\n- Women have income security, decent work and economic autonomy\n\n- All women and girls live a life free from all forms of violence \n\n- Women and girls contribute to and have greater influence in building sustainable peace and resilience, and benefit equally from the prevention of natural disasters and conflicts and humanitarian action\n\nUN Women also coordinates and promotes the UN system\u2019s work in advancing gender equality, and in all deliberations and agreements linked to the 2030 Agenda. The entity works to position gender equality as fundamental to the Sustainable Development Goals, and a more inclusive world.",
+      "org_type": [
+        "International Organization"
+      ],
+      "logo_img": "https://reliefweb.int/sites/default/files/images/sources/d1/06/d106b9f8-8758-3584-917c-1b77326cce45.png",
+      "org_img": "",
+      "established": "2010-07-02T00:00:00Z",
+      "short_name": "UN Women",
+      "long_name": "",
+      "parent_org": "",
+      "headquarters": "Manhattan",
+      "hq_country": "United States of America",
+      "awards_received": [],
+      "website": "https://www.unwomen.org/en",
+      "relief_web_id": "4512",
+      "relief_web_url": "https://reliefweb.int/organization/un-women",
+      "relief_provided": [
+        "Food Security",
+        "Protection"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "BGD",
+          "TUR",
+          "JOR",
+          "MDA",
+          "SYR",
+          "RWA",
+          "IRQ",
+          "LBN",
+          "UGA",
+          "HUN",
+          "KEN",
+          "MKD",
+          "SRB"
+        ],
+        "secondary_countries": [
+          "ITA",
+          "AFG",
+          "LUX",
+          "SOM",
+          "DEU",
+          "BGR",
+          "GEO",
+          "RUS",
+          "GRC",
+          "POL",
+          "AUT",
+          "SSD",
+          "COD",
+          "MMR",
+          "AZE",
+          "UKR",
+          "BLR",
+          "ESP",
+          "ARM",
+          "ISR",
+          "ROU",
+          "CZE",
+          "SVK"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCXDenzwzeXM1TNtTuWj8C4A",
+        "channel_url": "https://www.youtube.com/UNWomen",
+        "relevant_videos": [
+          "csyLkutTJ0A",
+          "M1AOd2SHicU",
+          "MmstEwyEsWg",
+          "ow9mfRoH-kc",
+          "4kj2UGa28JY"
+        ]
+      }
+    }
+  },
+  {
+    "name": "United Nations Industrial Development Organization",
+    "id": "Q386120",
+    "attributes": {
+      "description": "UNIDO is a specialized agency of the United Nations with a unique mandate to promote, dynamize and accelerate industrial development.  \n\nOur mandate is reflected in Sustainable Development Goal (SDG) 9: \u201cBuild resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation\u201d, but UNIDO\u2019s activities contribute to all the SDGs. \n\nUNIDO\u2019s vision is a world without poverty and hunger, where industry drives low-emission economies, improves living standards, and preserves the livable environment for present and future generations, leaving no one behind. \n\nUNIDO provides support to its 171 Member States through four mandated functions: technical cooperation; action-oriented research and policy-advisory services; normative standards-related activities; and fostering partnerships for knowledge and technology transfer.\n\nOur work is concentrated on three focus areas: ending hunger by helping businesses from farm to fork; stopping climate breakdown by using renewable energy and energy efficiency to reduce industrial greenhouse gas emissions; and supporting sustainable supply chains so that developing country producers get a fair deal and scarce resources are preserved.",
+      "org_type": [
+        "International Organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/6/6f/UNIDO_Logo.svg",
+      "org_img": "https://upload.wikimedia.org/wikipedia/commons/a/a8/UNIDO-ISEC.jpg",
+      "established": "1966-00-00T00:00:00Z",
+      "short_name": "UNIDO",
+      "long_name": "United Nations Industrial Development Organization",
+      "parent_org": "United Nations",
+      "headquarters": "Vienna",
+      "hq_country": "Austria",
+      "awards_received": [],
+      "website": "https://www.unido.org/",
+      "relief_web_id": "2246",
+      "relief_web_url": "https://reliefweb.int/organization/unido",
+      "relief_provided": [
+        "Food Security"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "LBR",
+          "TUR",
+          "GHA",
+          "IRN",
+          "SDN",
+          "LBN",
+          "ARM"
+        ],
+        "secondary_countries": [
+          "JPN",
+          "KOR",
+          "SYR",
+          "AFG"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCEdVD3q7YIDiWU-VkEhfOuA",
+        "channel_url": "https://www.youtube.com/user/UNIDObeta",
+        "relevant_videos": [
+          "tuxnrFsDbsc",
+          "jfAjol_7FFU",
+          "bnhPz6q7vU0",
+          "NAnWNY5rH1Y",
+          "Ykxzpqx5DPg"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Center for Victims of Torture",
+    "id": "Q5059917",
+    "attributes": {
+      "description": "The Center for Victims of Torture works toward a future in which torture ceases to exist and its victims have hope for a new life. We are an international nonprofit dedicated to healing survivors of torture and violent conflict. We provide direct care for those who have been tortured, train partners around the world who can prevent and treat torture, and advocate for human rights and an end to torture.\n\nSince our founding in 1985, CVT has:    \n- Rehabilitated over 46,000 torture and armed conflict survivors through direct healing.    \n- Engaged in post-conflict community building to support survivors of torture, working in the past in Guinea, Sierra Leone, Liberia, Democratic Republic of Congo, and today with refugees and internally displaced people in Ethiopia, Jordan, Kenya and Uganda.   \n- Pioneered research in torture survivor rehabilitation to better understand the effects of torture and how best to heal survivors.",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Center_for_Victims_of_Torture_logo.svg",
+      "org_img": "",
+      "established": "1985-00-00T00:00:00Z",
+      "short_name": "CVT",
+      "long_name": "The Center for Victims of Torture",
+      "parent_org": "",
+      "headquarters": "Saint Paul",
+      "hq_country": "United States of America",
+      "awards_received": [],
+      "website": "http://www.cvt.org/",
+      "relief_web_id": "1961",
+      "relief_web_url": "https://reliefweb.int/organization/cvt",
+      "relief_provided": [
+        "Health"
+      ],
+      "relevant_countries": {
+        "primary_countries": [],
+        "secondary_countries": []
+      },
+      "youtube_info": {
+        "channel_id": "UCMDwZj7zsDTMT5DCj84aAqg",
+        "channel_url": "http://www.youtube.com/user/ForVictimsofTorture",
+        "relevant_videos": [
+          "Yr7OfPIHXMQ",
+          "wLAs6RydVDU",
+          "JS4McywkLSM",
+          "9K1ax0g7ZmY"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Jesuit Refugee Service",
+    "id": "Q3480458",
+    "attributes": {
+      "description": "JRS was founded in November 1980 by Fr Pedro Arrupe SJ, the then Superior General of the Society of Jesus, to respond to the plight of Vietnamese refugees fleeing their war-ravaged homeland.\n\nFollowing the end of the Vietnam War in 1975, hundreds of thousands of South Vietnamese fled their homes, setting out in overcrowded boats across the South China Sea. Many did not survive the journey; they were killed by pirates or drowned because of storms and rough seas. Fr Arrupe felt compelled to act. He called on the Jesuits \u201cto bring at least some relief to such a tragic situation\u201d.\n\nFr Arrupe wrote to over 50 Jesuit provinces regarding the situation, recognising that the Jesuits, then numbering 27,000 men across the world, were well-placed to coordinate a global humanitarian response. As conflicts broke out in Central and Latin America, southeastern Europe, and across Africa, JRS rapidly grew from helping Vietnamese boat people in a few camps in Southeast Asia to working with refugees around the world.\n\nNearly 20 years after our founding, JRS was officially registered as a foundation of the Vatican City State on 19 March 2000.",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Jesuit_Refugee_Service_JRS_Logo.png",
+      "org_img": "",
+      "established": "1980-00-00T00:00:00Z",
+      "short_name": "JRS",
+      "long_name": "Jesuit Refugee Service",
+      "parent_org": "Society of Jesus",
+      "headquarters": "Rome",
+      "hq_country": "Italy",
+      "awards_received": [
+        {
+          "award_name": "honorary doctor of Saint Joseph University",
+          "award_date": "2016-06-17T00:00:00Z"
+        }
+      ],
+      "website": "https://jrs.net/en/home/",
+      "relief_web_id": "1046",
+      "relief_web_url": "https://reliefweb.int/organization/jrs",
+      "relief_provided": [
+        "Health"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "ITA",
+          "IND",
+          "DOM",
+          "THA",
+          "SDN",
+          "BDI",
+          "GIN",
+          "ZMB",
+          "GBR",
+          "BTN",
+          "BGD",
+          "KHM",
+          "VEN",
+          "COL",
+          "GRC",
+          "MDA",
+          "TCD",
+          "AGO",
+          "TZA",
+          "NAM",
+          "ETH",
+          "MWI",
+          "HUN",
+          "PAN",
+          "SSD",
+          "BIH",
+          "MMR",
+          "JOR",
+          "MYS",
+          "UKR",
+          "BLR",
+          "SYR",
+          "UGA",
+          "CMR",
+          "LKA",
+          "KEN",
+          "LBR",
+          "ZAF",
+          "TUR",
+          "PHL",
+          "IDN",
+          "CAF",
+          "RWA",
+          "LBN",
+          "ECU",
+          "NPL",
+          "ROU",
+          "HTI",
+          "COD"
+        ],
+        "secondary_countries": [
+          "PSE",
+          "AFG",
+          "BEL",
+          "FRA",
+          "PAK",
+          "SOM",
+          "IRQ",
+          "YEM",
+          "CAN",
+          "DEU",
+          "DJI",
+          "MKD",
+          "SRB",
+          "PER",
+          "USA",
+          "SLE",
+          "IRN",
+          "POL",
+          "VNM",
+          "ERI",
+          "AUT",
+          "DMA",
+          "LBY",
+          "MAR",
+          "MLT",
+          "HRV",
+          "TUN",
+          "NGA",
+          "ZWE",
+          "CZE",
+          "SVK"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCmwFCD5x4ymYadUQkNCB0sw",
+        "channel_url": "https://www.youtube.com/user/JesuitRefugee",
+        "relevant_videos": [
+          "k__dYVnz9N0",
+          "gYql2sQa3VE",
+          "nRwWlusrqxY",
+          "rs7nxzf9yYE",
+          "kVNc69bw6yY"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Medecins Du Monde",
+    "id": "Q256538",
+    "attributes": {
+      "description": "Cr\u00e9\u00e9e en 1980, M\u00e9decins du Monde est une association m\u00e9dicale militante de solidarit\u00e9 internationale qui lutte sans rel\u00e2che pour d\u00e9fendre un syst\u00e8me de sant\u00e9 juste et universel. Face \u00e0 l\u2019inertie et \u00e0 l\u2019indiff\u00e9rence, dans un monde o\u00f9 r\u00e8gne la violence physique, psychologique, politique et institutionnelle, M\u00e9decins du Monde soigne, interpelle, bouscule, sans limite, sans id\u00e9ologie ni censure. \n\nNous nous battons par les actes et par les droits, \u00e0 travers nos plaidoyers et nos actions de terrain, en France avec 59 programmes et \u00e0 l\u2019international dans une trentaine de pays. \n\nCar pour M\u00e9decins du Monde, d\u00e9fendre la sant\u00e9 \u00e7a n\u2019est pas seulement soigner, c\u2019est aussi \u00e9couter, accompagner, prot\u00e9ger, collaborer, d\u00e9fendre, former, plaider. C\u2019est s\u2019attaquer aux sources d\u2019un probl\u00e8me pour en faire dispara\u00eetre les sympt\u00f4mes.\n\nAinsi, nous nous engageons \u00e0 soigner les populations les plus vuln\u00e9rables, \u00e0 t\u00e9moigner des entraves constat\u00e9es dans l\u2019acc\u00e8s aux soins, \u00e0 d\u00e9noncer le rejet, la discrimination, les atteintes \u00e0 la dignit\u00e9 et aux droits humains, et \u00e0 militer pour obtenir des am\u00e9liorations durables des politiques de sant\u00e9 pour toutes et tous. Notre approche est locale, collective et durable. Nous n\u2019avons pas la pr\u00e9tention de pouvoir agir seuls, mais avec l\u2019aide d\u2019autres associations et le concours des personnes \u00e0 qui s\u2019adressent nos programmes. \n\nParce que sans la sant\u00e9 il n\u2019y a pas d\u2019avenir, nous, M\u00e9decins du Monde, ne laisserons rien ni personne y faire obstacle.",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/fr/4/40/Medecins_du_monde.svg",
+      "org_img": "",
+      "established": "1980-00-00T00:00:00Z",
+      "short_name": "MDM",
+      "long_name": "M\u00e9decins du Monde France",
+      "parent_org": "",
+      "headquarters": "",
+      "hq_country": "France",
+      "awards_received": [
+        {
+          "award_name": "Gran Cruz de la Orden Civil de Sanidad",
+          "award_date": "1996-00-00T00:00:00Z"
+        }
+      ],
+      "website": "https://www.medecinsdumonde.org/en",
+      "relief_web_id": "1992",
+      "relief_web_url": "https://reliefweb.int/organization/mdm",
+      "relief_provided": [
+        "Health"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "TUR",
+          "VEN",
+          "MYS",
+          "MMR",
+          "HUN",
+          "SYR",
+          "MEX",
+          "BIH",
+          "BGD"
+        ],
+        "secondary_countries": [
+          "ITA",
+          "PSE",
+          "DOM",
+          "BEL",
+          "THA",
+          "FRA",
+          "CHL",
+          "CUW",
+          "URY",
+          "IRQ",
+          "DEU",
+          "GBR",
+          "PRY",
+          "PER",
+          "COL",
+          "SLV",
+          "ARG",
+          "BRA",
+          "HND",
+          "PAN",
+          "EGY",
+          "JOR",
+          "BOL",
+          "MLT",
+          "GUY",
+          "TTO",
+          "IDN",
+          "LBN",
+          "ECU",
+          "CRI",
+          "ABW"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCTCQjWrkWFtHhmA3YPOfijw",
+        "channel_url": "https://www.youtube.com/user/medecinsdumonde",
+        "relevant_videos": [
+          "gISkgXf_Zak",
+          "9k1yMztJdH8",
+          "MwOZPAc1ocI",
+          "xSuVSzTxyGk",
+          "3rgLqjf9HnI"
+        ]
+      }
+    }
+  },
+  {
+    "name": "International Medical Corps",
+    "id": "Q17087816",
+    "attributes": {
+      "description": "A First Responder Since 1984\n\nA preeminent first responder, International Medical Corps provides emergency relief to those struck by conflict, disaster and disease\u2014no matter where they are, no matter what the conditions\u2014working with them to recover, rebuild and gain the skills and tools required for self-reliance. After the emergency has passed and our disaster-relief effort has ended, we shift from emergency medical response to long-term medical support and training. We provide resources and training to help local staff provide a range of services\u2014including healthcare, food, water and sanitation support\u2014to their communities.",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://reliefweb.int/sites/default/files/images/sources/db/e3/dbe38724-56fe-3b48-9f0c-fafded6e7fd1.jpg",
+      "org_img": "",
+      "established": "1984-00-00T00:00:00Z",
+      "short_name": "IMC",
+      "long_name": "International Medical Corps",
+      "parent_org": "",
+      "headquarters": "Los Angeles",
+      "hq_country": "United States of America",
+      "awards_received": [],
+      "website": "https://internationalmedicalcorps.org/",
+      "relief_web_id": "2019",
+      "relief_web_url": "https://reliefweb.int/organization/imc",
+      "relief_provided": [
+        "Health",
+        "Protection"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "TUR",
+          "JOR",
+          "AFG",
+          "TCD",
+          "TZA",
+          "SOM",
+          "SYR",
+          "IRQ",
+          "LBN",
+          "ETH",
+          "GEO",
+          "MOZ",
+          "SSD"
+        ],
+        "secondary_countries": [
+          "PSE",
+          "GRC",
+          "PAK",
+          "SDN",
+          "BDI",
+          "RUS",
+          "EGY",
+          "KEN"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCKNRZrTyaikNq9GY0vgY0mg",
+        "channel_url": "http://www.youtube.com/user/IMCworldwideDotOrg",
+        "relevant_videos": [
+          "tW6ANy28Yyg",
+          "J1-X6lUymdc",
+          "yPT3kDdJYR8",
+          "yLjNm20MBkU",
+          "4qjD6NR5T_4"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Qatar Red Crescent",
+    "id": "Q7267117",
+    "attributes": {
+      "description": "Established in March 1978 as Qatar's first volunteering charitable organization, Qatar Red Crescent S\u200b\u200bociety (QRCS) works to help and empower vulnerable individuals and communities without partiality or discrimination. QRCS is an active member of the International Red Cross and Red Crescent Movement, which comprises the International Committee of the Red Cross (ICRC), the International Federation of the Red Cross and Red Crescent Societies (IFRC), and a network of National Societies in 190\u200b countries. It is also a member of several regional and Islamic organizations, including the Islamic Committee of the International Crescent (ICIC) and the Arab Red Crescent and Red Cross Organization (ARCO).",
+      "org_type": [
+        "Red Cross/Red Crescent Movement"
+      ],
+      "logo_img": "https://reliefweb.int/sites/default/files/images/sources/20/d0/20d08f97-fabe-3d58-bab8-12fa81b61b6a.jpg",
+      "org_img": "",
+      "established": "1978-00-00T00:00:00Z",
+      "short_name": "Qatar Red Crescent",
+      "long_name": "Qatar Red Crescent Society",
+      "parent_org": "",
+      "headquarters": "Doha",
+      "hq_country": "Qatar",
+      "awards_received": [],
+      "website": "http://www.qrcs.org.qa",
+      "relief_web_id": "2747",
+      "relief_web_url": "https://reliefweb.int/organization/qatar-red-crescent",
+      "relief_provided": [
+        "Health"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "TUR",
+          "PSE",
+          "JOR",
+          "SYR",
+          "SDN",
+          "IRQ",
+          "LBN",
+          "NER",
+          "DJI",
+          "BGD"
+        ],
+        "secondary_countries": [
+          "IND",
+          "MMR",
+          "MLI",
+          "QAT",
+          "SOM",
+          "YEM",
+          "ETH"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCJ7T1_izTL7MW5vNoDZJYHg",
+        "channel_url": "https://www.youtube.com/user/qrcs",
+        "relevant_videos": [
+          "I6n61unS4hk",
+          "6C9aiqimYvo",
+          "JaF8iY5gAUI",
+          "wyyC7ecti7Q",
+          "10oQDGgHzfo"
+        ]
+      }
+    }
+  },
+  {
+    "name": "World Health Organization",
+    "id": "Q7817",
+    "attributes": {
+      "description": "Founded in 1948, WHO is the United Nations agency that connects nations, partners and people to promote health, keep the world safe and serve the vulnerable \u2013 so everyone, everywhere can attain the highest level of health.",
+      "org_type": [
+        "International Organization"
+      ],
+      "logo_img": "https://reliefweb.int/sites/default/files/images/sources/ad/18/ad18fee8-2239-3146-aaa3-14836be1a351.jpg",
+      "org_img": "https://upload.wikimedia.org/wikipedia/commons/5/50/World_Health_Organisation_headquarters%2C_Geneva%2C_north_and_west_sides.jpg",
+      "established": "1948-04-07T00:00:00Z",
+      "short_name": "WHO",
+      "long_name": "World Health Organization",
+      "parent_org": "United Nations Economic and Social Council",
+      "headquarters": "Geneva",
+      "hq_country": "Switzerland",
+      "awards_received": [
+        {
+          "award_name": "Princess of Asturias Award for International Cooperation",
+          "award_date": "2009-00-00T00:00:00Z"
+        }
+      ],
+      "website": "https://www.who.int/",
+      "relief_web_id": "1275",
+      "relief_web_url": "https://reliefweb.int/organization/who",
+      "relief_provided": [
+        "Health"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "TUR",
+          "PSE",
+          "JOR",
+          "SYR",
+          "IRQ",
+          "LBN",
+          "EGY"
+        ],
+        "secondary_countries": [
+          "JPN",
+          "SAU",
+          "KWT",
+          "USA"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UC07-dOwgza1IguKA86jqxNA",
+        "channel_url": "https://www.youtube.com/user/who",
+        "relevant_videos": [
+          "EfNt-hVPtFU",
+          "y7IgFR0-vmA",
+          "pL7aLrMU47M",
+          "cgpOqbsU2lM",
+          "UvHjkjXxYjY"
+        ]
+      }
+    }
+  },
+  {
+    "name": "Amnesty International",
+    "id": "Q42970",
+    "attributes": {
+      "description": "non-governmental organization based in the United Kingdom",
+      "org_type": [
+        "Non-governmental Organization"
+      ],
+      "logo_img": "https://upload.wikimedia.org/wikipedia/commons/b/be/Amnesty_international_Logo.svg",
+      "org_img": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Amnesty_Candle.JPG",
+      "established": "1961-05-28T00:00:00Z",
+      "short_name": "Amnesty",
+      "long_name": "Amnesty International",
+      "parent_org": "",
+      "headquarters": "London",
+      "hq_country": "United Kingdom of Great Britain and Northern Ireland",
+      "awards_received": [
+        {
+          "award_name": "Nobel Peace Prize",
+          "award_date": "1977-00-00T00:00:00Z"
+        },
+        {
+          "award_name": "Barcelona Medal of Honor",
+          "award_date": "2003-00-00T00:00:00Z"
+        },
+        {
+          "award_name": "United Nations Prize in the Field of Human Rights",
+          "award_date": "1978-00-00T00:00:00Z"
+        },
+        {
+          "award_name": "Erasmus Prize",
+          "award_date": "1976-00-00T00:00:00Z"
+        },
+        {
+          "award_name": "Geuzenpenning",
+          "award_date": "1987-00-00T00:00:00Z"
+        },
+        {
+          "award_name": "European Human Rights Prize",
+          "award_date": "1983-00-00T00:00:00Z"
+        },
+        {
+          "award_name": "Hans B\u00f6ckler Preis",
+          "award_date": "1988-00-00T00:00:00Z"
+        },
+        {
+          "award_name": "Free Your Mind",
+          "award_date": "1993-11-30T00:00:00Z"
+        },
+        {
+          "award_name": "Olof Palme Prize",
+          "award_date": "1991-01-01T00:00:00Z"
+        },
+        {
+          "award_name": "George Polk Award",
+          "award_date": "1984-00-00T00:00:00Z"
+        }
+      ],
+      "website": "http://www.amnesty.org/",
+      "relief_web_id": "569",
+      "relief_web_url": "https://reliefweb.int/organization/amnesty",
+      "relief_provided": [
+        "Other"
+      ],
+      "relevant_countries": {
+        "primary_countries": [
+          "ITA",
+          "AFG",
+          "THA",
+          "CHL",
+          "PAK",
+          "SOM",
+          "SDN",
+          "IRQ",
+          "YEM",
+          "GIN",
+          "BDI",
+          "BGR",
+          "MOZ",
+          "RUS",
+          "DJI",
+          "LTU",
+          "MKD",
+          "BGD",
+          "SRB",
+          "DNK",
+          "PER",
+          "USA",
+          "GRC",
+          "TZA",
+          "POL",
+          "BIH",
+          "PNG",
+          "EGY",
+          "CYP",
+          "HUN",
+          "LBY",
+          "MYS",
+          "JOR",
+          "MAR",
+          "CIV",
+          "SYR",
+          "UGA",
+          "KOR",
+          "KGZ",
+          "LKA",
+          "HRV",
+          "TUN",
+          "NRU",
+          "ESP",
+          "KEN",
+          "SVN",
+          "ZAF",
+          "TUR",
+          "TTO",
+          "IDN",
+          "RWA",
+          "LBN",
+          "COD"
+        ],
+        "secondary_countries": [
+          "TLS",
+          "PSE",
+          "BEL",
+          "FRA",
+          "NER",
+          "DEU",
+          "NIC",
+          "KHM",
+          "VEN",
+          "SLE",
+          "IRN",
+          "TCD",
+          "SLV",
+          "ETH",
+          "VNM",
+          "UZB",
+          "MEX",
+          "ERI",
+          "HND",
+          "SSD",
+          "MMR",
+          "TJK",
+          "BLR",
+          "ARE",
+          "UKR",
+          "CMR",
+          "MLT",
+          "NGA",
+          "BFA",
+          "LBR",
+          "AUS",
+          "GHA",
+          "SWE",
+          "ROU",
+          "GTM"
+        ]
+      },
+      "youtube_info": {
+        "channel_id": "UCREPamP892LJnJfJNWYKfPQ",
+        "channel_url": "https://www.youtube.com/user/AmnestyInternational",
+        "relevant_videos": [
+          "DKp1Q-gY540",
+          "rrQMOZwr1QY",
+          "33M62Fjt_wU",
+          "3joX0ONovkA",
+          "YIJ_0x1q6I8"
+        ]
+      }
+    }
   }
 ]
