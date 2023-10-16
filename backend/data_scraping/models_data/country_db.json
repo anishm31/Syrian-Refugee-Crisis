@@ -7223,7 +7223,27 @@
       "num_other": "0",
       "num_apps_rejected": "0",
       "num_closed": 56
-    }
+    },
+    "associatedCharities": [
+      {
+        "name": "United Nations High Commissioner for Refugees",
+        "link": "/charities/United%20Nations%20High%20Commissioner%20for%20Refugees"
+      },
+      {
+        "name": "World Food Programme",
+        "link": "/charities/World%20Food%20Programme"
+      }
+    ],
+    "associatedNewsEvents": [
+      {
+        "name": "Humanitarian Aid Shortage",
+        "link": "/news-and-events/NGOs%20warn:%20Humanitarian%20Aid%20Shortage%20amid%20Harsh%20Temperatures%20and%20rising%20cases%20of%20COVID-19"
+      },
+      {
+        "name": "Open Letter to UN Security Council",
+        "link": "/news-and-events/Open%20Letter%20to%20the%20UN%20Security%20Council%20(June%2022nd,%202023)"
+      } 
+    ]
   },
   {
     "country_name": "Uganda",
