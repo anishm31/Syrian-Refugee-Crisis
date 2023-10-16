@@ -3,6 +3,7 @@ import countryData from "../model_data/country_db.json";
 import { useParams } from 'react-router-dom';
 import {Container, Card, ListGroup, Row, Col, Button} from 'react-bootstrap';
 import { Link } from "react-router-dom";
+import CountryMap from "./CountryMap";
 
 function CountryInstancePage() {
     const params = useParams();
@@ -30,11 +31,9 @@ function CountryInstancePage() {
                             <ListGroup.Item>Number Closed: {country.attributes.num_closed.toLocaleString()}</ListGroup.Item>
                             <ListGroup.Item>Other: {country.attributes.num_other.toLocaleString()}</ListGroup.Item>
                         </ListGroup>
-                        <Card.Img
-                            variant="bottom"
-                            src={country.map_url}
-                            style={{ objectFit : "cover", width: "50%", height: "50%", margin: "auto"}}
-                        />
+                        <Card.Body>
+                            <CountryMap mapInfo={country.attributes.map_info} />
+                        </Card.Body>
                     </Card>
                 </div>
             </Container>
