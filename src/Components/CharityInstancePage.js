@@ -3,6 +3,7 @@ import charityData from "../model_data/charity_db.json";
 import { useParams } from 'react-router-dom';
 import {Container, Card, ListGroup, Row, Col, Button} from 'react-bootstrap';
 import { Link } from "react-router-dom";
+import VideoCarousel from "./VideoCarousel";
 
 function CharityInstancePage() {
     const params = useParams();
@@ -36,11 +37,9 @@ function CharityInstancePage() {
                         {charity.attributes.awards_received.map((award) => (
                                 <ListGroup.Item>{award}</ListGroup.Item>))}
                         </ListGroup>
-                        <Card.Img
-                            variant="bottom"
-                            src={charity.attributes.org_img}
-                            style={{objectFit: "cover", width: "50%", height: "50%", margin: "auto"}}
-                        />
+                        <Card.Body>
+                            <VideoCarousel youtubeInfo={charity.attributes.youtube_info} />
+                        </Card.Body>
                     </Card>
                 </div>
             </Container>
