@@ -1,0 +1,4 @@
+First run python3 -m venv .venv
+then . .venv/bin/activate 
+    to deactivate type 'deactivate'
+then pip install -r backend/API/requirements.txt
