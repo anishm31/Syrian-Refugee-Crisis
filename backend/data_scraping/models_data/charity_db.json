@@ -71,6 +71,11 @@
           "DJI",
           "BTN"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCWocpjd-nzUUgbd19tFyUmQ",
+        "channel_url": "https://www.youtube.com/user/NGOACTED",
+        "relevant_videos": []
       }
     }
   },
@@ -79,7 +84,9 @@
     "id": "Q699385",
     "attributes": {
       "description": "CARE International is a 75-year-old global confederation working to fight poverty and social injustice in the world, with a specific focus on the empowerment of women and girls. We work side-by-side with communities to understand the root causes of poverty and find innovative, locally-led solutions. CARE seeks to demonstrate the results and methodologies used in our projects to ensure transparency and accountability and advance the quality of our work.",
-      "org_type": ["Non-governmental Organization"],
+      "org_type": [
+        "Non-governmental Organization"
+      ],
       "logo_img": "https://upload.wikimedia.org/wikipedia/commons/4/49/CARE_Logo_Orange.png",
       "org_img": "",
       "established": "1945-00-00T00:00:00Z",
@@ -185,6 +192,11 @@
           "DOM",
           "SVK"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCOK3VDTcbFGPM2X3aTOmZpQ",
+        "channel_url": "https://www.youtube.com/user/CAREinternational",
+        "relevant_videos": []
       }
     }
   },
@@ -293,6 +305,11 @@
           "DOM",
           "SVK"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCOSVI6yw6mY_xLjAIO4TQGA",
+        "channel_url": "https://www.youtube.com/channel/UCOSVI6yw6mY_xLjAIO4TQGA",
+        "relevant_videos": []
       }
     }
   },
@@ -345,6 +362,11 @@
           "ROU",
           "SVK"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCpGzHyxhMmoiGTFZQlhJIMQ",
+        "channel_url": "https://www.youtube.com/internationalcatholicmigrationcommission",
+        "relevant_videos": []
       }
     }
   },
@@ -456,6 +478,11 @@
           "PAN",
           "MRT"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCTPDxhZ5d8nZgZFLTITA5LA",
+        "channel_url": "https://www.youtube.com/user/IOMMigration",
+        "relevant_videos": []
       }
     }
   },
@@ -505,6 +532,11 @@
           "SOM",
           "AFG"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UChevcXuzBOFhIAfzJpfQf5w",
+        "channel_url": "https://www.youtube.com/channel/UChevcXuzBOFhIAfzJpfQf5w",
+        "relevant_videos": []
       }
     }
   },
@@ -572,6 +604,11 @@
           "MNE",
           "SSD"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCZTzye9GGrnfsL-BZd_JBDg",
+        "channel_url": "https://www.youtube.com/user/IRWorldwide",
+        "relevant_videos": []
       }
     }
   },
@@ -634,6 +671,11 @@
           "CRI",
           "PAN"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UC7QZ2GaRS9bZNMSgnwxZVHg",
+        "channel_url": "https://www.youtube.com/user/premiereurgence",
+        "relevant_videos": []
       }
     }
   },
@@ -704,6 +746,11 @@
           "MKD",
           "COD"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCagCOAfZBpsTOlAJq_vcWbw",
+        "channel_url": "https://www.youtube.com/UNDP/",
+        "relevant_videos": []
       }
     }
   },
@@ -792,6 +839,11 @@
           "ESP",
           "SWE"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UC2ZDAoIMGP3m9tAgnniNEYw",
+        "channel_url": "http://www.youtube.com/user/unhcr",
+        "relevant_videos": []
       }
     }
   },
@@ -860,6 +912,11 @@
           "JPN",
           "AFG"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCZceliiH71OLw4t4HcvKKjw",
+        "channel_url": "http://www.youtube.com/user/unicef",
+        "relevant_videos": []
       }
     }
   },
@@ -943,6 +1000,11 @@
           "KWT",
           "COD"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UC1MOaUuMyeBPHiIWr16tAgw",
+        "channel_url": "https://www.youtube.com/user/unfpa",
+        "relevant_videos": []
       }
     }
   },
@@ -1003,6 +1065,11 @@
           "CHN",
           "RUS"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCT-FJ4sgZ-0OCTmyf1tmKwQ",
+        "channel_url": "https://www.youtube.com/user/WORLDFOODPROGRAM",
+        "relevant_videos": []
       }
     }
   },
@@ -1099,6 +1166,11 @@
           "CZE",
           "SVK"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCN7MvrHoSqI5RjV-urE1usw",
+        "channel_url": "http://www.youtube.com/user/IAmCaritas",
+        "relevant_videos": []
       }
     }
   },
@@ -1171,6 +1243,11 @@
           "MKD",
           "COD"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UClfHNvzS7UxS3me3ZV3TCrQ",
+        "channel_url": "https://www.youtube.com/user/CatholicRelief",
+        "relevant_videos": []
       }
     }
   },
@@ -1299,6 +1376,11 @@
           "CRI",
           "ABW"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCZ8xf9ZrTOv7SeYK7U5eKVg",
+        "channel_url": "https://www.youtube.com/user/ifrc",
+        "relevant_videos": []
       }
     }
   },
@@ -1417,6 +1499,11 @@
           "CZE",
           "SVK"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCFWA1y24EABrEB6u_dAfqIQ",
+        "channel_url": "https://www.youtube.com/RESCUEorg",
+        "relevant_videos": []
       }
     }
   },
@@ -1464,6 +1551,11 @@
           "ZMB",
           "EGY"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UC81vUUMrn0jrm_Wvvd-0OdQ",
+        "channel_url": "https://www.youtube.com/channel/UC81vUUMrn0jrm_Wvvd-0OdQ",
+        "relevant_videos": []
       }
     }
   },
@@ -1549,6 +1641,11 @@
           "ABW",
           "SVK"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCEwPS6OeB9NjoQlkg1eOcgw",
+        "channel_url": "https://www.youtube.com/user/mercycorps",
+        "relevant_videos": []
       }
     }
   },
@@ -1645,6 +1742,11 @@
           "CZE",
           "SVK"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCIGOWeWz4v76qfWg9ic1wAQ",
+        "channel_url": "https://www.youtube.com/@FondationTerredeshommes",
+        "relevant_videos": []
       }
     }
   },
@@ -1704,6 +1806,11 @@
           "MKD",
           "SRB"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCBl23tS-qaCVw-eveIGnUlg",
+        "channel_url": "https://www.youtube.com/user/actioncontrelafaim",
+        "relevant_videos": []
       }
     }
   },
@@ -1740,6 +1847,11 @@
           "SYR"
         ],
         "secondary_countries": []
+      },
+      "youtube_info": {
+        "channel_id": "UCpPo_0b7_nvXYBy6EbbMC5A",
+        "channel_url": "https://www.youtube.com/user/britishcouncil",
+        "relevant_videos": []
       }
     }
   },
@@ -1793,6 +1905,11 @@
           "MKD",
           "SRB"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCBt4eRgZAcwfbeT5AiElVWA",
+        "channel_url": "https://www.youtube.com/user/concernworldwide",
+        "relevant_videos": []
       }
     }
   },
@@ -1840,6 +1957,11 @@
           "ZMB",
           "SRB"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCUkfk2JDuxiAJLMgULWMewQ",
+        "channel_url": "https://www.youtube.com/user/kirkonulkomaanapu",
+        "relevant_videos": []
       }
     }
   },
@@ -1874,6 +1996,11 @@
         "secondary_countries": [
           "PSE"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCfXeCq5wRsRs4a9WzwJzQJg",
+        "channel_url": "https://www.youtube.com/user/humanappealint",
+        "relevant_videos": []
       }
     }
   },
@@ -1927,6 +2054,11 @@
           "EGY",
           "COD"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCGffmt_EoT0-cwq_7R1DiDQ",
+        "channel_url": "http://www.youtube.com/c/TheLutheranWorldFederation",
+        "relevant_videos": []
       }
     }
   },
@@ -2037,6 +2169,11 @@
           "NPL",
           "DOM"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCU9W9KBKmF4FcO_HWYNFVKg",
+        "channel_url": "https://www.youtube.com/@NorwRefugeeCouncil",
+        "relevant_videos": []
       }
     }
   },
@@ -2084,6 +2221,11 @@
           "PAK",
           "EGY"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCgSmQCoD_V56kipVpuUOzeQ",
+        "channel_url": "https://www.youtube.com/@reliefinternational3343",
+        "relevant_videos": []
       }
     }
   },
@@ -2222,6 +2364,11 @@
           "CZE",
           "SVK"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCNVTVX1noOYr60nfHBaUV9w",
+        "channel_url": "https://www.youtube.com/user/everyonestc",
+        "relevant_videos": []
       }
     }
   },
@@ -2294,6 +2441,11 @@
           "ZWE",
           "KWT"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCkD7gm3Am3M3k156lk46t3A",
+        "channel_url": "https://www.youtube.com/user/unesco",
+        "relevant_videos": []
       }
     }
   },
@@ -2401,6 +2553,11 @@
           "ZWE",
           "GTM"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UC-mPNVrE9uHcFj02XOjGi2g",
+        "channel_url": "https://www.youtube.com/user/WorldVisionStory",
+        "relevant_videos": []
       }
     }
   },
@@ -2477,6 +2634,11 @@
           "LBN",
           "ECU"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCNk0pLPnx9dGTG75U5CTISg",
+        "channel_url": "https://www.youtube.com/user/ADRAInternational/",
+        "relevant_videos": []
       }
     }
   },
@@ -2522,6 +2684,11 @@
           "USA",
           "BGD"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCbZPpaSmV5g1fkzNp-qUDHA",
+        "channel_url": "https://www.youtube.com/channel/UCbZPpaSmV5g1fkzNp-qUDHA",
+        "relevant_videos": []
       }
     }
   },
@@ -2570,6 +2737,11 @@
           "GBR",
           "EGY"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCzsElxx1mkkoSA01jEV7JdA",
+        "channel_url": "https://www.youtube.com/actionaid",
+        "relevant_videos": []
       }
     }
   },
@@ -2619,6 +2791,11 @@
           "DEU",
           "SSD"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCFQRnMCZ_HMwi6ZxdjH9new",
+        "channel_url": "https://www.youtube.com/welthungerhilfe",
+        "relevant_videos": []
       }
     }
   },
@@ -2683,6 +2860,11 @@
           "KWT",
           "SVK"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCtu8MkufmVgxS8_Ocl7mMig",
+        "channel_url": "http://www.youtube.com/user/FAOoftheUN",
+        "relevant_videos": []
       }
     }
   },
@@ -2766,6 +2948,11 @@
           "KWT",
           "COD"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCrlcu5KChYyHwXlIeD7oLUg",
+        "channel_url": "http://www.youtube.com/ilotv",
+        "relevant_videos": []
       }
     }
   },
@@ -2844,6 +3031,11 @@
           "PAN",
           "SVK"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCVLkqTvsRpm46RDmM4SYf6Q",
+        "channel_url": "https://www.youtube.com/channel/UCVLkqTvsRpm46RDmM4SYf6Q",
+        "relevant_videos": []
       }
     }
   },
@@ -2912,6 +3104,11 @@
           "CZE",
           "SVK"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCXDenzwzeXM1TNtTuWj8C4A",
+        "channel_url": "https://www.youtube.com/UNWomen",
+        "relevant_videos": []
       }
     }
   },
@@ -2954,6 +3151,11 @@
           "SYR",
           "AFG"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCEdVD3q7YIDiWU-VkEhfOuA",
+        "channel_url": "https://www.youtube.com/user/UNIDObeta",
+        "relevant_videos": []
       }
     }
   },
@@ -2983,6 +3185,11 @@
       "relevant_countries": {
         "primary_countries": [],
         "secondary_countries": []
+      },
+      "youtube_info": {
+        "channel_id": "UCMDwZj7zsDTMT5DCj84aAqg",
+        "channel_url": "http://www.youtube.com/user/ForVictimsofTorture",
+        "relevant_videos": []
       }
     }
   },
@@ -3099,6 +3306,11 @@
           "CZE",
           "SVK"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCmwFCD5x4ymYadUQkNCB0sw",
+        "channel_url": "https://www.youtube.com/user/JesuitRefugee",
+        "relevant_videos": []
       }
     }
   },
@@ -3175,6 +3387,11 @@
           "CRI",
           "ABW"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCTCQjWrkWFtHhmA3YPOfijw",
+        "channel_url": "https://www.youtube.com/user/medecinsdumonde",
+        "relevant_videos": []
       }
     }
   },
@@ -3228,6 +3445,11 @@
           "EGY",
           "KEN"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCKNRZrTyaikNq9GY0vgY0mg",
+        "channel_url": "http://www.youtube.com/user/IMCworldwideDotOrg",
+        "relevant_videos": []
       }
     }
   },
@@ -3276,6 +3498,11 @@
           "YEM",
           "ETH"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCJ7T1_izTL7MW5vNoDZJYHg",
+        "channel_url": "https://www.youtube.com/user/qrcs",
+        "relevant_videos": []
       }
     }
   },
@@ -3323,6 +3550,11 @@
           "KWT",
           "USA"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UC07-dOwgza1IguKA86jqxNA",
+        "channel_url": "https://www.youtube.com/user/who",
+        "relevant_videos": []
       }
     }
   },
@@ -3483,6 +3715,11 @@
           "ROU",
           "GTM"
         ]
+      },
+      "youtube_info": {
+        "channel_id": "UCREPamP892LJnJfJNWYKfPQ",
+        "channel_url": "https://www.youtube.com/user/AmnestyInternational",
+        "relevant_videos": []
       }
     }
   }
