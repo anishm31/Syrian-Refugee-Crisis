@@ -25,3 +25,8 @@ build:
 	echo "Building and running the application for CI/CD..."
 	npm run build
 	echo "Completed Build"
+
+tests:
+	echo "Running frontend tests"
+	npm test
+	echo "Completed Testing"
