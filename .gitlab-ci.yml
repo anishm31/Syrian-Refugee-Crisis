@@ -4,6 +4,9 @@ stages:
   - build
   - test
 
+before_script:
+  - npm install
+
 build:
   stage: build
   script:
