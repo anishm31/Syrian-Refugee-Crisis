@@ -2,9 +2,15 @@ image: node
 
 stages:
   - build
+  - test
 
 build:
   stage: build
   script:
     - npm install
     - npm run build
+
+test-jest:
+  stage: test
+  script:
+    - npm test
