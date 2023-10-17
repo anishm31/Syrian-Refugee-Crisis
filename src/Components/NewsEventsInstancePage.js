@@ -1,7 +1,8 @@
 import React from "react";
 import newsData from "../model_data/news_db.json";
 import { useParams } from 'react-router-dom';
-import {Container, Card, ListGroup} from 'react-bootstrap';
+import {Container, Card, ListGroup, Row, Col, Button} from 'react-bootstrap';
+import { Link } from "react-router-dom";
 
 
 function NewsEventsInstancePage() {
@@ -38,6 +39,5 @@ style={{ objectFit : "cover", width: "50%", height: "50%", margin: "auto"}}
 </Container>
 );
 }
-
 
 export default NewsEventsInstancePage;
