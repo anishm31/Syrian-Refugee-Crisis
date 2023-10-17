@@ -28,7 +28,7 @@ json_file_path = "./models_data/news_db.json"
 # Iterate through each endpoint to scrape necessary attributes
 #got rid of params
     # Make request to UNHCR API
-response = requests.get(f"https://api.reliefweb.int/v1/reports?appname=apidoc&query[value]=syrian refugees&query[fields][]=source&fields[include][]=source.shortname&fields[include][]=disaster_type.name&fields[include][]=primary_country.shortname&fields[include][]=date.created&fields[include][]=image&fields[include][]=headline.title&fields[include][]=theme.name&fields[include][]=url&limit=75")
+response = requests.get(f"https://api.reliefweb.int/v1/reports?appname=apidoc&query[value]=syrian refugees&query[fields][]=source&fields[include][]=source.shortname&fields[include][]=disaster_type.name&fields[include][]=primary_country.shortname&fields[include][]=date.created&fields[include][]=image&fields[include][]=headline.title&fields[include][]=theme.name&fields[include][]=source.id&fields[include][]=country.iso3&fields[include][]=url&limit=75")
 if response.status_code == 200:
       # Success, store data in json template
       response_data = response.json()
@@ -49,6 +49,8 @@ if response.status_code == 200:
         "Themes":[],
         "OrgLink":"",
         "Video":"",
+        "ISO":"",
+        "SourceID":[]
         }
         }
 
@@ -61,11 +63,13 @@ if response.status_code == 200:
         disaster_list = fields.get("disaster_type")
         disaster = []
         link = fields.get("url")
+        iso = fields.get("country")[0].get("iso3")
       
         sources_list = fields.get("source")
         source = []
         for i in sources_list:
           source.append(i.get("shortname")+" ")
+          instance_template["attributes"]["SourceID"].append((i).get("id"))
 
         theme_list = fields.get("theme")
         theme = []
@@ -84,26 +88,12 @@ if response.status_code == 200:
         instance_template["attributes"]["OtherSources"]= source
         instance_template["attributes"]["OrgLink"]= link
         instance_template["attributes"]["Themes"]= theme
+        instance_template["attributes"]["ISO"]= iso
+        
         
 
-        #news_data.append(instance_template)
-      #   api_key = 'AIzaSyDsWGnneLR5-fm9z3S5Tp-lMYqoDV1YpRk'
-      #   search_engine_id = 'e1c5bf1893dd2489d'
 
-      #     # Set the search query
-      #   query = instance_template["attributes"]["OrgLink"]
-
-      #     # Make the API request
-      #   time.sleep(1);
-      #   url = f'https://www.googleapis.com/customsearch/v1?key={api_key}&cx={search_engine_id}&q={query}&searchType=image'
-      #   response = requests.get(url)
-
-      #   if response.status_code == 200:
-      #  # Parse the JSON response
-      #     data = response.json()
-
-      #trying again the bing api lol
-
+        #bing image search 
         subscription_key = "6593dbe5ca00458b890062640971c88c"
         search_url = "https://api.bing.microsoft.com/v7.0/images/search"
         search_term = instance_template["Title"]
