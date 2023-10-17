@@ -1,185 +1,234 @@
 [
-
   {
-    "Title": "NGOs warn: Humanitarian Aid Shortage amid Harsh Temperatures and rising cases of COVID-19",
-    "Date": "2021-01-29T14:02:21+00:00",
-    "SecondImage":"https://ysm-res.cloudinary.com/image/upload/ar_16:9,c_fill,dpr_3.0,f_auto,g_faces:auto,q_auto:eco,w_500/v1/yms/prod/24490b0b-d9a2-4087-a848-75c91def322c",
+    "Title": "Open Letter to United Nations Security Council Ambassadors regarding the upcoming vote on the Syria cross-border resolution",
+    "Date": "2021-06-21T19:56:20+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/3/36/Urban_flood_cropped.jpg",
+    "Image": [
+      "https://tse1.mm.bing.net/th?id=OIP.znvbCnFsw1QMQ6ui_hl7MAHaEu&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
-        "Flood",
-        "Severe Local Storm"
+        "Epidemic"
       ],
       "PrimaryCountry": "Syria",
       "OtherSources": [
-        "Islamic Relief ",
+        "Concern ",
+        "InterAction ",
+        "War Child ",
+        "Tr\u00f3caire ",
         "NRC ",
         "CARE ",
         "Christian Aid ",
         "Mercy Corps ",
         "HI ",
+        "PIN ",
         "Oxfam ",
+        "M-USA ",
         "IRC ",
+        "RI ",
+        "RI ",
         "Save the Children ",
         "World Vision ",
-        "SDIO ",
+        "Syria Relief ",
         "SAMS ",
         "MedGlobal "
       ],
       "Themes": [
         "Food and Nutrition",
         "Health",
+        "Logistics and Telecommunications",
         "Protection and Human Rights",
         "Shelter and Non-Food Items"
       ],
-      "OrgLink": "https://www.care.org/news-and-stories/press-releases/ngos-warn-reduced-humanitarian-access-impedes-response-to-rising-cases-of-covid-19/"
-    },
-    "associatedCharities": [
-      {
-        "name": "United Nations High Commissioner for Refugees",
-        "link": "/charities/United%20Nations%20High%20Commissioner%20for%20Refugees"
-      },
-      {
-        "name": "World Food Programme",
-        "link": "/charities/World%20Food%20Programme"
-      }
-    ],
-    "associatedCountries": [
-      {
-        "name": "Germany",
-        "link": "/countries/Germany"
-      },
-      {
-        "name": "Turkey",
-        "link": "/countries/Turkey"
-      } 
-    ]
+      "OrgLink": "https://reliefweb.int/node/3749448",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Open%20Letter%20to%20United%20Nations%20Security%20Council%20Ambassadors%20regarding%20the%20upcoming%20vote%20on%20the%20Syria%20cross-border%20resolution&view=detail&mid=DA67976A3DD484C599EFDA67976A3DD484C599EF"
+      ]
+    }
   },
   {
-    "Title": "Joint NGO Statement Syria Cross-Border",
-    "Date": "2022-06-29T18:54:46+00:00",
-    "SecondImage":"data:image/png;base64,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",
+    "Title": "Children in NW Syria at grave danger amid the cholera outbreak and the onset of the harsh winter - Syrian humanitarians warn [EN/AR]",
+    "Date": "2022-11-07T00:00:00+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Lac_de_l%27Entonnoir_-_img_49473.jpg",
+    "Image": [
+      "https://tse2.mm.bing.net/th?id=OIP.VpRSiLmc-Mt9DoxNLMYNZQHaE8&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
-        "Drought",
         "Epidemic"
       ],
       "PrimaryCountry": "Syria",
       "OtherSources": [
-        "CARE ",
-        "Christian Aid ",
-        "Concern ",
-        "Global Communities ",
-        "GOAL ",
-        "HI ",
-        "InterAction ",
-        "IRC ",
-        "Islamic Relief ",
-        "MedGlobal ",
-        "Mercy Corps ",
-        "NRC ",
-        "Oxfam ",
-        "PIN ",
-        "RI ",
-        "Save the Children ",
+        "ACU ",
+        "Govt. Syria ",
+        "Hand in Hand for Aid and Development ",
+        "NWS NGO Forum ",
+        "Orange ",
+        "PAC - Turkey ",
         "Syria Relief ",
+        "SRD ",
         "SAMS ",
+        "SNA ",
+        "UOSSM ",
+        "Violet Organization ",
         "World Vision "
       ],
       "Themes": [
-        "Food and Nutrition",
         "Health",
+        "Protection and Human Rights",
         "Shelter and Non-Food Items",
         "Water Sanitation Hygiene"
       ],
-      "OrgLink": "https://www.savethechildren.net/news/joint-ngo-statement-syria-cross-border#"
-    },
-    "associatedCharities": [
-      {
-        "name": "United Nations High Commissioner for Refugees",
-        "link": "/charities/United%20Nations%20High%20Commissioner%20for%20Refugees"
-      },
-      {
-        "name": "UNICEF",
-        "link": "/charities/United%20Nations%20High%20Commissioner%20for%20Refugees"
-      },
-      {
-        "name": "World Food Programme",
-        "link": "/charities/World%20Food%20Programme"
-      }
-    ],
-    "associatedCountries": [
-      {
-        "name": "Germany",
-        "link": "/countries/Germany"
-      },
-      {
-        "name": "Jordan",
-        "link": "/countries/Jordan"
-      } 
-    ]
+      "OrgLink": "https://reliefweb.int/node/3903995",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Children%20in%20NW%20Syria%20at%20grave%20danger%20amid%20the%20cholera%20outbreak%20and%20the%20onset%20of%20the%20harsh%20winter%20-%20Syrian%20humanitarians%20warn%20[EN/AR]&view=detail&mid=9E749609C056BEA150C09E749609C056BEA150C0"
+      ]
+    }
   },
   {
-    "Title": "Open Letter to the UN Security Council (June 22nd, 2023)",
-    "Date": "2023-06-22T19:36:57+00:00",
-    "SecondImage":"data:image/jpeg;base64,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",
+    "Title": "On International Women\u2019s Day, the Devastating Earthquake that Hit Northwestern Syria Has Exacerbated the Dire Situation of Women, With No Fewer than 35,000 Women Losing Their Homes in the Earthquake [EN/AR]",
+    "Date": "2023-03-09T12:03:22+00:00",
     "Source": "",
-    "Image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Quake_epicenters_1963-98.png",
+    "Image": [
+      "https://tse4.mm.bing.net/th?id=OIP.bhlVTzE6IJnM0JcV3Nu2DgHaE8&pid=Api"
+    ],
     "attributes": {
       "DisasterType": [
         "Earthquake"
       ],
       "PrimaryCountry": "Syria",
       "OtherSources": [
-        "Ataa Relief ",
-        "CARE ",
-        "DCA ",
-        "Global Communities ",
-        "Hand in Hand for Aid and Development ",
-        "HI ",
-        "HelpAge ",
-        "IHSAN ",
-        "IRC ",
-        "Islamic Relief ",
-        "Malteser ",
-        "MedGlobal ",
-        "Mercy Corps ",
-        "M-USA ",
-        "NRC ",
-        "Oxfam ",
-        "PIN ",
-        "PAC ",
-        "RI ",
-        "Save the Children ",
-        "SRD ",
-        "SAMS ",
-        "UOSSM ",
-        "Violet Organization ",
-        "WHH ",
-        "World Vision "
+        "SNHR "
       ],
       "Themes": [
-        "Food and Nutrition",
-        "Health",
         "Protection and Human Rights",
-        "Shelter and Non-Food Items"
+        "Safety and Security"
       ],
-      "OrgLink": null
-    },
-    "associatedCharities": [
-      {
-        "name": "UNICEF",
-        "link": "/charities/United%20Nations%20High%20Commissioner%20for%20Refugees"
-      }
+      "OrgLink": "https://reliefweb.int/node/3941696",
+      "Video": [
+        "https://www.bing.com/videos/search?q=On%20International%20Women%E2%80%99s%20Day,%20the%20Devastating%20Earthquake%20that%20Hit%20Northwestern%20Syria%20Has%20Exacerbated%20the%20Dire%20Situation%20of%20Women,%20With%20No%20Fewer%20than%2035,000%20Women%20Losing%20Their%20Homes%20in%20the%20Earthquake%20[EN/AR]&view=detail&mid=9A370E9F2673B80556E49A370E9F2673B80556E4"
+      ]
+    }
+  },
+  {
+    "Title": "Extrajudicial Killing Claims the Lives of 723 Civilians in Syria in the First Half of 2021 [EN/AR]",
+    "Date": "2021-07-01T19:23:27+00:00",
+    "Source": "",
+    "Image": [
+      "https://tse2.mm.bing.net/th?id=OIP.saoT_UHiPt1RhYgar0XjTwHaHa&pid=Api"
     ],
-    "associatedCountries": [
-      {
-        "name": "Germany",
-        "link": "/countries/Germany"
-      }
-    ]
+    "attributes": {
+      "DisasterType": [
+        "Epidemic"
+      ],
+      "PrimaryCountry": "Syria",
+      "OtherSources": [
+        "SNHR "
+      ],
+      "Themes": [
+        "Mine Action",
+        "Protection and Human Rights"
+      ],
+      "OrgLink": "https://reliefweb.int/node/3752824",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Extrajudicial%20Killing%20Claims%20the%20Lives%20of%20723%20Civilians%20in%20Syria%20in%20the%20First%20Half%20of%202021%20[EN/AR]&view=detail&mid=0094D036CB77C6A2954F0094D036CB77C6A2954F"
+      ]
+    }
+  },
+  {
+    "Title": "Extrajudicial Killing Claims the Lives of 96 Civilians, Including 15 Children, 11 Women, and Nine Victims Due to Torture, in Syria in May 2021 [EN/AR]",
+    "Date": "2021-06-01T13:54:34+00:00",
+    "Source": "",
+    "Image": [
+      "https://tse3.mm.bing.net/th?id=OIP.jKWLSkddPlAkSKDuXnU2iQHaF9&pid=Api"
+    ],
+    "attributes": {
+      "DisasterType": [
+        "Epidemic"
+      ],
+      "PrimaryCountry": "Syria",
+      "OtherSources": [
+        "SNHR "
+      ],
+      "Themes": [
+        "Mine Action",
+        "Protection and Human Rights"
+      ],
+      "OrgLink": "https://reliefweb.int/node/3743305",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Extrajudicial%20Killing%20Claims%20the%20Lives%20of%2096%20Civilians,%20Including%2015%20Children,%2011%20Women,%20and%20Nine%20Victims%20Due%20to%20Torture,%20in%20Syria%20in%20May%202021%20[EN/AR]&view=detail&mid=BC219F6D611C133D5C98BC219F6D611C133D5C98"
+      ]
+    }
+  },
+  {
+    "Title": "On the 10th Anniversary of the Popular Uprising: 227,413 Syrian Civilians Documented Killed, Including 14,506 by Torture, with 149,361 Detained/ Forcibly Disappeared, and 13 Million Others Displaced",
+    "Date": "2021-03-15T20:23:28+00:00",
+    "Source": "",
+    "Image": [
+      "https://tse2.mm.bing.net/th?id=OIP.5ZiO506ajf-dML3V6SKxbwAAAA&pid=Api"
+    ],
+    "attributes": {
+      "DisasterType": [
+        "Epidemic"
+      ],
+      "PrimaryCountry": "Syria",
+      "OtherSources": [
+        "SNHR "
+      ],
+      "Themes": [
+        "Health",
+        "Protection and Human Rights"
+      ],
+      "OrgLink": "https://reliefweb.int/node/3721537",
+      "Video": [
+        "https://www.bing.com/videos/search?q=On%20the%2010th%20Anniversary%20of%20the%20Popular%20Uprising:%20227,413%20Syrian%20Civilians%20Documented%20Killed,%20Including%2014,506%20by%20Torture,%20with%20149,361%20Detained/%20Forcibly%20Disappeared,%20and%2013%20Million%20Others%20Displaced&view=detail&mid=CD0FB12C02F7E38B9835CD0FB12C02F7E38B9835"
+      ]
+    }
+  },
+  {
+    "Title": "On the 12th Anniversary of the Popular Uprising: A Total of 230,224 Civilians Documented as Dead, including 15,275 Who Died due to Torture, 154,871 Arrested and/or Forcibly Disappeared, and Roughly 14 Million Syrians Displaced",
+    "Date": "2023-03-15T20:48:37+00:00",
+    "Source": "",
+    "Image": [
+      "https://tse3.mm.bing.net/th?id=OIP.Qx9hYaWYg9yffz9_MHB_vAHaHa&pid=Api"
+    ],
+    "attributes": {
+      "DisasterType": [
+        "Earthquake"
+      ],
+      "PrimaryCountry": "Syria",
+      "OtherSources": [
+        "SNHR "
+      ],
+      "Themes": [
+        "Protection and Human Rights"
+      ],
+      "OrgLink": "https://reliefweb.int/node/3943796",
+      "Video": [
+        "https://www.bing.com/videos/search?q=On%20the%2012th%20Anniversary%20of%20the%20Popular%20Uprising:%20A%20Total%20of%20230,224%20Civilians%20Documented%20as%20Dead,%20including%2015,275%20Who%20Died%20due%20to%20Torture,%20154,871%20Arrested%20and/or%20Forcibly%20Disappeared,%20and%20Roughly%2014%20Million%20Syrians%20Displaced&view=detail&mid=E096719C608475EE1B45E096719C608475EE1B45"
+      ]
+    }
+  },
+  {
+    "Title": "Syrie: Barrage de Z\u00e9zoune - Rapport 07 juin 2001 - Aides irakiennes et marocaines",
+    "Date": "2002-06-07T04:00:00+00:00",
+    "Source": "",
+    "Image": [
+      "https://tse2.mm.bing.net/th?id=OIP.03YUX8yLf4BLfe80JZ7QbgHaEK&pid=Api"
+    ],
+    "attributes": {
+      "DisasterType": [
+        "Technological Disaster"
+      ],
+      "PrimaryCountry": "Syria",
+      "OtherSources": [
+        "Govt. Syria "
+      ],
+      "Themes": [],
+      "OrgLink": "https://reliefweb.int/node/102872",
+      "Video": [
+        "https://www.bing.com/videos/search?q=Syrie:%20Barrage%20de%20Z%C3%A9zoune%20-%20Rapport%2007%20juin%202001%20-%20Aides%20irakiennes%20et%20marocaines&view=detail&mid=D8358D982B9A0544FED6D8358D982B9A0544FED6"
+      ]
+    }
   }
 ]

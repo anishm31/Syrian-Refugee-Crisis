@@ -5,6 +5,17 @@
 
 import requests
 import json
+import os
+import time
+from pprint import pprint
+import matplotlib
+matplotlib.use('Agg')
+#had to download pip install azure-cognitiveservices-search-imagesearch for this
+from azure.cognitiveservices.search.imagesearch import ImageSearchClient
+from msrest.authentication import CognitiveServicesCredentials
+import matplotlib.pyplot as plt
+from PIL import Image
+from io import BytesIO
 
 # Set specific query fields for scrape
 
@@ -14,11 +25,10 @@ endpoints = ["reports"] # API endpoints to scrape
 
 news_data = []
 json_file_path = "./models_data/news_db.json"
-
 # Iterate through each endpoint to scrape necessary attributes
 #got rid of params
     # Make request to UNHCR API
-response = requests.get(f"https://api.reliefweb.int/v1/reports?appname=apidoc&query[value]=Syrian Refugee&query[fields][]=source&fields[include][]=source.shortname&fields[include][]=disaster_type.name&fields[include][]=primary_country.shortname&fields[include][]=date.created&fields[include][]=image&fields[include][]=headline.title&fields[include][]=theme.name&fields[include][]=origin")
+response = requests.get(f"https://api.reliefweb.int/v1/reports?appname=apidoc&query[value]=syrian refugees&query[fields][]=source&fields[include][]=source.shortname&fields[include][]=disaster_type.name&fields[include][]=primary_country.shortname&fields[include][]=date.created&fields[include][]=image&fields[include][]=headline.title&fields[include][]=theme.name&fields[include][]=source.id&fields[include][]=country.iso3&fields[include][]=url&limit=75")
 if response.status_code == 200:
       # Success, store data in json template
       response_data = response.json()
@@ -38,6 +48,9 @@ if response.status_code == 200:
         "OtherSources": {},
         "Themes":[],
         "OrgLink":"",
+        "Video":"",
+        "ISO":"",
+        "SourceID":[]
         }
         }
 
@@ -49,19 +62,23 @@ if response.status_code == 200:
         image = fields.get("headline")
         disaster_list = fields.get("disaster_type")
         disaster = []
-        link = fields.get("origin")
+        link = fields.get("url")
+        iso = fields.get("country")[0].get("iso3")
       
-
-
         sources_list = fields.get("source")
         source = []
         for i in sources_list:
           source.append(i.get("shortname")+" ")
+          instance_template["attributes"]["SourceID"].append((i).get("id"))
 
         theme_list = fields.get("theme")
         theme = []
-        for i in theme_list:
-          theme.append(i.get("name"))
+        if theme_list is not None:
+          for i in theme_list:
+            theme.append(i.get("name"))
+          
+          
+
 
         instance_template["Title"]=title
         instance_template["Date"]=date
@@ -69,39 +86,42 @@ if response.status_code == 200:
         instance_template["attributes"]["DisasterType"]=  disaster_list
         instance_template["Image"]= image
         instance_template["attributes"]["OtherSources"]= source
-        instance_template["attributes"]["Themes"]= theme
         instance_template["attributes"]["OrgLink"]= link
+        instance_template["attributes"]["Themes"]= theme
+        instance_template["attributes"]["ISO"]= iso
+        
         
 
-        #news_data.append(instance_template)
-        
-        if instance_template["attributes"]["DisasterType"] is not None:
-          for i in disaster_list:
-            disaster.append(i.get("name"))
+
+        #bing image search 
+        subscription_key = "6593dbe5ca00458b890062640971c88c"
+        search_url = "https://api.bing.microsoft.com/v7.0/images/search"
+        search_term = instance_template["Title"]
+        headers = {"Ocp-Apim-Subscription-Key" : subscription_key}
+        params = {"q": search_term, "license":"public", "count":"1", "offset":"0"}
+        time.sleep(1)
+        response = requests.get(search_url, headers=headers, params=params)
+        response.raise_for_status()
+        search_results = response.json()
+        instance_template["Image"] = [img["thumbnailUrl"] for img in search_results["value"][:16]]
+
+        #getting bing video 
+        search_url = "https://api.bing.microsoft.com/v7.0/videos/search"
+        params = {"q": search_term, "license":"public", "count":"1", "offset":"0", "embedded":"player", "pricing":"free"}
+        response = requests.get(search_url, headers=headers, params=params)
+        response.raise_for_status()
+        search_results = response.json()
+        instance_template["attributes"]["Video"] = [Videos["webSearchUrl"] for Videos in search_results["value"][:16]]
+
+        if instance_template["Image"] is not None : 
+          if disaster_list is not None:
+              for i in disaster_list:
+                disaster.append(i.get("name"))
           instance_template["attributes"]["DisasterType"]= disaster
 
+          #only add news/events that have disaster and an image
           news_data.append(instance_template)
-          wiki_disaster =  disaster[0]
-          # Scrape for Wikipedia for flag image
-          wiki_params = {
-            "action": "query",
-            "format": "json",
-            "titles": f"{wiki_disaster}",
-            "prop": "pageimages",
-            "piprop": "original"
-          }
-          response = requests.get("https://en.wikipedia.org/w/api.php", params=wiki_params)
-          if response.status_code == 200:
-            # Extact URL from JSON response and store
-            response_data = response.json()['query']['pages']
-            flag_url = list(response_data.values())[0]['original']['source']
-            instance_template["Image"] = flag_url
-          else:
-            # Error, print status code
-            print(f"Request Error: {response.status_code}")
-            print(f"Request URL: {response.url}")
-            print(f"Request Failure Reason: {response.request.reason}")
-            exit(1)
+
 else:
       # Error, print status code
       print(f"Request Error: {response.status_code}")
