@@ -28,7 +28,7 @@ json_file_path = "./models_data/news_db.json"
 # Iterate through each endpoint to scrape necessary attributes
 #got rid of params
     # Make request to UNHCR API
-response = requests.get(f"https://api.reliefweb.int/v1/reports?appname=apidoc&query[value]=earthquake&query[fields][]=source&fields[include][]=source.shortname&fields[include][]=disaster_type.name&fields[include][]=primary_country.shortname&fields[include][]=date.created&fields[include][]=image&fields[include][]=headline.title&fields[include][]=theme.name&fields[include][]=url&limit=75")
+response = requests.get(f"https://api.reliefweb.int/v1/reports?appname=apidoc&query[value]=syrian refugees&query[fields][]=source&fields[include][]=source.shortname&fields[include][]=disaster_type.name&fields[include][]=primary_country.shortname&fields[include][]=date.created&fields[include][]=image&fields[include][]=headline.title&fields[include][]=theme.name&fields[include][]=url&limit=75")
 if response.status_code == 200:
       # Success, store data in json template
       response_data = response.json()
@@ -123,10 +123,10 @@ if response.status_code == 200:
         search_results = response.json()
         instance_template["attributes"]["Video"] = [Videos["webSearchUrl"] for Videos in search_results["value"][:16]]
 
-
-        if instance_template["attributes"]["DisasterType"] is not None and instance_template["Image"] is not None : 
-          for i in disaster_list:
-            disaster.append(i.get("name"))
+        if instance_template["Image"] is not None : 
+          if disaster_list is not None:
+              for i in disaster_list:
+                disaster.append(i.get("name"))
           instance_template["attributes"]["DisasterType"]= disaster
 
           #only add news/events that have disaster and an image
