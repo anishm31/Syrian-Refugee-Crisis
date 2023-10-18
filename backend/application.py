@@ -173,6 +173,41 @@ def get_country(name):
         }
     )
 
+# Get all the countries
+@flaskApp.route("/news-and-events")
+def get_newsevents():
+    page = request.args.get("page")
+    query = db.session.query(NewsEvent)
+
+    if page is not None:
+        query = paginate(query, int(page))
+
+    newsevent_list = []
+    for newsevent in query:
+        newsevent_list.append(newsevent.as_dict())
+    
+    return jsonify(
+        {
+            "count": len(newsevent_list),
+            "data": newsevent_list,
+        }
+    )
+
+# Get a specific newsevent
+@flaskApp.route("/news-and-events/<title>")
+def get_country(title):
+    newsevent = db.session.query(NewsEvent).filter_by(title=title).first()
+    if newsevent is None:
+        status = "News/Event not found"
+        return Response(status, status=404)
+
+    return jsonify(
+        {
+            "count": 1,
+            "data": newsevent.as_dict(),
+        }
+    )
+
 
 def paginate(query, page_num, page_size=DEFAULT_PAGE_SIZE):
     return query.paginate(page=page_num, per_page=page_size, error_out=False).items
