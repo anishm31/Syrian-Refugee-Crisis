@@ -362,7 +362,7 @@
         "org_type": {
           "type": "array",
           "items": {
-            "type": "object"
+            "type": "string"
           },
           "nullable": true
         },
