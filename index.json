@@ -1,0 +1,648 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Syrian Refugees API",
+    "description": "Three endpoints to return information about our three models: Charities, Countries, News/Events"
+  },
+  "servers": [
+    {
+      "url": "https://api.syrianrefugeecrisis.me"
+    }
+  ],
+  "paths": {
+    "/charities": {
+      "get": {
+        "summary": "Get all charities",
+        "responses": {
+          "200": {
+            "description": "Successful retrieval of charities",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CharitiesResponse"
+                },
+                "examples": {
+                  "example-1": {
+                    "summary": "Example Charity Information",
+                    "value": {
+                      "count": 1,
+                      "data": [
+                        {
+                          "abbreviation": "UNHCR",
+                          "yearFounded": 1950,
+                          "purpose": "United Nations agency mandated to protect and support refugees",
+                          "websiteLink": "https://www.unhcr.org",
+                          "countryOfOrigin": "Switzerland",
+                          "parentOrganization": "United Nations",
+                          "media": {
+                            "image": null,
+                            "video": null
+                          },
+                          "aidStatistics": null
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+              }
+          },
+          "500": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/charities/{charityName}": {
+  "get": {
+    "summary": "Get a specific charity by charity name",
+    "parameters": [
+      {
+        "name": "charityName",
+        "in": "path",
+        "required": true,
+        "description": "Name of the charity to retrieve",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Successful found charity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CharityNameResponse"
+                },
+                "examples": {
+                  "example-1": {
+                    "summary": "Example Specific Charity Information",
+                    "value": {
+                      "count": 1,
+                      "data": [
+                        {
+                          "abbreviation": "UNHCR",
+                          "yearFounded": 1950,
+                          "purpose": "United Nations agency mandated to protect and support refugees",
+                          "websiteLink": "https://www.unhcr.org",
+                          "countryOfOrigin": "Switzerland",
+                          "parentOrganization": "United Nations",
+                          "media": {
+                            "image": null,
+                            "video": null
+                          },
+                          "aidStatistics": null
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+              }
+          },
+      "404": {
+        "description": "Charity not found"
+      }
+    }
+  }
+},
+    "/countries": {
+      "get": {
+        "summary": "Get all countries",
+        "responses": {
+          "200": {
+            "description": "Successful retrieval of countries",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountriesResponse"
+                },
+                "examples": {
+                  "example-1": {
+                    "summary": "Example Country Information",
+                    "value": {
+                      "count": 1,
+                      "data": [
+                        {
+                          "mapUrl": null,
+                          "flagImage": null,
+                          "asylumApplications": 522575,
+                          "asylumDecisions": 1691,
+                          "asylumStatistics": {
+                            "year": 2022,
+                            "recognized": 250,
+                            "rejected": 5,
+                            "closedForOtherReasons": 795,
+                            "closedOther": 641
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/countries/{countryName}": {
+  "get": {
+    "summary": "Get specific country data by its Name",
+    "parameters": [
+      {
+        "name": "countryName",
+        "in": "path",
+        "required": true,
+        "description": "Name of the country to retrieve",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+       "description": "Successful retrieval of country",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountriesNameResponse"
+                },
+                "examples": {
+                  "example-1": {
+                    "summary": "Example Country Information",
+                    "value": {
+                      "count": 1,
+                      "data": [
+                        {
+                          "mapUrl": null,
+                          "flagImage": null,
+                          "asylumApplications": 522575,
+                          "asylumDecisions": 1691,
+                          "asylumStatistics": {
+                            "year": 2022,
+                            "recognized": 250,
+                            "rejected": 5,
+                            "closedForOtherReasons": 795,
+                            "closedOther": 641
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+      "404": {
+        "description": "Country not found"
+      }
+    }
+  }
+},
+    "/news-events": {
+      "get": {
+        "summary": "Get all news/events",
+        "responses": {
+          "200": {
+            "description": "Successful retrieval of news/events",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NewsEventsResponse"
+                }, 
+                "examples": {
+            "example-1": {
+              "summary": "Example News/Event Information",
+              "value": {
+                "count": 1,
+                "data": [
+                  {
+                    "name": "Disaster in Syria",
+                    "date": "2021-01-29T14:02:21+00:00",
+                    "location": "Syria",
+                    "mapUrl": null,
+                    "description": "Flood and Severe Local Storm in Syria",
+                    "affectedPeople": null,
+                    "source": "Islamic Relief,NRC,CARE,Christian Aid,Mercy Corps,HI,Oxfam,IRC,Save the Children,World Vision,SDIO,SAMS,MedGlobal"
+                  }
+                ]
+              }
+            }
+          }
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/news-events/{eventYear}": {
+    "get": {
+    "summary": "Get a specific news/event by Year",
+    "parameters": [
+      {
+        "name": "eventYear",
+        "in": "path",
+        "required": true,
+        "description": "Year of the news/event to retrieve",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Successful retrieval of news/events by year",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NewsEventYearResponse"
+                }, 
+                "examples": {
+            "example-1": {
+              "summary": "Example News/Event Information",
+              "value": {
+                "count": 1,
+                "data": [
+                  {
+                    "name": "Disaster in Syria",
+                    "date": "2021-01-29T14:02:21+00:00",
+                    "location": "Syria",
+                    "mapUrl": null,
+                    "description": "Flood and Severe Local Storm in Syria",
+                    "affectedPeople": null,
+                    "source": "Islamic Relief,NRC,CARE,Christian Aid,Mercy Corps,HI,Oxfam,IRC,Save the Children,World Vision,SDIO,SAMS,MedGlobal"
+                  }
+                ]
+              }
+            }
+          }
+              }
+            }
+          },
+      "404": {
+        "description": "News/Event not found"
+      }
+    }
+  }
+  }
+},
+  "components": {
+    "schemas": {
+      "CharitiesResponse": {
+        "type": "object",
+        "properties": {
+          "count": {
+            "type": "integer"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Charity"
+            }
+          }
+        }
+      },
+      "CharityNameResponse": {
+        "type": "object",
+        "properties": {
+          "count": {
+            "type": "integer"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Charity"
+            }
+          }
+        }
+      },
+      "Charity": {
+        "type": "object",
+        "properties": {
+          "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string",
+          "nullable": true
+        },
+        "org_type": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "nullable": true
+        },
+        "logo_img": {
+          "type": "string",
+          "nullable": true
+        },
+        "org_img": {
+          "type": "string",
+          "nullable": true
+        },
+        "established": {
+          "type": "string",
+          "nullable": true
+        },
+        "short_name": {
+          "type": "string",
+          "nullable": true
+        },
+        "long_name": {
+          "type": "string",
+          "nullable": true
+        },
+        "parent_org": {
+          "type": "string",
+          "nullable": true
+        },
+        "headquarters": {
+          "type": "string",
+          "nullable": true
+        },
+        "hq_country": {
+          "type": "string",
+          "nullable": true
+        },
+        "awards_received": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "nullable": true
+        },
+        "website": {
+          "type": "string",
+          "nullable": true
+        },
+        "relief_web_id": {
+          "type": "string",
+          "nullable": true
+        },
+        "relief_web_url": {
+          "type": "string",
+          "nullable": true
+        },
+        "relief_provided": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "nullable": true
+        },
+        "youtube_info": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "nullable": true
+        },
+        "relevant_countries": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "nullable": true
+        },
+        "relevant_newsevents": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "nullable": true
+        }
+        }
+      },
+      "CountriesResponse": {
+        "type": "object",
+        "properties": {
+          "count": {
+            "type": "integer"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Country"
+            }
+          }
+        }
+      },
+      "CountriesNameResponse": {
+        "type": "object",
+        "properties": {
+          "count": {
+            "type": "integer"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Country"
+            }
+          }
+        }
+      },
+      "Country": {
+        "type": "object",
+        "properties": {
+          "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "country_iso3": {
+          "type": "string",
+          "nullable": true
+        },
+        "flag_url": {
+          "type": "string",
+          "nullable": true
+        },
+        "map_info": {
+          "type": "object",
+          "nullable": true
+        },
+        "capital": {
+          "type": "string",
+          "nullable": true
+        },
+        "num_refugees": {
+          "type": "integer",
+          "nullable": true
+        },
+        "num_asylum_decisions": {
+          "type": "integer",
+          "nullable": true
+        },
+        "year_of_decisions": {
+          "type": "integer",
+          "nullable": true
+        },
+        "num_recognized": {
+          "type": "integer",
+          "nullable": true
+        },
+        "num_other": {
+          "type": "integer",
+          "nullable": true
+        },
+        "num_apps_rejected": {
+          "type": "integer",
+          "nullable": true
+        },
+        "num_closed": {
+          "type": "integer",
+          "nullable": true
+        },
+        "relevant_charities": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "nullable": true
+        },
+        "relevant_newsevents": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "nullable": true
+        }
+        }
+      },
+      "NewsEventsResponse": {
+        "type": "object",
+        "properties": {
+          "count": {
+            "type": "integer"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NewsEvent"
+            }
+          }
+        }
+      },
+      "NewsEventYearResponse": {
+        "type": "object",
+        "properties": {
+          "count": {
+            "type": "integer"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NewsEvent"
+            }
+          }
+        }
+      },
+      "NewsEvent": {
+        "type": "object",
+        "properties": {
+          "id": {
+          "type": "integer"
+        },
+        "title": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string"
+        },
+        "image_url": {
+          "type": "string",
+          "nullable": true
+        },
+        "disaster_type": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "nullable": true
+        },
+        "primary_country": {
+          "type": "string",
+          "nullable": true
+        },
+        "other_sources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "nullable": true
+        },
+        "themes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "nullable": true
+        },
+        "orglink": {
+          "type": "string",
+          "nullable": true
+        },
+        "relevant_charities": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "nullable": true
+        },
+        "relevant_countries": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "nullable": true
+        }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "required": ["message"],
+        "properties": {
+          "message": {
+            "description": "A human readable error message",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
