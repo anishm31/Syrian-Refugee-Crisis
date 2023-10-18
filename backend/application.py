@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, Response, jsonify, request
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 
@@ -125,7 +125,52 @@ def get_charities():
 @flaskApp.route("/charities/<name>")
 def get_charity(name):
     charity = db.session.query(Charity).filter_by(name=name).first()
-    return jsonify({"data": charity.as_dict()})
+    if charity is None:
+        status = "Charity not found"
+        return Response(status, status=404)
+    
+    return jsonify(
+        {
+            "count": 1,
+            "data": charity.as_dict(),
+        }
+    )
+
+# Get all the countries
+@flaskApp.route("/countries")
+def get_countries():
+    page = request.args.get("page")
+    query = db.session.query(Country)
+
+    if page is not None:
+        query = paginate(query, int(page))
+
+    country_list = []
+    for country in query:
+        country_list.append(country.as_dict())
+    
+    return jsonify(
+        {
+            "count": len(country_list),
+            "data": country_list,
+        }
+    )
+
+# Get a specific country
+@flaskApp.route("/countries/<name>")
+def get_country(name):
+    country = db.session.query(Country).filter_by(name=name).first()
+    if country is None:
+        stataus = "Country not found"
+        return Response(status, status=404)
+
+    return jsonify(
+        {
+            "count": 1,
+            "data": country.as_dict(),
+        }
+    )
+
 
 
 if __name__ == "__main__":
