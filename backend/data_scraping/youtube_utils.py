@@ -94,4 +94,3 @@ def retrieve_videos(charity_db_path):
   with open(charity_db_path, "w") as f:
     json.dump(charity_db, f, indent=2)
     
-retrieve_videos("models_data/charity_db.json")
