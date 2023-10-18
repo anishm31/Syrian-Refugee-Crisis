@@ -31,8 +31,12 @@ class Charity(db.Model):
     relief_web_url = db.Column(db.String(100))
     relief_provided = db.Column(db.JSON)
     youtube_info = db.Column(db.JSON)
+    referenced_countries = db.Column(db.JSON, nullable=True)
     relevant_countries = db.Column(db.JSON, nullable=True)
     relevant_news_events = db.Column(db.JSON, nullable=True)
+    
+    def __repr__(self):
+        return f"<Charity {self.name}>"
 
 # This class defines the MySQL table for country instances
 class Country(db.Model):
@@ -52,6 +56,9 @@ class Country(db.Model):
     num_closed = db.Column(db.Integer)
     relevant_charities = db.Column(db.JSON, nullable=True)
     relevant_news_events = db.Column(db.JSON, nullable=True)
+    
+    def __repr__(self):
+        return f"<Country {self.name}>"
 
 # This class defines the MySQL table for news/events instances
 class NewsEvent(db.Model):
@@ -70,3 +77,6 @@ class NewsEvent(db.Model):
     source_ids = db.Column(db.JSON)
     relevant_charities = db.Column(db.JSON, nullable=True)
     relevant_countries = db.Column(db.JSON, nullable=True)
+    
+    def __repr__(self):
+        return f"<NewsEvent {self.title}>"
