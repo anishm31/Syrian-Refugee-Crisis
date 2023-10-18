@@ -7,6 +7,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import TeamCard from "./TeamCard.js";
+import ToolCard from "./ToolCard.js";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 
@@ -137,6 +138,33 @@ export default function About() {
         </Link>
       </Container>
       <br></br>
+
+
+      <Container className="container text-center mt-5 mb-4">
+        <h1>Tools</h1>
+      </Container>
+      <Container className="container text-center mt-5 mb-4">
+        <Row className="row row-cols-md-4 g-3">
+          {ToolInfo.slice(0, 4).map((tool) => {
+            return (
+              <Col className="col">
+                <ToolCard {...tool}></ToolCard>
+              </Col>
+            );
+          })}
+        </Row>
+        <br></br>
+        <Row className="row row-cols-md-4 g-3">
+          {ToolInfo.slice(4).map((tool) => {
+            return (
+              <Col key={tool.name} className="col">
+                <ToolCard {...tool}></ToolCard>
+              </Col>
+            );
+          })}
+        </Row>
+      </Container>
+
     </>
   );
 }
