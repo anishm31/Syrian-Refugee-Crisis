@@ -2,6 +2,8 @@ from flask import Flask, Response, jsonify, request
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 
+DEFAULT_PAGE_SIZE = 12
+
 # Set up Flask app and CORS
 flaskApp = Flask(__name__)
 CORS(flaskApp)
@@ -171,6 +173,9 @@ def get_country(name):
         }
     )
 
+
+def paginate(query, page_num, page_size=DEFAULT_PAGE_SIZE):
+    return query.paginate(page=page_num, per_page=page_size, error_out=False).items
 
 
 if __name__ == "__main__":
