@@ -163,7 +163,7 @@ def get_countries():
 def get_country(name):
     country = db.session.query(Country).filter_by(name=name).first()
     if country is None:
-        stataus = "Country not found"
+        status = "Country not found"
         return Response(status, status=404)
 
     return jsonify(
