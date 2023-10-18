@@ -5,7 +5,6 @@ import img2 from "../media/mahmoud-sulaiman-QF_CGDotbGY-unsplash.jpg";
 import img3 from "../media/julie-ricard-i9rzrKo5Vao-unsplash.jpg"
 import img4 from "../media/jonathan-ramalho-0uQUV_JDU4Y-unsplash.jpg"
 import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
 
 function HomeCarousel() {
   let carouselSlides = [
