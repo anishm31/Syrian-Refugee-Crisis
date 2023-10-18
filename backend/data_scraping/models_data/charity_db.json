@@ -3997,5 +3997,35 @@
         ]
       }
     }
+  },
+  {
+    "name": "Syrian Network for Human Rights",
+    "id": "Q25056738",
+    "attributes": {
+      "description": "The Syrian Network for Human Rights aims to enrich the human rights culture in Syria, spread awareness among citizens regarding their civil and political rights, and train dozens of Syrians in various fields of human rights. SNHR wishes that Syrian citizens would enjoy their full legal and constitutional rights. \n\nThe Syrian Network for Human Rights is a non-political organization that affirms its commitment towards international standards, declarations, and conventions of human rights of the United Nations.",
+      "org_type": ["Non-governmental Organization"],
+      "logo_img": "https://snhr.org/wp-content/uploads/2017/03/new-logo.jpg",
+      "org_img": "",
+      "established": "2011-06-00T00:00:00Z",
+      "short_name": "SNHR",
+      "long_name": "Syrian Network for Human Rights",
+      "parent_org": "",
+      "headquarters": "",
+      "hq_country": "Syrian Arab Republic",
+      "awards_received": [],
+      "website": "https://snhr.org/",
+      "relief_web_id": "19556",
+      "relief_web_url": "https://reliefweb.int/organization/snhr",
+      "relief_provided": ["Protection", "Human Rights"],
+      "relevant_countries": {
+        "primary_countries": ["SYR", "LBN", "CAF", "TUR"],
+        "secondary_countries": ["GRC", "JOR"]
+      },
+      "youtube_info": {
+        "channel_id": "UCYyGV5y7gVu2RrFJ9xB5NQA",
+        "channel_url": "https://www.youtube.com/sn4hr",
+        "relevant_videos": ["vf2z5RkdKm8", "oXhgqF9IiiI", "lYFJ1-H8iSQ&t=90s"]
+      }
+    }
   }
 ]

@@ -91,4 +91,3 @@ def scape_youtube_channels(charity_db_path):
     json.dump(charity_db, f, indent=2)
   print(f"Retrieved youtube channel links for {count}/{len(charity_db)} charities")
   
-print(scape_youtube_channels("models_data/charity_db.json"))
