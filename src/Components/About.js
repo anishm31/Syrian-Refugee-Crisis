@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import { TeamInfo } from "../TeamInfo.js"
+import { ToolInfo } from "../ToolInfo.js"
 
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
