@@ -7881,5 +7881,45 @@
       "num_apps_rejected": "0",
       "num_closed": 5
     }
+  },
+  {
+    "country_name": "Syrian Arab Republic",
+    "id": "SYR",
+    "attributes": {
+      "country_iso3": "SYR",
+      "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Flag_of_Syria.svg/1599px-Flag_of_Syria.svg.png?20210730095029",
+      "map_info": {
+        "address_components": [
+          {
+            "long_name": "Syria",
+            "short_name": "SY",
+            "types": ["country", "political"]
+          }
+        ],
+        "formatted_address": "Syria",
+        "geometry": {
+          "bounds": {
+            "northeast": { "lat": 37.318693, "lng": 42.376309 },
+            "southwest": { "lat": 32.311136, "lng": 35.62869999999999 }
+          },
+          "location": { "lat": 34.80207499999999, "lng": 38.996815 },
+          "location_type": "APPROXIMATE",
+          "viewport": {
+            "northeast": { "lat": 37.318693, "lng": 42.376309 },
+            "southwest": { "lat": 32.311136, "lng": 35.62869999999999 }
+          }
+        },
+        "place_id": "ChIJp8Y8QdzmGBURIPYqiPRGdYc",
+        "types": ["country", "political"]
+      },
+      "capital": ["Damascus"],
+      "num_refugees": 13000000,
+      "num_asylum_decisions": 0,
+      "year_of_decisions": 2022,
+      "num_recognized": "0",
+      "num_other": "0",
+      "num_apps_rejected": "0",
+      "num_closed": 0
+    }
   }
 ]
