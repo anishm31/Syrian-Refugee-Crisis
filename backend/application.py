@@ -72,9 +72,13 @@ class NewsEvent(db.Model):
     relevant_countries = db.Column(db.JSON, nullable=True)
 
 # API
-flaskApp.route("/")
+@flaskApp.route("/")
 def home():
     return "Hello I am Here!"
+
+@flaskApp.route("/whois/<name>")
+def whois(name):
+    return "Hello, " + name + ", that is your name!"
 
 # Get all the charities
 #@app.route("/charities")
@@ -94,7 +98,7 @@ def home():
 #    )
 
 # Get a specific charity
-@app.route("/charities/<name>")
+@flaskApp.route("/charities/<name>")
 def get_charity(name):
     charity = db.session.query(Charity).filter_by(name=name).first()
     return charity.name
