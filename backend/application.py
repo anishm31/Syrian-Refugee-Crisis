@@ -173,7 +173,7 @@ def get_country(name):
         }
     )
 
-# Get all the countries
+# Get all the newsevents
 @flaskApp.route("/news-and-events")
 def get_newsevents():
     page = request.args.get("page")
@@ -195,7 +195,7 @@ def get_newsevents():
 
 # Get a specific newsevent
 @flaskApp.route("/news-and-events/<title>")
-def get_country(title):
+def get_newsevent(title):
     newsevent = db.session.query(NewsEvent).filter_by(title=title).first()
     if newsevent is None:
         status = "News/Event not found"
