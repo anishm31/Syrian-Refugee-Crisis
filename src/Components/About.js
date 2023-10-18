@@ -35,25 +35,34 @@ export default function About() {
     request.send();
   }
 
-    // Get issues per user
-    async function get_issues() {
-      TeamInfo.forEach((user) => {
-        var request = new XMLHttpRequest();
-        var url =
-          "https://gitlab.com/api/v4/projects/50467591/issues_statistics?author_id=".concat(
-            user.user_id
-          );
-        request.open("GET", url);
-        request.onload = function () {
-          var result = JSON.parse(this.response);
-          var num = result.statistics.counts.all;
-          user.issues = num;
-        };
-        request.send();
+  // Get total unit tests
+  function total_unittests() {
+    var total = 0;
+    TeamInfo.forEach((user) => {
+        total += user.unittests;
       });
-    }
+      return total;
+  }
 
-    // Get total issues
+  // Get issues per user
+  async function get_issues() {
+    TeamInfo.forEach((user) => {
+      var request = new XMLHttpRequest();
+      var url =
+        "https://gitlab.com/api/v4/projects/50467591/issues_statistics?author_id=".concat(
+          user.user_id
+        );
+      request.open("GET", url);
+      request.onload = function () {
+        var result = JSON.parse(this.response);
+        var num = result.statistics.counts.all;
+        user.issues = num;
+      };
+      request.send();
+    });
+  }
+
+  // Get total issues
   async function total_issues() {
     var request = new XMLHttpRequest();
     var url = "https://gitlab.com/api/v4/projects/50467591/issues_statistics";
@@ -114,6 +123,8 @@ export default function About() {
             <Card.Subtitle as="h5">Total Commits: {totalCommits}</Card.Subtitle>
             <br></br>
             <Card.Subtitle as="h5">Total Issues: {totalIssues}</Card.Subtitle>
+            <br></br>
+            <Card.Subtitle as="h5">Total Unit Tests: {total_unittests()}</Card.Subtitle>
           </Card.Body>
         </Card>
       </Container>
