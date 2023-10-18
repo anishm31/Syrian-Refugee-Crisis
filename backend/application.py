@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 
@@ -34,6 +34,13 @@ class Charity(db.Model):
     relevant_countries = db.Column(db.JSON, nullable=True)
     relevant_news_events = db.Column(db.JSON, nullable=True)
 
+    def as_dict(self):
+        fields = {}
+        for c in self.__table__.columns:
+            fields[c.name] = getattr(self, c.name)
+        return fields
+
+
 # This class defines the MySQL table for country instances
 class Country(db.Model):
     __tablename__ = "country"
@@ -53,6 +60,13 @@ class Country(db.Model):
     relevant_charities = db.Column(db.JSON, nullable=True)
     relevant_news_events = db.Column(db.JSON, nullable=True)
 
+    def as_dict(self):
+        fields = {}
+        for c in self.__table__.columns:
+            fields[c.name] = getattr(self, c.name)
+        return fields
+
+
 # This class defines the MySQL table for news/events instances
 class NewsEvent(db.Model):
     __tablename__ = "news_events"
@@ -71,6 +85,13 @@ class NewsEvent(db.Model):
     relevant_charities = db.Column(db.JSON, nullable=True)
     relevant_countries = db.Column(db.JSON, nullable=True)
 
+    def as_dict(self):
+        fields = {}
+        for c in self.__table__.columns:
+            fields[c.name] = getattr(self, c.name)
+        return fields
+
+
 # API
 @flaskApp.route("/")
 def home():
@@ -81,28 +102,30 @@ def whois(name):
     return "Hello, " + name + ", that is your name!"
 
 # Get all the charities
-#@app.route("/charities")
-#def get_charities():
-#    page = request.args.get("page")
-#    query = db.session.query(Charity)
-#
-#    if page is not None:
-#        query = paginate(query, int(page))
-#
-#    result = charity_schema.dump(query, many=True)
-#    return jsonify(
-#        {
-#            "count": len(result),
-#            "data": result,
-#        }
-#    )
+@flaskApp.route("/charities")
+def get_charities():
+    page = request.args.get("page")
+    query = db.session.query(Charity)
+
+    if page is not None:
+        query = paginate(query, int(page))
+
+    charity_list = []
+    for charity in query:
+        charity_list.append(charity.as_dict())
+    
+    return jsonify(
+        {
+            "count": len(charity_list),
+            "data": charity_list,
+        }
+    )
 
 # Get a specific charity
 @flaskApp.route("/charities/<name>")
 def get_charity(name):
     charity = db.session.query(Charity).filter_by(name=name).first()
-    return charity.name
-    #return jsonify({"data": result})
+    return jsonify({"data": charity.as_dict()})
 
 
 if __name__ == "__main__":
