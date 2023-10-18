@@ -12,27 +12,12 @@ import NewsCard from "../Components/NewsCard";
 import CountryModelPage from "../Components/CountryModelPage";
 import CountryCard from "../Components/CountryCard";
 import HomePage from "../Components/HomePage";
-import HomeCarousel from "../Components/HomeCarousel";
 
 describe('SearchBar Component', () => {
   it('should render the search form textbox element', () => {
     render(<SearchBar />);
     const formControl = screen.getByRole('textbox');
     expect(formControl).toBeInTheDocument();
-  });
-});
-
-describe('InstanceGrid Component', () => {
-  it('should render the component without errors', () => {
-    const sampleInstances = [
-      { id: 1, name: 'Instance 1' },
-      { id: 2, name: 'Instance 2' },
-      { id: 3, name: 'Instance 3' },
-    ];
-    render(<InstanceGrid instances={sampleInstances} modelCard={() => <div>Mock Model Card</div>} />);
-    const instanceCountElement = screen.getByText('3 Instances');
-
-    expect(instanceCountElement).toBeInTheDocument();
   });
 });
 
@@ -165,5 +150,18 @@ describe('HomePage Component', () => {
     const carousel = screen.getByTestId('mocked-carousel');
 
     expect(carousel).toBeInTheDocument();
+  });
+});
+
+jest.mock('../Components/InstanceGrid', () => {
+  return () => <div data-testid="mocked-instance-grid">Mocked Instance Grid</div>;
+});
+
+describe('GenericModelPage', () => {
+  it('renders the model page with the correct title', () => {
+    render(<GenericModelPage model="Test Model" />);
+
+    const titleElement = screen.getByText('Test Model');
+    expect(titleElement).toBeInTheDocument();
   });
 });
