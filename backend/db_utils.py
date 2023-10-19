@@ -1,5 +1,5 @@
 from sqlalchemy import text
-from models import Charity, Country, NewsEvent, db, app
+from application import Charity, Country, NewsEvent, db, flaskApp
 import json
 import time
 import copy
@@ -22,7 +22,7 @@ def create_database():
 # Function used to clear a database of all contents and populate it with new instance data
 def populate_database():
   # Instantiate database session
-  with app.app_context():
+  with flaskApp.app_context():
     # Remove previous tables from db and add new tables (from models.py)
     db.session.remove()
     db.drop_all()

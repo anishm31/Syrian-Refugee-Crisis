@@ -95,14 +95,6 @@ class NewsEvent(db.Model):
 
 
 # API
-@flaskApp.route("/")
-def home():
-    return "Hello I am Here!"
-
-@flaskApp.route("/whois/<name>")
-def whois(name):
-    return "Hello, " + name + ", that is your name!"
-
 # Get all the charities
 @flaskApp.route("/charities")
 def get_charities():
