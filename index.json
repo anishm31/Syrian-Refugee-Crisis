@@ -27,21 +27,83 @@
                     "summary": "Example Charity Information",
                     "value": {
                       "count": 1,
-                      "data": [
-                        {
-                          "abbreviation": "UNHCR",
-                          "yearFounded": 1950,
-                          "purpose": "United Nations agency mandated to protect and support refugees",
-                          "websiteLink": "https://www.unhcr.org",
-                          "countryOfOrigin": "Switzerland",
-                          "parentOrganization": "United Nations",
-                          "media": {
-                            "image": null,
-                            "video": null
-                          },
-                          "aidStatistics": null
-                        }
-                      ]
+                       "data": [
+    {
+      "name": "Agency for Technical Cooperation and Development",
+      "id": "Q2826580",
+      "attributes": {
+        "description": "We go the last mile: ACTED’s mission is to save lives and support people in meeting their needs in hard to reach areas. ACTED develops and implements programs that target the most vulnerable amongst populations that have suffered from conflict, natural disaster, or socio-economic hardship. ACTED’s approach looks beyond the immediate emergency towards opportunities for longer term livelihoods reconstruction and sustainable development.\n\nOur mandate\n\nIndependent, private and non-profit, ACTED respects a strict political and religious impartiality, and operates following principles of non-discrimination, transparency, according to its core values: responsibility, impact, enterprising-spirit and inspiration.\n\nACTED is committed to immediate humanitarian relief to support those in urgent need and protect people’s dignity, while co-creating longer term opportunities for sustainable growth and fulfilling people’s potential.\n\nACTED endeavors to respond to humanitarian crises and build resilience; promote inclusive and sustainable growth; co-construct effective governance and support the building of civil society worldwide by investing in people and their potential.",
+"org_type": [
+"Non-governmental Organization"
+],
+"logo_img": "https://reliefweb.int/sites/default/files/images/sources/a6/81/a68112a9-8260-3135-8ff3-d067d8310e4f.jpg",
+"org_img": "",
+"established": "1993-00-00T00:00:00Z",
+"short_name": "ACTED",
+"long_name": "Agency for Technical Cooperation and Development",
+"parent_org": "",
+"headquarters": "Paris",
+"hq_country": "France",
+"awards_received": [],
+"website": "https://www.acted.org/en",
+"relief_web_id": "823",
+"relief_web_url": "https://reliefweb.int/organization/acted",
+"relief_provided": [
+"Basic Needs",
+"Education",
+"Food Security",
+"Other",
+"Protection",
+"Water Sanitation Hygiene"
+],
+"relevant_countries": {
+"primary_countries": [
+"AFG",
+"THA",
+"PAK",
+"SOM",
+"SDN",
+"IRQ",
+"NER",
+"BGD",
+"TCD",
+"SSD",
+"COG",
+"LBY",
+"MLI",
+"JOR",
+"UKR",
+"SYR",
+"UGA",
+"KEN",
+"TUR",
+"CAF",
+"LBN",
+"NPL",
+"COD"
+],
+"secondary_countries": [
+"BEN",
+"PSE",
+"MMR",
+"MDA",
+"IRN",
+"NGA",
+"TZA",
+"CMR",
+"RWA",
+"ETH",
+"BDI",
+"ROU",
+"ERI",
+"EGY",
+"DJI",
+"BTN"
+]
+}
+}
+}
+]
                     }
                   }
                 }
@@ -84,25 +146,90 @@
                   "$ref": "#/components/schemas/CharityNameResponse"
                 },
                 "examples": {
-                  "example-1": {
+                  "example-2": {
                     "summary": "Example Specific Charity Information",
                     "value": {
                       "count": 1,
-                      "data": [
-                        {
-                          "abbreviation": "UNHCR",
-                          "yearFounded": 1950,
-                          "purpose": "United Nations agency mandated to protect and support refugees",
-                          "websiteLink": "https://www.unhcr.org",
-                          "countryOfOrigin": "Switzerland",
-                          "parentOrganization": "United Nations",
-                          "media": {
-                            "image": null,
-                            "video": null
-                          },
-                          "aidStatistics": null
-                        }
-                      ]
+                      
+  "data": [
+    {
+      "name": "Agency for Technical Cooperation and Development",
+      "id": "Q2826580",
+      "attributes": {
+        "description": "We go the last mile: ACTED’s mission is to save lives and support people in meeting their needs in hard to reach areas. ACTED develops and implements programs that target the most vulnerable amongst populations that have suffered from conflict, natural disaster, or socio-economic hardship. ACTED’s approach looks beyond the immediate emergency towards opportunities for longer term livelihoods reconstruction and sustainable development.\n\nOur mandate\n\nIndependent, private and non-profit, ACTED respects a strict political and religious impartiality, and operates following principles of non-discrimination, transparency, according to its core values: responsibility, impact, enterprising-spirit and inspiration.\n\nACTED is committed to immediate humanitarian relief to support those in urgent need and protect people’s dignity, while co-creating longer term opportunities for sustainable growth and fulfilling people’s potential.\n\nACTED endeavors to respond to humanitarian crises and build resilience; promote inclusive and sustainable growth; co-construct effective governance and support the building of civil society worldwide by investing in people and their potential.",
+"org_type": [
+"Non-governmental Organization"
+],
+"logo_img": "https://reliefweb.int/sites/default/files/images/sources/a6/81/a68112a9-8260-3135-8ff3-d067d8310e4f.jpg",
+"org_img": "",
+"established": "1993-00-00T00:00:00Z",
+"short_name": "ACTED",
+"long_name": "Agency for Technical Cooperation and Development",
+"parent_org": "",
+"headquarters": "Paris",
+"hq_country": "France",
+"awards_received": [],
+"website": "https://www.acted.org/en",
+"relief_web_id": "823",
+"relief_web_url": "https://reliefweb.int/organization/acted",
+"relief_provided": [
+"Basic Needs",
+"Education",
+"Food Security",
+"Other",
+"Protection",
+"Water Sanitation Hygiene"
+],
+"relevant_countries": {
+"primary_countries": [
+"AFG",
+"THA",
+"PAK",
+"SOM",
+"SDN",
+"IRQ",
+"NER",
+"BGD",
+"TCD",
+"SSD",
+"COG",
+"LBY",
+"MLI",
+"JOR",
+"UKR",
+"SYR",
+"UGA",
+"KEN",
+"TUR",
+"CAF",
+"LBN",
+"NPL",
+"COD"
+],
+"secondary_countries": [
+"BEN",
+"PSE",
+"MMR",
+"MDA",
+"IRN",
+"NGA",
+"TZA",
+"CMR",
+"RWA",
+"ETH",
+"BDI",
+"ROU",
+"ERI",
+"EGY",
+"DJI",
+"BTN"
+]
+}
+}
+}
+]
+
+
                     }
                   }
                 }
@@ -127,25 +254,70 @@
                   "$ref": "#/components/schemas/CountriesResponse"
                 },
                 "examples": {
-                  "example-1": {
+                  "example-3": {
                     "summary": "Example Country Information",
                     "value": {
                       "count": 1,
                       "data": [
-                        {
-                          "mapUrl": null,
-                          "flagImage": null,
-                          "asylumApplications": 522575,
-                          "asylumDecisions": 1691,
-                          "asylumStatistics": {
-                            "year": 2022,
-                            "recognized": 250,
-                            "rejected": 5,
-                            "closedForOtherReasons": 795,
-                            "closedOther": 641
-                          }
-                        }
-                      ]
+    {
+        "mapUrl": {
+            "addressComponents": [
+                {
+                    "longName": "Albania",
+                    "shortName": "AL",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                }
+            ],
+            "formattedAddress": "Albania",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": 42.661081,
+                        "lng": 21.0572818
+                    },
+                    "southwest": {
+                        "lat": 39.63870319999999,
+                        "lng": 18.9948678
+                    }
+                },
+                "location": {
+                    "lat": 41.153332,
+                    "lng": 20.168331
+                },
+                "locationType": "APPROXIMATE",
+                "viewport": {
+                    "northeast": {
+                        "lat": 42.661081,
+                        "lng": 21.0572818
+                    },
+                    "southwest": {
+                        "lat": 39.63870319999999,
+                        "lng": 18.9948678
+                    }
+                }
+            },
+            "placeId": "ChIJLUwnvfM7RRMR7juY1onlfAc",
+            "types": [
+                "country",
+                "political"
+            ]
+        },
+        "flagImage": "https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Albania.svg",
+        "asylumApplications": 23,
+        "asylumDecisions": 5,
+        "asylumStatistics": {
+            "year": 2022,
+            "recognized": 5,
+            "rejected": 0,
+            "closedForOtherReasons": 0,
+            "closedOther": 0
+        }
+    }
+]
+
                     }
                   }
                 }
@@ -188,25 +360,70 @@
                   "$ref": "#/components/schemas/CountriesNameResponse"
                 },
                 "examples": {
-                  "example-1": {
+                  "example-4": {
                     "summary": "Example Country Information",
                     "value": {
                       "count": 1,
                       "data": [
-                        {
-                          "mapUrl": null,
-                          "flagImage": null,
-                          "asylumApplications": 522575,
-                          "asylumDecisions": 1691,
-                          "asylumStatistics": {
-                            "year": 2022,
-                            "recognized": 250,
-                            "rejected": 5,
-                            "closedForOtherReasons": 795,
-                            "closedOther": 641
-                          }
-                        }
-                      ]
+    {
+        "mapUrl": {
+            "addressComponents": [
+                {
+                    "longName": "Albania",
+                    "shortName": "AL",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                }
+            ],
+            "formattedAddress": "Albania",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": 42.661081,
+                        "lng": 21.0572818
+                    },
+                    "southwest": {
+                        "lat": 39.63870319999999,
+                        "lng": 18.9948678
+                    }
+                },
+                "location": {
+                    "lat": 41.153332,
+                    "lng": 20.168331
+                },
+                "locationType": "APPROXIMATE",
+                "viewport": {
+                    "northeast": {
+                        "lat": 42.661081,
+                        "lng": 21.0572818
+                    },
+                    "southwest": {
+                        "lat": 39.63870319999999,
+                        "lng": 18.9948678
+                    }
+                }
+            },
+            "placeId": "ChIJLUwnvfM7RRMR7juY1onlfAc",
+            "types": [
+                "country",
+                "political"
+            ]
+        },
+        "flagImage": "https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Albania.svg",
+        "asylumApplications": 23,
+        "asylumDecisions": 5,
+        "asylumStatistics": {
+            "year": 2022,
+            "recognized": 5,
+            "rejected": 0,
+            "closedForOtherReasons": 0,
+            "closedOther": 0
+        }
+    }
+]
+
                     }
                   }
                 }
@@ -231,21 +448,63 @@
                   "$ref": "#/components/schemas/NewsEventsResponse"
                 }, 
                 "examples": {
-            "example-1": {
+            "example-5": {
               "summary": "Example News/Event Information",
               "value": {
                 "count": 1,
                 "data": [
-                  {
-                    "name": "Disaster in Syria",
-                    "date": "2021-01-29T14:02:21+00:00",
-                    "location": "Syria",
-                    "mapUrl": null,
-                    "description": "Flood and Severe Local Storm in Syria",
-                    "affectedPeople": null,
-                    "source": "Islamic Relief,NRC,CARE,Christian Aid,Mercy Corps,HI,Oxfam,IRC,Save the Children,World Vision,SDIO,SAMS,MedGlobal"
-                  }
-                ]
+    {
+      "Title": "Syria: Make Human Rights Priority of Geneva Talks",
+      "Date": "2017-02-20T23:26:46+00:00",
+      "Source": "",
+      "Image": [
+        "https://tse3.mm.bing.net/th?id=OIP.1BTs6dzuUuluSaXL5pxLggHaDZ&pid=Api"
+      ],
+      "attributes": {
+        "DisasterType": [],
+        "PrimaryCountry": "Syria",
+        "OtherSources": [
+          "HA ",
+          "Amnesty ",
+          "Trócaire ",
+          "Christian Aid ",
+          "HRW ",
+          "PHR ",
+          "FIDH ",
+          "RI ",
+          "IHH ",
+          "GCR2P ",
+          "SNHR ",
+          "Syrian Institute for Justice ",
+          "UOSSM "
+        ],
+        "Themes": [
+          "Peacekeeping and Peacebuilding",
+          "Protection and Human Rights"
+        ],
+        "OrgLink": "https://reliefweb.int/node/1910113",
+        "Video": [
+          "https://www.bing.com/videos/search?q=Syria:%20Make%20Human%20Rights%20Priority%20of%20Geneva%20Talks&view=detail&mid=8F5746E9EED0C696FDBA8F5746E9EED0C696FDBA"
+        ],
+        "ISO": "syr",
+        "SourceID": [
+          505,
+          569,
+          1052,
+          1879,
+          1966,
+          2005,
+          2554,
+          2766,
+          3650,
+          4347,
+          19556,
+          31411,
+          35076
+        ]
+      }
+    }
+  ]
               }
             }
           }
@@ -288,21 +547,63 @@
                   "$ref": "#/components/schemas/NewsEventYearResponse"
                 }, 
                 "examples": {
-            "example-1": {
+            "example-6": {
               "summary": "Example News/Event Information",
               "value": {
                 "count": 1,
                 "data": [
-                  {
-                    "name": "Disaster in Syria",
-                    "date": "2021-01-29T14:02:21+00:00",
-                    "location": "Syria",
-                    "mapUrl": null,
-                    "description": "Flood and Severe Local Storm in Syria",
-                    "affectedPeople": null,
-                    "source": "Islamic Relief,NRC,CARE,Christian Aid,Mercy Corps,HI,Oxfam,IRC,Save the Children,World Vision,SDIO,SAMS,MedGlobal"
-                  }
-                ]
+    {
+      "Title": "Syria: Make Human Rights Priority of Geneva Talks",
+      "Date": "2017-02-20T23:26:46+00:00",
+      "Source": "",
+      "Image": [
+        "https://tse3.mm.bing.net/th?id=OIP.1BTs6dzuUuluSaXL5pxLggHaDZ&pid=Api"
+      ],
+      "attributes": {
+        "DisasterType": [],
+        "PrimaryCountry": "Syria",
+        "OtherSources": [
+          "HA ",
+          "Amnesty ",
+          "Trócaire ",
+          "Christian Aid ",
+          "HRW ",
+          "PHR ",
+          "FIDH ",
+          "RI ",
+          "IHH ",
+          "GCR2P ",
+          "SNHR ",
+          "Syrian Institute for Justice ",
+          "UOSSM "
+        ],
+        "Themes": [
+          "Peacekeeping and Peacebuilding",
+          "Protection and Human Rights"
+        ],
+        "OrgLink": "https://reliefweb.int/node/1910113",
+        "Video": [
+          "https://www.bing.com/videos/search?q=Syria:%20Make%20Human%20Rights%20Priority%20of%20Geneva%20Talks&view=detail&mid=8F5746E9EED0C696FDBA8F5746E9EED0C696FDBA"
+        ],
+        "ISO": "syr",
+        "SourceID": [
+          505,
+          569,
+          1052,
+          1879,
+          1966,
+          2005,
+          2554,
+          2766,
+          3650,
+          4347,
+          19556,
+          31411,
+          35076
+        ]
+      }
+    }
+  ]
               }
             }
           }
