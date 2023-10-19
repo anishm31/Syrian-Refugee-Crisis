@@ -50,6 +50,7 @@ function CharityModelPage() {
         model="Charities"
         modelCard={CharityCard}
         instances={charityInstances}
+        totalInstances={totalInstances}
       />
       <div className="pagination">
         <button

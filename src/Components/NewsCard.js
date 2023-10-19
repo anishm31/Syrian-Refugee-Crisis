@@ -47,6 +47,6 @@ function formatStringList(stringList) {
       }
     }
     return formatted_string;
-  }
+}
 
 export default NewsCard;

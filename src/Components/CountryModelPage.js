@@ -51,6 +51,7 @@ function CountryModelPage() {
         model="Countries"
         modelCard={CountryCard}
         instances={countryInstances}
+        totalInstances={totalInstances}
       />
       <div className="pagination">
         <button

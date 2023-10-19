@@ -49,6 +49,7 @@ function NewsEventsModelPage() {
         model="News/Events"
         modelCard={NewsCard}
         instances={newsEventsInstances}
+        totalInstances={totalInstances}
       />
       <div className="pagination">
         <button
