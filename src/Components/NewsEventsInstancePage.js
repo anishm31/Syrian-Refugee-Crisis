@@ -1,13 +1,34 @@
-import React from "react";
-import newsData from "../model_data/news_db.json";
+import React, {useEffect, useState} from "react";
 import { useParams } from 'react-router-dom';
 import {Container, Card, ListGroup, Row, Col, Button} from 'react-bootstrap';
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 
 function NewsEventsInstancePage() {
     const params = useParams();
-    const event = newsData.find(instance => instance.Title === params.id)
+    const [newsInstance, setNewsInstance] = useState([]);
+    const [loaded, setLoaded] = useState(false);
+
+    // Call the API to get the news instance data
+    useEffect(() => {
+        axios
+            .get(`https://api.syrianrefugeecrisis.me/news-and-events/${params.id}`)
+            .then((res) => {
+                setNewsInstance(res.data.data);
+                setLoaded(true);
+            })
+            .catch((err) => {
+                console.log("Call to the API failed...", err);
+            })
+    }, [params.id]);
+
+    // Verify that the charity data has been loaded before rendering main content
+    if (!loaded) {
+        return <h1 style={{textAlign: "center"}}>Page Loading...</h1>;
+    }
+
+    const eventDate = new Date(newsInstance.date);
     return (
         <div>
             <Container className='mt-5' style={{width : "85%", textAlign : "center"}}>
@@ -15,24 +36,19 @@ function NewsEventsInstancePage() {
                     <Card style={{ width: "90%", textAlign: "center"}}>
                         <Card.Img
                             variant="top"
-                            src={event.Image}
+                            src={newsInstance.image_url[0]}
                             style={{ objectFit : "cover", width: "50%", height: "50%", margin: "auto"}}
                         />
                         <Card.Body style={{ textAlign: "left" }}>
-                            <Card.Title>{event.Title}</Card.Title>
-                            <Card.Text style={{ fontSize: "small" }}>Date of Event: {event.Date.toLocaleString()}</Card.Text>
-                            <Card.Text>Location of Event: {event.attributes.PrimaryCountry.toLocaleString()}</Card.Text>
+                            <Card.Title>{newsInstance.title}</Card.Title>
+                            <Card.Text style={{ fontSize: "small" }}>Date of News/Event: {eventDate.toDateString()}</Card.Text>
+                            <Card.Text>Location of Event: {newsInstance.primary_country}</Card.Text>
                         </Card.Body>
                         <ListGroup className="list-group-flush">
-                            <ListGroup.Item>Disaster Type: {event.attributes.DisasterType.toLocaleString()}</ListGroup.Item>
-                            <ListGroup.Item>Source: {event.attributes.OtherSources}</ListGroup.Item>
-                            <ListGroup.Item>Theme: {event.attributes.Themes.toLocaleString()}</ListGroup.Item>
+                            <ListGroup.Item>Source(s): {formatStringList(newsInstance.sources)}</ListGroup.Item>
+                            <ListGroup.Item>Theme(s): {formatStringList(newsInstance.themes)}</ListGroup.Item>
+                            <iframe title="Bing Video" src={newsInstance.video_url[0]} width="800" height="600" frameborder="0"></iframe>
                         </ListGroup>
-                        <Card.Img
-                            variant="bottom"
-                            src={event.SecondImage}
-                            style={{ objectFit : "cover", width: "50%", height: "50%", margin: "auto"}}
-                        />
                     </Card>
                 </div>
             </Container>
@@ -42,11 +58,11 @@ function NewsEventsInstancePage() {
                         <Card>
                             <Card.Header as="h5">Associated Charities</Card.Header>
                             <Card.Body>
-                                {event.associatedCharities && event.associatedCharities.map((charity, index) => (
+                                {newsInstance.relevant_charities && newsInstance.relevant_charities.map((charity, index) => (
                                 <Container key={index} className="my-3">
-                                    <Link to={charity.link}>
+                                    <Link to={`/charities/${charity.charity_name}`}>
                                     <Button variant="primary" className="btn w-100">
-                                        {charity.name}
+                                        {charity.charity_name}
                                     </Button>
                                     </Link>
                                 </Container>
@@ -58,11 +74,11 @@ function NewsEventsInstancePage() {
                         <Card>
                             <Card.Header as="h5">Associated Countries</Card.Header>
                             <Card.Body>
-                                {event.associatedCountries && event.associatedCountries.map((country, index) => (
+                                {newsInstance.relevant_countries && newsInstance.relevant_countries.map((country, index) => (
                                 <Container key={index} className="my-3">
-                                    <Link to={country.link}>
+                                    <Link to={`/countries/${country.country_name}`}>
                                     <Button variant="primary" className="btn w-100">
-                                        {country.name}
+                                        {country.country_name}
                                     </Button>
                                     </Link>
                                 </Container>
@@ -74,6 +90,19 @@ function NewsEventsInstancePage() {
             </Container>
         </div>
     );
+}
+
+function formatStringList(stringList) {
+    let formatted_string = "";
+    for (let i = 0; i < stringList.length; i++) {
+      if (i !== stringList.length - 1) {
+        formatted_string += stringList[i] + ", ";
+      }
+      else {
+        formatted_string += stringList[i];
+      }
+    }
+    return formatted_string;
 }
 
 export default NewsEventsInstancePage;
