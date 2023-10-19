@@ -12,7 +12,7 @@ function CharityCard(props) {
       className="border"
       variant="top"
       src={props.instance.logo_img}
-      style={{ objectFit : "fit", width: "100%", height: "200px"}}
+      style={{ objectFit : "fit", width: "100%", height: "200px", border: "1px solid black"}}
     />
     <Card.Body style={{ textAlign: "left" }}>
       <Card.Title>{props.instance.name}</Card.Title>

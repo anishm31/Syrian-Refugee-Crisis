@@ -33,7 +33,8 @@ function CountryInstancePage() {
                         <Card.Img
                             variant="top"
                             src={countryInstance.flag_url}
-                            style={{ objectFit : "cover", width: "50%", height: "50%", margin: "auto"}}
+                            style={{ objectFit : "cover", width: "50%", height: "50%", margin: "auto",
+                                     border: "1px solid black"}}
                         />
                         <Card.Body style={{ textAlign: "left" }}>
                             <Card.Title>{countryInstance.name}</Card.Title>
