@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import { useParams } from 'react-router-dom';
 import {Container, Card, ListGroup, Row, Col, Button} from 'react-bootstrap';
 import { Link } from "react-router-dom";
+import CountryMap from "./CountryMap";
 import axios from "axios";
 
 function CountryInstancePage() {
@@ -47,7 +48,7 @@ function CountryInstancePage() {
                             <ListGroup.Item>Number Closed: {countryInstance.num_closed.toLocaleString()}</ListGroup.Item>
                             <ListGroup.Item>Other: {countryInstance.num_other.toLocaleString()}</ListGroup.Item>
                         </ListGroup>
-                        {/* TODO: Add Map Component Here Later */}
+                        <CountryMap mapInfo={countryInstance.map_info}/>
                     </Card>
                 </div>
             </Container>

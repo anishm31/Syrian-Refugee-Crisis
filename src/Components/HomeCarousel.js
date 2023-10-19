@@ -18,7 +18,7 @@ function HomeCarousel() {
         img: img2,
         caption: "Aftermath of civil war in Daraa, Syria",
         alt: "img-2",
-        link: "/countries/Syria",
+        link: "/countries/Syrian Arab Republic",
       },
       {
         img: img3,

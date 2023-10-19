@@ -7,8 +7,8 @@ function CountryMap(props) {
     id: 'google-map-script',
     googleMapsApiKey: "AIzaSyALEIcs3cRRGwkkH5HOsvEUYSbW_AseqNQ"
   });
-  const centerPoint = {lat: props.mapInfo.geometry.location.lat, lng: props.mapInfo.geometry.location.lng};
 
+  const centerPoint = {lat: props.mapInfo.geometry.location.lat, lng: props.mapInfo.geometry.location.lng}
 
   return (
     <div style={{height: "75vh", width: "100%"}}>
