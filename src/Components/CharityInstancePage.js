@@ -37,32 +37,44 @@ function CharityInstancePage() {
                             style={{ objectFit : "cover", width: "20%", height: "20%", margin: "auto"}}
                         />
                         <Card.Body style={{ textAlign: "left" }}>
-                            <Card.Title>{charityInstance.name}</Card.Title>
+                            <Card.Title style={{fontWeight: "bold", fontSize: "25px"}}>{charityInstance.name}</Card.Title>
                             <Card.Text>{charityInstance.short_name}</Card.Text>
                             <Card.Text style={{ fontSize: "small" }}>Est: {date_est.getFullYear()}</Card.Text>
-                            <Card.Text>Purpose: {charityInstance.description} </Card.Text>
-                            <a href={charityInstance.website} class="card-link">Website</a>
+                            <a href={charityInstance.website}>Organization Website</a>
                         </Card.Body>
-                        <ListGroup className="list-group-flush">
-                            <ListGroup.Item>Headquarters: {charityInstance.headquarters}</ListGroup.Item>
-                            <ListGroup.Item>Parent Organization: {charityInstance.parent_org}</ListGroup.Item>
+                        <ListGroup className="list-group-flush" style={{ textAlign: "left" }}>
+                            <ListGroup.Item>Purpose: {charityInstance.description}</ListGroup.Item>
                         </ListGroup>
-                        <Card.Body>
-                            <Card.Text>Notable Awards:</Card.Text>
-                        </Card.Body>
-                        <ListGroup className="list-group-flush">
-                        {charityInstance.awards_received.map((award) => (
-                                <ListGroup.Item>{award.award_name}</ListGroup.Item>))}
+                        <ListGroup className="list-group-flush" style={{ textAlign: "left" }}>
+                            <ListGroup.Item>Headquarters City: {charityInstance.headquarters}</ListGroup.Item>
+                            <ListGroup.Item>Parent Organization: {(charityInstance.parent_org) ? (charityInstance.parent_org) : "N/A"}</ListGroup.Item>
+                            <ListGroup.Item>Organization Type: {charityInstance.org_type}</ListGroup.Item>
                         </ListGroup>
-                        <Card.Body>
+                        <ListGroup className="list-group-flush" style={{ textAlign: "left" }}>
+                            <ListGroup.Item>Relief Provided:</ListGroup.Item>
+                            <ul style={{paddingLeft: "50px"}}>
+                                {charityInstance.relief_provided.map((relief) => (
+                                <li>{relief}</li>))}
+                            </ul>
+                        </ListGroup>
+                        <ListGroup className="list-group-flush" style={{ textAlign: "left" }}>
+                            <ListGroup.Item>Awards Received:</ListGroup.Item>
+                            <ul style={{paddingLeft: "50px"}}>
+                                {(charityInstance.awards_received.length !== 0) ? 
+                                charityInstance.awards_received.map((award) => (
+                                    <li>{award.award_name} ({award.award_date.substring(0, 4)})</li>))
+                                : <li>None</li>}
+                            </ul>
+                        </ListGroup>
+                        <ListGroup style={{paddingTop: "5px"}}>
                             <VideoCarousel youtubeInfo={charityInstance.youtube_info} />
-                        </Card.Body>
+                        </ListGroup>
                     </Card>
                 </div>
             </Container>
             
             <Container className="text-center my-5">
-                <Row xsm={1} sm={2} md={2}>
+                <Row className="justify-content-md-center" xs={1} sm={2}>
                     <Col>
                         <Card>
                             <Card.Header as="h5">Associated Countries</Card.Header>

@@ -43,14 +43,14 @@ function CountryInstancePage() {
                             <Card.Text></Card.Text>
                             <Card.Text style={{fontSize: "20px"}}>{'\n'}Refugee Statistics:</Card.Text>
                         </Card.Body>
-                        <ListGroup className="list-group-flush">
-                            <ListGroup.Item>Total Syrian Refugees: {countryInstance.num_refugees.toLocaleString()}</ListGroup.Item>
-                            <ListGroup.Item>Total Asylum Decisions: {countryInstance.num_asylum_decisions.toLocaleString()}</ListGroup.Item>
-                            <ListGroup.Item>Year of Decisions: {countryInstance.year_of_decisions}</ListGroup.Item>
-                            <ListGroup.Item>Number Granted Asylum: {countryInstance.num_recognized.toLocaleString()}</ListGroup.Item>
-                            <ListGroup.Item>Number Rejected: {countryInstance.num_apps_rejected.toLocaleString()}</ListGroup.Item>
-                            <ListGroup.Item>Number Closed: {countryInstance.num_closed.toLocaleString()}</ListGroup.Item>
-                            <ListGroup.Item>Other: {countryInstance.num_other.toLocaleString()}</ListGroup.Item>
+                        <ListGroup className="list-group-flush" style={{textAlign: "left", paddingLeft: "50px"}}>
+                            <ListGroup.Item><li>Total Syrian Refugees: {countryInstance.num_refugees.toLocaleString()}</li></ListGroup.Item>
+                            <ListGroup.Item><li>Total Asylum Decisions: {countryInstance.num_asylum_decisions.toLocaleString()}</li></ListGroup.Item>
+                            <ListGroup.Item><li>Year of Decisions: {countryInstance.year_of_decisions}</li></ListGroup.Item>
+                            <ListGroup.Item><li>Number Granted Asylum: {countryInstance.num_recognized.toLocaleString()}</li></ListGroup.Item>
+                            <ListGroup.Item><li>Number Rejected: {countryInstance.num_apps_rejected.toLocaleString()}</li></ListGroup.Item>
+                            <ListGroup.Item><li>Number Closed: {countryInstance.num_closed.toLocaleString()}</li></ListGroup.Item>
+                            <ListGroup.Item><li>Number Classified as Other: {countryInstance.num_other.toLocaleString()}</li></ListGroup.Item>
                         </ListGroup>
                         <CountryMap mapInfo={countryInstance.map_info}/>
                     </Card>
