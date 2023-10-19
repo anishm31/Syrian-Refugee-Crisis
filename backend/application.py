@@ -188,7 +188,7 @@ def get_newsevents():
 # Get a specific newsevent
 @flaskApp.route("/news-and-events/<title>")
 def get_newsevent(title):
-    newsevent = db.session.query(NewsEvent).filter_by(title=title).first()
+    newsevent = db.session.query(NewsEvent).filter(NewsEvent.title.ilike(f"%{title}%")).first()
     if newsevent is None:
         status = "News/Event not found"
         return Response(status, status=404)
