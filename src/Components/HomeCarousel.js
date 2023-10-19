@@ -12,25 +12,25 @@ function HomeCarousel() {
         img: img1,
         caption: "Madrid, Spain",
         alt: "img-1",
-        link: "/news-and-events/The%20UN%20Security%20Council%20Must%20Do%20More%20to%20End%20Attacks%20on%20Civilians%20in%20Syria",
+        link: "/countries/Spain",
       },
       {
         img: img2,
         caption: "Aftermath of civil war in Daraa, Syria",
         alt: "img-2",
-        link: "/news-and-events/44%20Syrian%20and%20International%20NGOs%20Call%20for%20Immediate%20End%20to%20Attacks%20on%20Civilians%20and%20Hospitals%20in%20Idlib,%20Syria",
+        link: "/countries/Syria",
       },
       {
         img: img3,
         caption: "Syrian refugee camp outside Athens, Greece",
         alt: "img-3",
-        link: "/news-and-events/Uniting%20for%20Peace%20in%20Syria:%20Global%20Civil%20Society%20Appeal%20to%20UN%20Member%20States",
+        link: "/countries/Greece",
       },
       {
         img: img4,
         caption: "Refugee camp in Iraq",
         alt: "img-4",
-        link: "/news-and-events/Joint%20NGO%20Statement%20Syria%20Cross-Border",
+        link: "/countries/Iraq",
       }
   ]
   return (
