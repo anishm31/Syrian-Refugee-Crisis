@@ -6,29 +6,28 @@ import { Link } from 'react-router-dom';
 
 
 function NewsCard(props) {
+    const event_date = new Date(props.instance.date);
     return (
         <Card style={{ width: "90%" }}>
             <Card.Img
                 variant="top"
-                src={props.instance.Image}
+                src={props.instance.image_url[0]}
                 style={{ objectFit : "cover", width: "100%", height: "200px"}}
             />
             <Card.Body style={{ textAlign: "left" }}>
                 <Card.Title>{props.instance.title}</Card.Title>
-                <Card.Text style={{ fontSize: "small" }}>Name of Event: {props.instance.Title}</Card.Text>
-                <Card.Text>Date of Event {props.instance.Date.toLocaleString()}</Card.Text>
+                <Card.Text>Date of News/Event: {event_date.toDateString()}</Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush" style={{ textAlign: "left" }}>
-                <ListGroup.Item>Location of Event: {props.instance.attributes.PrimaryCountry.toLocaleString()}</ListGroup.Item>
-                <ListGroup.Item>Disaster Type: {props.instance.attributes.DisasterType.toLocaleString()}</ListGroup.Item>
-                <ListGroup.Item>Source: {props.instance.attributes.OtherSources.toLocaleString()}</ListGroup.Item>
-                <ListGroup.Item>Theme: {props.instance.attributes.Themes.toLocaleString()}</ListGroup.Item>
+                <ListGroup.Item>Location of News/Event: {props.instance.primary_country}</ListGroup.Item>
+                <ListGroup.Item>Source(s): {formatStringList(props.instance.sources)}</ListGroup.Item>
+                <ListGroup.Item>Theme: {formatStringList(props.instance.themes)}</ListGroup.Item>
             </ListGroup>
             <Card.Body>
     <           Button variant="outline-success">
                     <Link
                         style={{ color: "black", textDecoration: "inherit"}}
-                        to={"/news-and-events/" + props.instance.Title}>
+                        to={`/news-and-events/${props.instance.title}`}>
                         More Info
                     </Link>
                 </Button>
@@ -37,5 +36,17 @@ function NewsCard(props) {
     );
 }
 
+function formatStringList(stringList) {
+    let formatted_string = "";
+    for (let i = 0; i < stringList.length; i++) {
+      if (i !== stringList.length - 1) {
+        formatted_string += stringList[i] + ", ";
+      }
+      else {
+        formatted_string += stringList[i];
+      }
+    }
+    return formatted_string;
+  }
 
 export default NewsCard;
