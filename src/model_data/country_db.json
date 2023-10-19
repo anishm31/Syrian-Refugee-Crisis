@@ -12,52 +12,7 @@
       "num_recognized": 250,
       "num_other": 641,
       "num_apps_rejected": 5,
-      "num_closed": 795,
-      "map_info": {
-        "address_components": [
-          {
-            "long_name": "Germany",
-            "short_name": "DE",
-            "types": [
-              "country",
-              "political"
-            ]
-          }
-        ],
-        "formatted_address": "Germany",
-        "geometry": {
-          "bounds": {
-            "northeast": {
-              "lat": 55.0815,
-              "lng": 15.0418962
-            },
-            "southwest": {
-              "lat": 47.2701115,
-              "lng": 5.8663425
-            }
-          },
-          "location": {
-            "lat": 51.165691,
-            "lng": 10.451526
-          },
-          "location_type": "APPROXIMATE",
-          "viewport": {
-            "northeast": {
-              "lat": 55.0815,
-              "lng": 15.0418962
-            },
-            "southwest": {
-              "lat": 47.2701115,
-              "lng": 5.8663425
-            }
-          }
-        },
-        "place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
-        "types": [
-          "country",
-          "political"
-        ]
-      }
+      "num_closed": 795
     },
     "associatedCharities": [
       {
@@ -93,53 +48,7 @@
       "num_recognized": "0",
       "num_other": "0",
       "num_apps_rejected": "0",
-      "num_closed": 56,
-      "map_info": {
-        "address_components": [
-          {
-            "long_name": "T\u00fcrkiye",
-            "short_name": "TR",
-            "types": [
-              "country",
-              "political"
-            ]
-          }
-        ],
-        "formatted_address": "T\u00fcrkiye",
-        "geometry": {
-          "bounds": {
-            "northeast": {
-              "lat": 42.3666999,
-              "lng": 44.8178449
-            },
-            "southwest": {
-              "lat": 35.8085919,
-              "lng": 25.4408142
-            }
-          },
-          "location": {
-            "lat": 38.963745,
-            "lng": 35.243322
-          },
-          "location_type": "APPROXIMATE",
-          "viewport": {
-            "northeast": {
-              "lat": 42.3666999,
-              "lng": 44.8178449
-            },
-            "southwest": {
-              "lat": 35.8085919,
-              "lng": 25.4408142
-            }
-          }
-        },
-        "place_id": "ChIJcSZPllwVsBQRKl9iKtTb2UA",
-        "types": [
-          "country",
-          "political"
-        ]
-      }
-
+      "num_closed": 56
     },
     "associatedCharities": [
       {
@@ -175,32 +84,7 @@
       "num_recognized": 7367,
       "num_other": "0",
       "num_apps_rejected": "0",
-      "num_closed": 46,
-      "map_info": {
-        "address_components": [
-          {
-            "long_name": "Jordan",
-            "short_name": "JO",
-            "types": ["country", "political"]
-          }
-        ],
-        "formatted_address": "Jordan",
-        "geometry": {
-          "bounds": {
-            "northeast": { "lat": 33.374735, "lng": 39.301154 },
-            "southwest": { "lat": 29.1850361, "lng": 34.9441001 }
-          },
-          "location": { "lat": 30.585164, "lng": 36.238414 },
-          "location_type": "APPROXIMATE",
-          "viewport": {
-            "northeast": { "lat": 33.374735, "lng": 39.301154 },
-            "southwest": { "lat": 29.1850361, "lng": 34.9441001 }
-          }
-        },
-        "place_id": "ChIJmd5kZkdvABURmU4mUQdbKI0",
-        "types": ["country", "political"]
-      }
-
+      "num_closed": 46
     },
     "associatedCharities": [
       {
