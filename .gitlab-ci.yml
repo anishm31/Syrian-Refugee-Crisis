@@ -26,11 +26,14 @@ gui-tests:
     CHROMEDRIVER_VERSION: "114.0.5735.90"
   script:
     - apt-get update && apt-get install -y unzip
+    - apt-get --yes install libnss3
+    - apt-get --yes install libgconf-2-4
+    - apt-get install libx11-xcb1
     - CHROMEDRIVER_URL="https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip"
     - wget $CHROMEDRIVER_URL -O chromedriver.zip
     - unzip chromedriver.zip -d /usr/local/bin
     - chmod +x /usr/local/bin/chromedriver
     - pip install --upgrade pip
-    - pip install -r requirements.txt
+    - pip install --no-cache-dir -r requirements.txt
     - python ./src/gui-tests.py
   
