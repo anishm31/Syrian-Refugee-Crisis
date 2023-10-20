@@ -19,9 +19,6 @@ test-jest:
     - npm install
     - npm test
 
-stages:
-  - test
-
 gui-tests:
   stage: test
   image: python:3.10
@@ -36,3 +33,4 @@ gui-tests:
     - pip install --upgrade pip
     - pip install -r requirements.txt
     - python ./src/gui-tests.py
+  
