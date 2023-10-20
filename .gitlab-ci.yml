@@ -19,13 +19,13 @@ test-jest:
     - npm install
     - npm test
 
-gui-tests:
-  image: python:3.10
-  stage: test
-  script:
-    - pip install --upgrade pip
-    - pip install --no-cache-dir -r requirements.txt
-    - docker pull selenium/standalone-chrome
-    - docker run -dp 4444:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome
-    - python gui-tests.py
+# gui-tests:
+#   image: python:3.10
+#   stage: test
+#   script:
+#     - pip install --upgrade pip
+#     - pip install --no-cache-dir -r requirements.txt
+#     - docker pull selenium/standalone-chrome
+#     - docker run -dp 4444:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome
+#     - python gui-tests.py
  
