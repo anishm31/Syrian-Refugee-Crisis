@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import { TeamInfo } from "../TeamInfo.js"
+import { ToolInfo } from "../ToolInfo.js"
 
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import TeamCard from "./TeamCard.js";
+import ToolCard from "./ToolCard.js";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 
@@ -35,25 +37,34 @@ export default function About() {
     request.send();
   }
 
-    // Get issues per user
-    async function get_issues() {
-      TeamInfo.forEach((user) => {
-        var request = new XMLHttpRequest();
-        var url =
-          "https://gitlab.com/api/v4/projects/50467591/issues_statistics?author_id=".concat(
-            user.user_id
-          );
-        request.open("GET", url);
-        request.onload = function () {
-          var result = JSON.parse(this.response);
-          var num = result.statistics.counts.all;
-          user.issues = num;
-        };
-        request.send();
+  // Get total unit tests
+  function total_unittests() {
+    var total = 0;
+    TeamInfo.forEach((user) => {
+        total += user.unittests;
       });
-    }
+      return total;
+  }
 
-    // Get total issues
+  // Get issues per user
+  async function get_issues() {
+    TeamInfo.forEach((user) => {
+      var request = new XMLHttpRequest();
+      var url =
+        "https://gitlab.com/api/v4/projects/50467591/issues_statistics?author_id=".concat(
+          user.user_id
+        );
+      request.open("GET", url);
+      request.onload = function () {
+        var result = JSON.parse(this.response);
+        var num = result.statistics.counts.all;
+        user.issues = num;
+      };
+      request.send();
+    });
+  }
+
+  // Get total issues
   async function total_issues() {
     var request = new XMLHttpRequest();
     var url = "https://gitlab.com/api/v4/projects/50467591/issues_statistics";
@@ -114,17 +125,53 @@ export default function About() {
             <Card.Subtitle as="h5">Total Commits: {totalCommits}</Card.Subtitle>
             <br></br>
             <Card.Subtitle as="h5">Total Issues: {totalIssues}</Card.Subtitle>
+            <br></br>
+            <Card.Subtitle as="h5">Total Unit Tests: {total_unittests()}</Card.Subtitle>
           </Card.Body>
         </Card>
       </Container>
       <Container className="container text-center mt-5 mb-4">
-        <Link to="https://documenter.getpostman.com/view/30070229/2s9YJZ3jaX">
+        <Link to="https://documenter.getpostman.com/view/30070229/2s9YR9YsK4">
           <Button size="md"> 
             API Documentation
           </Button>
         </Link>
       </Container>
+      <Container className="container text-center mt-5 mb-4">
+        <Link to="https://gitlab.com/mcastilleja/syrian_refugee_crisis">
+          <Button size="md"> 
+            Gitlab Repository
+          </Button>
+        </Link>
+      </Container>
       <br></br>
+
+
+      <Container className="container text-center mt-5 mb-4">
+        <h1>Tools</h1>
+      </Container>
+      <Container className="container text-center mt-5 mb-4">
+        <Row className="row row-cols-md-4 g-3">
+          {ToolInfo.slice(0, 4).map((tool) => {
+            return (
+              <Col className="col">
+                <ToolCard {...tool}></ToolCard>
+              </Col>
+            );
+          })}
+        </Row>
+        <br></br>
+        <Row className="row row-cols-md-4 g-3">
+          {ToolInfo.slice(4).map((tool) => {
+            return (
+              <Col key={tool.name} className="col">
+                <ToolCard {...tool}></ToolCard>
+              </Col>
+            );
+          })}
+        </Row>
+      </Container>
+
     </>
   );
 }

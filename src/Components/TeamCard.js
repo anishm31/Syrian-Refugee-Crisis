@@ -25,6 +25,9 @@ function TeamCard(props) {
         <br></br>
         <small className="text-muted">Issues: </small>
         <small>{props.issues}</small>
+        <br></br>
+        <small className="text-muted">Tests: </small>
+        <small>{props.unittests}</small>
       </Card.Footer>
     </Card>
   );

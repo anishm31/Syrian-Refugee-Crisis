@@ -14,6 +14,7 @@ const TeamInfo = [
     bio: "Junior CS Student at UT Austin",
     commits: 0,
     issues: 0,
+    unittests: 7,
   },
   {
     image: MatthewC,
@@ -24,6 +25,7 @@ const TeamInfo = [
     bio: "Junior CS Student at UT Austin",
     commits: 0,
     issues: 0,
+    unittests: 6,
   },
   {
     image: MatthewA,
@@ -34,6 +36,7 @@ const TeamInfo = [
     bio: "Junior CS Student at UT Austin",
     commits: 0,
     issues: 0,
+    unittests: 6,
   },
   {
     image: Pranitha,
@@ -44,6 +47,7 @@ const TeamInfo = [
     bio: "Junior CS Student at UT Austin",
     commits: 0,
     issues: 0,
+    unittests: 6,
   },
   {
     image: Shadow,
@@ -54,6 +58,7 @@ const TeamInfo = [
     bio: "Junior CS Student at UT Austin",
     commits: 0,
     issues: 0,
+    unittests: 7,
   },
 ];
 
