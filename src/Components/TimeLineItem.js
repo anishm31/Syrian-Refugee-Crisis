@@ -1,5 +1,7 @@
 import React from "react";
-import "./timeline.css"; 
+import "./timeline.css";
+import Button from "react-bootstrap/Button";
+import { Link } from 'react-router-dom'; 
 
 
 function TimeLineItem({ data }) {
@@ -9,21 +11,24 @@ function TimeLineItem({ data }) {
   }
 
   // Extract relevant data properties
-  const { title, description, date, imageUrl, link } = data;
+  const { title, description, date, } = data;
+
   
   const eventDate = new Date(date);
   return (
     <div className="timeline-item">
-      <div className="timeline-content">
+      <div className="timeline-item-content">
+     
         <h2>{title}</h2>
         <p>{description}</p>
         <time>{eventDate.toDateString()}</time>
-        {imageUrl && <img src={imageUrl} alt={title} />}
-        {link && (
-          <a href={link} target="_blank" rel="noopener noreferrer">
-            Learn More
-          </a>
-        )}
+        <     div className="custom-button">
+                    <Link
+                        style={{ color: "black", textDecoration: "inherit", border:'none'}}
+                        to={`/news-and-events/${title}`}>
+                        More Info
+                    </Link>
+                    </div>
         <span className="circle" />
       </div>
     </div>

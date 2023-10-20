@@ -27,7 +27,7 @@ function MainNavbar() {
 
             <Nav.Link>
               <Link
-                style={{ color: "white", textDecoration: "inherit", marginRight: 3}}
+                style={{ color: "white", textDecoration: "inherit", marginRight: 5}}
                 to="/about"
               >
               About
@@ -36,10 +36,10 @@ function MainNavbar() {
 
             <Nav.Link>
               <Link
-                style={{ color: "white", textDecoration: "inherit", marginRight: 3}}
+                style={{ color: "white", textDecoration: "inherit", marginRight: 0}}
                 to="/timeline"
               >
-              timeline
+              Timeline
               </Link>
             </Nav.Link>
             

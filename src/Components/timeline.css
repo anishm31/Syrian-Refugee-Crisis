@@ -1,3 +1,7 @@
+/*
+ Florin Pop's timeline. (n.d.). Retrieved from https://www.florin-pop.com/timeline
+*/
+
 .timeline-container {
     display: flex;
     flex-direction: column;
@@ -6,7 +10,7 @@
 }
 
 .timeline-container::after {
-    background-color: #8b211d;
+    background-color: #021f12;
     content: '';
     position: absolute;
     left: calc(50% - 2px);
@@ -31,9 +35,9 @@
 }
 
 .timeline-item-content {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 5px rgba(38, 24, 197, 0.3);
     border-radius: 5px;
-    background-color: #fff;
+    background-color: #7AA095;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -46,8 +50,8 @@
 
 .timeline-item-content::after {
     content: ' ';
-    background-color: #fff;
-    box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.2);
+    background-color: #618B4A;
+    box-shadow: 1px -1px 1px rgba(221, 139, 139, 0.2);
     position: absolute;
     right: -7.5px;
     top: calc(50% - 7.5px);
@@ -64,11 +68,11 @@
 .timeline-item:nth-child(odd) .timeline-item-content::after {
     right: auto;
     left: -7.5px;
-    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: -1px 1px 1px rgba(216, 19, 144, 0.2);
 }
 
 timeline-item-content .tag {
-    color: #fff;
+    color: rgb(213, 30, 30);
     font-size: 12px;
     font-weight: bold;
     top: 5px;
@@ -85,7 +89,7 @@ timeline-item-content .tag {
 }
 
 .timeline-item-content time {
-    color: #777;
+    color: #D7F9F1;
     font-size: 12px;
     font-weight: bold;
 }
@@ -108,8 +112,8 @@ timeline-item-content .tag {
 }
 
 .timeline-item-content .circle {
-    background-color: #fff;
-    border: 3px solid #e17b77;
+    background-color: #AFBC88;
+    border: 3px solid #618B4A;
     border-radius: 50%;
     position: absolute;
     top: calc(50% - 10px);
@@ -155,3 +159,16 @@ timeline-item-content .tag {
         display: none;
     }
 }
+
+.custom-button {
+    background-color: #4F673A; 
+    color: rgb(6, 27, 22);              
+    border: none;             
+    padding: 10px 20px;        
+    cursor: pointer;           
+    text-decoration: none;     
+  }
+
+  .custom-button:hover {
+    background-color: #618B4A;
+  }
