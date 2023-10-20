@@ -3,6 +3,12 @@
 # Website URL:
 https://www.syrianrefugeecrisis.me/
 
+# API Link:
+https://api.syrianrefugeecrisis.me/
+
+# API Documentation
+https://documenter.getpostman.com/view/30070229/2s9YR9YsK4
+
 ## Names EIDs, and Gitlab IDs of the team members:
 * Shadow Sincross (sas9375)
     * Gitlab ID: @shadowanneruby
@@ -15,31 +21,35 @@ https://www.syrianrefugeecrisis.me/
 * Matthew Castilleja (mc72635)
     * Gitlab ID: @mcastilleja
 
-## Project Leader:
-Matthew Albert
+## Phase Leader:
+Anish Madgula
+    - Responsibilities as phase leader:
+        - Scheduling team meetings to get status on tasks
+        - Delegating tasks/issues to make sure all requirements were completed
+        - Keeping track of the team's overall progress
 
 ## Git SHA:
-0c19884bdb912efe5209bef55def21a1bea2b814
+UPDATE BEFORE SUBMITTING
 
 ## Gitlab Pipeline:
 https://gitlab.com/mcastilleja/syrian_refugee_crisis/-/pipelines
 
 ## Estimated/Actual Completion Time:
 * Anish Madgula
-    * Estimated: 15 hours
-    * Actual: 15 hours
+    * Estimated: 20 hours
+    * Actual: 30 hours
 * Matthew Albert
-    * Estimated: 10 hours
-    * Actual: 15 hours
+    * Estimated: 25 hours
+    * Actual: 30 hours
 * Shadow Sincross
-    * Estimated: 8 hours
-    * Actual: 15 hours
+    * Estimated: 20 hours
+    * Actual: 30 hours
 * Matthew Castilleja
-    * Estimated: 12 hours
-    * Actual: 12 hours
+    * Estimated: 22 hours
+    * Actual: 30 hours
 * Pranitha Kolli
     * Estimated: 10 hours
     * Actual: 10 hours
 
 * Comments: 
-Referenced and adapted some code from https://gitlab.com/petarilievCS/cs373-idb7/ for about page
+    - Referenced and adapted code from https://gitlab.com/anshmor/cs-373-idb-group-3/ for setting up / populating the DB
