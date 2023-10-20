@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import {Container, Card, ListGroup, Row, Col, Button} from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import axios from "axios";
+import IFrame from "./IFrame";
+
 
 
 function NewsEventsInstancePage() {
@@ -47,9 +49,13 @@ function NewsEventsInstancePage() {
                         <ListGroup className="list-group-flush">
                             <ListGroup.Item>Source(s): {formatStringList(newsInstance.sources)}</ListGroup.Item>
                             <ListGroup.Item>Theme(s): {formatStringList(newsInstance.themes)}</ListGroup.Item>
-                            <iframe title="Bing Video" src={newsInstance.video_url[0]} width="800" height="600" frameborder="0"></iframe>
+                            
                         </ListGroup>
+                        
                     </Card>
+                    <IFrame
+                                src={newsInstance.video_url[0]} // Replace with your desired URL
+                                 />
                 </div>
             </Container>
             <Container className="text-center my-5">

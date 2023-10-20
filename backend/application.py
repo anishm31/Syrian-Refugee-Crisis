@@ -118,7 +118,13 @@ def get_charities():
 # Get a specific charity
 @flaskApp.route("/charities/<name>")
 def get_charity(name):
-    charity = db.session.query(Charity).filter_by(name=name).first()
+    useShortName = request.args.get("shortName")
+    charity = None
+    if useShortName is not None and useShortName == "true":
+        charity = db.session.query(Charity).filter_by(short_name=name).first()
+    else:
+        charity = db.session.query(Charity).filter_by(name=name).first()
+    
     if charity is None:
         status = "Charity not found"
         return Response(status, status=404)
