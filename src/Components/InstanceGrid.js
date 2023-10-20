@@ -8,7 +8,7 @@ function InstanceGrid(props) {
   return (
     <Container fluid className="mt-5">
       <div className="title-holder mb-3">
-        <h3>{instanceList.length} of {props.totalInstances} Instances</h3>
+        <h3>{instanceList.length} Instances</h3>
       </div>
       <Row className='d-flex justify-content-center' xs={1} md={3} lg={3} xlg={4}>
         {instanceList.map((instance) => {

@@ -3,12 +3,12 @@ from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 
 # Set up Flask app and CORS
-flaskApp = Flask(__name__)
-CORS(flaskApp)
-flaskApp.config[
+app = Flask(__name__)
+CORS(app)
+app.config[
     "SQLALCHEMY_DATABASE_URI"
 ] = "mysql+pymysql://admin:wsHxSdz0cSqqYu82SWrT@database-mmaps.cpt6ed6ivedi.us-west-2.rds.amazonaws.com:3306/database_mmaps"
-db = SQLAlchemy(flaskApp)
+db = SQLAlchemy(app)
 
 # This class defines the MySQL table for charity instances
 class Charity(db.Model):
@@ -70,40 +70,3 @@ class NewsEvent(db.Model):
     source_ids = db.Column(db.JSON)
     relevant_charities = db.Column(db.JSON, nullable=True)
     relevant_countries = db.Column(db.JSON, nullable=True)
-
-# API
-@flaskApp.route("/")
-def home():
-    return "Hello I am Here!"
-
-@flaskApp.route("/whois/<name>")
-def whois(name):
-    return "Hello, " + name + ", that is your name!"
-
-# Get all the charities
-#@app.route("/charities")
-#def get_charities():
-#    page = request.args.get("page")
-#    query = db.session.query(Charity)
-#
-#    if page is not None:
-#        query = paginate(query, int(page))
-#
-#    result = charity_schema.dump(query, many=True)
-#    return jsonify(
-#        {
-#            "count": len(result),
-#            "data": result,
-#        }
-#    )
-
-# Get a specific charity
-@flaskApp.route("/charities/<name>")
-def get_charity(name):
-    charity = db.session.query(Charity).filter_by(name=name).first()
-    return charity.name
-    #return jsonify({"data": result})
-
-
-if __name__ == "__main__":
-    flaskApp.run(port=5000, debug=True)

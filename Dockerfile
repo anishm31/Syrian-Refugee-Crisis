@@ -1,19 +1,17 @@
-# Fetch the latest node image on alpine linux
+# Fetching the latest node image on alpine linux
 FROM node:alpine
 
-# Set up the working directory
+# Setting up the work directory
 WORKDIR /react-app
 
-# Copy necessary frontend files into the container
-COPY ./public /react-app/public
-COPY ./src /react-app/src
+# Installing dependencies
 COPY ./package*.json /react-app
-
-# Install the necessary dependencies/packages
 RUN npm install
 
-# Expose the port that our react app is running on
+# Copying all the files in our project
+COPY . .
+
 EXPOSE 3000
 
-# Start the react app
+# Starting our application
 CMD ["npm", "start"]

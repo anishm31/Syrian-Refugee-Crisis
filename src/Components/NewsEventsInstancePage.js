@@ -1,35 +1,13 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
+import newsData from "../model_data/news_db.json";
 import { useParams } from 'react-router-dom';
 import {Container, Card, ListGroup, Row, Col, Button} from 'react-bootstrap';
 import { Link } from "react-router-dom";
-import axios from "axios";
-import IFrame from "./IFrame";
 
 
 function NewsEventsInstancePage() {
     const params = useParams();
-    const [newsInstance, setNewsInstance] = useState([]);
-    const [loaded, setLoaded] = useState(false);
-
-    // Call the API to get the news instance data
-    useEffect(() => {
-        axios
-            .get(`https://api.syrianrefugeecrisis.me/news-and-events/${params.id}`)
-            .then((res) => {
-                setNewsInstance(res.data.data);
-                setLoaded(true);
-            })
-            .catch((err) => {
-                console.log("Call to the API failed...", err);
-            })
-    }, [params.id]);
-
-    // Verify that the charity data has been loaded before rendering main content
-    if (!loaded) {
-        return <h1 style={{textAlign: "center"}}>Page Loading...</h1>;
-    }
-
-    const eventDate = new Date(newsInstance.date);
+    const event = newsData.find(instance => instance.Title === params.id)
     return (
         <div>
             <Container className='mt-5' style={{width : "85%", textAlign : "center"}}>
@@ -37,53 +15,39 @@ function NewsEventsInstancePage() {
                     <Card style={{ width: "90%", textAlign: "center"}}>
                         <Card.Img
                             variant="top"
-                            src={newsInstance.image_url[0]}
+                            src={event.Image}
                             style={{ objectFit : "cover", width: "50%", height: "50%", margin: "auto"}}
                         />
                         <Card.Body style={{ textAlign: "left" }}>
-                            <Card.Title style={{fontWeight: "bold", fontSize: "25px"}}>{newsInstance.title}</Card.Title>
-                            <Card.Text style={{ fontSize: "small" }}>Date of News/Event: {eventDate.toDateString()}</Card.Text>
-                            <a href={newsInstance.org_link}>Link to Article</a>
+                            <Card.Title>{event.Title}</Card.Title>
+                            <Card.Text style={{ fontSize: "small" }}>Date of Event: {event.Date.toLocaleString()}</Card.Text>
+                            <Card.Text>Location of Event: {event.attributes.PrimaryCountry.toLocaleString()}</Card.Text>
                         </Card.Body>
-                        <ListGroup style={{ textAlign: "left" }} className="list-group-flush">
-                            <ListGroup.Item>Location of Event: {newsInstance.primary_country}</ListGroup.Item>
-                            <ListGroup.Item>Country ISO Code: {newsInstance.country_iso3.toUpperCase()}</ListGroup.Item>
+                        <ListGroup className="list-group-flush">
+                            <ListGroup.Item>Disaster Type: {event.attributes.DisasterType.toLocaleString()}</ListGroup.Item>
+                            <ListGroup.Item>Source: {event.attributes.OtherSources}</ListGroup.Item>
+                            <ListGroup.Item>Theme: {event.attributes.Themes.toLocaleString()}</ListGroup.Item>
+                            <iframe title="Bing Video" src={event.attributes.Video.toLocaleString()} width="800" height="600" frameborder="0"></iframe>
                         </ListGroup>
-                        <ListGroup style={{ textAlign: "left" }} className="list-group-flush">
-                            <ListGroup.Item>Source(s): </ListGroup.Item>
-                            <ul style={{paddingLeft: "50px"}}>
-                                {newsInstance.sources.map((source) => (
-                                <li>{source.source_short_name}</li>))}
-                            </ul>
-                        </ListGroup>
-                        <ListGroup style={{ textAlign: "left" }} className="list-group-flush">
-                            <ListGroup.Item>Theme(s): </ListGroup.Item>
-                            <ul style={{paddingLeft: "50px"}}>
-                                {newsInstance.themes.map((theme) => (
-                                <li>{theme}</li>))}
-                            </ul>
-                        </ListGroup>
-                        <ListGroup style={{ textAlign: "left" }} className="list-group-flush">
-                            <ListGroup.Item>Disaster Type: </ListGroup.Item>
-                            <ul style={{paddingLeft: "50px"}}>
-                                <li>{newsInstance.disaster_type.length > 0 ? newsInstance.disaster_type : "None"}</li>
-                            </ul>
-                        </ListGroup>
-                        <IFrame src={newsInstance.video_url[0]} />
+                        <Card.Img
+                            variant="bottom"
+                            src={event.SecondImage}
+                            style={{ objectFit : "cover", width: "50%", height: "50%", margin: "auto"}}
+                        />
                     </Card>
                 </div>
             </Container>
             <Container className="text-center my-5">
-                <Row className="justify-content-md-center" xs={1} sm={2}>
+                <Row>
                     <Col>
                         <Card>
                             <Card.Header as="h5">Associated Charities</Card.Header>
                             <Card.Body>
-                                {newsInstance.relevant_charities && newsInstance.relevant_charities.map((charity, index) => (
+                                {event.associatedCharities && event.associatedCharities.map((charity, index) => (
                                 <Container key={index} className="my-3">
-                                    <Link to={`/charities/${charity.charity_name}`}>
+                                    <Link to={charity.link}>
                                     <Button variant="primary" className="btn w-100">
-                                        {charity.charity_name}
+                                        {charity.name}
                                     </Button>
                                     </Link>
                                 </Container>
@@ -95,11 +59,11 @@ function NewsEventsInstancePage() {
                         <Card>
                             <Card.Header as="h5">Associated Countries</Card.Header>
                             <Card.Body>
-                                {newsInstance.relevant_countries && newsInstance.relevant_countries.map((country, index) => (
+                                {event.associatedCountries && event.associatedCountries.map((country, index) => (
                                 <Container key={index} className="my-3">
-                                    <Link to={`/countries/${country.country_name}`}>
+                                    <Link to={country.link}>
                                     <Button variant="primary" className="btn w-100">
-                                        {country.country_name}
+                                        {country.name}
                                     </Button>
                                     </Link>
                                 </Container>
