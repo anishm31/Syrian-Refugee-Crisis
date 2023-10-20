@@ -2,6 +2,7 @@ import {useState, useEffect} from "react";
 import GenericModelPage from "./GenericModelPage";
 import NewsCard from "./NewsCard.js";
 import axios from "axios";
+import "./button.css";
 
 
 function NewsEventsModelPage() {
@@ -60,9 +61,10 @@ function NewsEventsModelPage() {
         </button>
         {generatePageNumbers().map((pageNumber) => (
           <button
+            id = "page-button"
             key={pageNumber}
             onClick={() => handlePageClick(pageNumber)}
-            className={pageNumber === currentPage ? "active" : ""}
+            className={`page-button ${pageNumber === currentPage ? 'active' : ''}`}
           >
             {pageNumber}
           </button>

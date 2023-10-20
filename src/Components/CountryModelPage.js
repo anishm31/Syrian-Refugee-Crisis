@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import GenericModelPage from "./GenericModelPage";
 import CountryCard from "./CountryCard";
 import axios from "axios";
-
+import  "./button.css";
 
 function CountryModelPage() {
 
@@ -54,22 +54,23 @@ function CountryModelPage() {
         totalInstances={totalInstances}
       />
       <div className="pagination">
-        <button
+        <button   
           onClick={() => handlePageClick(currentPage - 1)}
           disabled={currentPage === 1}
         >
           Previous
         </button>
         {generatePageNumbers().map((pageNumber) => (
-          <button
+          <button 
             key={pageNumber}
             onClick={() => handlePageClick(pageNumber)}
-            className={pageNumber === currentPage ? "active" : ""}
+            id = "page-button"
+            className={`page-button ${pageNumber === currentPage ? 'active' : ''}`}
           >
             {pageNumber}
           </button>
         ))}
-        <button
+        <button 
           onClick={() => handlePageClick(currentPage + 1)}
           disabled={currentPage === totalPages}
         >
@@ -81,9 +82,3 @@ function CountryModelPage() {
 }
 
 export default CountryModelPage;
-
-/* <GenericModelPage
-model="Countries"
-modelCard={CountryCard}
-instances={countryData}
-/>*/
