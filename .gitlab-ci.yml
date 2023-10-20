@@ -17,3 +17,11 @@ test-jest:
   stage: test
   script:
     - npm test
+
+test-postman:
+  stage: test
+  image: 
+    name: postman/newman:alpine
+    entrypoint: [""]
+  script:
+    - newman run postman/collections/phase_2_syrian_refugee_api.json
