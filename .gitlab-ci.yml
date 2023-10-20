@@ -23,7 +23,7 @@ gui-tests:
   stage: test
   image: python:3.10
   variables:
-    CHROMEDRIVER_VERSION: "latest"
+    CHROMEDRIVER_VERSION: "114.0.5735.90"
   script:
     - apt-get update && apt-get install -y unzip
     - CHROMEDRIVER_URL="https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip"
