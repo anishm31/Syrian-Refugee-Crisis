@@ -1,0 +1,12 @@
+.sources-list {
+  list-style: none;
+  padding: 0;
+}
+
+.sources-list li::before {
+  content: ", ";
+}
+
+.sources-list li:first-child::before {
+  content: " ";
+}

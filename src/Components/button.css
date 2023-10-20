@@ -1,0 +1,10 @@
+.page-button {
+    background-color: #f3eded; /* Set the default background color for page buttons */
+    color: #333; /* Set the default text color */
+  }
+  
+  /* Active page button style */
+  .page-button.active {
+    background-color: #7cb5db; /* Change to the highlight color you prefer */
+    color: #111010; /* Change the text color if needed */
+  }

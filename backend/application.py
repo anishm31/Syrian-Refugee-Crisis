@@ -1,6 +1,8 @@
-from flask import Flask
+from flask import Flask, Response, jsonify, request
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
+
+DEFAULT_PAGE_SIZE = 12
 
 # Set up Flask app and CORS
 flaskApp = Flask(__name__)
@@ -34,6 +36,13 @@ class Charity(db.Model):
     relevant_countries = db.Column(db.JSON, nullable=True)
     relevant_news_events = db.Column(db.JSON, nullable=True)
 
+    def as_dict(self):
+        fields = {}
+        for c in self.__table__.columns:
+            fields[c.name] = getattr(self, c.name)
+        return fields
+
+
 # This class defines the MySQL table for country instances
 class Country(db.Model):
     __tablename__ = "country"
@@ -53,6 +62,13 @@ class Country(db.Model):
     relevant_charities = db.Column(db.JSON, nullable=True)
     relevant_news_events = db.Column(db.JSON, nullable=True)
 
+    def as_dict(self):
+        fields = {}
+        for c in self.__table__.columns:
+            fields[c.name] = getattr(self, c.name)
+        return fields
+
+
 # This class defines the MySQL table for news/events instances
 class NewsEvent(db.Model):
     __tablename__ = "news_events"
@@ -71,38 +87,133 @@ class NewsEvent(db.Model):
     relevant_charities = db.Column(db.JSON, nullable=True)
     relevant_countries = db.Column(db.JSON, nullable=True)
 
+    def as_dict(self):
+        fields = {}
+        for c in self.__table__.columns:
+            fields[c.name] = getattr(self, c.name)
+        return fields
+
+
 # API
 @flaskApp.route("/")
 def home():
-    return "Hello I am Here!"
+    return "Hello I Am Here!"
 
-@flaskApp.route("/whois/<name>")
-def whois(name):
-    return "Hello, " + name + ", that is your name!"
 
 # Get all the charities
-#@app.route("/charities")
-#def get_charities():
-#    page = request.args.get("page")
-#    query = db.session.query(Charity)
-#
-#    if page is not None:
-#        query = paginate(query, int(page))
-#
-#    result = charity_schema.dump(query, many=True)
-#    return jsonify(
-#        {
-#            "count": len(result),
-#            "data": result,
-#        }
-#    )
+@flaskApp.route("/charities")
+def get_charities():
+    page = request.args.get("page")
+    query = db.session.query(Charity)
+
+    if page is not None:
+        query = paginate(query, int(page))
+
+    charity_list = []
+    for charity in query:
+        charity_list.append(charity.as_dict())
+    
+    return jsonify(
+        {
+            "count": len(charity_list),
+            "data": charity_list,
+        }
+    )
 
 # Get a specific charity
 @flaskApp.route("/charities/<name>")
 def get_charity(name):
-    charity = db.session.query(Charity).filter_by(name=name).first()
-    return charity.name
-    #return jsonify({"data": result})
+    useShortName = request.args.get("shortName")
+    charity = None
+    if useShortName is not None and useShortName == "true":
+        charity = db.session.query(Charity).filter_by(short_name=name).first()
+    else:
+        charity = db.session.query(Charity).filter_by(name=name).first()
+    
+    if charity is None:
+        status = "Charity not found"
+        return Response(status, status=404)
+    
+    return jsonify(
+        {
+            "count": 1,
+            "data": charity.as_dict(),
+        }
+    )
+
+# Get all the countries
+@flaskApp.route("/countries")
+def get_countries():
+    page = request.args.get("page")
+    query = db.session.query(Country)
+
+    if page is not None:
+        query = paginate(query, int(page))
+
+    country_list = []
+    for country in query:
+        country_list.append(country.as_dict())
+    
+    return jsonify(
+        {
+            "count": len(country_list),
+            "data": country_list,
+        }
+    )
+
+# Get a specific country
+@flaskApp.route("/countries/<name>")
+def get_country(name):
+    country = db.session.query(Country).filter_by(name=name).first()
+    if country is None:
+        status = "Country not found"
+        return Response(status, status=404)
+
+    return jsonify(
+        {
+            "count": 1,
+            "data": country.as_dict(),
+        }
+    )
+
+# Get all the newsevents
+@flaskApp.route("/news-and-events")
+def get_newsevents():
+    page = request.args.get("page")
+    query = db.session.query(NewsEvent)
+
+    if page is not None:
+        query = paginate(query, int(page))
+
+    newsevent_list = []
+    for newsevent in query:
+        newsevent_list.append(newsevent.as_dict())
+    
+    return jsonify(
+        {
+            "count": len(newsevent_list),
+            "data": newsevent_list,
+        }
+    )
+
+# Get a specific newsevent
+@flaskApp.route("/news-and-events/<title>")
+def get_newsevent(title):
+    newsevent = db.session.query(NewsEvent).filter(NewsEvent.title.ilike(f"%{title}%")).first()
+    if newsevent is None:
+        status = "News/Event not found"
+        return Response(status, status=404)
+
+    return jsonify(
+        {
+            "count": 1,
+            "data": newsevent.as_dict(),
+        }
+    )
+
+
+def paginate(query, page_num, page_size=DEFAULT_PAGE_SIZE):
+    return query.paginate(page=page_num, per_page=page_size, error_out=False).items
 
 
 if __name__ == "__main__":

@@ -131,9 +131,16 @@ export default function About() {
         </Card>
       </Container>
       <Container className="container text-center mt-5 mb-4">
-        <Link to="https://documenter.getpostman.com/view/30070229/2s9YJZ3jaX">
+        <Link to="https://documenter.getpostman.com/view/30070229/2s9YR9YsK4">
           <Button size="md"> 
             API Documentation
+          </Button>
+        </Link>
+      </Container>
+      <Container className="container text-center mt-5 mb-4">
+        <Link to="https://gitlab.com/mcastilleja/syrian_refugee_crisis">
+          <Button size="md"> 
+            Gitlab Repository
           </Button>
         </Link>
       </Container>
