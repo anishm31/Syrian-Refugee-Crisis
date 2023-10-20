@@ -83,7 +83,7 @@ class Tests(unittest.TestCase):
             self.assertEqual(response.status_code, 200)
             self.assertEqual(response.json["count"], 1)
             data = response.json["data"]
-            self.assertEqual(data["title"], "Rain%20of%20Fire")
+            self.assertEqual(data["title"], "Rain of Fire")
 
     def test_newsevent_page_fail(self):
         with client:
