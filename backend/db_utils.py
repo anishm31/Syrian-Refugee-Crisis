@@ -346,6 +346,37 @@ def compute_news_events_connections():
     count += 1
   # Commit all changes to database
   db.session.commit()
+  
+# Function to update sources in news/events to store if the source is a charity in the DB or not
+def update_news_sources():
+  # Retrieve all news/events from db
+  news_events = NewsEvent.query.all()
+  for news in news_events:
+    # Define list to store sources
+    new_sources = []
+    for source in news.sources:
+      # Define dict to store json source data
+      source_data = {
+        "source_short_name": "",
+        "source_reg_name": "",
+        "in_db": False
+      }
+      # Query for source in Charity table
+      result = Charity.query.filter_by(short_name=source).first()
+      if result is not None:
+        # Source is an instance in the DB
+        source_data["source_short_name"] = result.short_name
+        source_data["source_reg_name"] = result.name
+        source_data["in_db"] = True
+      else:
+        # Source is not an instance in the DB
+        source_data["source_short_name"] = source
+      # Add to sources list
+      new_sources.append(source_data)
+    news.sources = new_sources
+  # Commit all changes to database
+  db.session.commit()
+      
 
 if __name__ == "__main__":
     # print("Populating database...")

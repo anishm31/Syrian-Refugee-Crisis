@@ -5,11 +5,13 @@ import Button from "react-bootstrap/Button";
 import { Link } from 'react-router-dom';
 import axios from "axios";
 
+import "../CSS/NewsCard.css";
+
 
 function NewsCard(props) {
     const [locationCountryExists, setLocationCountryExists] = useState(false);
     const locationCountry = props.instance.primary_country;
-  
+   
     // Call API to determine if location is an instance in the Country model
     useEffect(() => {
       axios
@@ -43,7 +45,22 @@ function NewsCard(props) {
                     <>Location of News/Event: {props.instance.primary_country}</>
                     }
                 </ListGroup.Item>
-                <ListGroup.Item>Source(s): {formatStringList(props.instance.sources)}</ListGroup.Item>
+                <ListGroup.Item>Source(s): 
+                    <ul className="sources-list" style={{display: "inline"}}>
+                        {
+                            props.instance.sources.map((source) => (
+                                source.in_db ?
+                                (<li style={{display: "inline"}}>
+                                    <Link to={`/charities/${source.source_reg_name}`}>{source.source_short_name}</Link>
+                                </li>)
+                                :
+                                (<li style={{display: "inline"}}>
+                                    {source.source_short_name}
+                                </li>)
+                            ))
+                        }
+                    </ul>
+                </ListGroup.Item>
                 <ListGroup.Item>Theme(s): {formatStringList(props.instance.themes)}</ListGroup.Item>
                 <ListGroup.Item>Disaster Type: {formatStringList(props.instance.disaster_type)}</ListGroup.Item>
             </ListGroup>

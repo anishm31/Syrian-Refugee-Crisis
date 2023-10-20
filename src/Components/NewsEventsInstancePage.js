@@ -40,20 +40,44 @@ function NewsEventsInstancePage() {
                             style={{ objectFit : "cover", width: "50%", height: "50%", margin: "auto"}}
                         />
                         <Card.Body style={{ textAlign: "left" }}>
-                            <Card.Title>{newsInstance.title}</Card.Title>
+                            <Card.Title style={{fontWeight: "bold", fontSize: "25px"}}>{newsInstance.title}</Card.Title>
                             <Card.Text style={{ fontSize: "small" }}>Date of News/Event: {eventDate.toDateString()}</Card.Text>
-                            <Card.Text>Location of Event: {newsInstance.primary_country}</Card.Text>
+                            <a href={newsInstance.org_link}>Link to Article</a>
                         </Card.Body>
+                        <ListGroup style={{ textAlign: "left" }} className="list-group-flush">
+                            <ListGroup.Item>Location of Event: {newsInstance.primary_country}</ListGroup.Item>
+                            <ListGroup.Item>Country ISO Code: {newsInstance.country_iso3.toUpperCase()}</ListGroup.Item>
+                        </ListGroup>
+                        <ListGroup style={{ textAlign: "left" }} className="list-group-flush">
+                            <ListGroup.Item>Source(s): </ListGroup.Item>
+                            <ul style={{paddingLeft: "50px"}}>
+                                {newsInstance.sources.map((source) => (
+                                <li>{source.source_short_name}</li>))}
+                            </ul>
+                        </ListGroup>
+                        <ListGroup style={{ textAlign: "left" }} className="list-group-flush">
+                            <ListGroup.Item>Theme(s): </ListGroup.Item>
+                            <ul style={{paddingLeft: "50px"}}>
+                                {newsInstance.themes.map((theme) => (
+                                <li>{theme}</li>))}
+                            </ul>
+                        </ListGroup>
+                        <ListGroup style={{ textAlign: "left" }} className="list-group-flush">
+                            <ListGroup.Item>Disaster Type: </ListGroup.Item>
+                            <ul style={{paddingLeft: "50px"}}>
+                                <li>{newsInstance.disaster_type.length > 0 ? newsInstance.disaster_type : "None"}</li>
+                            </ul>
+                        </ListGroup>
                         <ListGroup className="list-group-flush">
-                            <ListGroup.Item>Source(s): {formatStringList(newsInstance.sources)}</ListGroup.Item>
-                            <ListGroup.Item>Theme(s): {formatStringList(newsInstance.themes)}</ListGroup.Item>
                             <iframe title="Bing Video" src={newsInstance.video_url[0]} width="800" height="600" frameborder="0"></iframe>
+                        </ListGroup>
+                        <ListGroup style={{paddingTop: "5px"}} className="list-group-flush">
                         </ListGroup>
                     </Card>
                 </div>
             </Container>
             <Container className="text-center my-5">
-                <Row>
+                <Row className="justify-content-md-center" xs={1} sm={2}>
                     <Col>
                         <Card>
                             <Card.Header as="h5">Associated Charities</Card.Header>
@@ -90,19 +114,6 @@ function NewsEventsInstancePage() {
             </Container>
         </div>
     );
-}
-
-function formatStringList(stringList) {
-    let formatted_string = "";
-    for (let i = 0; i < stringList.length; i++) {
-      if (i !== stringList.length - 1) {
-        formatted_string += stringList[i] + ", ";
-      }
-      else {
-        formatted_string += stringList[i];
-      }
-    }
-    return formatted_string;
 }
 
 export default NewsEventsInstancePage;
