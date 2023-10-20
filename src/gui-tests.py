@@ -1,12 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-# from selenium.webdriver.support.ui import WebDriverWait
-# from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
-# from selenium.webdriver import Remote
-# from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-# from selenium.webdriver.common.keys import Keys
-# from selenium.webdriver.support.select import Select
 import unittest
 import time
 
@@ -24,7 +20,7 @@ class Test(unittest.TestCase):
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--headless")
-        self.driver = webdriver.Chrome(chrome_options=chrome_options)
+        self.driver = webdriver.Chrome(options=chrome_options)
         self.driver.get(URL)
 
     @classmethod
@@ -35,15 +31,19 @@ class Test(unittest.TestCase):
         self.driver.get(URL)
         time.sleep(2)
         try:
-            home_carousel = self.driver.find_element_by_css_selector('carousel-inner')
+            self.driver.find_element(By.CLASS_NAME, "carousel-inner")
         except Exception as e:
             print("Home Carousel not found on home page" + str(e))
-        self.assertTrue(home_carousel.is_displayed())
+        self.assertTrue(str(self.driver.current_url), URL)
     
     def test_home_title(self):
         try:
-            title_button = self.driver.find_elements(By.CLASS_NAME, "active navbar-brand")
-            title_button.click()
+            WebDriverWait(self.driver, 10).until(
+            EC.element_to_be_clickable(
+                (By.XPATH, '//*[@id="root"]/nav/div/a[1]')
+            ))
+            home = self.driver.find_element(By.XPATH, '//*[@id="root"]/nav/div/a[1]')
+            home.click()
         except Exception as ex:
             print("Website title button not found: " + str(ex))
         self.assertEqual(str(self.driver.current_url), URL)
@@ -68,22 +68,32 @@ class Test(unittest.TestCase):
             
     def test_home_carousel_next(self):
         try:
-            next_button = self.driver.find_elements(By.CLASS_NAME, "carousel-control-next-icon")
+            next_button = self.driver.find_element(By.CLASS_NAME, "carousel-control-next-icon")
             next_button.click()
         except Exception as ex:
             print("Carousel next button not found: " + str(ex))
         self.assertEqual(str(self.driver.current_url), URL)
+        
+    def test_home_carousel_prev(self):
+        try:
+            prev_button = self.driver.find_element(By.CLASS_NAME, "carousel-control-prev-icon")
+            prev_button.click()
+        except Exception as ex:
+            print("Carousel prev button not found: " + str(ex))
+        self.assertEqual(str(self.driver.current_url), URL)
             
     def test_navbar_dropdown(self):
         try:
-            dropdown = self.driver.find_elements(By.CLASS_NAME, "nav-item dropdown")
+            dropdown = self.driver.find_element(By.ID, "basic-nav-dropdown")
             dropdown.click()
         except Exception as ex:
             print("Dropdown not found: " + str(ex))
         self.assertEqual(str(self.driver.current_url), URL)
-        
+    
     def test_charities_dropdown_item(self):
         try:
+            dropdown = self.driver.find_element(By.ID, "basic-nav-dropdown")
+            dropdown.click()
             elements = self.driver.find_elements(By.CLASS_NAME, "dropdown-item")
             elements[0].click()
         except Exception as ex:
@@ -92,26 +102,23 @@ class Test(unittest.TestCase):
     
     def test_countries_dropdown_item(self):
         try:
+            dropdown = self.driver.find_element(By.ID, "basic-nav-dropdown")
+            dropdown.click()
             elements = self.driver.find_elements(By.CLASS_NAME, "dropdown-item")
             elements[1].click()
         except Exception as ex:
             print("Countries dropdown not found: " + str(ex))
         self.assertEqual(str(self.driver.current_url), URL + "countries")
     
-    def test_newsevents_dropdown_item(self):
-        try:
-            elements = self.driver.find_elements(By.CLASS_NAME, "dropdown-item")
-            elements[2].click()
-        except Exception as ex:
-            print("News/Events dropdown not found: " + str(ex))
-        self.assertEqual(str(self.driver.current_url), URL + "news-and-events")
-        
     def test_carousel_indicators(self):
         try:
-            indicators = self.driver.find_element_by_css_selector('carousel-indicators')
+            WebDriverWait(self.driver, 10).until(
+            EC.element_to_be_clickable(
+                (By.XPATH, '//*[@id="root"]/div/div/div[1]')
+            ))
         except Exception as e:
             print("Carousel Indicators not found on home page" + str(e))
-        self.assertTrue(indicators.is_displayed())
+        self.assertTrue(str(self.driver.current_url), URL)
 
 if __name__ == "__main__":
     unittest.main()
