@@ -12,21 +12,21 @@ function CountryCard(props) {
         style={{ objectFit : "cover", width: "100%", height: "200px"}}
       />
       <Card.Body style={{ textAlign: "left" }}>
-        <Card.Title>{props.instance.country}</Card.Title>
+        <Card.Title>{props.instance.name}</Card.Title>
         <Card.Text style={{ fontSize: "small" }}>ISO Code: {props.instance.country_iso3}</Card.Text>
-        <Card.Text>Total Syrian Refugees: {props.instance.attributes.num_refugees.toLocaleString()}</Card.Text>
+        <Card.Text>Total Syrian Refugees: {props.instance.num_refugees.toLocaleString()}</Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush" style={{ textAlign: "left" }}>
-        <ListGroup.Item>Total Asylum Decisions: {props.instance.attributes.num_asylum_decisions.toLocaleString()}</ListGroup.Item>
-        <ListGroup.Item>Year of Decisions: {props.instance.attributes.year_of_decisions}</ListGroup.Item>
-        <ListGroup.Item>Number Granted Asylum: {props.instance.attributes.num_recognized.toLocaleString()}</ListGroup.Item>
-        <ListGroup.Item>Number Rejected: {props.instance.attributes.num_apps_rejected.toLocaleString()}</ListGroup.Item>
+        <ListGroup.Item>Total Asylum Decisions: {props.instance.num_asylum_decisions.toLocaleString()}</ListGroup.Item>
+        <ListGroup.Item>Year of Decisions: {props.instance.year_of_decisions}</ListGroup.Item>
+        <ListGroup.Item>Number Granted Asylum: {props.instance.num_recognized.toLocaleString()}</ListGroup.Item>
+        <ListGroup.Item>Number Rejected: {props.instance.num_apps_rejected.toLocaleString()}</ListGroup.Item>
       </ListGroup>
       <Card.Body>
         <Button variant="outline-success">
           <Link 
             style={{ color: "black", textDecoration: "inherit"}}
-            to={"/countries/" + props.instance.country}>
+            to={`/countries/${props.instance.name}`}>
           More Info
           </Link>
         </Button>

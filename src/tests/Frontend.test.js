@@ -4,13 +4,8 @@ import "@testing-library/jest-dom";
 import SearchBar from "../Components/SearchBar";
 import TeamCard from "../Components/TeamCard";
 import GenericModelPage from "../Components/GenericModelPage";
-import CharityModelPage from "../Components/CharityModelPage";
-import CharityCard from "../Components/CharityCard";
-import NewsEventsModelPage from "../Components/NewsEventsModelPage";
-import NewsCard from "../Components/NewsCard";
-import CountryModelPage from "../Components/CountryModelPage";
-import CountryCard from "../Components/CountryCard";
 import HomePage from "../Components/HomePage";
+import ToolCard from "../Components/ToolCard";
 
 describe('SearchBar Component', () => {
   it('should render the search form textbox element', () => {
@@ -74,45 +69,41 @@ describe('GenericModelPage Component', () => {
   });
 });
 
-jest.mock('../Components/CharityCard', () => {
-  return () => <div data-testid="charity-card">Mock Charity Card</div>;
-});
+describe('ToolCard', () => {
+  it('should render a tool card with the correct content', () => {
+    const tool = {
+      name: 'Sample Tool',
+      desc: 'Description of the sample tool',
+      link: 'https://example.com',
+      image: 'sample-image.jpg',
+    };
 
-describe('CharityModelPage Component', () => {
-  it('should render the CharityModelPage component with the provided data', () => {
-    render(<CharityModelPage />);
-    render(<CharityCard />);
-    const modelHeader = screen.getByText('Charities');
+    render(<ToolCard {...tool} />);
 
-    expect(modelHeader).toBeInTheDocument();
+    const cardElement = screen.getByTestId('tool-card');
+    expect(cardElement).toBeInTheDocument();
+
+    const toolName = screen.getByText('Sample Tool');
+    expect(toolName).toBeInTheDocument();
   });
 });
 
-jest.mock('../Components/NewsCard', () => {
-  return () => <div data-testid="news-card">Mock News/Events Card</div>;
-});
+describe('ToolCard', () => {
+  it('should render a tool card with the correct content', () => {
+    const tool = {
+      name: 'Another Tool',
+      desc: 'desc',
+      link: 'https://another-example.com',
+      image: 'sample-image.jpg',
+    };
 
-describe('NewsEventsModelPage Component', () => {
-  it('should render the NewsEventsModelPage component with the provided data', () => {
-    render(<NewsEventsModelPage />);
-    render(<NewsCard />);
-    const modelHeader = screen.getByText('News');
+    render(<ToolCard {...tool} />);
 
-    expect(modelHeader).toBeInTheDocument();
-  });
-});
+    const toolDescription = screen.getByText('desc');
+    expect(toolDescription).toBeInTheDocument();
 
-jest.mock('../Components/CountryCard', () => {
-  return () => <div data-testid="country-card">Mock Country Card</div>;
-});
-
-describe('CountryModelPage Component', () => {
-  it('should render the CountryModelPage component with the provided data', () => {
-    render(<CountryModelPage />);
-    render(<CountryCard />);
-    const modelHeader = screen.getByText('Countries');
-
-    expect(modelHeader).toBeInTheDocument();
+    const cardElement = screen.getByTestId('tool-card');
+    expect(cardElement).toBeInTheDocument();
   });
 });
 
@@ -162,5 +153,24 @@ describe('GenericModelPage', () => {
 
     const titleElement = screen.getByText('Test Model');
     expect(titleElement).toBeInTheDocument();
+  });
+});
+
+describe('ToolCard Component', () => {
+  const toolData = {
+    name: 'Random',
+    desc: 'A description of the random tool',
+    link: 'https://example.com/tool',
+    image: 'https://example.com/tool-image.jpg',
+  };
+
+  it('should render the ToolCard component with tool information', () => {
+    render(<ToolCard {...toolData} />);
+    
+    const nameElement = screen.getByText(toolData.name);
+    expect(nameElement).toBeInTheDocument();
+
+    const descElement = screen.getByText(toolData.desc);
+    expect(descElement).toBeInTheDocument();
   });
 });

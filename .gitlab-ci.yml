@@ -4,9 +4,6 @@ stages:
   - build
   - test
 
-# before_script:
-#   - npm install
-
 build:
   stage: build
   script:
@@ -18,6 +15,14 @@ test-jest:
   script:
     - npm install
     - npm test
+
+test-postman:
+  stage: test
+  image: 
+    name: postman/newman:alpine
+    entrypoint: [""]
+  script:
+    - newman run postman/collections/phase_2_syrian_refugee_api.json
 
 gui-tests:
     image: joyzoursky/python-chromedriver:3.9-selenium

@@ -11,7 +11,7 @@ function GenericModelPage(props) {
                     <h1>{(props.model) ? props.model : "General Model"}</h1>
                 </header>
                 <SearchBar />
-                <InstanceGrid model={props.model} modelCard={props.modelCard} instances={props.instances}></InstanceGrid>
+                <InstanceGrid model={props.model} modelCard={props.modelCard} instances={props.instances} totalInstances={props.totalInstances}></InstanceGrid>
             </Container>
         </div>
     );
