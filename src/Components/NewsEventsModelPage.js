@@ -5,6 +5,7 @@ import axios from "axios";
 import "./button.css";
 
 
+
 function NewsEventsModelPage() {
   const itemsPerPage = 12;
   const totalInstances = 75;
