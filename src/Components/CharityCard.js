@@ -1,11 +1,25 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { Card, ListGroup, Button } from "react-bootstrap";
 import { Link } from 'react-router-dom';
+import axios from "axios";
 
 function CharityCard(props) {
-  console.log(props.instance.established)
-  const date_est = new Date(props.instance.established);
+  const [hqExists, setHQExists] = useState(false);
+  const hqCountry = props.instance.hq_country;
 
+  // Call API to determine if hqCountry is an instance in the Country model
+  useEffect(() => {
+    axios
+      .get(`https://api.syrianrefugeecrisis.me/countries/${hqCountry}`)
+      .then(() => {
+        setHQExists(true);
+      })
+      .catch(() => {
+        setHQExists(false);
+      })
+  }, [setHQExists, hqCountry]);
+
+  const date_est = new Date(props.instance.established);
   return (
     <Card style={{ width: "90%" }}>
     <Card.Img
@@ -20,8 +34,15 @@ function CharityCard(props) {
       <Card.Text>Relief Provided: {formatReliefTypes(props.instance.relief_provided)} </Card.Text>
     </Card.Body>
     <ListGroup className="list-group-flush" style={{ textAlign: "left" }}>
-      <ListGroup.Item>Headquarters: {props.instance.hq_country}</ListGroup.Item>
-      <ListGroup.Item>Parent Organization: {props.instance.parent_org}</ListGroup.Item>
+      <ListGroup.Item>
+        {
+          hqExists ?
+          <>Headquarters: <Link to={`/countries/${props.instance.hq_country}`}>{props.instance.hq_country}</Link></> 
+          :
+          <>Headquarters: {props.instance.hq_country}</>
+        }
+      </ListGroup.Item>
+      <ListGroup.Item>Number of Awards: {props.instance.awards_received.length}</ListGroup.Item>
       <ListGroup.Item>Organization Type: {props.instance.org_type[0]}</ListGroup.Item>
     </ListGroup>
     <Card.Body>

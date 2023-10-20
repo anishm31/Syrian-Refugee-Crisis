@@ -37,24 +37,27 @@ function CountryInstancePage() {
                                      border: "1px solid black"}}
                         />
                         <Card.Body style={{ textAlign: "left" }}>
-                            <Card.Title>{countryInstance.name}</Card.Title>
+                            <Card.Title style={{fontWeight: "bold", fontSize: "25px"}}>{countryInstance.name}</Card.Title>
                             <Card.Text style={{ fontSize: "small" }}>ISO Code: {countryInstance.country_iso3}</Card.Text>
-                            <Card.Text>Total Syrian Refugees: {countryInstance.num_refugees.toLocaleString()}</Card.Text>
+                            <Card.Text>Capital: {formatStringList(countryInstance.capital)}</Card.Text>
+                            <Card.Text></Card.Text>
+                            <Card.Text style={{fontSize: "20px"}}>{'\n'}Refugee Statistics:</Card.Text>
                         </Card.Body>
-                        <ListGroup className="list-group-flush">
-                            <ListGroup.Item>Total Asylum Decisions: {countryInstance.num_asylum_decisions.toLocaleString()}</ListGroup.Item>
-                            <ListGroup.Item>Year of Decisions: {countryInstance.year_of_decisions}</ListGroup.Item>
-                            <ListGroup.Item>Number Granted Asylum: {countryInstance.num_recognized.toLocaleString()}</ListGroup.Item>
-                            <ListGroup.Item>Number Rejected: {countryInstance.num_apps_rejected.toLocaleString()}</ListGroup.Item>
-                            <ListGroup.Item>Number Closed: {countryInstance.num_closed.toLocaleString()}</ListGroup.Item>
-                            <ListGroup.Item>Other: {countryInstance.num_other.toLocaleString()}</ListGroup.Item>
+                        <ListGroup className="list-group-flush" style={{textAlign: "left", paddingLeft: "50px"}}>
+                            <ListGroup.Item><li>Total Syrian Refugees: {countryInstance.num_refugees.toLocaleString()}</li></ListGroup.Item>
+                            <ListGroup.Item><li>Total Asylum Decisions: {countryInstance.num_asylum_decisions.toLocaleString()}</li></ListGroup.Item>
+                            <ListGroup.Item><li>Year of Decisions: {countryInstance.year_of_decisions}</li></ListGroup.Item>
+                            <ListGroup.Item><li>Number Granted Asylum: {countryInstance.num_recognized.toLocaleString()}</li></ListGroup.Item>
+                            <ListGroup.Item><li>Number Rejected: {countryInstance.num_apps_rejected.toLocaleString()}</li></ListGroup.Item>
+                            <ListGroup.Item><li>Number Closed: {countryInstance.num_closed.toLocaleString()}</li></ListGroup.Item>
+                            <ListGroup.Item><li>Number Classified as Other: {countryInstance.num_other.toLocaleString()}</li></ListGroup.Item>
                         </ListGroup>
                         <CountryMap mapInfo={countryInstance.map_info}/>
                     </Card>
                 </div>
             </Container>
             <Container className="text-center my-5">
-                <Row>
+                <Row className="justify-content-md-center" xs={1} sm={2}>
                     <Col>
                         <Card>
                             <Card.Header as="h5">Associated Charities</Card.Header>
@@ -91,6 +94,19 @@ function CountryInstancePage() {
             </Container>
         </div>
       );
+}
+
+function formatStringList(stringList) {
+    let formatted_string = "";
+    for (let i = 0; i < stringList.length; i++) {
+      if (i !== stringList.length - 1) {
+        formatted_string += stringList[i] + ", ";
+      }
+      else {
+        formatted_string += stringList[i];
+      }
+    }
+    return formatted_string;
 }
 
 export default CountryInstancePage;

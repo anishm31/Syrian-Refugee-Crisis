@@ -1,4 +1,4 @@
-import {GoogleMap, useJsApiLoader} from '@react-google-maps/api';
+import {GoogleMap, MarkerF, useJsApiLoader} from '@react-google-maps/api';
 
 function CountryMap(props) {
   // Currently, the API key is restricted based on IP address.
@@ -18,6 +18,7 @@ function CountryMap(props) {
           center={centerPoint}
           zoom={5}
         >
+          <MarkerF position={centerPoint}/>
         </GoogleMap>
       ) : <h1>Loading Map...</h1>}
     </div>
