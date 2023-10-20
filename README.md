@@ -53,3 +53,4 @@ https://gitlab.com/mcastilleja/syrian_refugee_crisis/-/pipelines
 
 * Comments: 
     - Referenced and adapted code from https://gitlab.com/anshmor/cs-373-idb-group-3/ for setting up / populating the DB
+    - Referenced and adapted code from https://gitlab.com/petarilievCS/cs373-idb7 for selenium tests/pipeline and about page
