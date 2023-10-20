@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import GenericModelPage from "./GenericModelPage";
 import CharityCard from "./CharityCard";
 import axios from "axios";
+import "./button.css"
 
 
 function CharityModelPage() {
@@ -63,7 +64,8 @@ function CharityModelPage() {
           <button
             key={pageNumber}
             onClick={() => handlePageClick(pageNumber)}
-            className={pageNumber === currentPage ? "active" : ""}
+            id = "page-button"
+            className={`page-button ${pageNumber === currentPage ? 'active' : ''}`}
           >
             {pageNumber}
           </button>
