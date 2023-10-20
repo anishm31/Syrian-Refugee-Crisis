@@ -2,7 +2,6 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import SearchBar from "../Components/SearchBar";
-import InstanceGrid from "../Components/InstanceGrid";
 import TeamCard from "../Components/TeamCard";
 import GenericModelPage from "../Components/GenericModelPage";
 import CharityModelPage from "../Components/CharityModelPage";
