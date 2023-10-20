@@ -4,8 +4,8 @@ stages:
   - build
   - test
 
-before_script:
-  - npm install
+# before_script:
+#   - npm install
 
 build:
   stage: build
@@ -16,6 +16,7 @@ build:
 test-jest:
   stage: test
   script:
+    - npm install
     - npm test
 
 test-postman:
@@ -33,3 +34,11 @@ backend_unit_tests:
     - pip install -r backend/requirements.txt
   script:
     - python3 backend/tests.py
+
+gui-tests:
+    image: joyzoursky/python-chromedriver:3.9-selenium
+    stage: test
+    before_script:
+        - pip install -r requirements.txt
+    script:
+        - python3 src/gui-tests.py
