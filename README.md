@@ -22,11 +22,11 @@ https://documenter.getpostman.com/view/30070229/2s9YR9YsK4
     * Gitlab ID: @mcastilleja
 
 ## Phase Leader:
-Anish Madgula
-    - Responsibilities as phase leader:
-        - Scheduling team meetings to get status on tasks
-        - Delegating tasks/issues to make sure all requirements were completed
-        - Keeping track of the team's overall progress
+* Anish Madgula
+    * Responsibilities as phase leader:
+        * Scheduling team meetings to get status on tasks
+        * Delegating tasks/issues to make sure all requirements were completed
+        * Keeping track of the team's overall progress
 
 ## Git SHA:
 UPDATE BEFORE SUBMITTING
