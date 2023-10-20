@@ -25,3 +25,11 @@ test-postman:
     entrypoint: [""]
   script:
     - newman run postman/collections/phase_2_syrian_refugee_api.json
+
+backend_unit_tests:
+  stage: test
+  image: python:3.10
+  before_script:
+    - pip install -r backend/requirements.txt
+  script:
+    - python3 backend/tests.py
