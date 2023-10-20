@@ -10,8 +10,8 @@ class Tests(unittest.TestCase):
         with client:
             response = client.get("/charities")
             self.assertEqual(response.status_code, 200)
-            self.assertEqual(response.json["count"], 2)
-            self.assertEqual(len(response.json["data"]), 2)
+            self.assertEqual(response.json["count"], 48)
+            self.assertEqual(len(response.json["data"]), 48)
 
     def test_charities_page_paginization(self):
         with client:
@@ -38,8 +38,8 @@ class Tests(unittest.TestCase):
         with client:
             response = client.get("/countries")
             self.assertEqual(response.status_code, 200)
-            self.assertEqual(response.json["count"], 2)
-            self.assertEqual(len(response.json["data"]), 2)
+            self.assertEqual(response.json["count"], 127)
+            self.assertEqual(len(response.json["data"]), 127)
 
     def test_countries_page_paginization(self):
         with client:
@@ -66,8 +66,8 @@ class Tests(unittest.TestCase):
         with client:
             response = client.get("/news-and-events")
             self.assertEqual(response.status_code, 200)
-            self.assertEqual(response.json["count"], 2)
-            self.assertEqual(len(response.json["data"]), 2)
+            self.assertEqual(response.json["count"], 75)
+            self.assertEqual(len(response.json["data"]), 75)
 
     def test_newsevents_page_paginization(self):
         with client:
@@ -83,7 +83,7 @@ class Tests(unittest.TestCase):
             self.assertEqual(response.status_code, 200)
             self.assertEqual(response.json["count"], 1)
             data = response.json["data"]
-            self.assertEqual(data["name"], "Rain of Fire")
+            self.assertEqual(data["title"], "Rain of Fire")
 
     def test_newsevent_page_fail(self):
         with client:

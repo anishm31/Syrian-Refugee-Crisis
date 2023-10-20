@@ -137,6 +137,13 @@ export default function About() {
           </Button>
         </Link>
       </Container>
+      <Container className="container text-center mt-5 mb-4">
+        <Link to="https://gitlab.com/mcastilleja/syrian_refugee_crisis">
+          <Button size="md"> 
+            Gitlab Repository
+          </Button>
+        </Link>
+      </Container>
       <br></br>
 
 

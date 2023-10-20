@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import {Container, Card, ListGroup, Row, Col, Button} from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import axios from "axios";
+import IFrame from "./IFrame";
+
 
 
 function NewsEventsInstancePage() {
@@ -74,6 +76,9 @@ function NewsEventsInstancePage() {
                         <ListGroup style={{paddingTop: "5px"}} className="list-group-flush">
                         </ListGroup>
                     </Card>
+                    <IFrame
+                                src={newsInstance.video_url[0]} // Replace with your desired URL
+                                 />
                 </div>
             </Container>
             <Container className="text-center my-5">
