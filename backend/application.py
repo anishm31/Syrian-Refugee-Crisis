@@ -95,6 +95,11 @@ class NewsEvent(db.Model):
 
 
 # API
+@flaskApp.route("/")
+def home():
+    return "Hello I Am Here!"
+
+
 # Get all the charities
 @flaskApp.route("/charities")
 def get_charities():
