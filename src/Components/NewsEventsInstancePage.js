@@ -6,7 +6,6 @@ import axios from "axios";
 import IFrame from "./IFrame";
 
 
-
 function NewsEventsInstancePage() {
     const params = useParams();
     const [newsInstance, setNewsInstance] = useState([]);
@@ -70,15 +69,8 @@ function NewsEventsInstancePage() {
                                 <li>{newsInstance.disaster_type.length > 0 ? newsInstance.disaster_type : "None"}</li>
                             </ul>
                         </ListGroup>
-                        <ListGroup className="list-group-flush">
-                            <iframe title="Bing Video" src={newsInstance.video_url[0]} width="800" height="600" frameborder="0"></iframe>
-                        </ListGroup>
-                        <ListGroup style={{paddingTop: "5px"}} className="list-group-flush">
-                        </ListGroup>
+                        <IFrame src={newsInstance.video_url[0]} />
                     </Card>
-                    <IFrame
-                                src={newsInstance.video_url[0]} // Replace with your desired URL
-                                 />
                 </div>
             </Container>
             <Container className="text-center my-5">
