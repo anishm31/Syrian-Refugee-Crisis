@@ -33,6 +33,15 @@ function MainNavbar() {
               About
               </Link>
             </Nav.Link>
+
+            <Nav.Link>
+              <Link
+                style={{ color: "white", textDecoration: "inherit", marginRight: 3}}
+                to="/timeline"
+              >
+              timeline
+              </Link>
+            </Nav.Link>
             
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">

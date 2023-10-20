@@ -55,7 +55,7 @@ function NewsEventsInstancePage() {
                     </Card>
                     <IFrame
                                 src={newsInstance.video_url[0]} // Replace with your desired URL
-                                 />
+                                 /> 
                 </div>
             </Container>
             <Container className="text-center my-5">
