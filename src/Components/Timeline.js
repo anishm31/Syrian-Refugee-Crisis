@@ -11,7 +11,7 @@ function TimeLine() {
   // Fetch page of news/events instances from the API
   useEffect(() => {
     axios
-      .get("http://api.syrianrefugeecrisis.me/news-and-events")
+      .get("https://api.syrianrefugeecrisis.me/news-and-events")
       .then((response) => {
         setNewsEventsInstances(response.data.data);
         setLoaded(true);
