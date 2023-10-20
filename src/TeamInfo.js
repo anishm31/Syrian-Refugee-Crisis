@@ -51,7 +51,7 @@ const TeamInfo = [
   },
   {
     image: Shadow,
-    name: "Shadow Sincross",
+    name: "shadope",
     user: "shadowanneruby",
     user_id: "15677494",
     role: "Full Stack Developer",
