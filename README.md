@@ -29,7 +29,7 @@ https://documenter.getpostman.com/view/30070229/2s9YR9YsK4
         * Keeping track of the team's overall progress
 
 ## Git SHA:
-d194815911eec056a96ad0444a8f25c8245e5970
+6c140fa74efb67f19dcb3226f76660c5d726ed72
 
 ## Gitlab Pipeline:
 https://gitlab.com/mcastilleja/syrian_refugee_crisis/-/pipelines
