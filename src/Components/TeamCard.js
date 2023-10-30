@@ -7,7 +7,7 @@ function TeamCard(props) {
       <Card.Img variant="top" src={props.image}></Card.Img>
       <Card.Body>
         <Card.Title>
-          <h5>{props.name}</h5>
+          <h5>{props.displayname}</h5>
         </Card.Title>
         <h6>
           <Card.Text>@{props.user}</Card.Text>
