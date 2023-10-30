@@ -5,7 +5,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import {LinkContainer} from 'react-router-bootstrap';
 import { Link } from 'react-router-dom';
-
+import SearchBar from './SearchBar';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
 
 
 function MainNavbar() {
@@ -76,9 +79,13 @@ function MainNavbar() {
                   </NavDropdown.Item>
 
                 </NavDropdown>
-              
               </Nav>
-            </Navbar.Collapse>    
+            </Navbar.Collapse>   
+            <Form className="d-flex justify-content-end">
+              <Form.Control type="search" id="searchText" placeholder="Search..." 
+                  className="mx-2" aria-label="Search"></Form.Control>
+              <Button type="submit" variant="dark">Search</Button>
+            </Form>
           </Container>
         </Navbar>
       );
