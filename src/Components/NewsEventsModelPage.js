@@ -3,7 +3,7 @@ import GenericModelPage from "./GenericModelPage";
 import NewsCard from "./NewsCard.js";
 import axios from "axios";
 import "./button.css";
-
+import SortDropDown from "./SortDropDown";
 
 
 function NewsEventsModelPage() {
@@ -27,6 +27,23 @@ function NewsEventsModelPage() {
     return pageNumbers;
   };
 
+  const handleSort = (sortingKey) => {
+    if (sortingKey === 'disaster') {
+      // Sort by disaster (you can implement the sorting logic here)
+      const sortedInstances = [...newsEventsInstances].sort((a, b) => {
+        const themeA = a.date || ''; // Ensure theme is not undefined
+        const themeB = b.date || ''; // Ensure theme is not undefined
+        return themeA.localeCompare(themeB);
+      });
+      setNewsEventsInstances(sortedInstances);
+    setNewsEventsInstances(sortedInstances);
+    } else if (sortingKey === 'theme') {
+      // Sort by theme (implement sorting logic here)
+    } else if (sortingKey === 'source') {
+      // Sort by source (implement sorting logic here)
+    }
+  };
+
   // Fetch page of news/events instances from the API
   useEffect(() => {
     axios
@@ -45,8 +62,14 @@ function NewsEventsModelPage() {
     return <h1 style={{textAlign: "center"}}>Page Loading...</h1>;
   }
 
+
+
   return (
     <div>
+
+      <SortDropDown name = {newsEventsInstances} onSort={handleSort}> 
+      </SortDropDown>
+
       <GenericModelPage
         model="News/Events"
         modelCard={NewsCard}
