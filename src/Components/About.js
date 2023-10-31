@@ -96,8 +96,8 @@ export default function About() {
           resource to help increase Syrian refugee outreach across the globe.
 
           To build this website so far, we have utilized JavaScript (React framework), CSS (Bootstrap), HTML, 
-          and AWS. We have also utilized public APIs from various sites, including UNHCR, Wikipedia, and Relief Web.
-          In the future, we will have a Python (Flask framework) backend with a MySQL database.
+          Python (Flask Framework), AWS, and MySQL (connected via Flask SQLAlchemy). We have also utilized public APIs from 
+          various sites, including UNHCR, Wikipedia, Relief Web, Google Maps, and Microsoft Bing.
         </p>
       </Container>
 
