@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Dropdown from 'react-bootstrap/Dropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import "../CSS/GenericModelPage.css"
+import { Form, FormControl, Button, DropdownButton, InputGroup,Dropdown } from 'react-bootstrap';
 
 
 function SortDropDown(props) {
@@ -26,19 +26,17 @@ function SortDropDown(props) {
     
   }
   return (
-    <div> 
-    <Dropdown onSelect={props.onSort}>
-      <Dropdown.Toggle variant="success" id="dropdown-basic">
-      {selectedOption || 'Select an action'}
-      </Dropdown.Toggle>
-
-      <Dropdown.Menu>
-        <Dropdown.Item eventKey = "disaster">Disaster</Dropdown.Item>
-        <Dropdown.Item eventKey = "theme">Themes</Dropdown.Item>
-        <Dropdown.Item eventKey = "source">Source</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
-    <p>Selected option: {selectedOption}</p>
+    
+    <div className='search-and-dropdown'> 
+      <InputGroup>
+        <FormControl type="text" placeholder="Search" />
+        <DropdownButton title="Sort" id="dropdown-menu-align-right">
+          <Dropdown.Item eventKey="disaster">Disaster</Dropdown.Item>
+          <Dropdown.Item eventKey="theme">Themes</Dropdown.Item>
+          <Dropdown.Item eventKey="source">Source</Dropdown.Item>
+        </DropdownButton>
+      </InputGroup>
+      <p>Selected option: {selectedOption}</p>
     </div>
   );
 }

@@ -31,9 +31,9 @@ function NewsEventsModelPage() {
     if (sortingKey === 'disaster') {
       // Sort by disaster (you can implement the sorting logic here)
       const sortedInstances = [...newsEventsInstances].sort((a, b) => {
-        const themeA = a.date || ''; // Ensure theme is not undefined
-        const themeB = b.date || ''; // Ensure theme is not undefined
-        return themeA.localeCompare(themeB);
+        const disasterA = (a.disaster && a.disaster[0]) || ''; // Get the first disaster in the list
+        const disasterB = (b.disaster && b.disaster[0]) || '';
+        return disasterA.localeCompare(disasterB);
       });
       setNewsEventsInstances(sortedInstances);
     setNewsEventsInstances(sortedInstances);
@@ -67,14 +67,12 @@ function NewsEventsModelPage() {
   return (
     <div>
 
-      <SortDropDown name = {newsEventsInstances} onSort={handleSort}> 
-      </SortDropDown>
-
       <GenericModelPage
         model="News/Events"
         modelCard={NewsCard}
         instances={newsEventsInstances}
         totalInstances={totalInstances}
+        handleSort = {handleSort}
       />
       <div className="pagination">
         <button
