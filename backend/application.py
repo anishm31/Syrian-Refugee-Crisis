@@ -424,8 +424,6 @@ def sort_countries(sort_by_val, sort_order, filtered, filtered_retrievals):
         sort_by_column = Country.num_asylum_decisions
     elif sort_by_val == "yearOfDecisions":
         sort_by_column = Country.year_of_decisions
-    elif sort_by_val == "totalRecognized":
-        sort_by_column = Country.num_recognized
     elif sort_by_val == "numGranted":
         sort_by_column = Country.num_recognized
     elif sort_by_val == "numRejected":
