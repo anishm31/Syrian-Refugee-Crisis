@@ -104,13 +104,27 @@ def home():
 @flaskApp.route("/charities")
 def get_charities():
     page = request.args.get("page")
-    query = db.session.query(Charity)
+    sort_order = request.args.get("sortOrder")
+    sort_by_val = request.args.get("sortBy")
+    
+    # Create val to store retrieved rows
+    retrievals = None
+    
+    if sort_order is not None and sort_by_val is not None:
+        # Perform query with sorting
+        retrievals = sort_charities(sort_by_val, sort_order)
+        if retrievals is None:
+            status = f"Invalid sortBy or sortOrder: sortBy={sort_by_val}, sortOrder={sort_order}"
+            return Response(status, status=404)
+    else:
+        # Perform standard query of all charities
+        retrievals = db.session.query(Charity)
 
     if page is not None:
-        query = paginate(query, int(page))
+        retrievals = paginate(retrievals, int(page))
 
     charity_list = []
-    for charity in query:
+    for charity in retrievals:
         charity_list.append(charity.as_dict())
     
     return jsonify(
@@ -145,13 +159,27 @@ def get_charity(name):
 @flaskApp.route("/countries")
 def get_countries():
     page = request.args.get("page")
-    query = db.session.query(Country)
+    sort_order = request.args.get("sortOrder")
+    sort_by_val = request.args.get("sortBy")
+    
+    # Create variable for storing retrieved rows
+    retrievals = None
+    
+    if sort_order is not None and sort_by_val is not None:
+        # Perform query with sorting
+        retrievals = sort_countries(sort_by_val, sort_order)
+        if retrievals is None:
+            status = f"Invalid sortBy or sortOrder: sortBy={sort_by_val}, sortOrder={sort_order}"
+            return Response(status, status=404)
+    else:
+        # Perform standard query of all countries
+        retrievals = db.session.query(Country)
 
     if page is not None:
-        query = paginate(query, int(page))
+        retrievals = paginate(retrievals, int(page))
 
     country_list = []
-    for country in query:
+    for country in retrievals:
         country_list.append(country.as_dict())
     
     return jsonify(
@@ -180,13 +208,27 @@ def get_country(name):
 @flaskApp.route("/news-and-events")
 def get_newsevents():
     page = request.args.get("page")
-    query = db.session.query(NewsEvent)
+    sort_order = request.args.get("sortOrder")
+    sort_by_val = request.args.get("sortBy")
+    
+    # Declare variable to store retrieved rows
+    retrievals = None
+    
+    if sort_order is not None and sort_by_val is not None:
+        # Perform query with sorting
+        retrievals = sort_news_events(sort_by_val, sort_order)
+        if retrievals is None:
+            status = f"Invalid sortBy or sortOrder: sortBy={sort_by_val}, sortOrder={sort_order}"
+            return Response(status, status=404)
+    else:
+        # Perform standard query of all newsevents
+        retrievals = db.session.query(NewsEvent)
 
     if page is not None:
-        query = paginate(query, int(page))
+        retrievals = paginate(retrievals, int(page))
 
     newsevent_list = []
-    for newsevent in query:
+    for newsevent in retrievals:
         newsevent_list.append(newsevent.as_dict())
     
     return jsonify(
@@ -215,6 +257,98 @@ def get_newsevent(title):
 def paginate(query, page_num, page_size=DEFAULT_PAGE_SIZE):
     return query.paginate(page=page_num, per_page=page_size, error_out=False).items
 
+# Sort country instances based on sortBy and sortOrder API arguments
+def sort_countries(sort_by_val, sort_order):
+    # Determine order of the sorting
+    sort_by_ascending = None
+    if sort_order == "asc":
+        sort_by_ascending = True
+    elif sort_order == "desc":
+        sort_by_ascending = False
+    else:
+        # Invalid sortOrder
+        return None
+        
+    # Determine column to sort by
+    sort_by_column = None
+    if sort_by_val == "countryName":
+        sort_by_column = Country.name
+    elif sort_by_val == "totalRefugees":
+        sort_by_column = Country.num_refugees
+    elif sort_by_val == "totalAsylumDecisions":
+        sort_by_column = Country.num_asylum_decisions
+    elif sort_by_val == "yearOfDecisions":
+        sort_by_column = Country.year_of_decisions
+    elif sort_by_val == "totalRecognized":
+        sort_by_column = Country.num_recognized
+    elif sort_by_val == "numGranted":
+        sort_by_column = Country.num_recognized
+    elif sort_by_val == "numRejected":
+        sort_by_column = Country.num_apps_rejected
+    else:
+        # Return None to indicate sortBy column or sort order is invalid
+        return None
+        
+    # Perform query with sorting and return retrievals
+    return db.session.query(Country).order_by(sort_by_column.asc() if sort_by_ascending else sort_by_column.desc())
+
+# Sort charity instances based on sortBy and sortOrder API arguments
+def sort_charities(sort_by_val, sort_order):
+    # Determine order of sorting
+    sort_by_ascending = None
+    if sort_order == "asc":
+        sort_by_ascending = True
+    elif sort_order == "desc":
+        sort_by_ascending = False
+    else:
+        # Invalid sortOrder
+        return None
+
+    # Determine column to sort by
+    sort_by_column = None
+    if sort_by_val == "charityName":
+        sort_by_column = Charity.name
+    elif sort_by_val == "yearEstablished":
+        sort_by_column = Charity.established
+    elif sort_by_val == "numAwards":
+        sort_by_column = Charity.awards_received
+    elif sort_by_val == "numReliefTypes":
+        sort_by_column = Charity.relief_provided
+    else:
+        # Invalid sortBy arugment
+        return None
+    
+    # Perform query with sorting and return retrievals
+    return db.session.query(Charity).order_by(sort_by_column.asc() if sort_by_ascending else sort_by_column.desc())
+
+# Sort news/events instances based on sortBy and sortOrder API arguments
+def sort_news_events(sort_by_val, sort_order):
+    # Determine order of sorting
+    sort_by_ascending = None
+    if sort_order == "asc":
+        sort_by_ascending = True
+    elif sort_order == "desc":
+        sort_by_ascending = False
+    else:
+        # Invalid sortOrder
+        return None
+    
+    # Determine column to sort by
+    sort_by_column = None
+    if sort_by_val == "title":
+        sort_by_column = NewsEvent.title
+    elif sort_by_val == "date":
+        sort_by_column = NewsEvent.date
+    elif sort_by_val == "numSources":
+        sort_by_column = NewsEvent.sources
+    elif sort_by_val == "numThemes":
+        sort_by_column = NewsEvent.themes
+    else:
+        # Invalid sortBy argument
+        return None
+    
+    # Perform query with sorting and return retrievals
+    return db.session.query(NewsEvent).order_by(sort_by_column.asc() if sort_by_ascending else sort_by_column.desc())
 
 if __name__ == "__main__":
     flaskApp.run(port=5000, debug=True)
