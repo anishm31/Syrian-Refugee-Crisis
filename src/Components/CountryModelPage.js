@@ -11,8 +11,22 @@ function CountryModelPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const [loaded, setLoaded] = useState(false);
   const [countryInstances, setCountryInstances] = useState([]);
+  const [searchResults, setSearchResults] = useState([]); // Add state for search results
+  const [searchQuery, setSearchQuery] = useState(""); // State for the search query
 
   const totalPages = Math.ceil(totalInstances / itemsPerPage);
+
+  // Add a function to handle search
+  const handleSearch = () => {
+    axios
+      .get(`https://api.syrianrefugeecrisis.me/countries/search?query=${searchQuery}`)
+      .then((response) => {
+        setSearchResults(response.data.data);
+      })
+      .catch((error) => {
+        console.log("There was an error fetching the search results", error);
+      });
+  };
 
   const handlePageClick = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -50,8 +64,10 @@ function CountryModelPage() {
       <GenericModelPage
         model="Countries"
         modelCard={CountryCard}
-        instances={countryInstances}
+        instances={searchQuery ? searchResults : countryInstances}
         totalInstances={totalInstances}
+        onSearch={handleSearch} // Pass the search function to the SearchBar
+        setSearchQuery={setSearchQuery} // Pass setSearchQuery to the SearchBar
       />
       <div className="pagination">
         <button   
