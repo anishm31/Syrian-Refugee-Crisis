@@ -6,14 +6,29 @@ import "./button.css"
 
 
 function CharityModelPage() {
-  
+  // {searchInput}
   const itemsPerPage = 12;
   const totalInstances = 48;
   const [currentPage, setCurrentPage] = useState(1);
   const [loaded, setLoaded] = useState(false);
   const [charityInstances, setCharityInstances] = useState([]);
+  const [searchResults, setSearchResults] = useState([]); // Add state for search results
+  const [searchQuery, setSearchQuery] = useState(""); // State for the search query
+  // const [search, setSearch] = useState(searchInput);
 
   const totalPages = Math.ceil(totalInstances / itemsPerPage);
+
+  // Add a function to handle search
+  const handleSearch = () => {
+    axios
+      .get(`https://api.syrianrefugeecrisis.me/charities/search?query=${searchQuery}`)
+      .then((response) => {
+        setSearchResults(response.data.data);
+      })
+      .catch((error) => {
+        console.log("There was an error fetching the search results", error);
+      });
+  };
 
   const handlePageClick = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -50,8 +65,10 @@ function CharityModelPage() {
       <GenericModelPage
         model="Charities"
         modelCard={CharityCard}
-        instances={charityInstances}
+        instances={searchQuery ? searchResults : charityInstances} // Use search results if a search query exists
         totalInstances={totalInstances}
+        onSearch={handleSearch} // Pass the search function to the SearchBar
+        setSearchQuery={setSearchQuery} // Pass setSearchQuery to the SearchBar
       />
       <div className="pagination">
         <button
