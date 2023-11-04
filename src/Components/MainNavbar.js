@@ -10,6 +10,14 @@ import Form from 'react-bootstrap/Form';
 
 
 function MainNavbar() {
+  const onSearch = (e) => {
+    e.preventDefault();
+    var searchedTerm = document.getElementById("searchText").value;
+    if (searchedTerm) {
+      window.location.assign(`/search/${searchedTerm}`)
+    }
+  }
+
     return (
         <Navbar bg="dark" data-bs-theme="dark" expand="lg" className="bg-body-tertiary" >
           <Container>
@@ -79,7 +87,7 @@ function MainNavbar() {
                 </NavDropdown>
               </Nav>
             </Navbar.Collapse>   
-            <Form className="d-flex justify-content-end">
+            <Form className="d-flex justify-content-end" onSubmit={onSearch}>
               <Form.Control type="search" id="searchText" placeholder="Search..." 
                   className="mx-2" aria-label="Search"></Form.Control>
               <Button type="submit" variant="dark">Search</Button>
