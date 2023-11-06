@@ -38,11 +38,18 @@ class Charity(db.Model):
     youtube_info = db.Column(db.JSON)
     relevant_countries = db.Column(db.JSON, nullable=True)
     relevant_news_events = db.Column(db.JSON, nullable=True)
+    org_type_as_text = db.Column(db.Text)
+    awards_received_as_text = db.Column(db.Text)
+    relief_provided_as_text = db.Column(db.Text)
+    relevant_countries_as_text = db.Column(db.Text)
+    relevant_news_events_as_text = db.Column(db.Text)
 
     def as_dict(self):
         fields = {}
+        fields_to_exclude = ["org_type_as_text", "awards_received_as_text", "relief_provided_as_text", "relevant_countries_as_text", "relevant_news_events_as_text"]
         for c in self.__table__.columns:
-            fields[c.name] = getattr(self, c.name)
+            if c.name not in fields_to_exclude:
+                fields[c.name] = getattr(self, c.name)
         return fields
 
 
@@ -95,11 +102,18 @@ class NewsEvent(db.Model):
     source_ids = db.Column(db.JSON)
     relevant_charities = db.Column(db.JSON, nullable=True)
     relevant_countries = db.Column(db.JSON, nullable=True)
+    disaster_type_as_text = db.Column(db.Text)
+    sources_as_text = db.Column(db.Text)
+    themes_as_text = db.Column(db.Text)
+    relevant_charities_as_text = db.Column(db.Text)
+    relevant_countries_as_text = db.Column(db.Text)
 
     def as_dict(self):
         fields = {}
+        fields_to_exclude = ["disaster_type_as_text", "sources_as_text", "themes_as_text", "relevant_charities_as_text", "relevant_countries_as_text"]
         for c in self.__table__.columns:
-            fields[c.name] = getattr(self, c.name)
+            if c.name not in fields_to_exclude:
+                fields[c.name] = getattr(self, c.name)
         return fields
 
 # API
@@ -111,6 +125,8 @@ def home():
 @flaskApp.route("/charities")
 def get_charities():
     page = request.args.get("page")
+    # Fetch search arg
+    search_query = request.args.get("searchQuery")
     # Fetch sorting arguments
     sort_order = request.args.get("sortOrder")
     sort_by_val = request.args.get("sortBy")
@@ -118,22 +134,35 @@ def get_charities():
     relief_filter = request.args.get("reliefTypes")
     hq_filter = request.args.get("hqCountry")
     org_type_filter = request.args.get("orgType")
-    filtered = False
     
     # Create val to store retrieved rows
     retrievals = None
     
+    if search_query is not None:
+        # Perform search using FULLTEXT index of charities
+        cols_to_index = [Charity.name, Charity.description, Charity.established, Charity.short_name,
+                         Charity.hq_country, Charity.parent_org, Charity.headquarters, Charity.website,
+                         Charity.awards_received_as_text, Charity.org_type_as_text, Charity.relief_provided_as_text,
+                         Charity.relevant_countries_as_text, Charity.relevant_news_events_as_text]
+        # Construct MATCH SQL expression (using the already created FULLTEXT index)
+        match_expression = match(
+            *cols_to_index,
+            against = search_query,
+            in_natural_language_mode = True
+        )
+        # Search for relevant charities using MATCH...AGAINST expression and sort by descending relevance
+        retrievals = db.session.query(Charity).filter(match_expression > 0).order_by(match_expression.desc())
+    
     if relief_filter is not None or hq_filter is not None or org_type_filter is not None:
         # Perform query with filtering
-        retrievals = filter_charities(relief_filter, hq_filter, org_type_filter)
-        filtered = True
+        retrievals = filter_charities(relief_filter, hq_filter, org_type_filter, retrievals)
         if retrievals is None:
             status = "Invalid filter arguments. Filtering failed."
             return Response(status, status=404)
     
     if sort_order is not None and sort_by_val is not None:
         # Perform query with sorting
-        retrievals = sort_charities(sort_by_val, sort_order, filtered, retrievals)
+        retrievals = sort_charities(sort_by_val, sort_order, retrievals)
         if retrievals is None:
             status = f"Invalid sortBy or sortOrder: sortBy={sort_by_val}, sortOrder={sort_order}"
             return Response(status, status=404)
@@ -189,7 +218,6 @@ def get_countries():
     # Fetch filtering args
     year_filter = request.args.get("year")
     num_refugees_filter = request.args.get("numRefugees")
-    filtered = False
     
     # Create variable for storing retrieved rows
     retrievals = None
@@ -209,14 +237,13 @@ def get_countries():
     if year_filter is not None or num_refugees_filter is not None:
         # Perform query with filtering
         retrievals = filter_countries(year_filter, num_refugees_filter, retrievals)
-        filtered = True
         if retrievals is None:
             status = "Invalid filter arguments. Filtering failed."
             return Response(status, status=404)
     
     if sort_order is not None and sort_by_val is not None:
         # Perform query with sorting
-        retrievals = sort_countries(sort_by_val, sort_order, filtered, retrievals)
+        retrievals = sort_countries(sort_by_val, sort_order, retrievals)
         if retrievals is None:
             status = f"Invalid sortBy or sortOrder: sortBy={sort_by_val}, sortOrder={sort_order}"
             return Response(status, status=404)
@@ -258,6 +285,8 @@ def get_country(name):
 @flaskApp.route("/news-and-events")
 def get_newsevents():
     page = request.args.get("page")
+    # Fetch search arg
+    search_query = request.args.get("searchQuery")
     # Fetch sorting arguments
     sort_order = request.args.get("sortOrder")
     sort_by_val = request.args.get("sortBy")
@@ -266,22 +295,34 @@ def get_newsevents():
     source_filter = request.args.get("source")
     theme_filter = request.args.get("theme")
     disaster_type_filter = request.args.get("disasterType")
-    filtered = False
     
     # Declare variable to store retrieved rows
     retrievals = None
     
+    if search_query is not None:
+        # Perform search using FULLTEXT index of news/events
+        cols_to_index = [NewsEvent.title, NewsEvent.date, NewsEvent.disaster_type_as_text, NewsEvent.primary_country,
+                         NewsEvent.country_iso3, NewsEvent.sources_as_text, NewsEvent.themes_as_text,
+                         NewsEvent.org_link, NewsEvent.relevant_charities_as_text, NewsEvent.relevant_countries_as_text]
+        # Construct MATCH SQL expression (using the already created FULLTEXT index)
+        match_expression = match(
+            *cols_to_index,
+            against = search_query,
+            in_natural_language_mode = True
+        )
+        # Search for relevant news/events using MATCH...AGAINST expression and sort by descending relevance
+        retrievals = db.session.query(NewsEvent).filter(match_expression > 0).order_by(match_expression.desc())
+    
     if location_filter is not None or source_filter is not None or theme_filter is not None or disaster_type_filter is not None:
         # Perform query with filtering
-        retrievals = filter_news_events(location_filter, source_filter, theme_filter, disaster_type_filter)
-        filtered = True
+        retrievals = filter_news_events(location_filter, source_filter, theme_filter, disaster_type_filter, retrievals)
         if retrievals is None:
             status = "Invalid filter arguments. Filtering failed."
             return Response(status, status=404)
     
     if sort_order is not None and sort_by_val is not None:
         # Perform query with sorting
-        retrievals = sort_news_events(sort_by_val, sort_order, filtered, retrievals)
+        retrievals = sort_news_events(sort_by_val, sort_order, retrievals)
         if retrievals is None:
             status = f"Invalid sortBy or sortOrder: sortBy={sort_by_val}, sortOrder={sort_order}"
             return Response(status, status=404)
@@ -350,7 +391,7 @@ def filter_countries(year_filter, num_refugees_filter, returned_retrievals):
     # None returned if filter conditions invalid
     return (None if main_filter_condition is None else db.session.query(Country).filter(main_filter_condition))
 
-def filter_charities(relief_filter, hq_filter, org_type_filter):
+def filter_charities(relief_filter, hq_filter, org_type_filter, returned_retrievals):
     # Determine which attributes to filter by and build filter condition
     main_filter_condition = None
     if relief_filter is not None:
@@ -378,10 +419,14 @@ def filter_charities(relief_filter, hq_filter, org_type_filter):
         else:
             main_filter_condition = db.and_(main_filter_condition, db.and_(*org_type_conditions))
     
+    if returned_retrievals is not None:
+        # Filter retrievals returned from a search request (if filter conditions are valid)
+        return (None if main_filter_condition is None else returned_retrievals.filter(main_filter_condition))
+    
     # None returned if filter conditions invalid       
     return (None if main_filter_condition is None else db.session.query(Charity).filter(main_filter_condition))
 
-def filter_news_events(location_filter, source_filter, theme_filter, disaster_type_filter):
+def filter_news_events(location_filter, source_filter, theme_filter, disaster_type_filter, returned_retrievals):
     main_filter_condition = None
     if location_filter is not None:
         # Load into list
@@ -423,12 +468,16 @@ def filter_news_events(location_filter, source_filter, theme_filter, disaster_ty
             main_filter_condition = db.or_(*disaster_type_conditions)
         else:
             main_filter_condition = db.and_(main_filter_condition, db.or_(*disaster_type_conditions))
-            
+    
+    if returned_retrievals is not None:
+        # Filter retrievals returned from a search request (if filter conditions are valid)
+        return (None if main_filter_condition is None else returned_retrievals.filter(main_filter_condition))
+          
     # None returned if filter conditions invalid
     return (None if main_filter_condition is None else db.session.query(NewsEvent).filter(main_filter_condition))
         
 # Sort country instances based on sortBy and sortOrder API arguments
-def sort_countries(sort_by_val, sort_order, filtered, filtered_retrievals):
+def sort_countries(sort_by_val, sort_order, returned_retrievals):
     # Determine order of the sorting
     sort_by_ascending = None
     if sort_order == "asc":
@@ -457,16 +506,16 @@ def sort_countries(sort_by_val, sort_order, filtered, filtered_retrievals):
         # Return None to indicate sortBy column or sort order is invalid
         return None
         
-    if filtered:
-        # Perform query that sorts already filtered retrievals
-        return db.session.query(Country).filter(Country.id.in_([row.id for row in filtered_retrievals])) \
+    if returned_retrievals is not None:
+        # Perform query that sorts already searched or filtered retrievals
+        return db.session.query(Country).filter(Country.id.in_([row.id for row in returned_retrievals])) \
                .order_by(sort_by_column.asc() if sort_by_ascending else sort_by_column.desc())
                
     # Perform query with sorting and return retrievals
     return db.session.query(Country).order_by(sort_by_column.asc() if sort_by_ascending else sort_by_column.desc())
 
 # Sort charity instances based on sortBy and sortOrder API arguments
-def sort_charities(sort_by_val, sort_order, filtered, filtered_retrievals):
+def sort_charities(sort_by_val, sort_order, returned_retrievals):
     # Determine order of sorting
     sort_by_ascending = None
     if sort_order == "asc":
@@ -491,16 +540,16 @@ def sort_charities(sort_by_val, sort_order, filtered, filtered_retrievals):
         # Invalid sortBy arugment
         return None
     
-    if filtered:
-        # Perform query that sorts already filtered retrievals
-        return db.session.query(Charity).filter(Charity.id.in_([row.id for row in filtered_retrievals])) \
+    if returned_retrievals is not None:
+        # Perform query that sorts already searched or filtered retrievals
+        return db.session.query(Charity).filter(Charity.id.in_([row.id for row in returned_retrievals])) \
                .order_by(sort_by_column.asc() if sort_by_ascending else sort_by_column.desc())
         
     # Perform query with sorting and return retrievals
     return db.session.query(Charity).order_by(sort_by_column.asc() if sort_by_ascending else sort_by_column.desc())
 
 # Sort news/events instances based on sortBy and sortOrder API arguments
-def sort_news_events(sort_by_val, sort_order, filtered, filtered_retrievals):
+def sort_news_events(sort_by_val, sort_order, returned_retrievals):
     # Determine order of sorting
     sort_by_ascending = None
     if sort_order == "asc":
@@ -525,9 +574,9 @@ def sort_news_events(sort_by_val, sort_order, filtered, filtered_retrievals):
         # Invalid sortBy argument
         return None
     
-    if filtered:
-        # Perform query that sorts already filtered retrievals
-        return db.session.query(NewsEvent).filter(NewsEvent.id.in_([row.id for row in filtered_retrievals])) \
+    if returned_retrievals is not None:
+        # Perform query that sorts already searched or filtered retrievals
+        return db.session.query(NewsEvent).filter(NewsEvent.id.in_([row.id for row in returned_retrievals])) \
                .order_by(sort_by_column.asc() if sort_by_ascending else sort_by_column.desc())
     
     # Perform query with sorting and return retrievals
