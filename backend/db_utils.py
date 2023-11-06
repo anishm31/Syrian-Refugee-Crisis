@@ -376,10 +376,147 @@ def update_news_sources():
     news.sources = new_sources
   # Commit all changes to database
   db.session.commit()
-      
+  
+# Function to create a FULLTEXT index on the country table for searching   
+def create_country_search_index(create_columns=False):
+  if create_columns:
+    # Create new columns for current columns that are JSON and store as TEXT
+    db.session.execute(text("ALTER TABLE country ADD capital_as_text TEXT"))
+    db.session.execute(text("ALTER TABLE country ADD year_as_text TEXT"))
+    db.session.execute(text("ALTER TABLE country ADD relevant_charities_as_text TEXT"))
+    db.session.execute(text("ALTER TABLE country ADD relevant_news_events_as_text TEXT"))
+  
+  time.sleep(1)
+  
+  countries =  Country.query.all()
+  
+  # Convert JSON columns to TEXT
+  for country in countries:
+    # Convert capital list to text
+    capitals = country.capital
+    capitals = ", ".join(capitals)
+    country.capital_as_text = capitals
+    
+    # Convert year_of_decisions to text
+    year = str(country.year_of_decisions)
+    country.year_as_text = year
+    
+    # Convert relevant charities to text (comma separated list)
+    relevant_charities = country.relevant_charities
+    relevant_charities = [charity["charity_name"] for charity in relevant_charities]
+    relevant_charities = ", ".join(relevant_charities)
+    country.relevant_charities_as_text = relevant_charities
+    
+    # Convert relevant news/events to text (comma separated list)
+    relevant_news_events = country.relevant_news_events
+    relevant_news_events = [news_event["news_event_title"] for news_event in relevant_news_events]
+    relevant_news_events = ", ".join(relevant_news_events)
+    country.relevant_news_events_as_text = relevant_news_events
+  db.session.commit()
+  
+  time.sleep(1)
+  
+  # Create FULLTEXT index on country table
+  db.session.execute(text("ALTER TABLE country ADD FULLTEXT (name, country_iso3, capital_as_text, year_as_text, relevant_charities_as_text, relevant_news_events_as_text)"))
+  
+# Function to create a FULLTEXT index on the charity table for searching
+def create_charity_search_index(create_columns=False):
+  if create_columns:
+    # Create new columns for current columns that are JSON and store as TEXT
+    db.session.execute(text("ALTER TABLE charity ADD org_type_as_text TEXT"))
+    db.session.execute(text("ALTER TABLE charity ADD awards_received_as_text TEXT"))
+    db.session.execute(text("ALTER TABLE charity ADD relief_provided_as_text TEXT")) 
+    db.session.execute(text("ALTER TABLE charity ADD relevant_countries_as_text TEXT"))
+    db.session.execute(text("ALTER TABLE charity ADD relevant_news_events_as_text TEXT"))
+    time.sleep(1)
+    
+  charities = Charity.query.all()
+  
+  # Convert the JSON columns to TEXT
+  for charity in charities:
+    # Convert org_type list to text
+    org_type = charity.org_type
+    org_type = ", ".join(org_type)
+    charity.org_type_as_text = org_type
+    
+    # Convert awards_received list to text
+    awards_received = charity.awards_received
+    awards_received = [award["award_name"] for award in awards_received]
+    awards_received = ", ".join(awards_received)
+    charity.awards_received_as_text = awards_received
+    
+    # Convert relief_provided list to text
+    relief_provided = charity.relief_provided
+    relief_provided = ", ".join(relief_provided)
+    charity.relief_provided_as_text = relief_provided
+    
+    # Convert relevant countries to text (comma separated list)
+    relevant_countries = charity.relevant_countries
+    relevant_countries = [country["country_name"] for country in relevant_countries]
+    relevant_countries = ", ".join(relevant_countries)
+    charity.relevant_countries_as_text = relevant_countries
+    
+    # Convert relevant news/events to text (comma separated list)
+    relevant_news_events = charity.relevant_news_events
+    relevant_news_events = [news_event["news_event_title"] for news_event in relevant_news_events]
+    relevant_news_events = ", ".join(relevant_news_events)
+    charity.relevant_news_events_as_text = relevant_news_events
+    
+  db.session.commit()
+  
+  time.sleep(2)
+  
+  # Create fulltext index on charity table
+  db.session.execute(text("ALTER TABLE charity ADD FULLTEXT (name, description, established, short_name, hq_country, parent_org, headquarters, website, awards_received_as_text, org_type_as_text, relief_provided_as_text, relevant_countries_as_text, relevant_news_events_as_text)"))
+    
+# Function to create a FULLTEXT index on the news/events table for searching
+def create_news_events_search_index(create_columns=False):
+  if create_columns:
+    # Create new columns for current columns that are JSON and store as TEXT
+    db.session.execute(text("ALTER TABLE news_events ADD disaster_type_as_text TEXT"))
+    db.session.execute(text("ALTER TABLE news_events ADD sources_as_text TEXT"))
+    db.session.execute(text("ALTER TABLE news_events ADD themes_as_text TEXT"))
+    db.session.execute(text("ALTER TABLE news_events ADD relevant_charities_as_text TEXT"))
+    db.session.execute(text("ALTER TABLE news_events ADD relevant_countries_as_text TEXT"))
+    time.sleep(1)
+    
+  news_events = NewsEvent.query.all()
+  
+  for news in news_events:
+    # Convert disaster_type list to text
+    disaster_type = news.disaster_type
+    disaster_type = ", ".join(disaster_type)
+    news.disaster_type_as_text = disaster_type
+    
+    # Convert sources list to text
+    sources = news.sources
+    sources = [f"{source['source_short_name']} ({source['source_reg_name']})" for source in sources]
+    sources = ", ".join(sources)
+    news.sources_as_text = sources
+    
+    # Convert themes list to text
+    themes = news.themes
+    themes = ", ".join(themes)
+    news.themes_as_text = themes
+    
+    # Convert relevant charities to text (comma separated list)
+    relevant_charities = news.relevant_charities
+    relevant_charities = [charity["charity_name"] for charity in relevant_charities]
+    relevant_charities = ", ".join(relevant_charities)
+    news.relevant_charities_as_text = relevant_charities
+    
+    # Convert relevant countries to text (comma separated list)
+    relevant_countries = news.relevant_countries
+    relevant_countries = [country["country_name"] for country in relevant_countries]
+    relevant_countries = ", ".join(relevant_countries)
+    news.relevant_countries_as_text = relevant_countries
+  
+  db.session.commit()
+  
+  time.sleep(2)
+  
+  db.session.execute(text("ALTER TABLE news_events ADD FULLTEXT (title, date, disaster_type_as_text, primary_country, country_iso3, sources_as_text, themes_as_text, org_link, relevant_charities_as_text, relevant_countries_as_text)"))
 
 if __name__ == "__main__":
-    # print("Populating database...")
-    # populate_database()
-    # print("Database populated!")
-    pass
+    with flaskApp.app_context():
+      pass
