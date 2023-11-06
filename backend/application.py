@@ -1,7 +1,8 @@
 from flask import Flask, Response, jsonify, request
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import func
+from sqlalchemy import func, text
+from sqlalchemy.dialects.mysql import match
 import json
 
 DEFAULT_PAGE_SIZE = 12
@@ -63,11 +64,17 @@ class Country(db.Model):
     num_closed = db.Column(db.Integer)
     relevant_charities = db.Column(db.JSON, nullable=True)
     relevant_news_events = db.Column(db.JSON, nullable=True)
+    capital_as_text = db.Column(db.Text)
+    year_as_text = db.Column(db.Text)
+    relevant_charities_as_text = db.Column(db.Text)
+    relevant_news_events_as_text = db.Column(db.Text)
 
     def as_dict(self):
         fields = {}
+        fields_to_exclude = ["capital_as_text", "year_as_text", "relevant_charities_as_text", "relevant_news_events_as_text"]
         for c in self.__table__.columns:
-            fields[c.name] = getattr(self, c.name)
+            if c.name not in fields_to_exclude:
+                fields[c.name] = getattr(self, c.name)
         return fields
 
 
@@ -174,6 +181,8 @@ def get_charity(name):
 @flaskApp.route("/countries")
 def get_countries():
     page = request.args.get("page")
+    # Fetch search arg
+    search_query = request.args.get("searchQuery")
     # Fetch sorting args
     sort_order = request.args.get("sortOrder")
     sort_by_val = request.args.get("sortBy")
@@ -185,9 +194,21 @@ def get_countries():
     # Create variable for storing retrieved rows
     retrievals = None
     
+    if search_query is not None:
+        # Perform search using FULLTEXT index of countries
+        cols_to_index = [Country.name, Country.country_iso3, Country.capital_as_text, Country.year_as_text, Country.relevant_charities_as_text, Country.relevant_news_events_as_text]
+        # Construct MATCH SQL expression (using the already created FULLTEXT index)
+        match_expression = match(
+            *cols_to_index,
+            against = search_query,
+            in_natural_language_mode = True
+        )
+        # Search for relevant countries using MATCH...AGAINST expression and sort by descending relevance
+        retrievals = db.session.query(Country).filter(match_expression > 0).order_by(match_expression.desc()) 
+        
     if year_filter is not None or num_refugees_filter is not None:
         # Perform query with filtering
-        retrievals = filter_countries(year_filter, num_refugees_filter)
+        retrievals = filter_countries(year_filter, num_refugees_filter, retrievals)
         filtered = True
         if retrievals is None:
             status = "Invalid filter arguments. Filtering failed."
@@ -302,7 +323,7 @@ def get_newsevent(title):
 def paginate(query, page_num, page_size=DEFAULT_PAGE_SIZE):
     return query.paginate(page=page_num, per_page=page_size, error_out=False).items
 
-def filter_countries(year_filter, num_refugees_filter):
+def filter_countries(year_filter, num_refugees_filter, returned_retrievals):
     main_filter_condition = None
     if year_filter is not None:
         # Load years into list
@@ -321,6 +342,10 @@ def filter_countries(year_filter, num_refugees_filter):
             main_filter_condition = db.or_(*num_refugees_conditions)
         else:
             main_filter_condition = db.and_(main_filter_condition, db.or_(*num_refugees_conditions))
+    
+    if returned_retrievals is not None:
+        # Filter retrievals returned from a search request (if filter conditions are valid)
+        return (None if main_filter_condition is None else returned_retrievals.filter(main_filter_condition))
         
     # None returned if filter conditions invalid
     return (None if main_filter_condition is None else db.session.query(Country).filter(main_filter_condition))

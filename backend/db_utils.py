@@ -376,10 +376,50 @@ def update_news_sources():
     news.sources = new_sources
   # Commit all changes to database
   db.session.commit()
-      
+  
+# Function to create a FULLTEXT index on the country table for searching   
+def create_country_search_index(create_columns=False):
+  if create_columns:
+    # Create new columns for current columns that are JSON and store as TEXT
+    db.session.execute(text("ALTER TABLE country ADD capital_as_text TEXT"))
+    db.session.execute(text("ALTER TABLE country ADD year_as_text TEXT"))
+    db.session.execute(text("ALTER TABLE country ADD relevant_charities_as_text TEXT"))
+    db.session.execute(text("ALTER TABLE country ADD relevant_news_events_as_text TEXT"))
+  
+  time.sleep(1)
+  
+  countries =  Country.query.all()
+  
+  # Convert JSON columns to TEXT
+  for country in countries:
+    # Convert capital list to text
+    capitals = country.capital
+    capitals = ", ".join(capitals)
+    country.capital_as_text = capitals
+    
+    # Convert year_of_decisions to text
+    year = str(country.year_of_decisions)
+    country.year_as_text = year
+    
+    # Convert relevant charities to text (comma separated list)
+    relevant_charities = country.relevant_charities
+    relevant_charities = [charity["charity_name"] for charity in relevant_charities]
+    relevant_charities = ", ".join(relevant_charities)
+    country.relevant_charities_as_text = relevant_charities
+    
+    # Convert relevant news/events to text (comma separated list)
+    relevant_news_events = country.relevant_news_events
+    relevant_news_events = [news_event["news_event_title"] for news_event in relevant_news_events]
+    relevant_news_events = ", ".join(relevant_news_events)
+    country.relevant_news_events_as_text = relevant_news_events
+  db.session.commit()
+  
+  time.sleep(1)
+  
+  # Create FULLTEXT index on country table
+  db.session.execute(text("ALTER TABLE country ADD FULLTEXT (name, country_iso3, capital_as_text, year_as_text, relevant_charities_as_text, relevant_news_events_as_text)"))
+  
 
 if __name__ == "__main__":
-    # print("Populating database...")
-    # populate_database()
-    # print("Database populated!")
-    pass
+    with flaskApp.app_context():
+      pass
