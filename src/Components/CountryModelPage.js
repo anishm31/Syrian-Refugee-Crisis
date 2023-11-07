@@ -4,7 +4,7 @@ import CountryCard from "./CountryCard";
 import axios from "axios";
 import  "./button.css";
 
-function CountryModelPage() {
+function CountryModelPage({searchInput}) {
 
   const itemsPerPage = 12;
   const totalInstances = 127;
@@ -12,7 +12,7 @@ function CountryModelPage() {
   const [loaded, setLoaded] = useState(false);
   const [countryInstances, setCountryInstances] = useState([]);
   const [searchResults, setSearchResults] = useState([]); // Add state for search results
-  const [searchQuery, setSearchQuery] = useState(""); // State for the search query
+  const [searchQuery, setSearchQuery] = useState(searchInput); // State for the search query
 
   const totalPages = Math.ceil(totalInstances / itemsPerPage);
 

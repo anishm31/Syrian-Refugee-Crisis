@@ -6,14 +6,14 @@ import "./button.css";
 
 
 
-function NewsEventsModelPage() {
+function NewsEventsModelPage({searchInput}) {
   const itemsPerPage = 12;
   const totalInstances = 75;
   const [currentPage, setCurrentPage] = useState(1);
   const [loaded, setLoaded] = useState(false);
   const [newsEventsInstances, setNewsEventsInstances] = useState([]);
   const [searchResults, setSearchResults] = useState([]); // Add state for search results
-  const [searchQuery, setSearchQuery] = useState(""); // State for the search query
+  const [searchQuery, setSearchQuery] = useState(searchInput); // State for the search query
 
   const totalPages = Math.ceil(totalInstances / itemsPerPage);
 

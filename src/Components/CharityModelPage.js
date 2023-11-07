@@ -5,7 +5,7 @@ import axios from "axios";
 import "./button.css"
 
 
-function CharityModelPage() {
+function CharityModelPage({ searchInput}) {
   // {searchInput}
   const itemsPerPage = 12;
   const totalInstances = 48;
@@ -13,8 +13,7 @@ function CharityModelPage() {
   const [loaded, setLoaded] = useState(false);
   const [charityInstances, setCharityInstances] = useState([]);
   const [searchResults, setSearchResults] = useState([]); // Add state for search results
-  const [searchQuery, setSearchQuery] = useState(""); // State for the search query
-  // const [search, setSearch] = useState(searchInput);
+  const [searchQuery, setSearchQuery] = useState(searchInput); // State for the search query
 
   const totalPages = Math.ceil(totalInstances / itemsPerPage);
 
