@@ -13,9 +13,28 @@ function CountryModelPage() {
   const [countryInstances, setCountryInstances] = useState([]);
 
   const totalPages = Math.ceil(totalInstances / itemsPerPage);
+  const [selectedSortOption, setSelectedSortOption] = useState("");
 
   const handlePageClick = (pageNumber) => {
     setCurrentPage(pageNumber);
+  };
+
+  const handleSort = (sortingKey) => {
+    setSelectedSortOption(sortingKey);
+    fetchCountries(sortingKey, 1)
+  };
+
+  const fetchCountries = (sortingKey, page) => {
+    axios
+      .get(`https://api.syrianrefugeecrisis.me/countries?&sortBy=${sortingKey}&sortOrder=asc&page=${page}`)
+      .then((response) => {
+        setCountryInstances(response.data.data);
+        setLoaded(true);
+        setCurrentPage(page);
+      })
+      .catch((error) => {
+        console.log("There was an error fetching the data", error);
+      });
   };
 
   const generatePageNumbers = () => {
@@ -28,21 +47,8 @@ function CountryModelPage() {
 
   // Fetch page of country instances from the API
   useEffect(() => {
-    axios
-      .get(`https://api.syrianrefugeecrisis.me/countries?page=${currentPage}`)
-      .then((response) => {
-        setCountryInstances(response.data.data);
-        setLoaded(true);
-      })
-      .catch((error) => {
-        console.log("There was an error fetching the data", error);
-      });
-  }, [currentPage]);
-
-  // Verify that the country data has been loaded before rendering main content
-  if (!loaded) {
-    return <h1 style={{textAlign: "center"}}>Page Loading...</h1>;
-  }
+    fetchCountries(selectedSortOption, currentPage);
+  }, [selectedSortOption, currentPage]);
 
   // Instance data loaded, render main content
   return (
@@ -52,6 +58,7 @@ function CountryModelPage() {
         modelCard={CountryCard}
         instances={countryInstances}
         totalInstances={totalInstances}
+        handleSort = {handleSort}
       />
       <div className="pagination">
         <button   

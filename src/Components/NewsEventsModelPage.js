@@ -12,7 +12,7 @@ function NewsEventsModelPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const [loaded, setLoaded] = useState(false);
   const [newsEventsInstances, setNewsEventsInstances] = useState([]);
-  
+
   const [selectedSortOption, setSelectedSortOption] = useState("");
 
   const totalPages = Math.ceil(totalInstances / itemsPerPage);

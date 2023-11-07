@@ -11,36 +11,29 @@ import GenericModelPage from './GenericModelPage';
 
 function SortDropDown(props) {
 
-  const [selectedOption, setSelectedOption] = useState(''); 
+  let sortingOptions  = [];
 
-  function handleDropdownSelect(selectedKey) {
-    // `selectedKey` contains the `eventKey` of the selected item
-    // You can perform actions or set state based on the selected value
-    console.log('Selected eventKey:', selectedKey);
-  
-    // Example: Set a state variable based on the selected value
-    if (selectedKey === 'disaster') {
-      props.onSort('date')
-    } else if (selectedKey === 'theme') {
-      // Handle the "Themes" selection
-    } else if (selectedKey === 'source') {
-      // Handle the "Source" selection
-    }
+  if (props.model === "News/Events")
+  {
+    sortingOptions = ['date', 'numThemes', 'numSources', 'title'];
   }
+  else if(props.model === 'Countries')
+  {
+    sortingOptions = ['countryName', 'totalRefugees', 'totalAslyumDecisions', 'yearOfDecisions', 'numGranted', "numRejected"];
+  }
+
 
   return (
     
     <div className='search-and-dropdown'> 
       <InputGroup>
         <FormControl type="text" placeholder="Search" />
-        <DropdownButton title="Sort" id="dropdown-menu-align-right" onSelect={handleDropdownSelect}>
-          <Dropdown.Item onClick={() => props.handleSort('date')}>Date</Dropdown.Item>
-          <Dropdown.Item onClick={() => props.handleSort('numThemes')}>Themes</Dropdown.Item>
-          <Dropdown.Item onClick={() => props.handleSort('numSources')}>Sources</Dropdown.Item>
-          <Dropdown.Item onClick={() => props.handleSort('title')}>Title</Dropdown.Item>
+        <DropdownButton title="Sort" id="dropdown-menu-align-right" >
+          {sortingOptions.map(option => (
+            <Dropdown.Item key ={option} onClick={() => props.handleSort(option)}>{option}</Dropdown.Item>
+          ))}
         </DropdownButton>
       </InputGroup>
-      <p>Selected option: {selectedOption}</p>
     </div>
   );
 }
