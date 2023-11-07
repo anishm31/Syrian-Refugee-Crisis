@@ -10,7 +10,6 @@ function SearchBar(props) {
   const handleSearch = () => {
     if (query) {
       props.setSearchQuery(query);
-      props.onSearch();
     }
   };
 

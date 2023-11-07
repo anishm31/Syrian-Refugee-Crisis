@@ -16,18 +16,6 @@ function CountryModelPage({searchInput}) {
 
   const totalPages = Math.ceil(totalInstances / itemsPerPage);
 
-  // Add a function to handle search            
-  const handleSearch = () => {
-    axios
-      .get(`https://api.syrianrefugeecrisis.me/countries?searchQuery=${searchQuery}`)
-      .then((response) => {
-        setSearchResults(response.data.data);
-      })
-      .catch((error) => {
-        console.log("There was an error fetching the search results", error);
-      });
-  };
-
   const handlePageClick = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
@@ -39,6 +27,23 @@ function CountryModelPage({searchInput}) {
     }
     return pageNumbers;
   };
+
+  // Fetch page of country instances from a user search
+  useEffect(() => {
+    if (!searchQuery) {
+      // Search query is empty
+      return;
+    }
+    // Search query is not empty, fetch search results
+    axios
+      .get(`https://api.syrianrefugeecrisis.me/countries?searchQuery=${searchQuery}&page=${currentPage}`)
+      .then((response) => {
+        setSearchResults(response.data.data);
+      })
+      .catch((error) => {
+        console.log("There was an error fetching the search results", error);
+      });
+  }, [searchQuery, currentPage]);
 
   // Fetch page of country instances from the API
   useEffect(() => {
@@ -66,7 +71,6 @@ function CountryModelPage({searchInput}) {
         modelCard={CountryCard}
         instances={searchQuery ? searchResults : countryInstances}
         totalInstances={totalInstances}
-        onSearch={handleSearch} // Pass the search function to the SearchBar
         setSearchQuery={setSearchQuery} // Pass setSearchQuery to the SearchBar
       />
       <div className="pagination">

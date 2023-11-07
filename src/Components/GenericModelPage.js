@@ -10,8 +10,7 @@ function GenericModelPage(props) {
                 <header>
                     <h1>{(props.model) ? props.model : "General Model"}</h1>
                 </header>
-                <SearchBar 
-                    onSearch={props.onSearch} // Pass the search function
+                <SearchBar
                     setSearchQuery={props.setSearchQuery} // Pass the setSearchQuery function
                 />
                 <InstanceGrid model={props.model} modelCard={props.modelCard} instances={props.instances} totalInstances={props.totalInstances}></InstanceGrid>

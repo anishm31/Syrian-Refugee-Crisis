@@ -6,7 +6,6 @@ import "./button.css"
 
 
 function CharityModelPage({ searchInput}) {
-  // {searchInput}
   const itemsPerPage = 12;
   const totalInstances = 48;
   const [currentPage, setCurrentPage] = useState(1);
@@ -16,18 +15,6 @@ function CharityModelPage({ searchInput}) {
   const [searchQuery, setSearchQuery] = useState(searchInput); // State for the search query
 
   const totalPages = Math.ceil(totalInstances / itemsPerPage);
-
-  // Add a function to handle search
-  const handleSearch = () => {
-    axios
-      .get(`https://api.syrianrefugeecrisis.me/charities?searchQuery=${searchQuery}`)
-      .then((response) => {
-        setSearchResults(response.data.data);
-      })
-      .catch((error) => {
-        console.log("There was an error fetching the search results", error);
-      });
-  };
 
   const handlePageClick = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -40,6 +27,23 @@ function CharityModelPage({ searchInput}) {
     }
     return pageNumbers;
   };
+
+  // Fetch page of charity instances from a user search
+  useEffect(() => {
+    if (!searchQuery) {
+      // Search query is empty
+      return;
+    }
+    // Search query is not empty, fetch search results
+    axios
+      .get(`https://api.syrianrefugeecrisis.me/charities?searchQuery=${searchQuery}&page=${currentPage}`)
+      .then((response) => {
+        setSearchResults(response.data.data);
+      })
+      .catch((error) => {
+        console.log("There was an error fetching the search results", error);
+      });
+  }, [searchQuery, currentPage]);
 
   // Fetch page of charity instances from the API
   useEffect(() => {
@@ -66,7 +70,6 @@ function CharityModelPage({ searchInput}) {
         modelCard={CharityCard}
         instances={searchQuery ? searchResults : charityInstances} // Use search results if a search query exists
         totalInstances={totalInstances}
-        onSearch={handleSearch} // Pass the search function to the SearchBar
         setSearchQuery={setSearchQuery} // Pass setSearchQuery to the SearchBar
       />
       <div className="pagination">

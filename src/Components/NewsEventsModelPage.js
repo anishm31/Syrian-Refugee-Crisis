@@ -17,18 +17,6 @@ function NewsEventsModelPage({searchInput}) {
 
   const totalPages = Math.ceil(totalInstances / itemsPerPage);
 
-  // Add a function to handle search
-  const handleSearch = () => {
-    axios
-      .get(`https://api.syrianrefugeecrisis.me/news-and-events?searchQuery=${searchQuery}`)
-      .then((response) => {
-        setSearchResults(response.data.data);
-      })
-      .catch((error) => {
-        console.log("There was an error fetching the search results", error);
-      });
-  };
-
   const handlePageClick = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
@@ -40,6 +28,23 @@ function NewsEventsModelPage({searchInput}) {
     }
     return pageNumbers;
   };
+
+  // Fetch page of news/events instances from a user search
+  useEffect(() => {
+    if (!searchQuery) {
+      // Search query is empty
+      return;
+    }
+    // Search query is not empty, fetch search results
+    axios
+    .get(`https://api.syrianrefugeecrisis.me/news-and-events?searchQuery=${searchQuery}&page=${currentPage}`)
+    .then((response) => {
+      setSearchResults(response.data.data);
+    })
+    .catch((error) => {
+      console.log("There was an error fetching the search results", error);
+    });
+  }, [searchQuery, currentPage]);
 
   // Fetch page of news/events instances from the API
   useEffect(() => {
@@ -66,7 +71,6 @@ function NewsEventsModelPage({searchInput}) {
         modelCard={NewsCard}
         instances={searchQuery ? searchResults : newsEventsInstances} // Use search results if a search query exists
         totalInstances={totalInstances}
-        onSearch={handleSearch} // Pass the search function to the SearchBar
         setSearchQuery={setSearchQuery} // Pass setSearchQuery to the SearchBar
       />
       <div className="pagination">
