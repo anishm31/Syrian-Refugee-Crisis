@@ -17,10 +17,24 @@ function NewsEventsModelPage() {
 
   const totalPages = Math.ceil(totalInstances / itemsPerPage);
 
+  const[filterItems, setFilterItems]= useState([]);
+  const[newFilterItem, setNewFilterItem] = useState('');
+
+  const filterMap = new Map();
+
+  //comes in the form as as list for filter item, and &filtertype = 
+  
+
   const handleSort = (sortingKey) => {
-    setSelectedSortOption(sortingKey);
-    fetchNewsEvents(sortingKey, 1);
+      setSelectedSortOption(sortingKey);
+      fetchNewsEvents(sortingKey, 1);
   };
+
+
+  const handleHaha = () => {
+
+  };
+
 
   const handlePageClick = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -34,8 +48,27 @@ function NewsEventsModelPage() {
     return pageNumbers;
   };
 
+  const handleFilter = (filterItem, mapKey) => {
+
+    //we are adding another filter to its same kind
+    if(filterMap.has(mapKey))
+    {
+      const filterList = filterMap.get(mapKey)
+      filterList.push(filterItem);
+      filterMap.set(mapKey, filterList);
+    }
+    else{
+      //first filter of its kind
+      filterMap.set(mapKey, [filterItem]);
+    }
+    setNewFilterItem('');
+   };
 
   const fetchNewsEvents = (sortingKey, page) => {
+    const filterQuery = Array.from(filterMap.entries())
+    .map(([key, values]) => `${key}=${values.join(',')}`)
+    .join('&');
+
     axios
       .get(`https://api.syrianrefugeecrisis.me/news-and-events?&sortBy=${sortingKey}&sortOrder=asc&page=${page}`)
       .then((response) => {
@@ -80,6 +113,8 @@ function NewsEventsModelPage() {
         instances={newsEventsInstances}
         totalInstances={totalInstances}
         handleSort = {handleSort}
+        handleFilter = {handleFilter}
+
       />
       <div className="pagination">
         <button
