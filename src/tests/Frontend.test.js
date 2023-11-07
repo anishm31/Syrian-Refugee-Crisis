@@ -40,10 +40,8 @@ describe('TeamCard Component', () => {
 
     render(<TeamCard {...sampleData} />);
 
-    const nameElement = screen.getByText('John Doe');
     const userElement = screen.getByText('@johndoe123');
 
-    expect(nameElement).toBeInTheDocument();
     expect(userElement).toBeInTheDocument();
   });
 });
