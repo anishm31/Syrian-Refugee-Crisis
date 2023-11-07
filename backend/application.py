@@ -140,18 +140,22 @@ def get_charities():
     
     if search_query is not None:
         # Perform search using FULLTEXT index of charities
-        cols_to_index = [Charity.name, Charity.description, Charity.established, Charity.short_name,
+        indexed_cols = [Charity.name, Charity.description, Charity.established, Charity.short_name,
                          Charity.hq_country, Charity.parent_org, Charity.headquarters, Charity.website,
                          Charity.awards_received_as_text, Charity.org_type_as_text, Charity.relief_provided_as_text,
                          Charity.relevant_countries_as_text, Charity.relevant_news_events_as_text]
-        # Construct MATCH SQL expression (using the already created FULLTEXT index)
+        # Construct MATCH...AGAINST SQL expression (using the already created FULLTEXT index)
         match_expression = match(
-            *cols_to_index,
+            *indexed_cols,
             against = search_query,
             in_natural_language_mode = True
         )
         # Search for relevant charities using MATCH...AGAINST expression and sort by descending relevance
         retrievals = db.session.query(Charity).filter(match_expression > 0).order_by(match_expression.desc())
+
+        if retrievals is None or len(retrievals.all()) == 0:
+            # No results found, perform secondary search that checks for partial matching
+            retrievals = secondary_search(search_query, Charity, indexed_cols)
     
     if relief_filter is not None or hq_filter is not None or org_type_filter is not None:
         # Perform query with filtering
@@ -224,15 +228,20 @@ def get_countries():
     
     if search_query is not None:
         # Perform search using FULLTEXT index of countries
-        cols_to_index = [Country.name, Country.country_iso3, Country.capital_as_text, Country.year_as_text, Country.relevant_charities_as_text, Country.relevant_news_events_as_text]
-        # Construct MATCH SQL expression (using the already created FULLTEXT index)
+        indexed_cols = [Country.name, Country.country_iso3, Country.capital_as_text, Country.year_as_text, 
+                        Country.relevant_charities_as_text, Country.relevant_news_events_as_text]
+        # Construct MATCH...AGAINST SQL expression (using the already created FULLTEXT index)
         match_expression = match(
-            *cols_to_index,
+            *indexed_cols,
             against = search_query,
             in_natural_language_mode = True
         )
         # Search for relevant countries using MATCH...AGAINST expression and sort by descending relevance
         retrievals = db.session.query(Country).filter(match_expression > 0).order_by(match_expression.desc()) 
+        
+        if retrievals is None or len(retrievals.all()) == 0:
+            # No results found, perform secondary search that checks for partial matching
+            retrievals = secondary_search(search_query, Country, indexed_cols)
         
     if year_filter is not None or num_refugees_filter is not None:
         # Perform query with filtering
@@ -301,17 +310,21 @@ def get_newsevents():
     
     if search_query is not None:
         # Perform search using FULLTEXT index of news/events
-        cols_to_index = [NewsEvent.title, NewsEvent.date, NewsEvent.disaster_type_as_text, NewsEvent.primary_country,
+        indexed_cols = [NewsEvent.title, NewsEvent.date, NewsEvent.disaster_type_as_text, NewsEvent.primary_country,
                          NewsEvent.country_iso3, NewsEvent.sources_as_text, NewsEvent.themes_as_text,
                          NewsEvent.org_link, NewsEvent.relevant_charities_as_text, NewsEvent.relevant_countries_as_text]
-        # Construct MATCH SQL expression (using the already created FULLTEXT index)
+        # Construct MATCH...AGAINST SQL expression (using the already created FULLTEXT index)
         match_expression = match(
-            *cols_to_index,
+            *indexed_cols,
             against = search_query,
             in_natural_language_mode = True
         )
         # Search for relevant news/events using MATCH...AGAINST expression and sort by descending relevance
         retrievals = db.session.query(NewsEvent).filter(match_expression > 0).order_by(match_expression.desc())
+        
+        if retrievals is None or len(retrievals.all()) == 0:
+            # No results found, perform secondary search that checks for partial matching
+            retrievals = secondary_search(search_query, NewsEvent, indexed_cols)
     
     if location_filter is not None or source_filter is not None or theme_filter is not None or disaster_type_filter is not None:
         # Perform query with filtering
@@ -363,6 +376,15 @@ def get_newsevent(title):
 
 def paginate(query, page_num, page_size=DEFAULT_PAGE_SIZE):
     return query.paginate(page=page_num, per_page=page_size, error_out=False).items
+
+# Performs secondary search that is capable of partial matching
+def secondary_search(search_query, Table_to_Search, cols_to_search):
+    # Split search query into tokens
+    query_tokens = search_query.split()
+    # Construct compound ILIKE SQL expression for partial matching of each search query token
+    ilike_expression = db.or_(*[col.ilike(f"%{token}%") for token in query_tokens for col in cols_to_search])
+    # Perform secondary search using ILIKE expression
+    return db.session.query(Table_to_Search).filter(ilike_expression).order_by(ilike_expression.desc())
 
 def filter_countries(year_filter, num_refugees_filter, returned_retrievals):
     main_filter_condition = None
