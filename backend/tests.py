@@ -87,6 +87,37 @@ class Tests(unittest.TestCase):
             self.assertEqual(response.json["count"], 12)
             self.assertEqual(len(response.json["data"]), 12)
 
+    def test_countries_page_searchQuery(self):
+        with client:
+            response = client.get("/countries?searchQuery=Children")
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.json["count"], 38)
+            self.assertEqual(len(response.json["data"]), 38)
+
+    def test_countries_page_sortBy(self):
+        with client:
+            response = client.get("/countries?sortOrder=desc&sortBy=totalRefugees")
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.json["count"], 127)
+            self.assertEqual(len(response.json["data"]), 127)
+            self.assertEqual(response.json["data"][0]["num_refugees"], 13000000)
+
+    def test_countries_page_year(self):
+        with client:
+            response = client.get("/countries?year=[2020]")
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.json["count"], 9)
+            self.assertEqual(len(response.json["data"]), 9)
+            self.assertEqual(response.json["data"][0]["year_of_decisions"], 2020)
+
+    def test_countries_page_numRefugees(self):
+        with client:
+            response = client.get("/countries?numRefugees=[10000]")
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.json["count"], 21)
+            self.assertEqual(len(response.json["data"]), 21)
+            self.assertTrue(response.json["data"][0]["num_refugees"] > 10000)
+
     def test_country_page(self):
         with client:
             response = client.get("/countries/Germany")
