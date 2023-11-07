@@ -142,8 +142,7 @@ def get_charities():
         # Perform search using FULLTEXT index of charities
         indexed_cols = [Charity.name, Charity.description, Charity.established, Charity.short_name,
                          Charity.hq_country, Charity.parent_org, Charity.headquarters, Charity.website,
-                         Charity.awards_received_as_text, Charity.org_type_as_text, Charity.relief_provided_as_text,
-                         Charity.relevant_countries_as_text, Charity.relevant_news_events_as_text]
+                         Charity.awards_received_as_text, Charity.org_type_as_text, Charity.relief_provided_as_text]
         # Construct MATCH...AGAINST SQL expression (using the already created FULLTEXT index)
         match_expression = match(
             *indexed_cols,
@@ -228,8 +227,7 @@ def get_countries():
     
     if search_query is not None:
         # Perform search using FULLTEXT index of countries
-        indexed_cols = [Country.name, Country.country_iso3, Country.capital_as_text, Country.year_as_text, 
-                        Country.relevant_charities_as_text, Country.relevant_news_events_as_text]
+        indexed_cols = [Country.name, Country.country_iso3, Country.capital_as_text, Country.year_as_text]
         # Construct MATCH...AGAINST SQL expression (using the already created FULLTEXT index)
         match_expression = match(
             *indexed_cols,
@@ -311,8 +309,8 @@ def get_newsevents():
     if search_query is not None:
         # Perform search using FULLTEXT index of news/events
         indexed_cols = [NewsEvent.title, NewsEvent.date, NewsEvent.disaster_type_as_text, NewsEvent.primary_country,
-                         NewsEvent.country_iso3, NewsEvent.sources_as_text, NewsEvent.themes_as_text,
-                         NewsEvent.org_link, NewsEvent.relevant_charities_as_text, NewsEvent.relevant_countries_as_text]
+                        NewsEvent.country_iso3, NewsEvent.sources_as_text, NewsEvent.themes_as_text,
+                        NewsEvent.org_link]
         # Construct MATCH...AGAINST SQL expression (using the already created FULLTEXT index)
         match_expression = match(
             *indexed_cols,
