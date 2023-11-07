@@ -146,6 +146,52 @@ class Tests(unittest.TestCase):
             self.assertEqual(response.json["count"], 12)
             self.assertEqual(len(response.json["data"]), 12)
 
+    def test_newsevents_page_searchQuery(self):
+        with client:
+            response = client.get("/news-and-events?searchQuery=Children")
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.json["count"], 24)
+            self.assertEqual(len(response.json["data"]), 24)
+
+    def test_newsevents_page_sortBy(self):
+        with client:
+            response = cient.get("/news-and-events?sortOrder=asc&sortBy=date")
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.json["count"], 75)
+            self.assertEqual(len(response.json["data"]), 75)
+            self.assertEqual(response.json["data"][0]["date"], "2009-09-28T04:00:00+00:00")
+
+    def test_newsevents_page_location(self):
+        with client:
+            response = client.get("/news-and-events?location=[\"Myanmar\"]")
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.json["count"], 1)
+            self.assertEqual(len(response.json["data"]), 1)
+            self.assertEqual(response.json["data"][0]["primary_country"], "Myanmar")
+
+    def test_newsevents_page_source(self):
+        with client:
+            response = client.get("/news-and-events?source=[\"Amnesty\"]")
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.json["count"], 6)
+            self.assertEqual(len(response.json["data"]), 6)
+
+    def test_newsevents_page_theme(self):
+        with client:
+            response = client.get("/news-and-events?theme=[\"Health\"]")
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.json["count"], 8)
+            self.assertEqual(len(response.json["data"]), 8)
+            self.assertTrue("Health" in response.json["data"][0]["themes"])
+
+    def test_newsevents_page_disasterType(self):
+        with client:
+            response = client.get("/news-and-events?disasterType=[\"Epidemic\"]")
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.json["count"], 9)
+            self.assertEqual(len(response.json["data"]), 9)
+            self.assertTrue("Epidemic" in response.json["data"][0]["disaster_type"])
+
     def test_newsevent_page(self):
         with client:
             # maybe put %20 instead of space
