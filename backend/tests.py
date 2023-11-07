@@ -20,6 +20,45 @@ class Tests(unittest.TestCase):
             self.assertEqual(response.json["count"], 12)
             self.assertEqual(len(response.json["data"]), 12)
 
+    def test_charities_page_searchQuery(self):
+        with client:
+            response = client.get("/charities?searchQuery=Children")
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.json["count"], 16)
+            self.assertEqual(len(response.json["data"]), 16)
+
+    def test_charites_page_sortBy(self):
+        with client:
+            response = client.get("/charities?sortOrder=asc&sortBy=yearEstablished")
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.json["count"], 48)
+            self.assertEqual(len(response.json["data"]), 48)
+            self.assertEqual(response.json["data"][0]["established"], "1897-01-01T00:00:00Z")
+
+    def test_charities_page_reliefTypes(self):
+        with client:
+            response = client.get("/charities?reliefTypes=[\"Education\"]")
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.json["count"], 22)
+            self.assertEqual(len(response.json["data"]), 22)
+            self.assertTrue("Education" in response.json["data"][0]["relief_provided"])
+
+    def test_charities_page_hqCountry(self):
+        with client:
+            response = client.get("/charities?hqCountry=[\"Switzerland\"]")
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.json["count"], 10)
+            self.assertEqual(len(response.json["data"]), 10)
+            self.assertEqual(response.json["data"][0]["hq_country"], "Switzerland")
+
+    def test_charities_page_orgType(self):
+        with client:
+            response = client.get("/charities?orgType=[\"International Organization\"]")
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.json["count"], 12)
+            self.assertEqual(len(response.json["data"]), 12)
+            self.assertTrue("International Organization" in response.json["data"][0]["org_type"])
+
     def test_charity_page(self):
         with client:
             response = client.get("/charities/Medair")
