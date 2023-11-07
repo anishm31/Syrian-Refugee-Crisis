@@ -21,6 +21,10 @@ function SortDropDown(props) {
   {
     sortingOptions = ['countryName', 'totalRefugees', 'totalAslyumDecisions', 'yearOfDecisions', 'numGranted', "numRejected"];
   }
+  else if (props.model === 'Charities')
+  {
+    sortingOptions = ['charityName', 'yearEstablished', 'numAwards', 'numReliefTypes'];
+  }
 
 
   return (
