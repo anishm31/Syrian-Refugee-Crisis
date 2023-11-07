@@ -12,7 +12,7 @@ const SearchResultsPage = () => {
     if (search.includes("%20")) {
         search = search.replace("%20", " ");
     }
-    search = search.replace("/", "");.
+    search = search.replace("/", "");
     return (
         <>
         <Container>
