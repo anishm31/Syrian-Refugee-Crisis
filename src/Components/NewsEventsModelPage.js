@@ -20,7 +20,7 @@ function NewsEventsModelPage() {
   // Add a function to handle search
   const handleSearch = () => {
     axios
-      .get(`https://api.syrianrefugeecrisis.me/news-and-events/search?query=${searchQuery}`)
+      .get(`https://api.syrianrefugeecrisis.me/news-and-events?searchQuery=${searchQuery}`)
       .then((response) => {
         setSearchResults(response.data.data);
       })

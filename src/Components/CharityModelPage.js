@@ -21,7 +21,7 @@ function CharityModelPage() {
   // Add a function to handle search
   const handleSearch = () => {
     axios
-      .get(`https://api.syrianrefugeecrisis.me/charities/search?query=${searchQuery}`)
+      .get(`https://api.syrianrefugeecrisis.me/charities?searchQuery=${searchQuery}`)
       .then((response) => {
         setSearchResults(response.data.data);
       })

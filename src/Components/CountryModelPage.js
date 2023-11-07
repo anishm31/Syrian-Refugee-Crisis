@@ -16,10 +16,10 @@ function CountryModelPage() {
 
   const totalPages = Math.ceil(totalInstances / itemsPerPage);
 
-  // Add a function to handle search
+  // Add a function to handle search            
   const handleSearch = () => {
     axios
-      .get(`https://api.syrianrefugeecrisis.me/countries/search?query=${searchQuery}`)
+      .get(`https://api.syrianrefugeecrisis.me/countries?searchQuery=${searchQuery}`)
       .then((response) => {
         setSearchResults(response.data.data);
       })
