@@ -1,0 +1,24 @@
+.parallax-image {
+    width: 100%;
+    height: 100vh; /* or adjust this value to your preference */
+
+
+  }
+  
+  .timeline-background {
+    position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Set the width to 100% to match the container */
+  height: 100%; /* Set the height to 100% to match the container */
+  z-index: -1; 
+  }
+  
+  /* Main Timeline Content CSS */
+  .timeline-content {
+    position: relative; /* To ensure correct positioning of the background */
+    display: flex;
+    flex-direction: column;
+    /* Add other styling for the main container */
+  }
+  

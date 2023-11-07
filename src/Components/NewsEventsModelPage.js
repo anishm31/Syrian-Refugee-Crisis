@@ -12,8 +12,15 @@ function NewsEventsModelPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const [loaded, setLoaded] = useState(false);
   const [newsEventsInstances, setNewsEventsInstances] = useState([]);
+  
+  const [selectedSortOption, setSelectedSortOption] = useState("");
 
   const totalPages = Math.ceil(totalInstances / itemsPerPage);
+
+  const handleSort = (sortingKey) => {
+    setSelectedSortOption(sortingKey);
+    fetchNewsEvents(sortingKey, 1);
+  };
 
   const handlePageClick = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -27,40 +34,40 @@ function NewsEventsModelPage() {
     return pageNumbers;
   };
 
-  const handleSort = (sortingKey) => {
-    if (sortingKey === 'disaster') {
-      // Sort by disaster (you can implement the sorting logic here)
-      const sortedInstances = [...newsEventsInstances].sort((a, b) => {
-        const disasterA = (a.disaster && a.disaster[0]) || ''; // Get the first disaster in the list
-        const disasterB = (b.disaster && b.disaster[0]) || '';
-        return disasterA.localeCompare(disasterB);
-      });
-      setNewsEventsInstances(sortedInstances);
-    setNewsEventsInstances(sortedInstances);
-    } else if (sortingKey === 'theme') {
-      // Sort by theme (implement sorting logic here)
-    } else if (sortingKey === 'source') {
-      // Sort by source (implement sorting logic here)
-    }
-  };
 
-  // Fetch page of news/events instances from the API
-  useEffect(() => {
+  const fetchNewsEvents = (sortingKey, page) => {
     axios
-      .get(`https://api.syrianrefugeecrisis.me/news-and-events?page=${currentPage}`)
+      .get(`https://api.syrianrefugeecrisis.me/news-and-events?&sortBy=${sortingKey}&sortOrder=asc&page=${page}`)
       .then((response) => {
         setNewsEventsInstances(response.data.data);
         setLoaded(true);
+        setCurrentPage(page);
       })
       .catch((error) => {
         console.log("There was an error fetching the data", error);
       });
-  }, [currentPage]);
+  };
 
-  // Verify that the charity data has been loaded before rendering main content
-  if (!loaded) {
-    return <h1 style={{textAlign: "center"}}>Page Loading...</h1>;
-  }
+
+  // Fetch page of news/events instances from the API
+  useEffect(() => {
+    fetchNewsEvents(selectedSortOption, currentPage);
+  }, [selectedSortOption, currentPage]);
+  //   axios
+  //     .get(`https://api.syrianrefugeecrisis.me/news-and-events?page=${currentPage}`)
+  //     .then((response) => {
+  //       setNewsEventsInstances(response.data.data);
+  //       setLoaded(true);
+  //     })
+  //     .catch((error) => {
+  //       console.log("There was an error fetching the data", error);
+  //     });
+  // }, [currentPage]);
+
+  // // Verify that the charity data has been loaded before rendering main content
+  // if (!loaded) {
+  //   return <h1 style={{textAlign: "center"}}>Page Loading...</h1>;
+  // }
 
 
 

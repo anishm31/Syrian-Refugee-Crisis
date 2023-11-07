@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 function MainNavbar() {
     return (
-        <Navbar bg="dark" data-bs-theme="dark" expand="lg" className="bg-body-tertiary" >
+        <Navbar bg="dark" data-bs-theme="dark" expand="lg" className="bg-body-tertiary" style={{ position: "fixed", top: 0, left: 0, width: "100%", backgroundColor: "#fff", zIndex: 999 }} >
           <Container>
             <LinkContainer to="/">
               <Navbar.Brand >Syrian Refugee Crisis</Navbar.Brand>

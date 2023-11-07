@@ -1,4 +1,7 @@
-/* GenericModelPage.css */
+/* GenericModelPage.css 
+
+installed npm i @react-spring/web
+*/
 
 .search-and-dropdown {
     /* Use flexbox to arrange the components side by side */

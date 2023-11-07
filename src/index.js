@@ -14,6 +14,7 @@ import CountryInstancePage from './Components/CountryInstancePage';
 import CharityInstancePage from './Components/CharityInstancePage';
 import NewsEventsInstancePage from './Components/NewsEventsInstancePage';
 import TimeLine from './Components/Timeline';
+import TimelineBackground from './Components/TimelineBackground';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

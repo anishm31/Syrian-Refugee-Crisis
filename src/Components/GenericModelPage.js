@@ -3,7 +3,7 @@ import SearchBar from './SearchBar';
 import InstanceGrid from './InstanceGrid';
 import Container from 'react-bootstrap/Container';
 import SortDropDown from './SortDropDown';
-import "../CSS/GenericModelPage.css"
+import NewsEventsModelPage from './NewsEventsModelPage';
 
 function GenericModelPage(props) {
     return (
@@ -12,13 +12,10 @@ function GenericModelPage(props) {
                 <header>
                     <h1>{(props.model) ? props.model : "General Model"}</h1>
                 </header>
-                <div className="search-and-dropdown">
-                <SearchBar className= "search-bar" />
-                <SortDropDown className="sort-drop-down" name = {props.instances} onSort={props.handleSort}> 
+                <div className = "d-flex justify-content-center">
+                <SortDropDown className="sort-drop-down" name = {props.instances} handleSort={props.handleSort} align-items = "center" > 
                 </SortDropDown>
                 </div>
-            
-            
                 <InstanceGrid model={props.model} modelCard={props.modelCard} instances={props.instances} totalInstances={props.totalInstances}></InstanceGrid>
             </Container>
         </div>
