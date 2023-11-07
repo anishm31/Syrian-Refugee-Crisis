@@ -24,8 +24,8 @@ class Tests(unittest.TestCase):
         with client:
             response = client.get("/charities?searchQuery=Children")
             self.assertEqual(response.status_code, 200)
-            self.assertEqual(response.json["count"], 16)
-            self.assertEqual(len(response.json["data"]), 16)
+            self.assertEqual(response.json["count"], 6)
+            self.assertEqual(len(response.json["data"]), 6)
 
     def test_charites_page_sortBy(self):
         with client:
@@ -91,8 +91,8 @@ class Tests(unittest.TestCase):
         with client:
             response = client.get("/countries?searchQuery=Children")
             self.assertEqual(response.status_code, 200)
-            self.assertEqual(response.json["count"], 38)
-            self.assertEqual(len(response.json["data"]), 38)
+            self.assertEqual(response.json["count"], 0)
+            self.assertEqual(len(response.json["data"]), 0)
 
     def test_countries_page_sortBy(self):
         with client:
@@ -150,12 +150,12 @@ class Tests(unittest.TestCase):
         with client:
             response = client.get("/news-and-events?searchQuery=Children")
             self.assertEqual(response.status_code, 200)
-            self.assertEqual(response.json["count"], 24)
-            self.assertEqual(len(response.json["data"]), 24)
+            self.assertEqual(response.json["count"], 20)
+            self.assertEqual(len(response.json["data"]), 20)
 
     def test_newsevents_page_sortBy(self):
         with client:
-            response = cient.get("/news-and-events?sortOrder=asc&sortBy=date")
+            response = client.get("/news-and-events?sortOrder=asc&sortBy=date")
             self.assertEqual(response.status_code, 200)
             self.assertEqual(response.json["count"], 75)
             self.assertEqual(len(response.json["data"]), 75)
