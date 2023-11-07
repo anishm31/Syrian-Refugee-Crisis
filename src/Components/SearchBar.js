@@ -1,35 +1,42 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 
 function SearchBar(props) {
+  const [query, setQuery] = useState('');
 
-    const [query, setQuery] = useState(''); // Add state for the search query
+  const handleSearch = () => {
+    if (query) {
+      props.setSearchQuery(query);
+      props.onSearch();
+    }
+  };
 
-    const handleSearch = () => {
-        if (query) {
-            props.setSearchQuery(query);
-            props.onSearch();
-        }
-    };
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault(); // Prevent form submission
+      handleSearch(); // Trigger search when the "Enter" key is pressed
+    }
+  };
 
   return (
     <Container className='mt-4' style={{ width: '35%' }}>
-      <Form>
+      <Form onSubmit={(e) => e.preventDefault()}> {/* Prevent form submission */}
         <InputGroup className='mt-5'>
           <Form.Control
             type='text'
             placeholder='Search for instance'
             value={query}
             onChange={(e) => setQuery(e.target.value)}
+            onKeyPress={handleKeyPress} // Detect "Enter" key press
           />
           <Button
             variant='outline-secondary'
             id='button-addon1'
             type='button'
-            onClick={handleSearch} // Trigger search when "Submit" is clicked
+            onClick={handleSearch}
           >
             Search
           </Button>
