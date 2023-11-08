@@ -8,9 +8,7 @@ function SearchBar(props) {
   const [query, setQuery] = useState('');
 
   const handleSearch = () => {
-    if (query) {
-      props.setSearchQuery(query);
-    }
+    props.handleSearch(query)
   };
 
   const handleKeyPress = (e) => {
