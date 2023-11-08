@@ -62,7 +62,7 @@ function SortDropDown(props) {
       setCategoryLabel("Charity Filters");
       setData({
         none: ['none'],
-        orgType: ['Non-governmental Organization', 'yearEstablished'],
+        orgType: ["Non-governmental Organization", "Government"],
       });
     }
   }, [props.model]);
