@@ -77,7 +77,7 @@ function NewsEventsInstancePage() {
                 <Row className="justify-content-md-center" xs={1} sm={2}>
                     <Col>
                         <Card>
-                            <Card.Header as="h5">Charities Involved with Event</Card.Header>
+                            <Card.Header as="h5">Charities Referenced by News/Event Article</Card.Header>
                             <Card.Body>
                                 {newsInstance.relevant_charities && newsInstance.relevant_charities.map((charity, index) => (
                                 <Container key={index} className="my-3">
@@ -93,7 +93,7 @@ function NewsEventsInstancePage() {
                     </Col>
                     <Col>
                         <Card>
-                            <Card.Header as="h5">Countries Impacted by Event</Card.Header>
+                            <Card.Header as="h5">Countries Referenced by News/Event Article and Sources</Card.Header>
                             <Card.Body>
                                 {newsInstance.relevant_countries && newsInstance.relevant_countries.map((country, index) => (
                                 <Container key={index} className="my-3">

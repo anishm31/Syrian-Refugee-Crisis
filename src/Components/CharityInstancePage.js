@@ -77,7 +77,7 @@ function CharityInstancePage() {
                 <Row className="justify-content-md-center" xs={1} sm={2}>
                     <Col>
                         <Card>
-                            <Card.Header as="h5">Countries that Support this Charity</Card.Header>
+                            <Card.Header as="h5">Countries Where this Charity is Active</Card.Header>
                             <Card.Body>
                                 {charityInstance.relevant_countries && charityInstance.relevant_countries.map((country, index) => (
                                 <Container key={index} className="my-3">
