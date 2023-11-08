@@ -14,7 +14,7 @@ function InstanceGrid(props) {
         {instanceList.map((instance) => {
           return (
             <Col className="mb-3" key={instance.id}>
-              <props.modelCard instance={instance} />
+              <props.modelCard instance={instance} searchQuery={props.searchQuery} />
             </Col>
           );
         })}

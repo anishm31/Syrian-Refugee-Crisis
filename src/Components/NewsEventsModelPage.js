@@ -41,7 +41,7 @@ function NewsEventsModelPage({searchInput}) {
 
     let instanceCountURL = `https://api.syrianrefugeecrisis.me/news-and-events?${searchArg}${sortByArg}${sortOrderArg}${filterArg}`;
     let instanceDataURL = `https://api.syrianrefugeecrisis.me/news-and-events?${searchArg}${sortByArg}${sortOrderArg}${filterArg}&page=${currentPage}`;
-    console.log("URL: ", instanceDataURL)
+
     // Fetch the total number of instances
     axios
       .get(instanceCountURL)
@@ -128,6 +128,7 @@ function NewsEventsModelPage({searchInput}) {
         instances={newsEventsInstances} // Use search results if a search query exists
         totalInstances={totalInstances}
         handleSearch={handleSearch}
+        searchQuery={searchQuery}
         handleSort={handleSort}
         handleFilter={handleFilter}
         loaded={dataLoaded && countLoaded}
