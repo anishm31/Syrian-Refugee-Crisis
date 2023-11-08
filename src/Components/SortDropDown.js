@@ -50,12 +50,12 @@ function SortDropDown(props) {
         none: ['none'],
         theme: ['Peacekeeping and Peacebuilding', 'Protection and Human Rights'],
       });
-    } else if (props.model === 'Country Filters') {
+    } else if (props.model === 'Countries') {
       setSortingOptions(['countryName', 'totalRefugees', 'totalAsylumDecisions', 'yearOfDecisions', 'numGranted', 'numRejected']);
       setCategoryLabel("Countries"); // Change the label for the "Countries" model
       setData({
         none: ['none'],
-        Location: ['China', 'Yemen', 'Mexico'],
+        year: [2015, 2020, 2019],
       });
     } else if (props.model === 'Charities') {
       setSortingOptions(['charityName', 'yearEstablished', 'numAwards', 'numReliefTypes']);
