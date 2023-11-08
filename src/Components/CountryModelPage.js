@@ -65,6 +65,7 @@ function CountryModelPage({searchInput}) {
   };
 
   const handleSearch = (query) => {
+    // Change in state will trigger useEffect
     setSearchQuery(query);
     setCurrentPage(1);
   };
