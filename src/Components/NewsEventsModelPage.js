@@ -31,8 +31,10 @@ function NewsEventsModelPage() {
   };
   const handleFilter = (filterItem, mapKey) => {
     // Clone the existing filterMap to avoid modifying state directly
-    const updatedFilterMap = new Map(filterMap);
-    console.log("Filter Map:", filterItem, mapKey);
+    if(filterItem === "none")
+    {
+      filterItem = "";
+    }
     // Check if the map already has the key, and add or update the value accordingly
     if (filterMap.has(mapKey)) {
       const filterList = filterMap.get(mapKey);
@@ -51,7 +53,6 @@ function NewsEventsModelPage() {
       filterMap.set(mapKey, [filterItem]);
     }
   
-    console.log("Filter Map:", filterItem, mapKey);
     // Set the state with the updated filterMap
     setFilterItems(filterMap);
   
@@ -82,12 +83,9 @@ function NewsEventsModelPage() {
     const filterQuery = Array.from(filterMap.entries())
     .map(([key, values]) => `&${key}=${JSON.stringify(values)}`)
     .join('');
-  
-  console.log("Filter Query:", filterQuery);
-    console.log("Filter mao", filterMap.entries());
     axios
       .get(`https://api.syrianrefugeecrisis.me/news-and-events?&sortBy=${sortingKey}${filterQuery}&sortOrder=asc&page=${page}`)
-      //.get(`https://api.syrianrefugeecrisis.me/news-and-events?&theme=["Peacekeeping and Peacebuilding"]&page=${page}` )
+
       .then((response) => {
         setNewsEventsInstances(response.data.data);
         setLoaded(true);
@@ -103,29 +101,16 @@ function NewsEventsModelPage() {
   useEffect(() => {
     fetchNewsEvents(selectedSortOption, currentPage);
   }, [selectedSortOption, currentPage]);
-  //   axios
-  //     .get(`https://api.syrianrefugeecrisis.me/news-and-events?page=${currentPage}`)
-  //     .then((response) => {
-  //       setNewsEventsInstances(response.data.data);
-  //       setLoaded(true);
-  //     })
-  //     .catch((error) => {
-  //       console.log("There was an error fetching the data", error);
-  //     });
-  // }, [currentPage]);
-
-
-  //add this back in later
+  
   // // Verify that the charity data has been loaded before rendering main content
-  // if (!loaded) {
-  //   return <h1 style={{textAlign: "center"}}>Page Loading...</h1>;
-  // }
+  if (!loaded) {
+    return <h1 style={{textAlign: "center"}}>Page Loading...</h1>;
+  }
 
 
 
   return (
     <div>
-
       <GenericModelPage
         model="News/Events"
         modelCard={NewsCard}

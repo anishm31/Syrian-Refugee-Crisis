@@ -31,8 +31,10 @@ function CharityModelPage() {
   }
 
   const handleFilter = (filterItem, mapKey) => {
-    // Clone the existing filterMap to avoid modifying state directly
-    const updatedFilterMap = new Map(filterMap);
+    if(filterItem === "none")
+    {
+      filterItem = "";
+    }
     console.log("Filter Map:", filterItem, mapKey);
     // Check if the map already has the key, and add or update the value accordingly
     if (filterMap.has(mapKey)) {

@@ -9,14 +9,14 @@ function SortDropDown(props) {
   const [data, setData] = useState({}); // Initialize data as an empty object
   const [categoryLabel, setCategoryLabel] = useState("Category"); // Default label
 
-
+  //default
   const [selectedFilter, setSelectedFilter] = useState({
     category: "",
     option: "",
   });
 
 
-  //when the user clicks to a differnt Filter category
+  //when the user clicks to a different Filter category
   const handleCategoryChange = (event) => {
     setSelectedFilter({
       ...selectedFilter,
@@ -25,7 +25,7 @@ function SortDropDown(props) {
     });
   };
 
-  //when the user switches to a differnt subcategory
+  //when the user switches to a different subcategory
   const handleOptionChange = (event) => {
     const newCategory = selectedFilter.category;
   const newOption = event.target.value;
@@ -43,14 +43,13 @@ function SortDropDown(props) {
   //sets the variables inside of both filter and sort dropdowns
   useEffect(() => {
     // Set sorting and filtering options based on the model
-
     if (props.model === "News/Events") {
       setSortingOptions(['date', 'numThemes', 'numSources', 'title']);
       setCategoryLabel("Category"); // Change the label for the "News/Events" model
       setData({
         none: ['none'],
         theme: ["none",'Peacekeeping and Peacebuilding', 'Protection and Human Rights'],
-        location : ["none","Somalia", "Lebanon","Thailand"],
+        location : ["none","Syrian Arab Republic", "Occupied Palestinian Territory", "Myanmar"],
         source : ["none","SNHR", "CARE", "Concern"],
         disasterType : ["none","Epidemic", ]
       });
@@ -59,8 +58,8 @@ function SortDropDown(props) {
       setCategoryLabel("Countries"); // Change the label for the "Countries" model
       setData({
         none: ['none'],
-        year: ["",2015, 2020, 2019],
-        numRefugees: ["",23, 7803, 450]
+        year: ["none",2015, 2020, 2019],
+        numRefugees: ["none",23, 7803, 450]
       });
     } else if (props.model === 'Charities') {
       setSortingOptions(['charityName', 'yearEstablished', 'numAwards', 'numReliefTypes']);
@@ -76,6 +75,7 @@ function SortDropDown(props) {
   }, [props.model]);
 
   return (
+    //sort dropdown
     <div className='search-and-dropdown'>
       <InputGroup>
         <FormControl type="text" placeholder="Search" />
@@ -92,14 +92,12 @@ function SortDropDown(props) {
             <div>
               <label>{categoryLabel}:</label>
               <select value={selectedFilter.category} onChange={handleCategoryChange}>
-                //map the sort categories in first dropdown
                 {Object.keys(data).map((category) => (
                   <option key={category} value={category}>
                     {category}
                   </option>
                 ))}
               </select>
-
 
               <label>Option:</label>
               <select value={selectedFilter.option} onChange={handleOptionChange}>
