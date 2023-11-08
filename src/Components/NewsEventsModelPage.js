@@ -13,20 +13,30 @@ function NewsEventsModelPage({searchInput}) {
   const [searchQuery, setSearchQuery] = useState(searchInput); // State for the search query
   const [totalPages, setTotalPages] = useState(1);
   const [totalInstances, setTotalInstances] = useState(0);
+  const [selectedSortOption, setSelectedSortOption] = useState("");
 
-  const requestInstances = useCallback((userQuery) => {
+  const requestInstances = useCallback((userQuery, sortByKey) => {
     // Set loaded states to false
     setDataLoaded(false);
     setCountLoaded(false);
     // Define arguments for sorting/searching/filtering
     let searchArg = userQuery ? `&searchQuery=${userQuery}` : "";
-    // TODO: filtering and sorting stuff
-    let sortArg = "";
+    let sortByArg = sortByKey ? `&sortBy=${sortByKey}` : "";
+    let sortOrderArg = ""
+    if (sortByArg) {
+      // Determine most logical sort order for the selected sort option
+      if (sortByKey === "title") {
+        sortOrderArg = "&sortOrder=asc";
+      } else {
+        sortOrderArg = "&sortOrder=desc";
+      }
+    }
+    // TODO: filtering stuff
     let filterArg = "";
 
-    let instanceCountURL = `https://api.syrianrefugeecrisis.me/news-and-events?${searchArg}${sortArg}${filterArg}`;
-    let instanceDataURL = `https://api.syrianrefugeecrisis.me/news-and-events?${searchArg}${sortArg}${filterArg}&page=${currentPage}`;
-
+    let instanceCountURL = `https://api.syrianrefugeecrisis.me/news-and-events?${searchArg}${sortByArg}${sortOrderArg}${filterArg}`;
+    let instanceDataURL = `https://api.syrianrefugeecrisis.me/news-and-events?${searchArg}${sortByArg}${sortOrderArg}${filterArg}&page=${currentPage}`;
+    console.log("URL: ", instanceDataURL)
     // Fetch the total number of instances
     axios
       .get(instanceCountURL)
@@ -63,6 +73,12 @@ function NewsEventsModelPage({searchInput}) {
     return pageNumbers;
   };
 
+  const handleSort = (sortingKey) => {
+    // Change in state will trigger useEffect
+    setSelectedSortOption(sortingKey);
+    setCurrentPage(1);
+  };
+
   const handleSearch = (query) => {
     // Change in state will trigger useEffect
     setSearchQuery(query);
@@ -71,8 +87,8 @@ function NewsEventsModelPage({searchInput}) {
 
   // useEffect for retrieving instances based on state change
   useEffect(() => {
-    requestInstances(searchQuery);
-  }, [requestInstances, currentPage, searchQuery]);
+    requestInstances(searchQuery, selectedSortOption);
+  }, [requestInstances, currentPage, searchQuery, selectedSortOption]);
 
   return (
     <div>
@@ -82,6 +98,7 @@ function NewsEventsModelPage({searchInput}) {
         instances={newsEventsInstances} // Use search results if a search query exists
         totalInstances={totalInstances}
         handleSearch={handleSearch}
+        handleSort={handleSort}
         loaded={dataLoaded && countLoaded}
       />
       {dataLoaded && countLoaded ?
