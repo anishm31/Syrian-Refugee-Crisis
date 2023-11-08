@@ -4,8 +4,7 @@ import InstanceGrid from './InstanceGrid';
 import Container from 'react-bootstrap/Container';
 import SortDropDown from './SortDropDown';
 import NewsEventsModelPage from './NewsEventsModelPage';
-
-function GenericModelPage(props) {
+console.log("ugh");function GenericModelPage(props) {
     return (
         <div className='model-page'>
             <Container className='mt-5' style={{width : "85%", textAlign : "center"}}>
@@ -13,10 +12,10 @@ function GenericModelPage(props) {
                     <h1>{(props.model) ? props.model : "General Model"}</h1>
                 </header>
                 <div className = "d-flex justify-content-center">
-                <SortDropDown className="sort-drop-down" name = {props.instances} handleSort={props.handleSort} align-items = "center" model ={props.model} handleFilter = {props.handleFilter} > 
-                </SortDropDown>
+                
+                <SortDropDown className="sort-drop-down" name = {props.instances} handleSort={props.handleSort} align-items = "center" model ={props.model} handleFilter = {props.handleFilter}>  </SortDropDown>
                 </div>
-                <InstanceGrid model={props.model} handleHaha = {props.handleHaha} handleSort={props.handleSort} modelCard={props.modelCard} instances={props.instances} totalInstances={props.totalInstances}></InstanceGrid>
+                <InstanceGrid model={props.model} handleFilter = {props.handleFilter} handleSort={props.handleSort} modelCard={props.modelCard} instances={props.instances} totalInstances={props.totalInstances}></InstanceGrid>
             </Container>
         </div>
     );

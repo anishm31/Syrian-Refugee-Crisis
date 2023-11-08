@@ -22,18 +22,33 @@ function NewsEventsModelPage() {
 
   const filterMap = new Map();
 
-  //comes in the form as as list for filter item, and &filtertype = 
   
 
   const handleSort = (sortingKey) => {
       setSelectedSortOption(sortingKey);
       fetchNewsEvents(sortingKey, 1);
   };
-
-
-  const handleHaha = () => {
-
+  const handleFilter = (filterItem, mapKey) => {
+    // Clone the existing filterMap to avoid modifying state directly
+    const updatedFilterMap = new Map(filterMap);
+  
+    // Check if the map already has the key, and add or update the value accordingly
+    if (updatedFilterMap.has(mapKey)) {
+      const filterList = updatedFilterMap.get(mapKey);
+      filterList.push(filterItem);
+      updatedFilterMap.set(mapKey, filterList);
+    } else {
+      updatedFilterMap.set(mapKey, [filterItem]);
+    }
+  
+    // Set the state with the updated filterMap
+    setFilterItems(updatedFilterMap);
+  
+    // Clear the new filter item
+    setNewFilterItem("");
   };
+
+
 
 
   const handlePageClick = (pageNumber) => {
@@ -47,30 +62,20 @@ function NewsEventsModelPage() {
     }
     return pageNumbers;
   };
+  console.log("Filter Map:", Array.from(filterMap.entries()));
 
-  const handleFilter = (filterItem, mapKey) => {
 
-    //we are adding another filter to its same kind
-    if(filterMap.has(mapKey))
-    {
-      const filterList = filterMap.get(mapKey)
-      filterList.push(filterItem);
-      filterMap.set(mapKey, filterList);
-    }
-    else{
-      //first filter of its kind
-      filterMap.set(mapKey, [filterItem]);
-    }
-    setNewFilterItem('');
-   };
 
   const fetchNewsEvents = (sortingKey, page) => {
     const filterQuery = Array.from(filterMap.entries())
     .map(([key, values]) => `${key}=${values.join(',')}`)
     .join('&');
 
+    console.log("Filter Query:", filterQuery);
+    console.log("Filter mao", filterMap.entries());
     axios
-      .get(`https://api.syrianrefugeecrisis.me/news-and-events?&sortBy=${sortingKey}&sortOrder=asc&page=${page}`)
+      .get(`https://api.syrianrefugeecrisis.me/news-and-events?&sortBy=${sortingKey}${filterQuery}&sortOrder=asc&page=${page}`)
+      //.get(`https://api.syrianrefugeecrisis.me/news-and-events?&theme=["Peacekeeping and Peacebuilding"]&page=${page}` )
       .then((response) => {
         setNewsEventsInstances(response.data.data);
         setLoaded(true);
@@ -97,6 +102,8 @@ function NewsEventsModelPage() {
   //     });
   // }, [currentPage]);
 
+
+  //add this back in later
   // // Verify that the charity data has been loaded before rendering main content
   // if (!loaded) {
   //   return <h1 style={{textAlign: "center"}}>Page Loading...</h1>;

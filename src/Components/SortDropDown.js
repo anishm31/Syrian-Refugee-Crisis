@@ -1,74 +1,68 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../CSS/GenericModelPage.css";
-import { Form, FormControl, Button, DropdownButton, InputGroup, Dropdown, ButtonGroup } from 'react-bootstrap';
-import NewsEventsModelPage from './NewsEventsModelPage';
-
+import { Form, FormControl, DropdownButton, InputGroup, Dropdown, ButtonGroup } from 'react-bootstrap';
 
 function SortDropDown(props) {
-  let sortingOptions = [];
-  const [showConnectedDropdown, setShowConnectedDropdown] = useState(false);
-  const [filteringOptions, setFilteringOptions] = useState({});
-  const [selectedFilter, setSelectedFilter] = useState(null);
 
-  const toggleConnected = (val) => {
-    setShowConnectedDropdown(val);
+  const [sortingOptions, setSortingOptions] = useState([]);
+  const [data, setData] = useState({}); // Initialize data as an empty object
+  const [categoryLabel, setCategoryLabel] = useState("Category"); // Default label
+
+
+  const [selectedFilter, setSelectedFilter] = useState({
+    category: "",
+    option: "",
+  });
+
+
+  //when the user clicks to a differnt Filter category
+  const handleCategoryChange = (event) => {
+    setSelectedFilter({
+      ...selectedFilter,
+      category: event.target.value,
+      option: "", // Reset the option when the category changes
+    });
   };
 
-    const handleFilterSelection = (option) => {
-    setSelectedFilter(option);
+  //when the user switches to a differnt subcategory
+  const handleOptionChange = (event) => {
+    const newCategory = selectedFilter.category;
+  const newOption = event.target.value;
+    setSelectedFilter({
+      ...selectedFilter,
+      option: event.target.value,
+    });
+  
+    // Call props.handleFilter with the selected category and option
+    props.handleFilter(newOption, newCategory);
   };
-  function getKeyByValue(object, value) {
-    for (const key in object) {
-      const keyList = object[key];
-      if (keyList.includes(value)) {
-        return key;
-      }
-    }
-    return null; // Return null if the value is not found in the object
-  }
 
-  const menuItems = [
-    {
-      title: 'Home',
-      url: '/',
-    },
-    {
-      title: 'Services',
-      url: '/services',
-    },
-    {
-      title: 'About',
-      url: '/about',
-    },
-  ];
 
-  // Set sort choices based on the model that the dropdown box will be in
-  if (props.model === "News/Events") {
-    sortingOptions = ['date', 'numThemes', 'numSources', 'title'];
-  } else if (props.model === 'Countries') {
-    sortingOptions = ['countryName', 'totalRefugees', 'totalAsylumDecisions', 'yearOfDecisions', 'numGranted', "numRejected"];
-  } else if (props.model === 'Charities') {
-    sortingOptions = ['charityName', 'yearEstablished', 'numAwards', 'numReliefTypes'];
-  }
 
-  // Set the filtering choices based on the model that the dropdown box will be in
+  //sets the variables inside of both filter and sort dropdowns
   useEffect(() => {
-    if (props.model === 'Countries') {
-      setFilteringOptions({
-        location: ['China', 'Yemen', 'Mexico'],
+    // Set sorting and filtering options based on the model
+    if (props.model === "News/Events") {
+      setSortingOptions(['date', 'numThemes', 'numSources', 'title']);
+      setCategoryLabel("Category"); // Change the label for the "News/Events" model
+      setData({
+        none: ['none'],
+        theme: ['Peacekeeping and Peacebuilding', 'Protection and Human Rights'],
       });
-    }
-    else if (props.model === 'News/Events')
-    {
-      setFilteringOptions({
-        themes: ['Peacekeeping and Peacebuilding', 'Protection and Human Rights'],
+    } else if (props.model === 'Country Filters') {
+      setSortingOptions(['countryName', 'totalRefugees', 'totalAsylumDecisions', 'yearOfDecisions', 'numGranted', 'numRejected']);
+      setCategoryLabel("Countries"); // Change the label for the "Countries" model
+      setData({
+        none: ['none'],
+        Location: ['China', 'Yemen', 'Mexico'],
       });
-    }
-    else if(props.model === 'Charities')
-    {
-      setFilteringOptions({
-        orgType: ['Non-governmental Organization', 'International Organization'],
+    } else if (props.model === 'Charities') {
+      setSortingOptions(['charityName', 'yearEstablished', 'numAwards', 'numReliefTypes']);
+      setCategoryLabel("Charity Filters");
+      setData({
+        none: ['none'],
+        orgType: ['Non-governmental Organization', 'yearEstablished'],
       });
     }
   }, [props.model]);
@@ -79,31 +73,36 @@ function SortDropDown(props) {
         <FormControl type="text" placeholder="Search" />
         <Dropdown as={ButtonGroup}>
           <DropdownButton title="Sort" id="dropdown-menu-align-right">
-            {sortingOptions.map(option => (
+            {sortingOptions.map((option) => (
               <Dropdown.Item key={option} onClick={() => props.handleSort(option)}>
                 {option}
               </Dropdown.Item>
             ))}
           </DropdownButton>
 
-          <DropdownButton onClick={() => toggleConnected(true)} title="Filter" id="dropdown-menu-align-right">
-          {menuItems.map((menu, index) => {
-          return (
-            <li className="menu-items" key={index}>
-              <a>{menu.title}</a>
-              <Dropdown as={ButtonGroup}>
-              <DropdownButton title={menu.title} id="dropdown-menu-align-right">
-             {sortingOptions.map(option => (
-              <Dropdown.Item key={option} onClick={() => props.handleSort(option)}>
-                {option}
-              </Dropdown.Item>
-            ))}
+          <DropdownButton title="Filter" id="dropdown-menu-align-right" >
+            <div>
+              <label>{categoryLabel}:</label>
+              <select value={selectedFilter.category} onChange={handleCategoryChange}>
+                //map the sort categories in first dropdown
+                {Object.keys(data).map((category) => (
+                  <option key={category} value={category}>
+                    {category}
+                  </option>
+                ))}
+              </select>
+
+
+              <label>Option:</label>
+              <select value={selectedFilter.option} onChange={handleOptionChange}>
+                {data[selectedFilter.category] && data[selectedFilter.category].map((filterSubCategory) => (
+                  <option key={filterSubCategory} value={filterSubCategory} >
+                    {filterSubCategory}
+                  </option>
+                ))}
+              </select>
+            </div>
           </DropdownButton>
-              </Dropdown>
-            </li>
-          );
-        })}
-        </DropdownButton>
         </Dropdown>
       </InputGroup>
     </div>
