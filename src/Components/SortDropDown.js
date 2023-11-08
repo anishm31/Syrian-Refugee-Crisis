@@ -49,6 +49,9 @@ function SortDropDown(props) {
       setData({
         none: ['none'],
         theme: ['Peacekeeping and Peacebuilding', 'Protection and Human Rights'],
+        location : ["Somalia", "Lebanon","Thailand"],
+        source : ["SNHR", "CARE", "Concern"],
+        disasterType : ["Epidemic"]
       });
     } else if (props.model === 'Countries') {
       setSortingOptions(['countryName', 'totalRefugees', 'totalAsylumDecisions', 'yearOfDecisions', 'numGranted', 'numRejected']);
@@ -56,6 +59,7 @@ function SortDropDown(props) {
       setData({
         none: ['none'],
         year: [2015, 2020, 2019],
+        numRefugees: [23, 7803, 450]
       });
     } else if (props.model === 'Charities') {
       setSortingOptions(['charityName', 'yearEstablished', 'numAwards', 'numReliefTypes']);
@@ -63,6 +67,9 @@ function SortDropDown(props) {
       setData({
         none: ['none'],
         orgType: ["Non-governmental Organization", "Government"],
+        hqCountry : ['France','Switzerland', 'Denmark'],
+        reliefTypes : ["Basic Needs", "Education",
+        "Food Security"]
       });
     }
   }, [props.model]);
