@@ -43,32 +43,33 @@ function SortDropDown(props) {
   //sets the variables inside of both filter and sort dropdowns
   useEffect(() => {
     // Set sorting and filtering options based on the model
+
     if (props.model === "News/Events") {
       setSortingOptions(['date', 'numThemes', 'numSources', 'title']);
       setCategoryLabel("Category"); // Change the label for the "News/Events" model
       setData({
         none: ['none'],
-        theme: ['Peacekeeping and Peacebuilding', 'Protection and Human Rights'],
-        location : ["Somalia", "Lebanon","Thailand"],
-        source : ["SNHR", "CARE", "Concern"],
-        disasterType : ["Epidemic"]
+        theme: ["none",'Peacekeeping and Peacebuilding', 'Protection and Human Rights'],
+        location : ["none","Somalia", "Lebanon","Thailand"],
+        source : ["none","SNHR", "CARE", "Concern"],
+        disasterType : ["none","Epidemic", ]
       });
     } else if (props.model === 'Countries') {
       setSortingOptions(['countryName', 'totalRefugees', 'totalAsylumDecisions', 'yearOfDecisions', 'numGranted', 'numRejected']);
       setCategoryLabel("Countries"); // Change the label for the "Countries" model
       setData({
         none: ['none'],
-        year: [2015, 2020, 2019],
-        numRefugees: [23, 7803, 450]
+        year: ["",2015, 2020, 2019],
+        numRefugees: ["",23, 7803, 450]
       });
     } else if (props.model === 'Charities') {
       setSortingOptions(['charityName', 'yearEstablished', 'numAwards', 'numReliefTypes']);
       setCategoryLabel("Charity Filters");
       setData({
         none: ['none'],
-        orgType: ["Non-governmental Organization", "Government"],
-        hqCountry : ['France','Switzerland', 'Denmark'],
-        reliefTypes : ["Basic Needs", "Education",
+        orgType: ["none","Non-governmental Organization", "Government"],
+        hqCountry : ["none",'France','Switzerland', 'Denmark'],
+        reliefTypes : ["none","Basic Needs", "Education",
         "Food Security"]
       });
     }
