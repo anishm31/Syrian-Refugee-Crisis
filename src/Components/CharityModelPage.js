@@ -14,20 +14,30 @@ function CharityModelPage({ searchInput}) {
   const [totalInstances, setTotalInstances] = useState(0);
   const [totalPages, setTotalPages] = useState(1);
   const [searchQuery, setSearchQuery] = useState(searchInput); // State for the search query
+  const [selectedSortOption, setSelectedSortOption] = useState("");
 
-  const requestInstances = useCallback((userQuery) => {
+  const requestInstances = useCallback((userQuery, sortByKey) => {
     // Set loaded states to false
     setDataLoaded(false);
     setCountLoaded(false);
     // Define arguments for sorting/searching/filtering
     let searchArg = userQuery ? `&searchQuery=${userQuery}` : "";
-    // TODO: filtering and sorting stuff
-    let sortArg = "";
+    let sortByArg = sortByKey ? `&sortBy=${sortByKey}` : "";
+    let sortOrderArg = ""
+    if (sortByArg) {
+      // Determine most logical sort order for the selected sort option
+      if (sortByKey === "charityName" || sortByKey === "yearEstablished") {
+        sortOrderArg = "&sortOrder=asc";
+      } else {
+        sortOrderArg = "&sortOrder=desc";
+      }
+    }
+    // TODO: filtering stuff
     let filterArg = "";
 
-    let instanceCountURL = `https://api.syrianrefugeecrisis.me/charities?${searchArg}${sortArg}${filterArg}`;
-    let instanceDataURL = `https://api.syrianrefugeecrisis.me/charities?${searchArg}${sortArg}${filterArg}&page=${currentPage}`;
-
+    let instanceCountURL = `https://api.syrianrefugeecrisis.me/charities?${searchArg}${sortByArg}${sortOrderArg}${filterArg}`;
+    let instanceDataURL = `https://api.syrianrefugeecrisis.me/charities?${searchArg}${sortByArg}${sortOrderArg}${filterArg}&page=${currentPage}`;
+    console.log(instanceDataURL)
     // Fetch the total number of instances
     axios
       .get(instanceCountURL)
@@ -64,6 +74,12 @@ function CharityModelPage({ searchInput}) {
     return pageNumbers;
   };
 
+  const handleSort = (sortingKey) => {
+    // Change in state will trigger useEffect
+    setSelectedSortOption(sortingKey);
+    setCurrentPage(1);
+  };
+
   const handleSearch = (query) => {
     // Change in state will trigger useEffect
     setSearchQuery(query);
@@ -72,8 +88,8 @@ function CharityModelPage({ searchInput}) {
 
   // useEffect for retrieving instances based on state changes
   useEffect(() => {
-    requestInstances(searchQuery);
-  }, [requestInstances, currentPage, searchQuery]);
+    requestInstances(searchQuery, selectedSortOption);
+  }, [requestInstances, currentPage, searchQuery, selectedSortOption]);
 
   return (
     <div>
@@ -83,6 +99,7 @@ function CharityModelPage({ searchInput}) {
         instances={charityInstances} // Use search results if a search query exists
         totalInstances={totalInstances}
         handleSearch={handleSearch}
+        handleSort={handleSort}
         loaded={dataLoaded && countLoaded}
       />
       {dataLoaded && countLoaded ?
@@ -115,14 +132,4 @@ function CharityModelPage({ searchInput}) {
   );
 }
 
-
 export default CharityModelPage;
-
-
-/*
- <GenericModelPage //test
-      model="Charities"
-      modelCard={CharityCard}
-      instances={charityData}
-    />
-*/

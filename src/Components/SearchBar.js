@@ -3,6 +3,7 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
+import SortDropDown from './SortDropDown';
 
 function SearchBar(props) {
   const [query, setQuery] = useState('');
@@ -37,6 +38,14 @@ function SearchBar(props) {
           >
             Search
           </Button>
+          <SortDropDown 
+            className="sort-drop-down" 
+            name={props.name} 
+            handleSort={props.handleSort} 
+            align-items="center" 
+            model ={props.model} 
+            handleFilter={props.handleFilter}>
+          </SortDropDown>
         </InputGroup>
       </Form>
     </Container>

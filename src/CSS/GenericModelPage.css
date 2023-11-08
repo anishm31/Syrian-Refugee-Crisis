@@ -1,0 +1,18 @@
+/* GenericModelPage.css 
+
+installed npm i @react-spring/web
+*/
+
+.search-and-dropdown {
+  /* Use flexbox to arrange the components side by side */
+  display:flex;
+  flex-direction:row;
+  align-items: center; /* Vertically center the components */
+  margin-bottom: 20px; /* Add some spacing at the bottom of the container */
+}
+
+/* Add a margin to the right of the SearchBar to separate it from the SortDropDown */
+.search-and-dropdown .search-bar {
+  margin-right: 0; 
+ 
+}
