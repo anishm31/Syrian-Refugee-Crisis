@@ -23,8 +23,9 @@ function GenericModelPage(props) {
                     model={props.model} 
                     modelCard={props.modelCard} 
                     instances={props.instances} 
-                    totalInstances={props.totalInstances}>
-                </InstanceGrid>
+                    totalInstances={props.totalInstances}
+                    searchQuery={props.searchQuery}
+                />
                 :
                 <div style={{paddingTop: "20px"}}>
                     <Spinner animation="border" variant="primary" />

@@ -42,7 +42,7 @@ function CountryModelPage({searchInput}) {
     
     let instanceCountURL = `https://api.syrianrefugeecrisis.me/countries?${searchArg}${sortByArg}${sortOrderArg}${filterArg}`;
     let instanceDataURL = `https://api.syrianrefugeecrisis.me/countries?${searchArg}${sortByArg}${sortOrderArg}${filterArg}&page=${currentPage}`;
-    console.log("URL", instanceDataURL)
+
     // Fetch the total number of instances
     axios
       .get(instanceCountURL)
@@ -129,6 +129,7 @@ function CountryModelPage({searchInput}) {
         modelCard={CountryCard}
         instances={countryInstances}
         totalInstances={totalInstances}
+        searchQuery={searchQuery}
         handleSearch={handleSearch} // Pass handleSearch to the SearchBar
         handleSort={handleSort}
         handleFilter={handleFilter}

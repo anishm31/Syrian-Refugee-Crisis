@@ -42,7 +42,7 @@ function CharityModelPage({ searchInput}) {
 
     let instanceCountURL = `https://api.syrianrefugeecrisis.me/charities?${searchArg}${sortByArg}${sortOrderArg}${filterArg}`;
     let instanceDataURL = `https://api.syrianrefugeecrisis.me/charities?${searchArg}${sortByArg}${sortOrderArg}${filterArg}&page=${currentPage}`;
-    console.log(instanceDataURL)
+
     // Fetch the total number of instances
     axios
       .get(instanceCountURL)
@@ -129,6 +129,7 @@ function CharityModelPage({ searchInput}) {
         instances={charityInstances} // Use search results if a search query exists
         totalInstances={totalInstances}
         handleSearch={handleSearch}
+        searchQuery={searchQuery}
         handleSort={handleSort}
         handleFilter={handleFilter}
         loaded={dataLoaded && countLoaded}
