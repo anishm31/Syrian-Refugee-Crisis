@@ -14,8 +14,10 @@ function NewsEventsModelPage({searchInput}) {
   const [totalPages, setTotalPages] = useState(1);
   const [totalInstances, setTotalInstances] = useState(0);
   const [selectedSortOption, setSelectedSortOption] = useState("");
+  const [filterItems, setFilterItems] = useState([]);
+  const filterMap = new Map();
 
-  const requestInstances = useCallback((userQuery, sortByKey) => {
+  const requestInstances = useCallback((userQuery, sortByKey, filterOptionsMap) => {
     // Set loaded states to false
     setDataLoaded(false);
     setCountLoaded(false);
@@ -31,8 +33,11 @@ function NewsEventsModelPage({searchInput}) {
         sortOrderArg = "&sortOrder=desc";
       }
     }
-    // TODO: filtering stuff
-    let filterArg = "";
+    let filterArg = filterOptionsMap ? 
+                    Array.from(filterOptionsMap.entries()) 
+                    .map(([key, values]) => `&${key}=${JSON.stringify(values)}`)
+                    .join('')
+                    : "";
 
     let instanceCountURL = `https://api.syrianrefugeecrisis.me/news-and-events?${searchArg}${sortByArg}${sortOrderArg}${filterArg}`;
     let instanceDataURL = `https://api.syrianrefugeecrisis.me/news-and-events?${searchArg}${sortByArg}${sortOrderArg}${filterArg}&page=${currentPage}`;
@@ -73,6 +78,31 @@ function NewsEventsModelPage({searchInput}) {
     return pageNumbers;
   };
 
+  const handleFilter = (filterValue, filterKey) => {
+    if (filterValue === "none") {
+      filterValue = "";
+    }
+    // Check if the map already has the key, and add or update the value accordingly
+    if (filterMap.has(filterKey)) {
+      let filterList = filterMap.get(filterKey);
+      // Now, check if filterList already includes the filterValue
+      if (filterList.includes(filterValue)) {
+        // User added filter value twice, get rid of it from filter list
+        const filterListCopy = filterList.filter((item)=> item !== filterValue);
+        filterList = filterListCopy;
+      } else {
+        filterList.push(filterValue);
+        filterMap.set(filterKey, filterList);
+      }
+    } else {
+      filterMap.set(filterKey, [filterValue]);
+    }
+
+    // Set state with update filterMap to trigger useEffect
+    setFilterItems(filterMap);
+    setCurrentPage(1);
+  };
+
   const handleSort = (sortingKey) => {
     // Change in state will trigger useEffect
     setSelectedSortOption(sortingKey);
@@ -87,8 +117,8 @@ function NewsEventsModelPage({searchInput}) {
 
   // useEffect for retrieving instances based on state change
   useEffect(() => {
-    requestInstances(searchQuery, selectedSortOption);
-  }, [requestInstances, currentPage, searchQuery, selectedSortOption]);
+    requestInstances(searchQuery, selectedSortOption, filterItems);
+  }, [requestInstances, currentPage, searchQuery, selectedSortOption, filterItems]);
 
   return (
     <div>
@@ -99,6 +129,7 @@ function NewsEventsModelPage({searchInput}) {
         totalInstances={totalInstances}
         handleSearch={handleSearch}
         handleSort={handleSort}
+        handleFilter={handleFilter}
         loaded={dataLoaded && countLoaded}
       />
       {dataLoaded && countLoaded ?
