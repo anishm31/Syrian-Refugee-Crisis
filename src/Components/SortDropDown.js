@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { DropdownButton, Dropdown, ButtonGroup } from 'react-bootstrap';
+// TODO: Do we need this import? Causing JEST to fail
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 function SortDropDown(props) {
 

@@ -19,7 +19,12 @@ function GenericModelPage(props) {
                     handleFilter={props.handleFilter}
                 />
                 {props.loaded ?
-                <InstanceGrid model={props.model} modelCard={props.modelCard} instances={props.instances} totalInstances={props.totalInstances}></InstanceGrid>
+                <InstanceGrid 
+                    model={props.model} 
+                    modelCard={props.modelCard} 
+                    instances={props.instances} 
+                    totalInstances={props.totalInstances}>
+                </InstanceGrid>
                 :
                 <div style={{paddingTop: "20px"}}>
                     <Spinner animation="border" variant="primary" />
