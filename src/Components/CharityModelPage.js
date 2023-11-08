@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import GenericModelPage from "./GenericModelPage";
 import CharityCard from "./CharityCard";
 import axios from "axios";
@@ -7,14 +7,50 @@ import "./button.css"
 
 function CharityModelPage({ searchInput}) {
   const itemsPerPage = 12;
-  const totalInstances = 48;
   const [currentPage, setCurrentPage] = useState(1);
-  const [loaded, setLoaded] = useState(false);
+  const [dataLoaded, setDataLoaded] = useState(false);
+  const [countLoaded, setCountLoaded] = useState(false);
   const [charityInstances, setCharityInstances] = useState([]);
-  const [searchResults, setSearchResults] = useState([]); // Add state for search results
+  const [totalInstances, setTotalInstances] = useState(0);
+  const [totalPages, setTotalPages] = useState(1);
   const [searchQuery, setSearchQuery] = useState(searchInput); // State for the search query
 
-  const totalPages = Math.ceil(totalInstances / itemsPerPage);
+  const requestInstances = useCallback((userQuery) => {
+    // Set loaded states to false
+    setDataLoaded(false);
+    setCountLoaded(false);
+    // Define arguments for sorting/searching/filtering
+    let searchArg = userQuery ? `&searchQuery=${userQuery}` : "";
+    // TODO: filtering and sorting stuff
+    let sortArg = "";
+    let filterArg = "";
+
+    let instanceCountURL = `https://api.syrianrefugeecrisis.me/charities?${searchArg}${sortArg}${filterArg}`;
+    let instanceDataURL = `https://api.syrianrefugeecrisis.me/charities?${searchArg}${sortArg}${filterArg}&page=${currentPage}`;
+
+    // Fetch the total number of instances
+    axios
+      .get(instanceCountURL)
+      .then((response) => {
+        setTotalInstances(response.data.count);
+        setTotalPages(Math.ceil(response.data.count / itemsPerPage));
+        setCountLoaded(true);
+      })
+      .catch((error) => {
+        console.log("There was an error fetching the data", error);
+      });
+
+    // Fetch country instances
+    axios
+      .get(instanceDataURL)
+      .then((response) => {
+        setCharityInstances(response.data.data);
+        setDataLoaded(true);
+      })
+      .catch((error) => {
+        console.log("There was an error fetching the data", error);
+      });
+  }, [currentPage]);
 
   const handlePageClick = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -28,50 +64,27 @@ function CharityModelPage({ searchInput}) {
     return pageNumbers;
   };
 
-  // Fetch page of charity instances from a user search
-  useEffect(() => {
-    if (!searchQuery) {
-      // Search query is empty
-      return;
-    }
-    // Search query is not empty, fetch search results
-    axios
-      .get(`https://api.syrianrefugeecrisis.me/charities?searchQuery=${searchQuery}&page=${currentPage}`)
-      .then((response) => {
-        setSearchResults(response.data.data);
-      })
-      .catch((error) => {
-        console.log("There was an error fetching the search results", error);
-      });
-  }, [searchQuery, currentPage]);
-
-  // Fetch page of charity instances from the API
-  useEffect(() => {
-    axios
-      .get(`https://api.syrianrefugeecrisis.me/charities?page=${currentPage}`)
-      .then((response) => {
-        setCharityInstances(response.data.data);
-        setLoaded(true);
-      })
-      .catch((error) => {
-        console.log("There was an error fetching the data", error);
-      });
-  }, [currentPage]);
-
-  // Verify that the charity data has been loaded before rendering main content
-  if (!loaded) {
-    return <h1 style={{textAlign: "center"}}>Page Loading...</h1>;
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+    setCurrentPage(1);
   }
+
+  // useEffect for retrieving instances based on state changes
+  useEffect(() => {
+    requestInstances(searchQuery);
+  }, [requestInstances, currentPage, searchQuery]);
 
   return (
     <div>
       <GenericModelPage
         model="Charities"
         modelCard={CharityCard}
-        instances={searchQuery ? searchResults : charityInstances} // Use search results if a search query exists
+        instances={charityInstances} // Use search results if a search query exists
         totalInstances={totalInstances}
-        setSearchQuery={setSearchQuery} // Pass setSearchQuery to the SearchBar
+        handleSearch={handleSearch}
+        loaded={dataLoaded && countLoaded}
       />
+      {dataLoaded && countLoaded ?
       <div className="pagination">
         <button
           onClick={() => handlePageClick(currentPage - 1)}
@@ -96,6 +109,7 @@ function CharityModelPage({ searchInput}) {
           Next
         </button>
       </div>
+      : null}
     </div>
   );
 }

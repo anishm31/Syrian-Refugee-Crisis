@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import GenericModelPage from "./GenericModelPage";
 import CountryCard from "./CountryCard";
 import axios from "axios";
@@ -7,14 +7,50 @@ import  "./button.css";
 function CountryModelPage({searchInput}) {
 
   const itemsPerPage = 12;
-  const totalInstances = 127;
   const [currentPage, setCurrentPage] = useState(1);
-  const [loaded, setLoaded] = useState(false);
+  const [dataLoaded, setDataLoaded] = useState(false);
+  const [countLoaded, setCountLoaded] = useState(false);
   const [countryInstances, setCountryInstances] = useState([]);
-  const [searchResults, setSearchResults] = useState([]); // Add state for search results
   const [searchQuery, setSearchQuery] = useState(searchInput); // State for the search query
+  const [totalPages, setTotalPages] = useState(1);
+  const [totalInstances, setTotalInstances] = useState(0);
 
-  const totalPages = Math.ceil(totalInstances / itemsPerPage);
+  const requestInstances = useCallback((userQuery) => {
+    // Set loaded states to false
+    setDataLoaded(false);
+    setCountLoaded(false);
+    // Define arguments for sorting/searching/filtering
+    let searchArg = userQuery ? `&searchQuery=${userQuery}` : "";
+    // TODO: filtering and sorting stuff
+    let sortArg = "";
+    let filterArg = "";
+
+    let instanceCountURL = `https://api.syrianrefugeecrisis.me/countries?${searchArg}${sortArg}${filterArg}`;
+    let instanceDataURL = `https://api.syrianrefugeecrisis.me/countries?${searchArg}${sortArg}${filterArg}&page=${currentPage}`;
+
+    // Fetch the total number of instances
+    axios
+      .get(instanceCountURL)
+      .then((response) => {
+        setTotalInstances(response.data.count);
+        setTotalPages(Math.ceil(response.data.count / itemsPerPage));
+        setCountLoaded(true);
+      })
+      .catch((error) => {
+        console.log("There was an error fetching the data", error);
+      });
+
+    // Fetch country instances
+    axios
+      .get(instanceDataURL)
+      .then((response) => {
+        setCountryInstances(response.data.data);
+        setDataLoaded(true);
+      })
+      .catch((error) => {
+        console.log("There was an error fetching the data", error);
+      });
+  }, [currentPage]);
 
   const handlePageClick = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -28,40 +64,16 @@ function CountryModelPage({searchInput}) {
     return pageNumbers;
   };
 
-  // Fetch page of country instances from a user search
-  useEffect(() => {
-    if (!searchQuery) {
-      // Search query is empty
-      return;
-    }
-    // Search query is not empty, fetch search results
-    axios
-      .get(`https://api.syrianrefugeecrisis.me/countries?searchQuery=${searchQuery}&page=${currentPage}`)
-      .then((response) => {
-        setSearchResults(response.data.data);
-      })
-      .catch((error) => {
-        console.log("There was an error fetching the search results", error);
-      });
-  }, [searchQuery, currentPage]);
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+    setCurrentPage(1);
+  };
 
-  // Fetch page of country instances from the API
+  // useEffect for retrieving instances based on state changes
   useEffect(() => {
-    axios
-      .get(`https://api.syrianrefugeecrisis.me/countries?page=${currentPage}`)
-      .then((response) => {
-        setCountryInstances(response.data.data);
-        setLoaded(true);
-      })
-      .catch((error) => {
-        console.log("There was an error fetching the data", error);
-      });
-  }, [currentPage]);
-
-  // Verify that the country data has been loaded before rendering main content
-  if (!loaded) {
-    return <h1 style={{textAlign: "center"}}>Page Loading...</h1>;
-  }
+    console.log("USE EFFECT CALLED")
+    requestInstances(searchQuery);
+  }, [requestInstances, currentPage, searchQuery]);
 
   // Instance data loaded, render main content
   return (
@@ -69,34 +81,37 @@ function CountryModelPage({searchInput}) {
       <GenericModelPage
         model="Countries"
         modelCard={CountryCard}
-        instances={searchQuery ? searchResults : countryInstances}
+        instances={countryInstances}
         totalInstances={totalInstances}
-        setSearchQuery={setSearchQuery} // Pass setSearchQuery to the SearchBar
+        handleSearch={handleSearch} // Pass handleSearch to the SearchBar
+        loaded={dataLoaded && countLoaded}
       />
+      {dataLoaded && countLoaded ? 
       <div className="pagination">
-        <button   
-          onClick={() => handlePageClick(currentPage - 1)}
-          disabled={currentPage === 1}
-        >
-          Previous
-        </button>
-        {generatePageNumbers().map((pageNumber) => (
-          <button 
-            key={pageNumber}
-            onClick={() => handlePageClick(pageNumber)}
-            id = "page-button"
-            className={`page-button ${pageNumber === currentPage ? 'active' : ''}`}
-          >
-            {pageNumber}
-          </button>
-        ))}
+      <button   
+        onClick={() => handlePageClick(currentPage - 1)}
+        disabled={currentPage === 1}
+      >
+        Previous
+      </button>
+      {generatePageNumbers().map((pageNumber) => (
         <button 
-          onClick={() => handlePageClick(currentPage + 1)}
-          disabled={currentPage === totalPages}
+          key={pageNumber}
+          onClick={() => handlePageClick(pageNumber)}
+          id = "page-button"
+          className={`page-button ${pageNumber === currentPage ? 'active' : ''}`}
         >
-          Next
+          {pageNumber}
         </button>
-      </div>
+      ))}
+      <button 
+        onClick={() => handlePageClick(currentPage + 1)}
+        disabled={currentPage === totalPages}
+      >
+        Next
+      </button>
+    </div>
+    : null}
     </div>
   );
 }
