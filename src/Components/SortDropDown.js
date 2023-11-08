@@ -6,7 +6,7 @@ import { Form, FormControl, DropdownButton, InputGroup, Dropdown, ButtonGroup } 
 function SortDropDown(props) {
 
   const [sortingOptions, setSortingOptions] = useState([]);
-  const [data, setData] = useState({}); // Initialize data as an empty object
+  const [data, setData] = useState({}); 
   const [categoryLabel, setCategoryLabel] = useState("Category"); // Default label
 
   //default
@@ -21,7 +21,8 @@ function SortDropDown(props) {
     setSelectedFilter({
       ...selectedFilter,
       category: event.target.value,
-      option: "", // Reset the option when the category changes
+      // Reset the option when the category changes
+      option: "", 
     });
   };
 
@@ -45,7 +46,7 @@ function SortDropDown(props) {
     // Set sorting and filtering options based on the model
     if (props.model === "News/Events") {
       setSortingOptions(['date', 'numThemes', 'numSources', 'title']);
-      setCategoryLabel("Category"); // Change the label for the "News/Events" model
+      setCategoryLabel("Category"); 
       setData({
         none: ['none'],
         theme: ["none",'Peacekeeping and Peacebuilding', 'Protection and Human Rights'],
@@ -55,7 +56,7 @@ function SortDropDown(props) {
       });
     } else if (props.model === 'Countries') {
       setSortingOptions(['countryName', 'totalRefugees', 'totalAsylumDecisions', 'yearOfDecisions', 'numGranted', 'numRejected']);
-      setCategoryLabel("Countries"); // Change the label for the "Countries" model
+      setCategoryLabel("Countries"); 
       setData({
         none: ['none'],
         year: ["none",2015, 2020, 2019],

@@ -30,7 +30,6 @@ function NewsEventsModelPage() {
       fetchNewsEvents(sortingKey, 1);
   };
   const handleFilter = (filterItem, mapKey) => {
-    // Clone the existing filterMap to avoid modifying state directly
     if(filterItem === "none")
     {
       filterItem = "";

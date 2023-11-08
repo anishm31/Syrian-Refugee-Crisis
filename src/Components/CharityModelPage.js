@@ -73,7 +73,6 @@ function CharityModelPage() {
     console.log("Filter mao", filterMap.entries());
     axios
       .get(`https://api.syrianrefugeecrisis.me/charities?&sortBy=${sortingKey}${filterQuery}&sortOrder=asc&page=${page}`)
-      //.get(`https://api.syrianrefugeecrisis.me/news-and-events?&theme=["Peacekeeping and Peacebuilding"]&page=${page}` )
       .then((response) => {
         setCharityInstances(response.data.data);
         setLoaded(true);
