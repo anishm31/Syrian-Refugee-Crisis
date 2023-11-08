@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { useParams } from 'react-router-dom';
-import {Container, Card, ListGroup, Row, Col, Button} from 'react-bootstrap';
+import {Accordion, Container, Card, ListGroup, Row, Col, Button, Spinner} from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import axios from "axios";
 import IFrame from "./IFrame";
@@ -26,7 +26,11 @@ function NewsEventsInstancePage() {
 
     // Verify that the charity data has been loaded before rendering main content
     if (!loaded) {
-        return <h1 style={{textAlign: "center"}}>Page Loading...</h1>;
+        return(             
+            <div style={{textAlign: "center", paddingTop: "50px"}}>
+                <Spinner animation="border" variant="primary" />
+            </div>
+        );
     }
 
     const eventDate = new Date(newsInstance.date);
@@ -50,11 +54,17 @@ function NewsEventsInstancePage() {
                             <ListGroup.Item>Country ISO Code: {newsInstance.country_iso3.toUpperCase()}</ListGroup.Item>
                         </ListGroup>
                         <ListGroup style={{ textAlign: "left" }} className="list-group-flush">
-                            <ListGroup.Item>Source(s): </ListGroup.Item>
-                            <ul style={{paddingLeft: "50px"}}>
-                                {newsInstance.sources.map((source) => (
-                                <li>{source.source_short_name}</li>))}
-                            </ul>
+                            <Accordion flush>
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>Source(s)</Accordion.Header>
+                                    <Accordion.Body>
+                                        <ul style={{paddingLeft: "30px"}}>
+                                            {newsInstance.sources.map((source) => (
+                                            <li>{source.source_short_name}</li>))}
+                                        </ul>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>
                         </ListGroup>
                         <ListGroup style={{ textAlign: "left" }} className="list-group-flush">
                             <ListGroup.Item>Theme(s): </ListGroup.Item>

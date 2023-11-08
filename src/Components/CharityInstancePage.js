@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import { useParams } from 'react-router-dom';
-import {Container, Card, ListGroup, Row, Col, Button} from 'react-bootstrap';
+import {Container, Card, ListGroup, Row, Col, Button, Spinner} from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import VideoCarousel from "./VideoCarousel";
 import axios from "axios";
@@ -23,8 +23,13 @@ function CharityInstancePage() {
     
     // Verify that the charity data has been loaded before rendering main content
     if (!loaded) {
-        return <h1 style={{textAlign: "center"}}>Page Loading...</h1>;
+        return(             
+            <div style={{textAlign: "center", paddingTop: "50px"}}>
+                <Spinner animation="border" variant="primary" />
+            </div>
+        );
     }
+
     const date_est = new Date(charityInstance.established);  
     return (
         <div>
