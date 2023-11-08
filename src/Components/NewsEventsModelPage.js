@@ -36,8 +36,17 @@ function NewsEventsModelPage() {
     // Check if the map already has the key, and add or update the value accordingly
     if (filterMap.has(mapKey)) {
       const filterList = filterMap.get(mapKey);
-      filterList.push(filterItem);
-      filterMap.set(mapKey, filterList);
+      //now need to check if filterList has key
+      if(filterList.includes(filterItem))
+      {
+        //user clicked on it twice, get rid of it from the filter list
+        const filterListCopy = filterList.filter((item)=> item !== filterItem);
+        filterList = filterListCopy;
+      }
+      else{
+        filterList.push(filterItem);
+        filterMap.set(mapKey, filterList);
+      }
     } else {
       filterMap.set(mapKey, [filterItem]);
     }
