@@ -14,7 +14,7 @@ function NewsEventsModelPage() {
   const [newsEventsInstances, setNewsEventsInstances] = useState([]);
 
   const [selectedSortOption, setSelectedSortOption] = useState("");
-
+  const [sortingKey, setSortingKey] = useState("");
   const totalPages = Math.ceil(totalInstances / itemsPerPage);
 
   const[filterItems, setFilterItems]= useState([]);
@@ -25,27 +25,30 @@ function NewsEventsModelPage() {
   
 
   const handleSort = (sortingKey) => {
+      setSortingKey(sortingKey);
       setSelectedSortOption(sortingKey);
       fetchNewsEvents(sortingKey, 1);
   };
   const handleFilter = (filterItem, mapKey) => {
     // Clone the existing filterMap to avoid modifying state directly
     const updatedFilterMap = new Map(filterMap);
-  
+    console.log("Filter Map:", filterItem, mapKey);
     // Check if the map already has the key, and add or update the value accordingly
-    if (updatedFilterMap.has(mapKey)) {
-      const filterList = updatedFilterMap.get(mapKey);
+    if (filterMap.has(mapKey)) {
+      const filterList = filterMap.get(mapKey);
       filterList.push(filterItem);
-      updatedFilterMap.set(mapKey, filterList);
+      filterMap.set(mapKey, filterList);
     } else {
-      updatedFilterMap.set(mapKey, [filterItem]);
+      filterMap.set(mapKey, [filterItem]);
     }
   
+    console.log("Filter Map:", filterItem, mapKey);
     // Set the state with the updated filterMap
-    setFilterItems(updatedFilterMap);
+    setFilterItems(filterMap);
   
     // Clear the new filter item
     setNewFilterItem("");
+    fetchNewsEvents(sortingKey, 1);
   };
 
 
@@ -62,16 +65,16 @@ function NewsEventsModelPage() {
     }
     return pageNumbers;
   };
-  console.log("Filter Map:", Array.from(filterMap.entries()));
+ 
 
 
 
   const fetchNewsEvents = (sortingKey, page) => {
     const filterQuery = Array.from(filterMap.entries())
-    .map(([key, values]) => `${key}=${values.join(',')}`)
-    .join('&');
-
-    console.log("Filter Query:", filterQuery);
+    .map(([key, values]) => `&${key}=${JSON.stringify(values)}`)
+    .join('');
+  
+  console.log("Filter Query:", filterQuery);
     console.log("Filter mao", filterMap.entries());
     axios
       .get(`https://api.syrianrefugeecrisis.me/news-and-events?&sortBy=${sortingKey}${filterQuery}&sortOrder=asc&page=${page}`)
