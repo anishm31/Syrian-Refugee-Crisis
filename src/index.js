@@ -13,7 +13,6 @@ import NewsEventsModelPage from './Components/NewsEventsModelPage';
 import CountryInstancePage from './Components/CountryInstancePage';
 import CharityInstancePage from './Components/CharityInstancePage';
 import NewsEventsInstancePage from './Components/NewsEventsInstancePage';
-import TimeLine from './Components/Timeline';
 import SearchResultsPage from './Components/SearchResultsPage';
 import TimelineBackground from './Components/TimelineBackground.tsx';
 
