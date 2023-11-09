@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import { useParams } from 'react-router-dom';
-import {Container, Card, ListGroup, Row, Col, Button} from 'react-bootstrap';
+import {Container, Card, ListGroup, Row, Col, Button, Spinner} from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import CountryMap from "./CountryMap";
 import axios from "axios";
@@ -21,10 +21,15 @@ function CountryInstancePage() {
         })
     }, [params.id]);
 
-    // Verify that the country data has been loaded before rendering main content
+    // Verify that the charity data has been loaded before rendering main content
     if (!loaded) {
-        return <h1 style={{textAlign: "center"}}>Page Loading...</h1>;
+        return(             
+            <div style={{textAlign: "center", paddingTop: "50px"}}>
+                <Spinner animation="border" variant="primary" />
+            </div>
+        );
     }
+
     return (
         <div>
             <Container className='mt-5' style={{width: "85%", textAlign: "center"}}>
@@ -60,7 +65,7 @@ function CountryInstancePage() {
                 <Row className="justify-content-md-center" xs={1} sm={2}>
                     <Col>
                         <Card>
-                            <Card.Header as="h5">Associated Charities</Card.Header>
+                            <Card.Header as="h5">Charities that Reference this Country</Card.Header>
                             <Card.Body>
                                 {countryInstance.relevant_charities && countryInstance.relevant_charities.map((charity, index) => (
                                 <Container key={index} className="my-3">
@@ -76,7 +81,7 @@ function CountryInstancePage() {
                     </Col>
                     <Col>
                         <Card>
-                            <Card.Header as="h5">Associated News/Events</Card.Header>
+                            <Card.Header as="h5">News/Events in this Country or Referenced by Related Charities</Card.Header>
                             <Card.Body>
                                 {countryInstance.relevant_news_events && countryInstance.relevant_news_events.map((event, index) => (
                                 <Container key={index} className="my-3">

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { useParams } from 'react-router-dom';
-import {Container, Card, ListGroup, Row, Col, Button} from 'react-bootstrap';
+import {Accordion, Container, Card, ListGroup, Row, Col, Button, Spinner} from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import axios from "axios";
 import IFrame from "./IFrame";
@@ -26,7 +26,11 @@ function NewsEventsInstancePage() {
 
     // Verify that the charity data has been loaded before rendering main content
     if (!loaded) {
-        return <h1 style={{textAlign: "center"}}>Page Loading...</h1>;
+        return(             
+            <div style={{textAlign: "center", paddingTop: "50px"}}>
+                <Spinner animation="border" variant="primary" />
+            </div>
+        );
     }
 
     const eventDate = new Date(newsInstance.date);
@@ -50,11 +54,17 @@ function NewsEventsInstancePage() {
                             <ListGroup.Item>Country ISO Code: {newsInstance.country_iso3.toUpperCase()}</ListGroup.Item>
                         </ListGroup>
                         <ListGroup style={{ textAlign: "left" }} className="list-group-flush">
-                            <ListGroup.Item>Source(s): </ListGroup.Item>
-                            <ul style={{paddingLeft: "50px"}}>
-                                {newsInstance.sources.map((source) => (
-                                <li>{source.source_short_name}</li>))}
-                            </ul>
+                            <Accordion flush>
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>Source(s)</Accordion.Header>
+                                    <Accordion.Body>
+                                        <ul style={{paddingLeft: "30px"}}>
+                                            {newsInstance.sources.map((source) => (
+                                            <li>{source.source_short_name}</li>))}
+                                        </ul>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>
                         </ListGroup>
                         <ListGroup style={{ textAlign: "left" }} className="list-group-flush">
                             <ListGroup.Item>Theme(s): </ListGroup.Item>
@@ -77,7 +87,7 @@ function NewsEventsInstancePage() {
                 <Row className="justify-content-md-center" xs={1} sm={2}>
                     <Col>
                         <Card>
-                            <Card.Header as="h5">Associated Charities</Card.Header>
+                            <Card.Header as="h5">Charities Referenced by News/Event Article</Card.Header>
                             <Card.Body>
                                 {newsInstance.relevant_charities && newsInstance.relevant_charities.map((charity, index) => (
                                 <Container key={index} className="my-3">
@@ -93,7 +103,7 @@ function NewsEventsInstancePage() {
                     </Col>
                     <Col>
                         <Card>
-                            <Card.Header as="h5">Associated Countries</Card.Header>
+                            <Card.Header as="h5">Countries Referenced by News/Event Article and Sources</Card.Header>
                             <Card.Body>
                                 {newsInstance.relevant_countries && newsInstance.relevant_countries.map((country, index) => (
                                 <Container key={index} className="my-3">

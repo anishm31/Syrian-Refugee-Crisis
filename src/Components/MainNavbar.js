@@ -5,10 +5,19 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import {LinkContainer} from 'react-router-bootstrap';
 import { Link } from 'react-router-dom';
-
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 
 function MainNavbar() {
+  const onSearch = (e) => {
+    e.preventDefault();
+    var searchedTerm = document.getElementById("searchText").value;
+    if (searchedTerm) {
+      window.location.assign(`/search/${searchedTerm}`)
+    }
+  }
+
     return (
         <Navbar bg="dark" data-bs-theme="dark" expand="lg" className="bg-body-tertiary" >
           <Container>
@@ -76,9 +85,13 @@ function MainNavbar() {
                   </NavDropdown.Item>
 
                 </NavDropdown>
-              
               </Nav>
-            </Navbar.Collapse>    
+            </Navbar.Collapse>   
+            <Form className="d-flex justify-content-end" onSubmit={onSearch}>
+              <Form.Control type="search" id="searchText" placeholder="Search..." 
+                  className="mx-2" aria-label="Search"></Form.Control>
+              <Button type="submit" variant="dark">Search</Button>
+            </Form>
           </Container>
         </Navbar>
       );

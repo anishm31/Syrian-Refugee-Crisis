@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import { useParams } from 'react-router-dom';
-import {Container, Card, ListGroup, Row, Col, Button} from 'react-bootstrap';
+import {Container, Card, ListGroup, Row, Col, Button, Spinner} from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import VideoCarousel from "./VideoCarousel";
 import axios from "axios";
@@ -23,8 +23,13 @@ function CharityInstancePage() {
     
     // Verify that the charity data has been loaded before rendering main content
     if (!loaded) {
-        return <h1 style={{textAlign: "center"}}>Page Loading...</h1>;
+        return(             
+            <div style={{textAlign: "center", paddingTop: "50px"}}>
+                <Spinner animation="border" variant="primary" />
+            </div>
+        );
     }
+
     const date_est = new Date(charityInstance.established);  
     return (
         <div>
@@ -77,7 +82,7 @@ function CharityInstancePage() {
                 <Row className="justify-content-md-center" xs={1} sm={2}>
                     <Col>
                         <Card>
-                            <Card.Header as="h5">Associated Countries</Card.Header>
+                            <Card.Header as="h5">Countries Where this Charity is Active</Card.Header>
                             <Card.Body>
                                 {charityInstance.relevant_countries && charityInstance.relevant_countries.map((country, index) => (
                                 <Container key={index} className="my-3">
@@ -93,7 +98,7 @@ function CharityInstancePage() {
                     </Col>
                     <Col>
                         <Card>
-                            <Card.Header as="h5">Associated News/Events</Card.Header>
+                            <Card.Header as="h5">News/Events Headlines Affected by Charity's Impact</Card.Header>
                             <Card.Body>
                                 {charityInstance.relevant_news_events && charityInstance.relevant_news_events.map((event, index) => (
                                 <Container key={index} className="my-3">
