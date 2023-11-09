@@ -3,7 +3,7 @@
 import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax';
 import React, { useRef } from 'react'
 import TimeLine from './Timeline';
-import "./TimelineBackground.css";
+import "../CSS/TimelineBackground.css";
 
 
 const url = (name: string, wrap = false) =>

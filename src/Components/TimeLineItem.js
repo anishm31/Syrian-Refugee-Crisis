@@ -1,5 +1,5 @@
 import React from "react";
-import "./timeline.css";
+import "../CSS/timeline.css";
 import { Link } from 'react-router-dom'; 
 
 

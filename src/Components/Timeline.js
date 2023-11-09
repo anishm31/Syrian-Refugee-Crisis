@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import TimeLineItem from "./TimeLineItem";
 import axios from "axios";
-import "./timeline.css"; 
+import "../CSS/timeline.css"; 
 
 
 function TimeLine() {
