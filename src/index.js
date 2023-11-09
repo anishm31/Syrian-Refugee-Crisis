@@ -13,8 +13,8 @@ import NewsEventsModelPage from './Components/NewsEventsModelPage';
 import CountryInstancePage from './Components/CountryInstancePage';
 import CharityInstancePage from './Components/CharityInstancePage';
 import NewsEventsInstancePage from './Components/NewsEventsInstancePage';
-import TimeLine from './Components/Timeline';
 import SearchResultsPage from './Components/SearchResultsPage';
+import TimelineBackground from './Components/TimelineBackground.tsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -25,7 +25,7 @@ root.render(
     <Routes> 
         <Route exact path="/" element={<HomePage />} />
         <Route path = "/about" element ={<About />}/>
-        <Route path = "/timeline" element ={<TimeLine />}/>
+        <Route path = "/timeline" element ={<TimelineBackground />}/>
         <Route path = "/countries" element = {<CountryModelPage />}/>
         <Route path = "/charities" element = {<CharityModelPage />}/>
         <Route path = "/news-and-events" element = {<NewsEventsModelPage />}/>
