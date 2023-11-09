@@ -14,42 +14,38 @@ https://documenter.getpostman.com/view/30070229/2s9YR9YsK4
     * Gitlab ID: @shadowanneruby
 * Matthew Albert (mma3785)
     * Gitlab ID: @matthew.albert
-* Pranitha Kolli (prk546)
-    * Gitlab ID: @pranikolli
 * Anish Madgula (am98375)
     * Gitlab ID: @animadgula
 * Matthew Castilleja (mc72635)
     * Gitlab ID: @mcastilleja
 
 ## Phase Leader:
-* Anish Madgula
+* Shadow Sincross
     * Responsibilities as phase leader:
-        * Scheduling team meetings to get status on tasks
-        * Delegating tasks/issues to make sure all requirements were completed
+        * Ensuring that everyone is working on assigned tasks
         * Keeping track of the team's overall progress
+        * Make sure team is meeting deadlines (including mini deadlines this phase)
+        * Motivating team to make progress and meet all requirements
 
 ## Git SHA:
-6c140fa74efb67f19dcb3226f76660c5d726ed72
+b78e513f351429cd2dc8d6f198853d7e7b079249
 
 ## Gitlab Pipeline:
 https://gitlab.com/mcastilleja/syrian_refugee_crisis/-/pipelines
 
 ## Estimated/Actual Completion Time:
 * Anish Madgula
-    * Estimated: 20 hours
-    * Actual: 30 hours
-* Matthew Albert
-    * Estimated: 25 hours
-    * Actual: 30 hours
-* Shadow Sincross
-    * Estimated: 20 hours
-    * Actual: 30 hours
-* Matthew Castilleja
-    * Estimated: 22 hours
-    * Actual: 30 hours
-* Pranitha Kolli
     * Estimated: 10 hours
-    * Actual: 10 hours
+    * Actual: 20 hours
+* Matthew Albert
+    * Estimated: 15 hours
+    * Actual: 20 hours
+* Shadow Sincross
+    * Estimated: 12 hours
+    * Actual: 20 hours
+* Matthew Castilleja
+    * Estimated: 15 hours
+    * Actual: 20 hours
 
 * Comments: 
     - Referenced and adapted code from https://gitlab.com/anshmor/cs-373-idb-group-3/ for setting up / populating the DB
