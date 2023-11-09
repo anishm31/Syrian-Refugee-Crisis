@@ -1,0 +1,5 @@
+.gradient-div {
+    background: linear-gradient(to bottom, #120144, #5238af, #7878c1);
+    width: 100%;
+    height: 100%;
+  }
