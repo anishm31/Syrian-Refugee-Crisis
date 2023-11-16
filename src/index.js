@@ -15,6 +15,7 @@ import CharityInstancePage from './Components/CharityInstancePage';
 import NewsEventsInstancePage from './Components/NewsEventsInstancePage';
 import SearchResultsPage from './Components/SearchResultsPage';
 import TimelineBackground from './Components/TimelineBackground.tsx';
+import VisualizationsPage from './Components/VisualizationsPage.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -33,6 +34,7 @@ root.render(
         <Route path = "/charities/:id" element = {<CharityInstancePage />}/>
         <Route path = "/news-and-events/:id" element = {<NewsEventsInstancePage />}/>
         <Route path="/search/:query" element={<SearchResultsPage />} />
+        <Route path="/visualizations" element={<VisualizationsPage />} />
     </Routes>
 
   </Router>
