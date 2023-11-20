@@ -16,7 +16,7 @@ function CharityModelPage({ searchInput, showFilters = true }) {
   const [searchQuery, setSearchQuery] = useState(searchInput);
   const [selectedSortOption, setSelectedSortOption] = useState("");
   const [filterItems, setFilterItems] = useState([]);
-  const [filterShow, setFilterShow] = useState(showFilters);
+  const [filterShow] = useState(showFilters);
   const filterMap = new Map();
 
   const requestInstances = useCallback((userQuery, sortByKey, filterOptionsMap) => {

@@ -4,7 +4,7 @@ import NewsCard from "./NewsCard.js";
 import axios from "axios";
 import "./button.css";
 
-function NewsEventsModelPage({searchInput}) {
+function NewsEventsModelPage({searchInput, showFilters = true}) {
   const itemsPerPage = 12;
   const [currentPage, setCurrentPage] = useState(1);
   const [dataLoaded, setDataLoaded] = useState(false);
@@ -15,6 +15,7 @@ function NewsEventsModelPage({searchInput}) {
   const [totalInstances, setTotalInstances] = useState(0);
   const [selectedSortOption, setSelectedSortOption] = useState("");
   const [filterItems, setFilterItems] = useState([]);
+  const [filterShow] = useState(showFilters);
   const filterMap = new Map();
 
   const requestInstances = useCallback((userQuery, sortByKey, filterOptionsMap) => {
@@ -132,6 +133,7 @@ function NewsEventsModelPage({searchInput}) {
         handleSort={handleSort}
         handleFilter={handleFilter}
         loaded={dataLoaded && countLoaded}
+        showFilters={filterShow}
       />
       {dataLoaded && countLoaded ?
       <div className="pagination">
