@@ -4,7 +4,7 @@ import CountryCard from "./CountryCard";
 import axios from "axios";
 import  "./button.css";
 
-function CountryModelPage({searchInput}) {
+function CountryModelPage({searchInput, showFilters = true}) {
 
   const itemsPerPage = 12;
   const [currentPage, setCurrentPage] = useState(1);
@@ -16,6 +16,7 @@ function CountryModelPage({searchInput}) {
   const [totalInstances, setTotalInstances] = useState(0);
   const [selectedSortOption, setSelectedSortOption] = useState("");
   const [filterItems, setFilterItems] = useState([]);
+  const [filterShow] = useState(showFilters);
   const filterMap = new Map();
 
   const requestInstances = useCallback((userQuery, sortByKey, filterOptionsMap) => {
@@ -134,6 +135,7 @@ function CountryModelPage({searchInput}) {
         handleSort={handleSort}
         handleFilter={handleFilter}
         loaded={dataLoaded && countLoaded}
+        showFilters={filterShow}
       />
       {dataLoaded && countLoaded ? 
       <div className="pagination">

@@ -5,7 +5,7 @@ import axios from "axios";
 import "./button.css"
 
 
-function CharityModelPage({ searchInput}) {
+function CharityModelPage({ searchInput, showFilters = true }) {
   const itemsPerPage = 12;
   const [currentPage, setCurrentPage] = useState(1);
   const [dataLoaded, setDataLoaded] = useState(false);
@@ -16,6 +16,7 @@ function CharityModelPage({ searchInput}) {
   const [searchQuery, setSearchQuery] = useState(searchInput);
   const [selectedSortOption, setSelectedSortOption] = useState("");
   const [filterItems, setFilterItems] = useState([]);
+  const [filterShow] = useState(showFilters);
   const filterMap = new Map();
 
   const requestInstances = useCallback((userQuery, sortByKey, filterOptionsMap) => {
@@ -133,6 +134,7 @@ function CharityModelPage({ searchInput}) {
         handleSort={handleSort}
         handleFilter={handleFilter}
         loaded={dataLoaded && countLoaded}
+        showFilters={filterShow}
       />
       {dataLoaded && countLoaded ?
       <div className="pagination">
