@@ -28,7 +28,8 @@ function VisualizationsPage() {
   
   return (
       <div style={{height: "100vh"}}>
-          <h1>Visualizations</h1>
+          <h1 style={{textAlign : "center", marginBottom : "20px"}}>Our Visualizations</h1>
+          <br></br>
           <Container style={{height: "65%", width: "85%"}} fluid id="visContainer">
             <WorldMap height={visDimensions.height} width={visDimensions.width}/>
           </Container>
