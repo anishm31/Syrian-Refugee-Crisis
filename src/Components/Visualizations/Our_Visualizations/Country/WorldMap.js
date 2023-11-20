@@ -48,6 +48,18 @@ function WorldMap(props) {
       selectedPath.setAttribute("stroke-width", 0.5);
     }
 
+    // Event handler to display country info when clicked
+    const displayCountryInfo = (countryShape, totalRefugees) => {
+
+      let countryName = countryShape.properties.name;
+      totalRefugees = totalRefugees ? totalRefugees : 0;
+
+      // Display country info
+      alert(
+        `${countryName} has ${totalRefugees.toLocaleString()} Syrian refugees.`
+      );
+    }
+
     // Adjust projection (scale and translation) to fit the map in the container
     projection.fitSize([mapWidth, mapHeight], geoData);
 
@@ -75,6 +87,7 @@ function WorldMap(props) {
               fillOpacity={1}
               onMouseOver={mouseOver}
               onMouseOut={mouseLeave}
+              onClick={() => displayCountryInfo(countryShape, totalRefugees)}
             />
           );
         })
@@ -85,7 +98,7 @@ function WorldMap(props) {
     const createMapLegend = (legendHeight, legendWidth) => {
       // Adjust legend width so that it stores the width of each color scale rectangle
       legendWidth = legendWidth / colorScheme.length;
-      const legendX = 70;
+      const legendX = props.width / 4;
       const legendY = 50;
 
       return (
@@ -144,7 +157,7 @@ function WorldMap(props) {
       </svg>
     </div>
     :
-    <div style={{paddingTop: "20px"}}>
+    <div style={{paddingTop: "20px", textAlign : "center"}}>
       <Spinner animation="border" variant="primary" />
     </div>
   )
