@@ -16,7 +16,7 @@ function CountryModelPage({searchInput, showFilters = true}) {
   const [totalInstances, setTotalInstances] = useState(0);
   const [selectedSortOption, setSelectedSortOption] = useState("");
   const [filterItems, setFilterItems] = useState([]);
-  const [filterShow, setFilterShow] = useState(showFilters);
+  const [filterShow] = useState(showFilters);
   const filterMap = new Map();
 
   const requestInstances = useCallback((userQuery, sortByKey, filterOptionsMap) => {
