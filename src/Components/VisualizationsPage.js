@@ -43,31 +43,6 @@ function VisualizationsPage() {
     }
   }, []);
 
-  useEffect(() => {
-    if (!charitiesData) return;
-
-    // Destroy the existing chart instance before creating a new one
-    if (chartInstance) {
-      chartInstance.destroy();
-    }
-
-    const newChartInstance = new Chart("dummyCanvasId", {
-      type: "doughnut", // or your desired chart type
-      data: generateReliefChartData(),
-      options: {
-        // your options here
-      },
-    });
-
-    // Set the new chart instance
-    setChartInstance(newChartInstance);
-
-    // Cleanup function to destroy the chart instance when the component is unmounted
-    return () => {
-      newChartInstance.destroy();
-    };
-  }, [charitiesData]); // Run whenever charitiesData changes
-
   const generateReliefChartData = () => {
     if (!charitiesData) return null;
 
