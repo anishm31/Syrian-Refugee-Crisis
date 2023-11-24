@@ -138,29 +138,31 @@ function CountryModelPage({searchInput, showFilters = true}) {
         showFilters={filterShow}
       />
       {dataLoaded && countLoaded ? 
-      <div className="pagination">
-      <button   
-        onClick={() => handlePageClick(currentPage - 1)}
-        disabled={currentPage === 1}
-      >
-        Previous
-      </button>
-      {generatePageNumbers().map((pageNumber) => (
-        <button 
-          key={pageNumber}
-          onClick={() => handlePageClick(pageNumber)}
-          id = "page-button"
-          className={`page-button ${pageNumber === currentPage ? 'active' : ''}`}
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div className="pagination">
+        <button   
+          onClick={() => handlePageClick(currentPage - 1)}
+          disabled={currentPage === 1}
         >
-          {pageNumber}
+          Previous
         </button>
-      ))}
-      <button 
-        onClick={() => handlePageClick(currentPage + 1)}
-        disabled={currentPage === totalPages}
-      >
-        Next
-      </button>
+        {generatePageNumbers().map((pageNumber) => (
+          <button 
+            key={pageNumber}
+            onClick={() => handlePageClick(pageNumber)}
+            id = "page-button"
+            className={`page-button ${pageNumber === currentPage ? 'active' : ''}`}
+          >
+            {pageNumber}
+          </button>
+        ))}
+        <button 
+          onClick={() => handlePageClick(currentPage + 1)}
+          disabled={currentPage === totalPages}
+        >
+          Next
+        </button>
+      </div>
     </div>
     : null}
     </div>

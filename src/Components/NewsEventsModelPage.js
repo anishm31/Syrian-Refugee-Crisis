@@ -136,29 +136,31 @@ function NewsEventsModelPage({searchInput, showFilters = true}) {
         showFilters={filterShow}
       />
       {dataLoaded && countLoaded ?
-      <div className="pagination">
-        <button
-          onClick={() => handlePageClick(currentPage - 1)}
-          disabled={currentPage === 1}
-        >
-          Previous
-        </button>
-        {generatePageNumbers().map((pageNumber) => (
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div className="pagination">
           <button
-            id = "page-button"
-            key={pageNumber}
-            onClick={() => handlePageClick(pageNumber)}
-            className={`page-button ${pageNumber === currentPage ? 'active' : ''}`}
+            onClick={() => handlePageClick(currentPage - 1)}
+            disabled={currentPage === 1}
           >
-            {pageNumber}
+            Previous
           </button>
-        ))}
-        <button
-          onClick={() => handlePageClick(currentPage + 1)}
-          disabled={currentPage === totalPages}
-        >
-          Next
-        </button>
+          {generatePageNumbers().map((pageNumber) => (
+            <button
+              id = "page-button"
+              key={pageNumber}
+              onClick={() => handlePageClick(pageNumber)}
+              className={`page-button ${pageNumber === currentPage ? 'active' : ''}`}
+            >
+              {pageNumber}
+            </button>
+          ))}
+          <button
+            onClick={() => handlePageClick(currentPage + 1)}
+            disabled={currentPage === totalPages}
+          >
+            Next
+          </button>
+        </div>
       </div>
       : null}
     </div>
