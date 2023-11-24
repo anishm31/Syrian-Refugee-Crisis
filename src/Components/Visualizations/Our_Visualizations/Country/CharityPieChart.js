@@ -5,6 +5,7 @@ import Chart from 'chart.js/auto';
 const CharityPieChart = ({ charitiesData }) => {
     const [chartInstance, setChartInstance] = useState(null);
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
         if (!charitiesData) return;
 
