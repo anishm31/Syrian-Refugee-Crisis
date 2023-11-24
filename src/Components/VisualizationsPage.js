@@ -1,10 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 import WorldMap from "./Visualizations/Our_Visualizations/Country/WorldMap";
+import CharityPieChart from "./Visualizations/Our_Visualizations/Country/CharityPieChart";
+import axios from "axios";
+
 
 function VisualizationsPage() {
-  // State for visualization dimensions
   const [visDimensions, setVisDimensions] = useState({width: 0, height: 0});
+  const [charitiesData, setCharitiesData] = useState(null);
+
+  useEffect(() => {
+    axios.get("https://api.syrianrefugeecrisis.me/charities")
+      .then((response) => {
+        setCharitiesData(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
   // useEffect for handling visualization dimensions and responsive resizing
   useEffect(() => {
@@ -12,21 +25,20 @@ function VisualizationsPage() {
       const containerWidth = document.getElementById("visContainer").offsetWidth;
       const containerHeight = document.getElementById("visContainer").offsetHeight;
 
-      // Set visualization dimensions to be 95% of parent container dimensions
       setVisDimensions({width: Math.floor(containerWidth * 0.95), height: Math.floor(containerHeight * 0.95)});
     }
 
-    // Setup dimensions on page load
+    // update dimensions when page loads
     updateDimensions();
-
-    // Add event listener to update dimensions on window resize
     window.addEventListener("resize", updateDimensions);
 
-    // Cleanup function to remove event listener
-    return () => window.removeEventListener("resize", updateDimensions);
+    return () => {
+      window.removeEventListener("resize", updateDimensions);
+    }
   }, []);
   
   return (
+    <div>
       <div style={{height: "100vh"}}>
           <h1 style={{textAlign : "center", marginBottom : "20px"}}>Our Visualizations</h1>
           <br></br>
@@ -34,6 +46,12 @@ function VisualizationsPage() {
             <WorldMap height={visDimensions.height} width={visDimensions.width}/>
           </Container>
       </div>
+      <div>
+        <Container style={{ width: "60%", height: "60%" }}>
+          {charitiesData && <CharityPieChart charitiesData={charitiesData} />}
+        </Container>
+      </div>
+    </div>
   )
 }
 
