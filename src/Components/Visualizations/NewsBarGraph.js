@@ -1,66 +1,74 @@
-import React, { useEffect } from 'react';
+import { useState, useEffect } from "react";
+import axios from "axios";
 import * as d3 from 'd3';
 
 function NewsBarGraph() {
+  const [sources, setSources] = useState([]);
+  const [loaded, setLoaded] = useState(false);
+
   useEffect(() => {
-    // Sample data
-    const data = [10, 20, 15, 25, 30];
+    if (!loaded) {
+      axios.get("https://api.syrianrefugeecrisis.me/news-and-events")
+        .then((response) => {
+          setSources(response.data.data);
+          setLoaded(true);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+  }, [loaded]);
 
-    // Set up SVG dimensions
-    const svgWidth = '100%';
-    const svgHeight = 500;
+  useEffect(() => {
+    if (sources.length > 0) {
+      // Extract source names
+      const data = sources.map((event) => event.title);
 
-    // Set up margin
-    const margin = { top: 20, right: 20, bottom: 30, left: 40 };
+      // Set up SVG dimensions
+      const svgWidth = '100%';
+      const svgHeight = 500;
 
-    // Calculate chart dimensions
-    const chartWidth = '100%' - margin.left - margin.right;
-    const chartHeight = svgHeight - margin.top - margin.bottom;
+      // Set up margin
+      const margin = { top: 20, right: 20, bottom: 30, left: 40 };
 
-    // Create SVG container
-    const svg = d3.select('svg')
-      .attr('width', svgWidth)
-      .attr('height', svgHeight);
+      // Calculate chart dimensions
+      const chartWidth = svgWidth - margin.left - margin.right;
+      const chartHeight = svgHeight - margin.top - margin.bottom;
 
-    // Create chart group
-    const chart = svg.append('g')
-      .attr('transform', `translate(${margin.left},${margin.top})`);
+      // Create SVG container
+      const svg = d3.select('svg')
+        .attr('width', svgWidth)
+        .attr('height', svgHeight);
 
-    // Create scales
-    const xScale = d3.scaleBand()
-      .domain(data.map((d, i) => i))
-      .range([0, chartWidth])
-      .padding(0.1);
+      // Create chart group
+      const chart = svg.append('g')
+        .attr('transform', `translate(${margin.left},${margin.top})`);
 
-    const yScale = d3.scaleLinear()
-      .domain([0, d3.max(data)])
-      .range([chartHeight, 0]);
+      // Create scaleBand
+      const xScale = d3.scaleBand()
+        .domain(data)
+        .range([0, chartWidth])
+        .padding(0.9);
 
-    // Create bars
-    chart.selectAll('.bar')
-      .data(data)
-      .enter().append('rect')
-      .attr('class', 'bar')
-      .attr('x', (d, i) => xScale(i))
-      .attr('y', d => yScale(d))
-      .attr('width', xScale.bandwidth())
-      .attr('height', d => chartHeight - yScale(d));
+      // Create bars
+      chart.selectAll('.bar')
+        .data(data)
+        .enter().append('rect')
+        .attr('class', 'bar')
+        .attr('x', d => xScale(d))
+        .attr('y', 0)
+        .attr('width', xScale.bandwidth())
+        .attr('height', chartHeight)
+        .attr('fill', 'steelblue');
 
-    // Create x-axis
-    const xAxis = d3.axisBottom(xScale);
-    svg.append('g')
-      .attr('class', 'x-axis')
-      .attr('transform', `translate(${margin.left},${svgHeight - margin.bottom})`)
-      .call(xAxis);
-
-    // Create y-axis
-    const yAxis = d3.axisLeft(yScale);
-    svg.append('g')
-      .attr('class', 'y-axis')
-      .attr('transform', `translate(${margin.left},${margin.top})`)
-      .call(yAxis);
-
-  }, []); // Empty dependency array to run the effect only once
+      // Create x-axis
+      const xAxis = d3.axisBottom(xScale);
+      svg.append('g')
+        .attr('class', 'x-axis')
+        .attr('transform', `translate(${margin.left},${svgHeight - margin.bottom})`)
+        .call(xAxis);
+    }
+  }, [sources]);
 
   return (
     <svg
