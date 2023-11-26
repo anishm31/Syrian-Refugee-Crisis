@@ -60,6 +60,15 @@ function MainNavbar() {
                 Visualizations
               </Link>
             </Nav.Link>
+
+            <Nav.Link>
+              <Link
+                style={{ color: "white", textDecoration: "inherit", marginRight: 7}}
+                to="/provider-visualizations"
+              >
+                Provider Visualizations
+              </Link>
+            </Nav.Link>
             
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">

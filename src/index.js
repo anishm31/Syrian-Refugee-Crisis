@@ -16,6 +16,7 @@ import NewsEventsInstancePage from './Components/NewsEventsInstancePage';
 import SearchResultsPage from './Components/SearchResultsPage';
 import TimelineBackground from './Components/TimelineBackground.tsx';
 import VisualizationsPage from './Components/VisualizationsPage.js';
+import ProviderVisualizationsPage from './Components/ProviderVisualizationsPage.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -35,6 +36,7 @@ root.render(
         <Route path = "/news-and-events/:id" element = {<NewsEventsInstancePage />}/>
         <Route path="/search/:query" element={<SearchResultsPage />} />
         <Route path="/visualizations" element={<VisualizationsPage />} />
+        <Route path="/provider-visualizations" element={<ProviderVisualizationsPage />} />
     </Routes>
 
   </Router>
