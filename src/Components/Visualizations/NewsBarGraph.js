@@ -1,88 +1,65 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 
-function NewsBarGraph() {
-  const [sources, setSources] = useState([]);
-  const [loaded, setLoaded] = useState(false);
+function NewsBarGraph({ newsData }) {
+  const svgRef = useRef(null);
 
   useEffect(() => {
-    if (!loaded) {
-      axios.get("https://api.syrianrefugeecrisis.me/news-and-events")
-        .then((response) => {
-          setSources(response.data.data);
-          setLoaded(true);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    }
-  }, [loaded]);
+    if (!newsData || newsData.data.length === 0) return;
+    console.log("FIRST", newsData.data);
+    const margin = { top: 30, right: 30, bottom: 150, left: 60 };
+    const width = 500 - margin.left - margin.right;
+    const height = 400 - margin.top - margin.bottom;
 
-  useEffect(() => {
-    if (sources.length > 0) {
-      // Extract source names
-      const data = sources.map((event) => event.title);
+    const svg = d3.select(svgRef.current)
+      .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-      // Set up SVG dimensions
-      const svgWidth = '100%';
-      const svgHeight = 500;
+    const x = d3.scaleBand()
+      .range([0, width])
+      .domain(newsData.data.map(d => d.country_iso3)) // Assuming 'primary_country' is the property you want to use
+      .padding(0.2);
 
-      // Set up margin
-      const margin = { top: 20, right: 20, bottom: 30, left: 40 };
+    const y = d3.scaleLinear()
+      .domain([0, newsData.data.length])
+      .range([height, 0]);
 
-      // Calculate chart dimensions
-      const chartWidth = svgWidth - margin.left - margin.right;
-      const chartHeight = svgHeight - margin.top - margin.bottom;
+    svg.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x))
+      .selectAll("text")
+      .attr("transform", "translate(-10,0)rotate(-20)")
+      .style("text-anchor", "end");
 
-      // Create SVG container
-      const svg = d3.select('svg')
-        .attr('width', svgWidth)
-        .attr('height', svgHeight);
+    svg.append("g")
+      .call(d3.axisLeft(y));
 
-      // Create chart group
-      const chart = svg.append('g')
-        .attr('transform', `translate(${margin.left},${margin.top})`);
+    svg.selectAll("mybar")
+      .data(newsData.data)
+      .enter()
+      .append("rect")
+      .attr("x", d => x(d.primary_country)) // Update to the correct property
+      .attr("y", d => y(/* Use the property that represents the height of the bar */))
+      .attr("width", x.bandwidth())
+      .attr("height", d => height - y(/* Use the property that represents the height of the bar */))
+      .attr("fill", "#69b3a2");
 
-      // Create scaleBand
-      const xScale = d3.scaleBand()
-        .domain(data)
-        .range([0, chartWidth])
-        .padding(0.9);
+      console.log("LOOK HERE", newsData.data.map(place => place.id)); // Log x-axis data
+      console.log(x.domain()); // Log x-scale domain
 
-      // Create bars
-      chart.selectAll('.bar')
-        .data(data)
-        .enter().append('rect')
-        .attr('class', 'bar')
-        .attr('x', d => xScale(d))
-        .attr('y', 0)
-        .attr('width', xScale.bandwidth())
-        .attr('height', chartHeight)
-        .attr('fill', 'steelblue');
-
-      // Create x-axis
-      const xAxis = d3.axisBottom(xScale);
-      svg.append('g')
-        .attr('class', 'x-axis')
-        .attr('transform', `translate(${margin.left},${svgHeight - margin.bottom})`)
-        .call(xAxis);
-    }
-  }, [sources]);
+    return () => {
+      d3.select(svgRef.current).selectAll('*').remove();
+    };
+  }, [newsData]);
 
   return (
-    <svg
-      style={{
-        height: 500,
-        width: "100%",
-        marginRight: "0px",
-        marginLeft: "0px",
-      }}
-    >
-      <g className="plot-area" />
-      <g className="x-axis" />
-      <g className="y-axis" />
-    </svg>
+    <div>
+      <h1>Your Donation Progress</h1>
+      <div ref={svgRef}></div>
+    </div>
   );
 }
 

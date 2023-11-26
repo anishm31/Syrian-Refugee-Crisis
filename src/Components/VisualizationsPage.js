@@ -9,15 +9,26 @@ import axios from "axios";
 function VisualizationsPage() {
   const [visDimensions, setVisDimensions] = useState({width: 0, height: 0});
   const [charitiesData, setCharitiesData] = useState(null);
+  const [newsData, setNewsData] = useState(null);
 
   useEffect(() => {
     axios.get("https://api.syrianrefugeecrisis.me/charities")
       .then((response) => {
         setCharitiesData(response.data);
+        setNewsData(response.data);
       })
       .catch((error) => {
         console.log(error);
       });
+
+      axios.get("https://api.syrianrefugeecrisis.me/news-and-events")
+      .then((response) => {
+        setNewsData(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
   }, []);
 
   // useEffect for handling visualization dimensions and responsive resizing
@@ -54,7 +65,7 @@ function VisualizationsPage() {
       </div>
       <div>
       <Container style={{ width: "60%", height: "60%" }}>
-      <NewsBarGraph/>
+      {newsData && <NewsBarGraph newsData={newsData} />}
         </Container>
       </div>
     </div>
