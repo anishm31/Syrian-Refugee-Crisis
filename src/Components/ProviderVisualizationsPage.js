@@ -34,4 +34,4 @@ function ProviderVisualizationsPage() {
   );
 };
 
-export default ProviderVisualizationPage;
+export default ProviderVisualizationsPage;
