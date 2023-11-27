@@ -31,7 +31,7 @@ function ProviderVisualizationsPage() {
         <DisordersBarGraph width={visDimensions.width} height={visDimensions.height} />
       </Container>
     </div>
-  )
-}
+  );
+};
 
-export default ProviderVisualizationsPage;
+export default ProviderVisualizationPage;
