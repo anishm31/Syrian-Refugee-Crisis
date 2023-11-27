@@ -48,7 +48,7 @@ function LocationsFunnelGraph(props) {
         }
 
         // Grab the top 5 disorder frequencies
-        let top5Instances = newInstances.sort((a, b) => (a.frequency > b .frequency) ? 1 : -1).reverse().slice(0, 5);
+        let top5Instances = newInstances.sort((a, b) => (a.frequency > b.frequency) ? 1 : -1).reverse().slice(0, 5);
         
         // Color the top 5 disorders
         let colors = ["#8884d8", "#83a6ed", "#8dd1e1", "#82ca9d", "#a4de6c"];
