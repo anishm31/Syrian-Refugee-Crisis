@@ -2,21 +2,33 @@ import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 import WorldMap from "./Visualizations/Our_Visualizations/Country/WorldMap";
 import CharityPieChart from "./Visualizations/Our_Visualizations/Country/CharityPieChart";
+import NewsBarGraph from "./Visualizations/Our_Visualizations/Country/NewsBarGraph";
 import axios from "axios";
 
 
 function VisualizationsPage() {
   const [visDimensions, setVisDimensions] = useState({width: 0, height: 0});
   const [charitiesData, setCharitiesData] = useState(null);
+  const [newsData, setNewsData] = useState(null);
 
   useEffect(() => {
     axios.get("https://api.syrianrefugeecrisis.me/charities")
       .then((response) => {
         setCharitiesData(response.data);
+        setNewsData(response.data);
       })
       .catch((error) => {
         console.log(error);
       });
+
+      axios.get("https://api.syrianrefugeecrisis.me/news-and-events")
+      .then((response) => {
+        setNewsData(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
   }, []);
 
   // useEffect for handling visualization dimensions and responsive resizing
@@ -47,8 +59,13 @@ function VisualizationsPage() {
           </Container>
       </div>
       <div>
-        <Container style={{ width: "60%", height: "60%" }}>
+        <Container style={{ width: "60%", height: "60%" , marginBottom: "20px"}}>
           {charitiesData && <CharityPieChart charitiesData={charitiesData} />}
+        </Container>
+      </div>
+      <div>
+      <Container style={{ width: "50%", height: "50%" }}>
+      {newsData && <NewsBarGraph newsData={newsData} />}
         </Container>
       </div>
     </div>
