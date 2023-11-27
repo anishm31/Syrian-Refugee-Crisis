@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 import WorldMap from "./Visualizations/Our_Visualizations/Country/WorldMap";
 import CharityPieChart from "./Visualizations/Our_Visualizations/Country/CharityPieChart";
-import NewsBarGraph from "./Visualizations/NewsBarGraph";
+import NewsBarGraph from "./Visualizations/Our_Visualizations/Country/NewsBarGraph";
 import axios from "axios";
 
 
@@ -59,12 +59,12 @@ function VisualizationsPage() {
           </Container>
       </div>
       <div>
-        <Container style={{ width: "60%", height: "60%" }}>
+        <Container style={{ width: "60%", height: "60%" , marginBottom: "20px"}}>
           {charitiesData && <CharityPieChart charitiesData={charitiesData} />}
         </Container>
       </div>
       <div>
-      <Container style={{ width: "60%", height: "60%" }}>
+      <Container style={{ width: "50%", height: "50%" }}>
       {newsData && <NewsBarGraph newsData={newsData} />}
         </Container>
       </div>
