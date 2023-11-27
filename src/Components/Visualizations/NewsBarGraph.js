@@ -8,7 +8,7 @@ function NewsBarGraph({ newsData }) {
     if (!newsData || newsData.data.length === 0) return;
     console.log("FIRST", newsData.data);
     const margin = { top: 30, right: 30, bottom: 150, left: 60 };
-    const width = 2000 - margin.left - margin.right;
+    const width = 1000 - margin.left - margin.right;
     const height = 1000 - margin.top - margin.bottom;
 
     const svg = d3.select(svgRef.current)
@@ -18,16 +18,46 @@ function NewsBarGraph({ newsData }) {
       .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    //want the x axis to be different sources
-    const uniqueShortnames = [...new Set(newsData.data.flatMap(d => (d.sources || []).map(s => s.source_short_name)))];
-   // const uniqueShortnames = [...new Set(newsData.data.flatMap(d => d.sources.map(s => s.source_short_name)))];
+     // Flatten the data and extract the source short names
+     const allShortnames = newsData.data.flatMap(d =>
+      (d.sources || []).map(source => source.source_short_name)
+    );
+
+    // Count occurrences of each short name
+    const sourceCounts = d3.rollup(
+      allShortnames,
+      v => v.length,
+      d => d || "Unknown"
+    );
+
+    // Create categories based on counts
+    const categories = Array.from(sourceCounts.keys())
+      .reduce((acc, shortname) => {
+        const count = sourceCounts.get(shortname);
+        if (count <= 1) {
+          acc.singleOrLess.push(shortname);
+        } else {
+          acc.mainGroup.push(shortname);
+        }
+        return acc;
+      }, { mainGroup: [], singleOrLess: [] });
+
+      // Define the color scale for the choropleth map
+  const thresholds = [5,10,15,20,25];
+  //const thresholds = [100, 1_000, 10_000, 100_000, 1_000_000, 10_000_000];
+  const thresholdLabels = ["100", "1K", "10K", "100K", "1M", "10M"];
+  const colorScheme = d3.schemeYlOrRd[thresholds.length + 1];
+  let colorScale =
+    d3.scaleThreshold()
+    .domain(thresholds)
+    .range(colorScheme);
+
     const x = d3.scaleBand()
       .range([0, width])
-      .domain(uniqueShortnames ) // Assuming 'primary_country' is the property you want to use
-      .padding(0.85);
+      .domain(categories.mainGroup.concat("Sources cited 1 times or less")) 
 
     const y = d3.scaleLinear()
-      .domain([0, newsData.data.length])
+      .domain([0, d3.max(sourceCounts.values())])
       .range([height, 0]);
 
     svg.append("g")
@@ -40,23 +70,30 @@ function NewsBarGraph({ newsData }) {
     svg.append("g")
       .call(d3.axisLeft(y));
 
+      
     svg.selectAll("mybar")
-      .data(newsData.data.filter(d => d.sources && d.sources.in_db === true))
+      .data(categories.mainGroup.map(shortname => ({
+        shortname,
+        count: sourceCounts.get(shortname),
+      })))
       .enter()
       .append("rect")
-      .attr("x", d => x(d.primary_country)) // Update to the correct property
-      .attr("y", d => y(/* Use the property that represents the height of the bar */))
+      .attr("x", d => x(d.shortname))
+      .attr("y", d => y(d.count))
       .attr("width", x.bandwidth())
-      .attr("height", d => height - y(/* Use the property that represents the height of the bar */))
-      .attr("transform", "rotate(80)")
-      .attr("fill", "#69b3a2");
+      .attr("height", d => height - y(d.count))
+      .attr('fill', function (d) {
+        return colorScale(d.count);
+      });
 
-
-
-      
-
-      console.log("LOOK HERE", newsData.data.map(place => place.id)); // Log x-axis data
-      console.log(x.domain()); // Log x-scale domain
+    // Create a separate category for sources with count <= 1
+    const singleOrLessTotal = categories.singleOrLess.reduce((acc, shortname) => acc + sourceCounts.get(shortname), 0);
+    svg.append("rect")
+      .attr("x", x("Sources cited 1 times or less"))
+      .attr("y", y(singleOrLessTotal))
+      .attr("width", x.bandwidth())
+      .attr("height", height - y(singleOrLessTotal))
+      .attr("fill", "lightgray");
 
     return () => {
       d3.select(svgRef.current).selectAll('*').remove();
