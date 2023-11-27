@@ -1,11 +1,12 @@
-import React from "react";
+import React from 'react';
+import TreatmentPieChart from './Visualizations/Provider Visualizations/TreatmentPieChart';
 
-function ProviderVisualizationsPage() {
+const ProviderVisualizationPage = () => {
   return (
     <div>
-      <h1 style={{textAlign : "center", marginBottom : "20px"}}>Provider Visualizations (Mental Health Austin)</h1>
+      <TreatmentPieChart />
     </div>
-  )
-}
+  );
+};
 
-export default ProviderVisualizationsPage;
+export default ProviderVisualizationPage;
