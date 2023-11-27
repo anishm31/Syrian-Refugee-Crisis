@@ -4,6 +4,13 @@ import * as d3 from 'd3';
 function NewsBarGraph({ newsData }) {
   const svgRef = useRef(null);
 
+  var tooltip = d3.select("body")
+  .append("div")
+  .style("position", "absolute")
+  .style("z-index", "10")
+  .style("visibility", "hidden")
+  .text("a simple tooltip");
+
   useEffect(() => {
     if (!newsData || newsData.data.length === 0) return;
     console.log("FIRST", newsData.data);
@@ -71,7 +78,7 @@ function NewsBarGraph({ newsData }) {
       .call(d3.axisLeft(y));
 
       
-    svg.selectAll("mybar")
+      svg.selectAll("mybar")
       .data(categories.mainGroup.map(shortname => ({
         shortname,
         count: sourceCounts.get(shortname),
@@ -84,7 +91,29 @@ function NewsBarGraph({ newsData }) {
       .attr("height", d => height - y(d.count))
       .attr('fill', function (d) {
         return colorScale(d.count);
+      })
+      .on("mouseover", function (event, d) {
+          // Show tooltip
+    tooltip.style("visibility", "visible")
+    .html(`Source: ${d.shortname}<br>Count: ${d.count}`)
+    .style("left", event.pageX + "px")
+    .style("top", (event.pageY - 28) + "px");
+        // Highlight the bar on mouseover
+        d3.select(this)
+          .attr("fill", "orange");
+      })
+      .on("mousemove", function (event) {
+        // Update tooltip position on mousemove
+        tooltip.style("left", event.pageX + "px")
+          .style("top", (event.pageY - 28) + "px");
+      })
+      .on("mouseout", function (event, d) {
+        // Hide tooltip and restore the original color on mouseout
+        tooltip.style("visibility", "hidden");
+        d3.select(this).attr("fill", colorScale(d.count));
       });
+    
+    
 
     // Create a separate category for sources with count <= 1
     const singleOrLessTotal = categories.singleOrLess.reduce((acc, shortname) => acc + sourceCounts.get(shortname), 0);
@@ -94,6 +123,7 @@ function NewsBarGraph({ newsData }) {
       .attr("width", x.bandwidth())
       .attr("height", height - y(singleOrLessTotal))
       .attr("fill", "lightgray");
+      
 
     return () => {
       d3.select(svgRef.current).selectAll('*').remove();
@@ -102,7 +132,7 @@ function NewsBarGraph({ newsData }) {
 
   return (
     <div>
-      <h1>Your Donation Progress</h1>
+      <h1>Source Frequency</h1>
       <div ref={svgRef}></div>
     </div>
   );
