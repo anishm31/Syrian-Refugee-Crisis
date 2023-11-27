@@ -7,6 +7,7 @@ function NewsBarGraph({ newsData }) {
   const svgRef = useRef(null);
   const [singleSources, setSingleSources] = useState([]);
 
+
   var tooltip = d3.select("body")
     .append("div")
     .style("position", "absolute")
@@ -40,6 +41,7 @@ function NewsBarGraph({ newsData }) {
       d => d || "Unknown"
     );
 
+    const currentSvgRef = svgRef.current;
     // Create categories for sources used more than once, and used one time or less
     const categories = Array.from(sourceCounts.keys())
       .reduce((acc, shortname) => {
@@ -125,9 +127,9 @@ function NewsBarGraph({ newsData }) {
 
 
     return () => {
-      d3.select(svgRef.current).selectAll('*').remove();
+      d3.select(currentSvgRef).selectAll('*').remove();
     };
-  }, [newsData]);
+  }, [newsData, singleSources, tooltip]);
 
   //generate a list of sources that were used 1 or 0 times
   const generateLegend = () => {
