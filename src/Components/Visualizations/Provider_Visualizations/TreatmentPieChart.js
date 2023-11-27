@@ -42,7 +42,7 @@ const TreatmentPieChart = () => {
       <Spinner animation="border" variant="primary" role="status" style={{ display: loading ? 'block' : 'none' }} />
       {!loading && (
         <div>
-          <h1 style={{ textAlign: 'center' }}>Mental Health Treatments</h1>
+          <h3 style={{ textAlign: 'center' }}>Mental Health Treatments</h3>
           {aggregatedData.length > 0 && (
             <PieChart width={800} height={600}>
               <Pie
