@@ -52,18 +52,18 @@ const TreatmentPieChart = () => {
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#AF19FF', '#FF6666'];
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>
       <Spinner animation="border" variant="primary" role="status" style={{ display: loading ? 'block' : 'none' }} />
       {!loading && (
         <div>
-          <h3 style={{ textAlign: 'center' }}>Number of Mental Health Treatments per Location</h3>
+          <h3 style={{ textAlign: 'center', marginTop: "100px"}}>Number of Mental Health Treatments per Location</h3>
           {finalData.length > 0 && (
-            <PieChart width={800} height={600}>
+            <PieChart width={window.innerWidth < 800 ? window.innerWidth : 800} height={600}>
               <Pie
                 data={finalData}
-                cx={200}
-                cy={300}
-                outerRadius={200}
+                cx={window.innerWidth < 800 ? window.innerWidth / 2 : 200}
+                cy={250}
+                outerRadius={window.innerWidth < 800 ? window.innerWidth / 4 : 200}
                 fill="#8884d8"
                 dataKey="count"
                 label
@@ -78,8 +78,8 @@ const TreatmentPieChart = () => {
                 align="right"
                 layout="vertical"
                 wrapperStyle={{
-                  right: '-300px',
-                  top: '30%',
+                  right: window.innerWidth < 800 ? '-100px' : '-300px',
+                  top: '20%',
                   wordWrap: 'break-word',
                 }}
                 payload={finalData.map((entry, index) => ({
