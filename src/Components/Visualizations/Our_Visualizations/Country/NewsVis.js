@@ -12,10 +12,21 @@ const NewsVis = ({ newsData }) => {
     );
     const numberOfSources = allShortnames.length;
 
-    const newDataset = Array(numberOfSources).fill(0).map(() => ({
+    const sourceCounts = d3.rollup(
+      allShortnames,
+      (v) => v.length,
+      (d) => d || "Unknown"
+    );
+
+    const sourceData = Array.from(sourceCounts, ([shortname, count]) => ({
+      shortname,
+      radius: Math.sqrt(count) * 5, // Adjust the scaling factor as needed
+    }));
+
+    const newDataset = sourceData.map((data) => ({
       cx: Math.random() * 500 + 10, // Adjust the range for x positions
       cy: Math.random() * 500 + 15, // Centered around the middle of the available height
-      r: Math.random() * 1 + 5, // Adjust the radius as needed
+      r: data.radius, // Use the calculated radius from sourceData
     }));
 
     // Ensure non-overlapping positions
