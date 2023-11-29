@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {BarChart, Bar, XAxis, YAxis, Tooltip} from "recharts";
+import {BarChart, Bar, XAxis, YAxis, Tooltip, Rectangle} from "recharts";
 import { Container, Spinner } from "react-bootstrap";
 import axios from "axios";
 import "./DisordersBarGraph.css";
@@ -53,10 +53,10 @@ function DisordersBarGraph(props) {
         Number of Treatments per Disorder
       </h3>
       <BarChart width={props.width} height={props.height} data={disorderInstances}>
-        <XAxis dataKey="name"/>
-        <YAxis />
+        <XAxis dataKey="name" />
+        <YAxis label={{ value: "Number of Treatments", angle: -90, position: "insideLeft", dy: 100 }} />
         <Tooltip content={<DisorderLabel/>}/>
-        <Bar dataKey="num_treatments" fill="#00a9b5" />
+        <Bar dataKey="num_treatments" fill="#00a9b5" activeBar={<Rectangle fill="#b50c00" stroke="#b50c00" />} />
       </BarChart>
     </Container>)
     :

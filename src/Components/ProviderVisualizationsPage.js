@@ -32,9 +32,11 @@ function ProviderVisualizationsPage() {
       <Container style={{height: "65%", width: "85%"}} fluid id="visContainer">
         <DisordersBarGraph width={visDimensions.width} height={visDimensions.height} />
       </Container>
+      <br></br>
       <Container style={{height: "65%", width: "85%"}} fluid id="visContainer">
         <TreatmentPieChart />
       </Container>
+      <br></br>
       <Container style={{height: "65%", width: "85%"}} fluid id="visContainer">
         <LocationsFunnelGraph width={visDimensions.width} height={visDimensions.height} />
       </Container>

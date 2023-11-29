@@ -2,13 +2,14 @@ import * as d3 from "d3"
 import {geoData} from "./mapGeoData"
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Spinner } from "react-bootstrap";
+import { Spinner, Tooltip, OverlayTrigger } from "react-bootstrap";
 
 // Adapted code from https://www.react-graph-gallery.com/choropleth-map
 
 function WorldMap(props) {
   const [instances, setInstances] = useState([]);
   const [loaded, setLoaded] = useState(false);
+  const [selectedCountry, setSelectedCountry] = useState(null);
 
   // Define the color scale for the choropleth map
   const thresholds = [100, 1_000, 10_000, 100_000, 1_000_000, 10_000_000];
@@ -29,13 +30,16 @@ function WorldMap(props) {
   const createSvgPaths = (mapHeight, mapWidth) => {
 
     // Event handler to be called when the mouse is over a country
-    const mouseOver = (event) => {
+    const mouseOver = (event, countryShape) => {
       // Get the selected path element (country)
       const selectedPath = event.target;
 
       // Change stroke width and color to highlight the country
       selectedPath.setAttribute("stroke", "#000");
       selectedPath.setAttribute("stroke-width", 1.7);
+
+      // Set the selected country to the country that was hovered over
+      setSelectedCountry(countryShape.id)
     };
 
     // Event handler to be called when the mouse leaves a country
@@ -46,18 +50,9 @@ function WorldMap(props) {
       // Revert to original path styling
       selectedPath.setAttribute("stroke", "#bdbdbd");
       selectedPath.setAttribute("stroke-width", 0.5);
-    }
 
-    // Event handler to display country info when clicked
-    const displayCountryInfo = (countryShape, totalRefugees) => {
-
-      let countryName = countryShape.properties.name;
-      totalRefugees = totalRefugees ? totalRefugees : 0;
-
-      // Display country info
-      alert(
-        `${countryName} has ${totalRefugees.toLocaleString()} Syrian refugees.`
-      );
+      // Set the selected country to null
+      setSelectedCountry(null)
     }
 
     // Adjust projection (scale and translation) to fit the map in the container
@@ -77,18 +72,32 @@ function WorldMap(props) {
             ? colorScale(totalRefugees)
             : colorScale(0);
 
+          const tooltipContent = (
+            <Tooltip id={`tooltip-${countryShape.id}`}>
+              {`${totalRefugees ? totalRefugees.toLocaleString() : 0} Syrian Refugees in ${countryShape.properties.name}`}
+            </Tooltip>
+
+          );
+
           return (
-            <path
-              key={countryShape.id}
-              d={pathGenerator(countryShape)}
-              stroke="#bdbdbd"
-              strokeWidth={0.5}
-              fill={color}
-              fillOpacity={1}
-              onMouseOver={mouseOver}
-              onMouseOut={mouseLeave}
-              onClick={() => displayCountryInfo(countryShape, totalRefugees)}
-            />
+            <g key={countryShape.id} className="country">
+              <OverlayTrigger 
+                placement="right" 
+                overlay={selectedCountry === countryShape.id ? tooltipContent : <div></div>}
+                trigger="click"
+              >
+                <path
+                  key={countryShape.id}
+                  d={pathGenerator(countryShape)}
+                  stroke="#bdbdbd"
+                  strokeWidth={0.5}
+                  fill={color}
+                  fillOpacity={1}
+                  onMouseOver={(event) => mouseOver(event, countryShape)}
+                  onMouseOut={mouseLeave}
+                />
+              </OverlayTrigger>
+            </g>
           );
         })
     );
