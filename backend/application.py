@@ -124,7 +124,9 @@ def home():
 # Get all the charities
 @flaskApp.route("/charities")
 def get_charities():
+    # Fetch pagination arguments
     page = request.args.get("page")
+    page_size = request.args.get("pageSize")
     # Fetch search arg
     search_query = request.args.get("searchQuery")
     # Fetch sorting arguments
@@ -175,7 +177,7 @@ def get_charities():
         retrievals = db.session.query(Charity)
 
     if page is not None:
-        retrievals = paginate(retrievals, int(page))
+        retrievals = paginate(retrievals, int(page), int(page_size)) if page_size is not None else paginate(retrievals, int(page))
 
     charity_list = []
     for charity in retrievals:
@@ -212,7 +214,9 @@ def get_charity(name):
 # Get all the countries
 @flaskApp.route("/countries")
 def get_countries():
+    # Fetch pagination args
     page = request.args.get("page")
+    page_size = request.args.get("pageSize")
     # Fetch search arg
     search_query = request.args.get("searchQuery")
     # Fetch sorting args
@@ -260,7 +264,7 @@ def get_countries():
         retrievals = db.session.query(Country)
 
     if page is not None:
-        retrievals = paginate(retrievals, int(page))
+        retrievals = paginate(retrievals, int(page), int(page_size)) if page_size is not None else paginate(retrievals, int(page))
 
     country_list = []
     for country in retrievals:
@@ -291,7 +295,9 @@ def get_country(name):
 # Get all the newsevents
 @flaskApp.route("/news-and-events")
 def get_newsevents():
+    # Fetch pagination args
     page = request.args.get("page")
+    page_size = request.args.get("pageSize")
     # Fetch search arg
     search_query = request.args.get("searchQuery")
     # Fetch sorting arguments
@@ -343,7 +349,7 @@ def get_newsevents():
         retrievals = db.session.query(NewsEvent)
 
     if page is not None:
-        retrievals = paginate(retrievals, int(page))
+        retrievals = paginate(retrievals, int(page), int(page_size)) if page_size is not None else paginate(retrievals, int(page))
 
     newsevent_list = []
     for newsevent in retrievals:
