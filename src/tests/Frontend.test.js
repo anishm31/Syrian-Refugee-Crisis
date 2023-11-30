@@ -60,8 +60,10 @@ describe('GenericModelPage Component', () => {
     render(<GenericModelPage {...sampleProps} />);
     
     const modelHeader = screen.getByText('Sample Model');
+    const searchBar = screen.getByRole('textbox');
 
     expect(modelHeader).toBeInTheDocument();
+    expect(searchBar).toBeInTheDocument();
   });
 });
 
