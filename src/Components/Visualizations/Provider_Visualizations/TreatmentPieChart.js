@@ -24,8 +24,8 @@ const TreatmentPieChart = () => {
 
   const locationCounts = {};
   const otherLocations = new Set();
-  treatmentData.forEach(entry => {
-    entry.locations_list.forEach(location => {
+  treatmentData.forEach((entry) => {
+    entry.locations_list.forEach((location) => {
       if (locationCounts[location]) {
         locationCounts[location] += 1;
       } else {
@@ -44,26 +44,30 @@ const TreatmentPieChart = () => {
 
   const topN = 10;
   const topNData = sortedData.slice(0, topN);
-  const otherData = [...otherLocations].map(location => ({ location, count: 1 }));
+  const otherData = [...otherLocations].map((location) => ({ location, count: 1 }));
 
   const otherCount = otherData.reduce((acc, entry) => acc + entry.count, 0);
   const finalData = [...topNData, { location: 'Other', count: otherCount }];
 
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#AF19FF', '#FF6666'];
 
+  const isSmallScreen = window.innerWidth < 800;
+
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>
       <Spinner animation="border" variant="primary" role="status" style={{ display: loading ? 'block' : 'none' }} />
       {!loading && (
-        <div>
-          <h3 style={{ textAlign: 'center', marginTop: "100px"}}>Number of Mental Health Treatments per Location</h3>
+        <div style={{ marginBottom: isSmallScreen ? '150px' : '0' }}>
+          <h3 style={{ textAlign: 'center', marginTop: isSmallScreen ? '350px' : '100px' }}>
+            Number of Mental Health Treatments per Location
+          </h3>
           {finalData.length > 0 && (
-            <PieChart width={window.innerWidth < 800 ? window.innerWidth : 800} height={600}>
+            <PieChart width={isSmallScreen ? window.innerWidth : 800} height={600}>
               <Pie
                 data={finalData}
-                cx={window.innerWidth < 800 ? window.innerWidth / 2 : 200}
+                cx={isSmallScreen ? window.innerWidth / 2 : 200}
                 cy={250}
-                outerRadius={window.innerWidth < 800 ? window.innerWidth / 4 : 200}
+                outerRadius={isSmallScreen ? window.innerWidth / 4 : 200}
                 fill="#8884d8"
                 dataKey="count"
                 label
@@ -73,21 +77,23 @@ const TreatmentPieChart = () => {
                 ))}
               </Pie>
               <Tooltip formatter={(value, _, props) => [value, props.payload.location]} />
-              <Legend
-                verticalAlign="middle"
-                align="right"
-                layout="vertical"
-                wrapperStyle={{
-                  right: window.innerWidth < 800 ? '-100px' : '-300px',
-                  top: '20%',
-                  wordWrap: 'break-word',
-                }}
-                payload={finalData.map((entry, index) => ({
-                  value: entry.location,
-                  type: 'square',
-                  color: COLORS[index % COLORS.length],
-                }))}
-              />
+              {!isSmallScreen && (
+                <Legend
+                  verticalAlign="middle"
+                  align="right"
+                  layout="vertical"
+                  wrapperStyle={{
+                    right: isSmallScreen ? '-100px' : '-300px',
+                    top: '20%',
+                    wordWrap: 'break-word',
+                  }}
+                  payload={finalData.map((entry, index) => ({
+                    value: entry.location,
+                    type: 'square',
+                    color: COLORS[index % COLORS.length],
+                  }))}
+                />
+              )}
             </PieChart>
           )}
         </div>
