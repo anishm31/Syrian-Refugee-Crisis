@@ -57,8 +57,8 @@ const TreatmentPieChart = () => {
     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>
       <Spinner animation="border" variant="primary" role="status" style={{ display: loading ? 'block' : 'none' }} />
       {!loading && (
-        <div style={{ marginBottom: isSmallScreen ? '150px' : '0' }}>
-          <h3 style={{ textAlign: 'center', marginTop: isSmallScreen ? '350px' : '100px' }}>
+        <div style={{ marginBottom: isSmallScreen ? '200px' : '0' }}>
+          <h3 style={{ textAlign: 'center', marginTop: isSmallScreen ? '400px' : '100px' }}>
             Number of Mental Health Treatments per Location
           </h3>
           {finalData.length > 0 && (
