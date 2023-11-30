@@ -97,7 +97,6 @@ const NewsVis = ({ newsData }) => {
       .on("mouseout", handleMouseOut);
 
     circles.exit().remove();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dataset]);
 
   const handleMouseOver = (event, data) => {
@@ -154,7 +153,6 @@ const NewsVis = ({ newsData }) => {
 
   return (
     <div style={{ position: "relative" }}>
-      <h3 style={{textAlign : "center", marginBottom : "10px"}}>Frequency of Source Citations</h3>
       <svg width={600} height={600} ref={ref}>
         {dataset.map((d, i) => (
           <circle
