@@ -6,7 +6,7 @@ import "./button.css"
 
 
 function CharityModelPage({ searchInput, showFilters = true }) {
-  const itemsPerPage = 12;
+  const itemsPerPage = searchInput ? 3 : 9;
   const [currentPage, setCurrentPage] = useState(1);
   const [dataLoaded, setDataLoaded] = useState(false);
   const [countLoaded, setCountLoaded] = useState(false);
@@ -42,7 +42,7 @@ function CharityModelPage({ searchInput, showFilters = true }) {
                     : "";
 
     let instanceCountURL = `https://api.syrianrefugeecrisis.me/charities?${searchArg}${sortByArg}${sortOrderArg}${filterArg}`;
-    let instanceDataURL = `https://api.syrianrefugeecrisis.me/charities?${searchArg}${sortByArg}${sortOrderArg}${filterArg}&page=${currentPage}`;
+    let instanceDataURL = `https://api.syrianrefugeecrisis.me/charities?${searchArg}${sortByArg}${sortOrderArg}${filterArg}&page=${currentPage}&pageSize=${itemsPerPage}`;
 
     // Fetch the total number of instances
     axios
@@ -66,7 +66,7 @@ function CharityModelPage({ searchInput, showFilters = true }) {
       .catch((error) => {
         console.log("There was an error fetching the data", error);
       });
-  }, [currentPage]);
+  }, [currentPage, itemsPerPage]);
 
   const handlePageClick = (pageNumber) => {
     setCurrentPage(pageNumber);
