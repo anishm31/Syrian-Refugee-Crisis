@@ -8,6 +8,12 @@ const NewsVis = ({ newsData }) => {
   const ref = useRef();
   const [dataset, setDataset] = useState([]);
   const { tooltipData, tooltipLeft, tooltipTop, showTooltip, hideTooltip } = useTooltip();
+  const thresholds = [1,2,5,10, 20, 30, 40,50,60];
+  const thresholdLabels = ["1","5","10", "20", "30", "40","50","60","70"];
+  const colorScheme = d3.interpolateBuPu;
+  const colorScale = d3.scaleThreshold()  
+    .domain(thresholds)
+    .range(Array.from({ length: thresholds.length + 1 }, (_, i) => colorScheme(i / thresholds.length)));
 
   useEffect(() => {
     const allShortnames = newsData.data.flatMap((d) =>
@@ -23,6 +29,7 @@ const NewsVis = ({ newsData }) => {
     const sourceData = Array.from(sourceCounts, ([shortname, count]) => ({
       shortname,
       radius: Math.sqrt(count) * 5,
+      count,
     }));
 
     const newDataset = sourceData.map((data) => ({
@@ -30,6 +37,7 @@ const NewsVis = ({ newsData }) => {
       cy: Math.random() * 500 + 15,
       r: data.radius,
       name: data.shortname,
+      count: data.count,
     }));
 
     setDataset(enforceNonOverlapping(newDataset));
@@ -74,7 +82,7 @@ const NewsVis = ({ newsData }) => {
       .attr("cx", (d) => d.cx)
       .attr("cy", (d) => d.cy)
       .attr("r", (d) => d.r)
-      .style("fill", (d) => getColorBasedOnRadius(d.r))
+      .style("fill", (d) => getColorBasedOnRadius(d.count))
       .on("mouseover", (event, d) => handleMouseOver(event, d))
       .on("mouseout", handleMouseOut);
 
@@ -84,7 +92,7 @@ const NewsVis = ({ newsData }) => {
       .attr("cx", (d) => d.cx)
       .attr("cy", (d) => d.cy)
       .attr("r", (d) => d.r)
-      .style("fill", (d) => getColorBasedOnRadius(d.r))
+      .style("fill", (d) => getColorBasedOnRadius(d.count))
       .on("mouseover", (event, d) => handleMouseOver(event, d))
       .on("mouseout", handleMouseOut);
 
@@ -104,24 +112,62 @@ const NewsVis = ({ newsData }) => {
     hideTooltip();
   };
 
-  const getColorBasedOnRadius = (radius) => {
-    return d3.interpolateRdYlBu(radius / 30);
+  const getColorBasedOnRadius = (count) => {
+    return colorScale(count);
+  };
+
+  const createMapLegend = (legendHeight, legendWidth) => {
+    // Adjust legend width so that it stores the width of each color scale rectangle
+    const colorRange = Array.from({ length: thresholds.length + 1 }, (_, i) => colorScheme(i / thresholds.length));
+    legendWidth = legendWidth / colorRange.length;
+    const legendX = 100 / 4; // CHANGE
+    const legendY = 50;
+
+    return (
+      <g>
+        {"Legend"}
+        <text
+          x={legendX + (colorRange.length * legendWidth) / 2}
+          y={legendY - 5}
+          fontSize="14px"
+          textAnchor="middle"
+        >
+          Frequency of Source Citings
+        </text>
+        {colorRange.map((color, i) => (
+          <g key={i} transform={`translate(${legendX + i * legendWidth+1}, ${legendY})`}>
+            <rect width={legendWidth} height={legendHeight} fill={color} />
+            <text
+              x={legendWidth / 2 * 2}
+              y={legendHeight + 10}
+              fontSize="12px"
+              textAnchor="middle"
+            >
+              {thresholdLabels[i]}
+            </text>
+          </g>
+        ))}
+      </g>
+    );
   };
 
   return (
     <div style={{ position: "relative" }}>
-      <svg width={1000} height={1000} ref={ref}>
+      <svg width={600} height={600} ref={ref}>
         {dataset.map((d, i) => (
           <circle
             key={i}
             cx={d.cx}
             cy={d.cy}
             r={d.r}
-            fill={getColorBasedOnRadius(d.r)}
+            fill={getColorBasedOnRadius(d.count)}
             onMouseOver={(event) => handleMouseOver(event, d)}
             onMouseOut={handleMouseOut}
           />
         ))}
+        <g transform={`translate(0, ${600 - 80})`}>
+          {createMapLegend(10, 200)}
+        </g>
       </svg>
       {tooltipData && (
         <Tooltip
@@ -129,7 +175,10 @@ const NewsVis = ({ newsData }) => {
           left={tooltipLeft}
           style={defaultStyles}
         >
-          <strong>{tooltipData.name}</strong>
+          <div>
+            <strong>{tooltipData.name}</strong>
+          </div>
+          <div>Count: {tooltipData.count}</div>
         </Tooltip>
       )}
     </div>

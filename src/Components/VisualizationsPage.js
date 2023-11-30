@@ -3,9 +3,8 @@ import { Container } from "react-bootstrap";
 import WorldMap from "./Visualizations/Our_Visualizations/Country/WorldMap";
 import CharityPieChart from "./Visualizations/Our_Visualizations/Country/CharityPieChart";
 import NewsBarGraph from "./Visualizations/Our_Visualizations/Country/NewsBarGraph";
-import NewsVis from "./Visualizations/Our_Visualizations/Country/NewsVis";
 import axios from "axios";
-
+import NewsVis from "./Visualizations/Our_Visualizations/Country/NewsVis";
 
 function VisualizationsPage() {
   const [visDimensions, setVisDimensions] = useState({width: 0, height: 0});
@@ -56,17 +55,17 @@ function VisualizationsPage() {
           <h1 style={{textAlign : "center", marginBottom : "20px"}}>Our Visualizations</h1>
           <br></br>
           <Container style={{height: "65%", width: "85%"}} fluid id="visContainer">
-            {/* <WorldMap height={visDimensions.height} width={visDimensions.width}/> */}
+            <WorldMap height={visDimensions.height} width={visDimensions.width}/>
           </Container>
       </div>
       <div>
         <Container style={{ width: "60%", height: "60%" , marginBottom: "20px"}}>
-          {/* {charitiesData && <CharityPieChart charitiesData={charitiesData} />} */}
+          {charitiesData && <CharityPieChart charitiesData={charitiesData} />}
         </Container>
       </div>
       <div>
-      <Container style={{ width: "50%", height: "50%" }}>
-      {newsData && <NewsVis newsData={newsData} />}
+      <Container style={{height: "50%", width: "50%"}} fluid id="visContainer">
+      {newsData && <NewsVis newsData={newsData} height={visDimensions.height} width={visDimensions.width} />}
         </Container>
       </div>
     </div>
