@@ -27,7 +27,7 @@ function MainNavbar() {
 
             <Nav.Link>
               <Link
-                style={{ color: "white", textDecoration: "inherit", marginRight: 7 }}
+                style={{ color: "white", textDecoration: "inherit", marginRight: 14 }}
                 to="/"
               >
               Home
@@ -36,7 +36,7 @@ function MainNavbar() {
 
             <Nav.Link>
               <Link
-                style={{ color: "white", textDecoration: "inherit", marginRight: 7}}
+                style={{ color: "white", textDecoration: "inherit", marginRight: 14}}
                 to="/about"
               >
               About
@@ -45,7 +45,7 @@ function MainNavbar() {
 
             <Nav.Link>
               <Link
-                style={{ color: "white", textDecoration: "inherit", marginRight: 7}}
+                style={{ color: "white", textDecoration: "inherit", marginRight: 14}}
                 to="/timeline"
               >
               Timeline
@@ -54,7 +54,7 @@ function MainNavbar() {
 
             <Nav.Link>
               <Link
-                style={{ color: "white", textDecoration: "inherit", marginRight: 7}}
+                style={{ color: "white", textDecoration: "inherit", marginRight: 14}}
                 to="/visualizations"
               >
                 Visualizations
@@ -63,7 +63,7 @@ function MainNavbar() {
 
             <Nav.Link>
               <Link
-                style={{ color: "white", textDecoration: "inherit", marginRight: 7}}
+                style={{ color: "white", textDecoration: "inherit", marginRight: 14}}
                 to="/provider-visualizations"
               >
                 Provider Visualizations
