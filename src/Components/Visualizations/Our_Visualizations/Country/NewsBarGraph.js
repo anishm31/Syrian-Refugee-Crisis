@@ -115,7 +115,7 @@ function NewsBarGraph({ newsData }) {
       });
 
 
-
+      
     // Create a seperate category for sources with count <= 1
     const singleOrLessTotal = categories.singleOrLess.reduce((acc, shortname) => acc + sourceCounts.get(shortname), 0);
     svg.append("rect")

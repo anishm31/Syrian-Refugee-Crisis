@@ -4,7 +4,7 @@ import WorldMap from "./Visualizations/Our_Visualizations/Country/WorldMap";
 import CharityPieChart from "./Visualizations/Our_Visualizations/Country/CharityPieChart";
 import NewsBarGraph from "./Visualizations/Our_Visualizations/Country/NewsBarGraph";
 import axios from "axios";
-
+import NewsVis from "./Visualizations/Our_Visualizations/Country/NewsVis";
 
 function VisualizationsPage() {
   const [visDimensions, setVisDimensions] = useState({width: 0, height: 0});
@@ -64,8 +64,8 @@ function VisualizationsPage() {
         </Container>
       </div>
       <div>
-      <Container style={{ width: "50%", height: "50%" }}>
-      {newsData && <NewsBarGraph newsData={newsData} />}
+      <Container style={{height: "50%", width: "50%"}} fluid id="visContainer">
+      {newsData && <NewsVis newsData={newsData} height={visDimensions.height} width={visDimensions.width} />}
         </Container>
       </div>
     </div>
