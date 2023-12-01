@@ -4,7 +4,7 @@ import NewsCard from "./NewsCard.js";
 import axios from "axios";
 import "./button.css";
 
-function NewsEventsModelPage({searchInput}) {
+function NewsEventsModelPage({searchInput, showFilters = true}) {
   const itemsPerPage = 12;
   const [currentPage, setCurrentPage] = useState(1);
   const [dataLoaded, setDataLoaded] = useState(false);
@@ -15,6 +15,7 @@ function NewsEventsModelPage({searchInput}) {
   const [totalInstances, setTotalInstances] = useState(0);
   const [selectedSortOption, setSelectedSortOption] = useState("");
   const [filterItems, setFilterItems] = useState([]);
+  const [filterShow] = useState(showFilters);
   const filterMap = new Map();
 
   const requestInstances = useCallback((userQuery, sortByKey, filterOptionsMap) => {
@@ -132,31 +133,34 @@ function NewsEventsModelPage({searchInput}) {
         handleSort={handleSort}
         handleFilter={handleFilter}
         loaded={dataLoaded && countLoaded}
+        showFilters={filterShow}
       />
       {dataLoaded && countLoaded ?
-      <div className="pagination">
-        <button
-          onClick={() => handlePageClick(currentPage - 1)}
-          disabled={currentPage === 1}
-        >
-          Previous
-        </button>
-        {generatePageNumbers().map((pageNumber) => (
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div className="pagination">
           <button
-            id = "page-button"
-            key={pageNumber}
-            onClick={() => handlePageClick(pageNumber)}
-            className={`page-button ${pageNumber === currentPage ? 'active' : ''}`}
+            onClick={() => handlePageClick(currentPage - 1)}
+            disabled={currentPage === 1}
           >
-            {pageNumber}
+            Previous
           </button>
-        ))}
-        <button
-          onClick={() => handlePageClick(currentPage + 1)}
-          disabled={currentPage === totalPages}
-        >
-          Next
-        </button>
+          {generatePageNumbers().map((pageNumber) => (
+            <button
+              id = "page-button"
+              key={pageNumber}
+              onClick={() => handlePageClick(pageNumber)}
+              className={`page-button ${pageNumber === currentPage ? 'active' : ''}`}
+            >
+              {pageNumber}
+            </button>
+          ))}
+          <button
+            onClick={() => handlePageClick(currentPage + 1)}
+            disabled={currentPage === totalPages}
+          >
+            Next
+          </button>
+        </div>
       </div>
       : null}
     </div>

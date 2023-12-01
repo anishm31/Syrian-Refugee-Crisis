@@ -16,9 +16,9 @@ const SearchResultsPage = () => {
     return (
         <>
         <Container>
-            <CharityModelPage searchInput={search}/>
-            <CountryModelPage searchInput={search}/>
-            <NewsEventsModelPage searchInput={search}/>
+            <CharityModelPage searchInput={search} showFilters={false}/>
+            <CountryModelPage searchInput={search} showFilters={false}/>
+            <NewsEventsModelPage searchInput={search} showFilters={false}/>
         </Container>
         </>
     )
