@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import DisordersBarGraph from "./Visualizations/Provider_Visualizations/DisordersBarGraph";
 import TreatmentPieChart from "./Visualizations/Provider_Visualizations/TreatmentPieChart";
+import LocationsFunnelGraph from "./Visualizations/Provider_Visualizations/LocationsFunnelGraph";
 import { Container } from "react-bootstrap";
 
 function ProviderVisualizationsPage() {
@@ -31,8 +32,13 @@ function ProviderVisualizationsPage() {
       <Container style={{height: "65%", width: "85%"}} fluid id="visContainer">
         <DisordersBarGraph width={visDimensions.width} height={visDimensions.height} />
       </Container>
+      <br></br>
       <Container style={{height: "65%", width: "85%"}} fluid id="visContainer">
         <TreatmentPieChart />
+      </Container>
+      <br></br>
+      <Container style={{height: "65%", width: "85%"}} fluid id="visContainer">
+        <LocationsFunnelGraph width={visDimensions.width} height={visDimensions.height} />
       </Container>
     </div>
   );
