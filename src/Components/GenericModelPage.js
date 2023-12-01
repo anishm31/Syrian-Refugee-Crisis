@@ -11,15 +11,13 @@ function GenericModelPage(props) {
                 <header>
                     <h1>{(props.model) ? props.model : "General Model"}</h1>
                 </header>
-                {props.showFilters && (
-                    <SearchBar
-                        handleSearch={props.handleSearch}
-                        name={props.instances}
-                        handleSort={props.handleSort}
-                        model={props.model}
-                        handleFilter={props.handleFilter}
-                    />
-                )}
+                <SearchBar
+                    handleSearch={props.handleSearch}
+                    name={props.instances}
+                    handleSort={props.handleSort}
+                    model={props.model}
+                    handleFilter={props.handleFilter}
+                />
                 {props.loaded ?
                 <InstanceGrid 
                     model={props.model} 
